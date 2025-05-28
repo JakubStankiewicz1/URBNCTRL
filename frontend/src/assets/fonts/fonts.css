@@ -1,0 +1,35 @@
+/* Formula1 Font Definitions */
+
+@font-face {
+  font-family: 'Formula1';
+  src: url('/src/assets/fonts/Formula1-Regular_web_0.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Formula1';
+  src: url('/src/assets/fonts/Formula1-Bold_web_0.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Formula1';
+  src: url('/src/assets/fonts/Formula1-Wide_web_0.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-stretch: expanded;
+  font-display: swap;
+}
+
+/* For specific usage of Wide variant */
+@font-face {
+  font-family: 'Formula1-Wide';
+  src: url('/src/assets/fonts/Formula1-Wide_web_0.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}

@@ -29,7 +29,7 @@
   height: 100vh;
   background: #000000;
   z-index: 5;
-  transition: opacity 0.05s linear;
+  transition: opacity 1s ease-out;
 }
 
 .helmetViewerOverlayVisible {
@@ -77,8 +77,13 @@
   align-items: center;
   justify-content: center;
   opacity: 1;
-  transition: opacity 0.5s ease;
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
   text-align: center;
+}
+
+.helmetViewerButtonContainer.fade-out {
+  opacity: 0;
+  transform: translate(-50%, -50%) scale(0.8);
 }
 
 .helmetViewerButtonContainerButtonBtn {
@@ -90,10 +95,11 @@
     color: #FF1E00;    font-size: 1.2rem;
     font-family: 'Formula1', sans-serif;
     font-weight: bold;
-    transition: .5s;
+    transition: all 0.3s ease;
     overflow: hidden;
     margin-right: 70px;
     cursor: pointer;
+    animation: buttonPulse 2s infinite;
 }
 .helmetViewerButtonContainerButtonBtn:hover{
     background-color: #FF1E00;
@@ -183,4 +189,97 @@ span:nth-child(1){
     100%{
         bottom: 100%;
     }
+}
+
+/* Circle Expand Animation */
+.helmetViewerCircleOverlay {
+  position: fixed;
+  background: radial-gradient(circle, #FF1E00 0%, #FF4500 50%, #FF6B00 100%);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 6;
+  transition: width 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              height 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+              opacity 0.8s ease-out;
+  pointer-events: none;
+  box-shadow: 0 0 100px rgba(255, 30, 0, 0.8),
+              0 0 200px rgba(255, 30, 0, 0.4),
+              inset 0 0 100px rgba(255, 255, 255, 0.1);
+}
+
+.helmetViewerButtonContainerButtonBtnText {
+  font-family: 'Formula1', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  position: relative;
+  z-index: 1;
+  margin: 0;
+}
+
+/* Pulse animation for button */
+@keyframes buttonPulse {
+  0% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 30, 0, 0.7);
+  }
+  70% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 10px rgba(255, 30, 0, 0);
+  }
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 30, 0, 0);
+  }
+}
+
+/* Logo in top-left corner */
+.helmetViewerCircleOverlayLogo {
+  position: fixed;
+  /* top: 40px; */
+  /* left: 50px; */
+  z-index: 20;
+  pointer-events: none;
+  position: relative;
+}
+
+.helmetViewerCircleOverlayLogoDiv {
+  font-family: 'Formula1-Wide', sans-serif;
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #FF1E00;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  /* text-shadow: 0 0 15px rgba(255, 30, 0, 0.7),
+               0 0 30px rgba(255, 30, 0, 0.4);
+  background: rgba(0, 0, 0, 0.4); */
+  /* padding: 12px 20px; */
+  /* border-radius: 8px;  -webkit-backdrop-filter: blur(15px); */
+  /* backdrop-filter: blur(15px); */
+  /* border: 2px solid rgba(255, 30, 0, 0.5); */
+  /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3),
+              inset 0 1px 0 rgba(255, 255, 255, 0.1); */
+  transition: all 0.3s ease;
+  padding-top: 20px;
+    padding-left: 30px;
+  /* position: relative; */
+}
+
+
+
+
+
+.helmetViewerCircleOverlayLogoDivDivOne {
+    width: 10px;
+    height: 60px;
+    background-color: red;
+    left: 20px;
+
+    transform: rotate(45deg);
+
+    position: absolute;
+
+    /* top: 50%; */
+    top: 0;
+
 }
