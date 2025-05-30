@@ -1,77 +1,32 @@
-/* Formula1 Font Definitions */
+
+/* Custom Font Faces */
 @font-face {
-  font-family: 'Formula1';
-  src: url('/src/assets/fonts/Formula1-Regular_web_0.ttf') format('truetype');
+  font-family: 'Chinese Shanghai';
+  src: url('./assets/fonts/ChineseShangaiDemoVersionRegular-p7Eyy.ttf') format('truetype'),
+       url('./assets/fonts/ChineseShangaiDemoVersionRegular-DOmnE.otf') format('opentype');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
-
-@font-face {
-  font-family: 'Formula1';
-  src: url('/src/assets/fonts/Formula1-Bold_web_0.ttf') format('truetype');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: 'Formula1-Wide';
-  src: url('/src/assets/fonts/Formula1-Wide_web_0.ttf') format('truetype');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
-
-/* 
-Formula1 Font Usage Guide
--------------------------
-- For regular text: font-family: 'Formula1', sans-serif;
-- For bold text: font-family: 'Formula1', sans-serif; font-weight: bold;
-- For wide text (titles): font-family: 'Formula1-Wide', sans-serif;
-
-Available utility classes:
-- .formula1-title: For main headings (uses Formula1-Wide)
-- .formula1-text: For regular text (uses Formula1 Regular)
-- .formula1-bold: For emphasized text (uses Formula1 Bold)
-*/
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Lato", sans-serif;
 }
 
-body {
-  font-family: 'Formula1', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  /* background: #0a0a0a; */
-  /* color: white; */
-  overflow-x: hidden;
-}
-
-#root {
-  min-height: 100vh;
-}
-
-/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Custom scrollbar */
-::-webkit-scrollbar {
-  width: 8px;
+::selection {
+  background-color: #1a5319;
+  color: #feffa7;
 }
 
-/* ::-webkit-scrollbar-track {
-  background: #1a1a2e;
-} */
-
-/* ::-webkit-scrollbar-thumb {
-  background: linear-gradient(to bottom, #4ecdc4, #ff6b6b);
-  border-radius: 4px;
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-::-webkit-scrollbar-thumb:hover {
-  background: linear-gradient(to bottom, #ff6b6b, #4ecdc4);
-} */
