@@ -1,10 +1,11 @@
 import React from 'react';
 import "./home.css";
+import HomeHero from '../../components/HomeHero/HomeHero';
 
 const Home = () => {
   return (
     <div className='home'>
-      <h1 className='custom-heading'>Welcome to URBNCTRL</h1>
+      {/* <h1 className='custom-heading'>Welcome to URBNCTRL</h1>
       <p className='chinese-shanghai-text'>This text uses Chinese Shanghai font</p>
       <p className='normal-text'>This is normal text with Lato font</p>
       
@@ -13,7 +14,8 @@ const Home = () => {
           Inline Style Example
         </h2>
         <p>You can use the font with inline styles too!</p>
-      </div>
+      </div> */}
+      <HomeHero />
     </div>
   )
 }
