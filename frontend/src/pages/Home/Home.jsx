@@ -1,6 +1,7 @@
 import React from 'react';
 import "./home.css";
 import HomeHero from '../../components/HomeHero/HomeHero';
+import HomeHeroImages from '../../components/HomeHeroImages/HomeHeroImages';
 
 const Home = () => {
   return (
@@ -16,6 +17,8 @@ const Home = () => {
         <p>You can use the font with inline styles too!</p>
       </div> */}
       <HomeHero />
+
+      <HomeHeroImages />
     </div>
   )
 }
