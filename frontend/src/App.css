@@ -1,13 +1,14 @@
 .app {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
-    overflow: hidden;
+    overflow-x: hidden;
+    /* usuwam overflow: hidden, żeby scroll działał */
 }
 
 .appContainer {
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     transform-origin: center center;
     transition: transform 0.3s ease-in-out;

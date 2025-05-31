@@ -2,6 +2,7 @@ import React from 'react';
 import "./home.css";
 import HomeHero from '../../components/HomeHero/HomeHero';
 import HomeHeroImages from '../../components/HomeHeroImages/HomeHeroImages';
+import HomeHeroScrolling from '../../components/HomeHeroScrolling/HomeHeroScrolling';
 
 const Home = () => {
   return (
@@ -19,6 +20,8 @@ const Home = () => {
       <HomeHero />
 
       <HomeHeroImages />
+
+      <HomeHeroScrolling />
     </div>
   )
 }

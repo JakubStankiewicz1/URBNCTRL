@@ -4,6 +4,22 @@ import ChineseShangaiOTF from './fonts/ChineseShangaiDemoVersionRegular-DOmnE.ot
 
 import HomeHeroImagesOne from "./HomeHeroImagesOne.jpg";
 
+import HomeHeroScrollingAlpina from "./HomeHeroScrollingAlpina.png";
+
+import HomeHeroScrollingNovitec from "./HomeHeroScrollingNovitec.png";
+
+import HomeHeroScrollingABT from "./HomeHeroScrollingABT.png";
+
+import HomeHeroScrollingRWB from "./HomeHeroScrollingRWB.png";
+
+import HomeHeroScrollingMansory from "./HomeHeroScrollingMansory.png";
+
+import HomeHeroScrollingTechArt from "./HomeHeroScrollingTechArt.png";
+
+import HomeHeroScrollingManhart from "./HomeHeroScrollingManhart.png";
+
+import HomeHeroScrollingHennessey from "./HomeHeroScrollingHennessey.png";
+
 // Export font paths
 export const fonts = {
   chineseShanghai: {
@@ -18,4 +34,12 @@ export { ChineseShangaiTTF, ChineseShangaiOTF };
 
 export default {
   HomeHeroImagesOne,
+  HomeHeroScrollingAlpina,
+  HomeHeroScrollingNovitec,
+  HomeHeroScrollingABT,
+  HomeHeroScrollingRWB,
+  HomeHeroScrollingMansory,
+  HomeHeroScrollingTechArt,
+  HomeHeroScrollingManhart,
+  HomeHeroScrollingHennessey
 }
