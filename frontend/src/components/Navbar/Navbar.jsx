@@ -3,7 +3,7 @@ import "./navbar.css";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { PiUserBold } from "react-icons/pi";
 
-const Navbar = () => {
+const Navbar = ({ menuOpen, setMenuOpen }) => {
   return (
     <div className='navbar'>
         <div className="navbarContainer">
@@ -16,12 +16,6 @@ const Navbar = () => {
                         </p>
                     </div>
                 </div>
-
-
-
-
-
-
 
                 {/* Right Part */}
                 <div className="navbarContainerRight">
@@ -43,8 +37,8 @@ const Navbar = () => {
                             </div>
                         </div>
 
-                        {/* Element */}
-                        <div className="navbarContainerRightContainerElementThree">
+                        {/* Hamburger */}
+                        <div className="navbarContainerRightContainerElementThree" onClick={() => setMenuOpen(!menuOpen)} style={{cursor:'pointer'}}>
                             <div className="navbarContainerRightContainerElementThreeContainer">
                                 <div className="navbarContainerRightContainerElementThreeContainerMenu">
                                     <div className="navbarContainerRightContainerElementThreeContainerMenuLineOne" />

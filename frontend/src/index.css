@@ -1,5 +1,3 @@
-
-/* Custom Font Faces */
 @font-face {
   font-family: 'Chinese Shanghai';
   src: url('./assets/fonts/ChineseShangaiDemoVersionRegular-p7Eyy.ttf') format('truetype'),
@@ -14,7 +12,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
-  cursor: none; /* Ukryj domyślny kursor */
+  /* cursor: none; */
 }
 
 html {
@@ -31,14 +29,12 @@ a {
   color: inherit;
 }
 
-/* Custom Green Dot Cursor */
 body {
   position: relative;
   overflow-x: hidden;
 }
 
-/* Hardware acceleration for ultra-smooth cursor */
-.custom-cursor {
+/* .custom-cursor {
   position: fixed;
   top: 0;
   left: 0;
@@ -47,7 +43,7 @@ body {
   background: radial-gradient(circle, #00ff00 0%, #1a5319 70%, transparent 100%);
   border-radius: 50%;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 19999;
   mix-blend-mode: difference;
   transform: translate(-50%, -50%);
   transition: width 0.03s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
@@ -79,4 +75,4 @@ body {
   height: 8px;
   background: radial-gradient(circle, #ffffff 0%, #00ff00 50%, #1a5319 100%);
 }
-
+ */
