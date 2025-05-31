@@ -3,6 +3,7 @@ import "./home.css";
 import HomeHero from '../../components/HomeHero/HomeHero';
 import HomeHeroImages from '../../components/HomeHeroImages/HomeHeroImages';
 import HomeHeroScrolling from '../../components/HomeHeroScrolling/HomeHeroScrolling';
+import HomeLocationOne from '../../components/HomeLocationOne/HomeLocationOne';
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <HomeHeroImages />
 
       <HomeHeroScrolling />
+      <HomeLocationOne />
     </div>
   )
 }
