@@ -13,6 +13,7 @@
     transition: transform 0.3s ease-in-out;
     display: flex;
     flex-direction: column;
+    z-index: 999999;
 }
 
 .appContainer--menuOpen {

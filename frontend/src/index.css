@@ -1,3 +1,6 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+
+
 @font-face {
   font-family: 'Chinese Shanghai';
   src: url('./assets/fonts/ChineseShangaiDemoVersionRegular-p7Eyy.ttf') format('truetype'),
@@ -76,3 +79,12 @@ body {
   background: radial-gradient(circle, #ffffff 0%, #00ff00 50%, #1a5319 100%);
 }
  */
+.nunito-sans-regular {
+  font-family: "Nunito Sans", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100,
+    "YTLC" 500;
+}
