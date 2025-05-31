@@ -58,14 +58,18 @@ const HomeLocationOne = () => {
 
                                     <div className="homeLocationOneContainerDivRightContainerBottomContainerOneBtn">
                                         <p className="homeLocationOneContainerDivRightContainerBottomContainerOneBtnText">
-                                            Start
+                                            Visit Us
                                         </p>
                                     </div>
-                                    
+
                                 </div>
 
 
-                                {/* <div className="homeLocationOneContainerDivRightContainerBottomContainerTwo"></div> */}
+                                <div className="homeLocationOneContainerDivRightContainerBottomContainerTwo">
+                                    <button className="homeLocationOneContainerDivRightContainerBottomContainerTwoButton">
+                                        Instagram
+                                    </button>
+                                </div>
                                 
                             </div>
                         </div>
