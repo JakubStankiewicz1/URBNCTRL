@@ -5,6 +5,7 @@
     background-color: #000000;
     /* padding-top: 5px; */
     /* padding-bottom: 5px; */
+    padding-bottom: 10px;
 }
 
 .fotterContainer {
@@ -88,3 +89,185 @@
     position: relative;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fotterContainerDivMiddle {
+    width: 98%;
+
+    margin-left: auto;
+margin-right: auto;
+    height: 100%;
+
+    margin-top: 50px;
+    /* margin-left: 20px; */
+}
+
+
+.fotterContainerDivMiddleContainer {
+    width: 80%;
+    margin-right: auto;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+.fotterContainerDivMiddleContainerLeftContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 180px;
+}
+
+.fotterContainerDivMiddleContainerLeftContainerOneContainerText {
+    color: gray;
+}
+
+.fotterContainerDivMiddleContainerLeftContainerTwoContainerDiv {
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    /* gap: 440px; */
+    width: 500px;
+    border-bottom: 1px solid gray;
+    /* background-color: yellow; */
+    justify-content: space-between;
+    height: 60px;
+}
+
+.fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOne {
+    width: 100%;
+}
+
+.fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput {
+    border: none;
+    background-color: transparent;
+    width: 100%;
+    height: 100%;
+    color: white;
+    font-size: 24px;
+    padding-left: 15px;
+}
+
+.fotterContainerDivMiddleContainerLeftContainerTwoContainerDivTwo {
+    /* background-color: red; */
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    width: 100px;
+}
+
+.fotterContainerDivMiddleContainerLeftContainerTwoContainerDivTwoText {
+    color: gray;
+    font-size: 18px;
+    font-weight: 500;
+    
+}
+
+.fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput::placeholder {
+    font-size: 24px;
+    color: gray;
+}
+
+.fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput:focus {
+    border: none;
+    outline: none;
+}
+
+.fotterContainerDivMiddleContainerRightContainerOneContainerText {
+    color: gray;
+}
+
+.fotterContainerDivMiddleContainerRightContainerTwo {
+    margin-top: 50px;
+}
+
+.fotterContainerDivMiddleContainerRightContainerTwoContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainerText {
+    color: white;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.fotterContainerDivInfo {
+    width: 100%;
+    height: 100%;
+    /* background-color: red; */
+    margin-top: 50px;
+}
+
+.fotterContainerDivInfoContainer {
+    width: 80%;
+    /* margin-left: auto; */
+margin-right: auto;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    /* background-color: blue; */
+
+    gap: 160px;
+}
+
+.fotterContainerDivInfoContainerLeft {
+    width: 100%;
+    height: 100%;
+    /* background-color: yellow; */
+}
+
+.fotterContainerDivInfoContainerLeftContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+
+.fotterContainerDivInfoContainerLeftContainerElementContainerOneContainerText,
+.fotterContainerDivInfoContainerRightContainerOneContainerText {
+    color: gray;
+    font-size: 18px;
+}
+
+.fotterContainerDivInfoContainerLeftContainerElementContainerTwoOneText,
+.fotterContainerDivInfoContainerLeftContainerElementContainerTwoTwoText,
+.fotterContainerDivInfoContainerRightContainerTwoContainerElementContainerText {
+    color: white;
+    font-size: 16px
+}
