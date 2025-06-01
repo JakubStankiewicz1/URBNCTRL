@@ -1,0 +1,367 @@
+.homeCollection {
+    width: 100%;
+    height: 100%;
+
+    background-color: #49C104;
+    
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.homeCollectionContainer {
+    width: 87%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.homeCollectionContainerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.homeCollectionContainerDivTop {
+    width: 100%;
+    height: 100%;
+}
+
+.homeCollectionContainerDivTopContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    gap: 20px;
+}
+
+.homeCollectionContainerDivTopContainerTop {
+    width: 100%;
+    height: 100%;
+}
+
+.homeCollectionContainerDivTopContainerTopHr {
+    width: 100%;
+    height: 100%;
+}
+
+.homeCollectionContainerDivTopContainerTopHrDiv {
+    width: 100%;
+    height: 2px;
+    background-color: #000000;
+}
+
+.homeCollectionContainerDivTopContainerBottom {
+    width: 100%;
+    height: 100%;
+}
+
+.homeCollectionContainerDivTopContainerBottomContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between
+}
+
+.homeCollectionContainerDivTopContainerBottomContainerLeftContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 20px;
+}
+
+.homeCollectionContainerDivTopContainerBottomContainerLeftContainerOneText {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 800;
+    line-height: 19px;
+    text-transform: uppercase;
+}
+
+.homeCollectionContainerDivTopContainerBottomContainerLeftContainerTwoText {
+    color: #000000;
+    font-size: 32px;
+    font-weight: 800;
+    line-height: 32px;
+    text-transform: uppercase;
+}
+
+.homeCollectionContainerDivTopContainerBottomContainerRightContainerDiv {
+    position: relative;
+    display: flex;
+    /* align-items: center; */
+    gap: 7px;
+    cursor: pointer;
+    /* justify-content: center; */
+    overflow: hidden;
+    /* padding: 10px 0; */
+    width: 250px;
+    height: 34px;
+    /* background-color: red; */
+}
+
+.homeCollectionContainerDivTopContainerBottomContainerRightContainerDivText {
+    /* color: #000000; */
+    /* font-size: 16px; */
+    /* font-weight: 800; */
+    /* line-height: 30px; */
+    /* text-transform: uppercase; */
+    /* position: relative; */
+    /* display: inline-block; */
+    transition: all 0.4s ease;
+
+    /* background-color: yellow; */
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeCollectionContainerDivTopContainerBottomContainerRightContainerDivTextPart1,
+.homeCollectionContainerDivTopContainerBottomContainerRightContainerDivTextPart2 {
+    transition: transform 0.4s ease;
+    display: inline-block;
+    margin-right: 5px;
+
+    color: black;
+    width: 100%;
+    height: 100%;
+}
+
+.homeCollectionContainerDivTopContainerBottomContainerRightContainerDivTextPart2 {
+    margin-right: 0;
+        width: 100%;
+    height: 100%;
+}
+
+.homeCollectionContainerDivTopContainerBottomContainerRightContainerDivArrow {
+    font-size: 18px;
+    font-weight: bold;
+    color: #000000;
+    transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+    position: relative;
+    z-index: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Split text animation styles */
+.split-text-container {
+    /* display: flex; */
+    /* align-items: center; */
+    /* height: 19px; */
+    /* position: relative; */
+    /* z-index: 2; */
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    margin-top: 15px;
+        width: 100%;
+    height: 100%;
+}
+
+.split-letter-container {
+    /* position: relative;
+    height: 19px;
+    width: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center; */
+    
+}
+
+.split-space {
+    width: 8px;
+    display: inline-block;
+}
+
+.split-letter {
+    position: relative;
+    height: 32px; /* 2x font-size for perfect split */
+    width: 22px;
+    display: block;
+}
+
+.letter-top, .letter-bottom {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    color: #000000;
+    font-size: 16px;
+    font-weight: 800;
+    text-transform: uppercase;
+    line-height: 16px;
+    transition: transform 0.4s cubic-bezier(.77,0,.18,1);
+    text-align: center;
+    pointer-events: none;
+    height: 16px; /* połowa split-letter */
+    overflow: hidden;
+    /* clip-path: none; */
+}
+
+.letter-top {
+    clip-path: inset(0 0 50% 0);
+}
+
+.letter-bottom {
+    clip-path: inset(50% 0 0 0);
+}
+
+/* Hover Effects */
+.homeCollectionContainerDivTopContainerBottomContainerRightContainerDiv:hover .letter-top {
+    transform: translateY(-8px);
+}
+
+.homeCollectionContainerDivTopContainerBottomContainerRightContainerDiv:hover .letter-bottom {
+    transform: translateY(8px);
+}
+
+/* Dodaj opóźnienie powrotu clip-path, aby po zabraniu kursora połówki liter były widoczne do końca animacji */
+.letter-top, .letter-bottom {
+    transition-delay: 0s, 0.4s;
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.homeCollectionContainerDivTopContainerBottomContainerRightContainerDiv:hover .homeCollectionContainerDivTopContainerBottomContainerRightContainerDivArrow {
+    transform: translateX(220px);
+    z-index: 10;
+}
+
+
+
+
+
+
+.homeCollectionContainerDivBottom {
+    width: 100%;
+    height: 100%;
+
+    margin-top: 50px;
+
+    /* background-color: red; */
+}
+
+.homeCollectionContainerDivBottomContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: red; */
+    gap: 40px;
+}
+
+.homeCollectionContainerDivBottomContainerElement {
+    width: 100%;
+    height: 100%;
+
+    /* background-color: red; */
+}
+
+.homeCollectionContainerDivBottomContainerElementContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+}
+
+.homeCollectionContainerDivBottomContainerElementContainerTop {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeCollectionContainerDivBottomContainerElementContainerTopContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeCollectionContainerDivBottomContainerElementContainerTopContainerDivContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeCollectionContainerDivBottomContainerElementContainerTopContainerDivContainerImage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeCollectionContainerDivBottomContainerElementContainerTopContainerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeCollectionContainerDivBottomContainerElementContainerTopContainerDivImage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.homeCollectionContainerDivBottomContainerElementContainerBottomContainerButton {
+    background-color: #000000;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border: 1px solid #000000;
+}
+
+.homeCollectionContainerDivBottomContainerElementContainerBottomContainerButtonContainerText {
+    font-size: 12px;
+    font-weight: 900;
+    line-height: 13px;
+    text-transform: uppercase;
+    color: #ffffff;
+    letter-spacing: 1.4px;
+    transition: all 0.3s ease-in-out;
+}
+
+.homeCollectionContainerDivBottomContainerElementContainerBottomContainerButton:hover {
+    background-color: #ffffff;
+    border: 1px solid #000000;
+}
+
+
+.homeCollectionContainerDivBottomContainerElementContainerBottomContainerButton:hover .homeCollectionContainerDivBottomContainerElementContainerBottomContainerButtonContainerText {
+    color: #000000;
+}

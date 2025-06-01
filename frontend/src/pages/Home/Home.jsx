@@ -4,6 +4,8 @@ import HomeHero from '../../components/HomeHero/HomeHero';
 import HomeHeroImages from '../../components/HomeHeroImages/HomeHeroImages';
 import HomeHeroScrolling from '../../components/HomeHeroScrolling/HomeHeroScrolling';
 import HomeLocationOne from '../../components/HomeLocationOne/HomeLocationOne';
+import HomeImages from '../../components/HomeImages/HomeImages';
+import HomeCollection from '../../components/HomeCollection/HomeCollection';
 
 const Home = () => {
   return (
@@ -24,6 +26,9 @@ const Home = () => {
 
       <HomeHeroScrolling />
       <HomeLocationOne />
+      <HomeImages />
+
+      <HomeCollection />
     </div>
   )
 }

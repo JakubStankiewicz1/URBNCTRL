@@ -1,0 +1,58 @@
+.homeImages {
+    width: 100%;
+    height: 100%;
+
+
+    background-color: #000000;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.homeImagesContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.homeImagesScroll {
+    width: 100%;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    cursor: grab;
+}
+
+.homeImagesScroll:active,
+.homeImagesScroll.dragging {
+    cursor: grabbing;
+}
+
+.homeImagesScroll::-webkit-scrollbar {
+    display: none;
+}
+
+.homeImagesContainerDiv {
+    width: max-content;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+
+.homeImagesContainerDivElement {
+    min-width: 870px;
+    height: 490px;
+    background-color: red;
+    flex: 0 0 auto;
+}
+
+.homeImagesContainerDivElementGreen {
+    min-width: 395px;
+    height: 490px;
+    background-color: #19d819;
+    flex: 0 0 auto;
+}
