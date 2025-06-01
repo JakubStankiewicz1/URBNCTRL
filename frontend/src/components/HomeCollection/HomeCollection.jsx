@@ -6,6 +6,9 @@ import assets from '../../assets/assets';
 const HomeCollection = () => {
   return (
     <div className='homeCollection'>
+        <div className="homeCollection-bgblob3"></div>
+        <div className="homeCollection-bgblob4"></div>
+        <div className="homeCollection-bgblob5"></div>
         <div className="homeCollectionContainer">
             <div className="homeCollectionContainerDiv">
 

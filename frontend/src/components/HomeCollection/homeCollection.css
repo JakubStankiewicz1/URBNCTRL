@@ -4,8 +4,148 @@
 
     background-color: #49C104;
     
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+
+    position: relative;
+    overflow: hidden;
+}
+
+/* Rozmyte czarne plamy w tle */
+.homeCollection::before,
+.homeCollection::after,
+.homeCollection::backdrop {
+    content: '';
+    position: absolute;
+    z-index: 0;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(40px);
+    opacity: 0.32;
+    background: #000;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.homeCollection::before {
+    width: 600px;
+    height: 400px;
+    top: 0;
+    left: 0;
+    animation-name: moveBlob1;
+    animation-duration: 24s;
+}
+
+.homeCollection::after {
+    width: 500px;
+    height: 500px;
+    top: 0;
+    right: 0;
+    animation-name: moveBlob2;
+    animation-duration: 28s;
+}
+
+/* Trzeci element - użyj dodatkowego div-a w JSX */
+.homeCollection .homeCollection-bgblob3 {
+    content: '';
+    position: absolute;
+    width: 700px;
+    height: 350px;
+    left: 50%;
+    top: 100%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    filter: blur(53px);
+    opacity: 0.40;
+    background: #000;
+    z-index: 0;
+    pointer-events: none;
+    animation: moveBlob3 32s linear infinite;
+}
+
+/* Czwarta kula */
+.homeCollection .homeCollection-bgblob4 {
+    content: '';
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    left: 80%;
+    top: 30%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    filter: blur(50px);
+    opacity: 0.2;
+    background: #000;
+    z-index: 0;
+    pointer-events: none;
+    animation: moveBlob4 36s linear infinite;
+}
+
+/* Piąta kula */
+.homeCollection .homeCollection-bgblob5 {
+    content: '';
+    position: absolute;
+    width: 300px;
+    height: 600px;
+    left: 10%;
+    top: 80%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.20;
+    background: #000;
+    z-index: 0;
+    pointer-events: none;
+    animation: moveBlob5 40s linear infinite;
+}
+
+@keyframes moveBlob1 {
+    0%   { transform: translate(0, 0) scale(1.1) rotate(0deg);}
+    20%  { transform: translate(60vw, 10vh) scale(1.2) rotate(20deg);}
+    40%  { transform: translate(40vw, 60vh) scale(1.1) rotate(40deg);}
+    60%  { transform: translate(0vw, 80vh) scale(1.2) rotate(60deg);}
+    80%  { transform: translate(-20vw, 40vh) scale(1.1) rotate(20deg);}
+    100% { transform: translate(0, 0) scale(1.1) rotate(0deg);}
+}
+
+@keyframes moveBlob2 {
+    0%   { transform: translate(0, 0) scale(1) rotate(0deg);}
+    25%  { transform: translate(-50vw, 20vh) scale(1.15) rotate(-15deg);}
+    50%  { transform: translate(-30vw, 70vh) scale(1.05) rotate(-30deg);}
+    75%  { transform: translate(10vw, 60vh) scale(1.1) rotate(-10deg);}
+    100% { transform: translate(0, 0) scale(1) rotate(0deg);}
+}
+
+@keyframes moveBlob3 {
+    0%   { transform: translate(-50%, -50%) scale(1) rotate(0deg);}
+    20%  { transform: translate(30vw, -80vh) scale(1.2) rotate(15deg);}
+    40%  { transform: translate(-40vw, -30vh) scale(1.1) rotate(-10deg);}
+    60%  { transform: translate(10vw, 30vh) scale(1.15) rotate(20deg);}
+    80%  { transform: translate(-30vw, 60vh) scale(1.05) rotate(-10deg);}
+    100% { transform: translate(-50%, -50%) scale(1) rotate(0deg);}
+}
+
+@keyframes moveBlob4 {
+    0%   { transform: translate(-50%, -50%) scale(1) rotate(0deg);}
+    20%  { transform: translate(-10vw, 20vh) scale(1.15) rotate(10deg);}
+    40%  { transform: translate(-30vw, 60vh) scale(1.05) rotate(30deg);}
+    60%  { transform: translate(20vw, 50vh) scale(1.2) rotate(60deg);}
+    80%  { transform: translate(10vw, -20vh) scale(1.1) rotate(20deg);}
+    100% { transform: translate(-50%, -50%) scale(1) rotate(0deg);}
+}
+
+@keyframes moveBlob5 {
+    0%   { transform: translate(-50%, -50%) scale(1) rotate(0deg);}
+    25%  { transform: translate(30vw, -10vh) scale(1.1) rotate(-10deg);}
+    50%  { transform: translate(-20vw, -40vh) scale(1.2) rotate(20deg);}
+    75%  { transform: translate(10vw, 30vh) scale(1.05) rotate(-20deg);}
+    100% { transform: translate(-50%, -50%) scale(1) rotate(0deg);}
+}
+
+/* Upewnij się, że reszta kontentu jest nad tłem */
+.homeCollection > * {
+    position: relative;
+    z-index: 1;
 }
 
 .homeCollectionContainer {
