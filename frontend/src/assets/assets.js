@@ -16,6 +16,10 @@ import HomeCollectionTwo from "./HomeCollectionTwo.webp";
 import HomeCollectionThree from "./HomeCollectionThree.webp";
 import HomeCollectionFour from "./HomeCollectionFour.webp";
 
+
+import HomeTrendingFeaturesOne from "./HomeTrendingFeaturesOne.jpg";
+
+
 // Export font paths
 export const fonts = {
   chineseShanghai: {
@@ -41,5 +45,6 @@ export default {
   HomeCollectionOne,
   HomeCollectionTwo,
   HomeCollectionThree,
-  HomeCollectionFour
+  HomeCollectionFour,
+  HomeTrendingFeaturesOne
 }

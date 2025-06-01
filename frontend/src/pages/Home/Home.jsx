@@ -7,6 +7,7 @@ import HomeLocationOne from '../../components/HomeLocationOne/HomeLocationOne';
 import HomeImages from '../../components/HomeImages/HomeImages';
 import HomeCollection from '../../components/HomeCollection/HomeCollection';
 import Fotter from '../../components/Fotter/Fotter';
+import HomeTrendingFeatures from '../../components/HomeTrendingFeatures/HomeTrendingFeatures';
 
 const Home = () => {
   return (
@@ -29,7 +30,11 @@ const Home = () => {
       <HomeLocationOne />
       <HomeImages />
 
+      <HomeTrendingFeatures />
+
       <HomeCollection />
+
+      
 
       <Fotter />
     </div>
