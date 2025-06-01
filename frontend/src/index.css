@@ -37,48 +37,6 @@ body {
   overflow-x: hidden;
 }
 
-/* .custom-cursor {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 12px;
-  height: 12px;
-  background: radial-gradient(circle, #00ff00 0%, #1a5319 70%, transparent 100%);
-  border-radius: 50%;
-  pointer-events: none;
-  z-index: 19999;
-  mix-blend-mode: difference;
-  transform: translate(-50%, -50%);
-  transition: width 0.03s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              height 0.03s cubic-bezier(0.25, 0.46, 0.45, 0.94), 
-              background 0.03s ease, 
-              box-shadow 0.03s ease;
-  will-change: transform, width, height;
-  backface-visibility: hidden;
-  perspective: 1000px;
-  transform-style: preserve-3d;
-  box-shadow: 
-    0 0 10px rgba(0, 255, 0, 0.5),
-    0 0 20px rgba(0, 255, 0, 0.3),
-    0 0 30px rgba(0, 255, 0, 0.1);
-}
-
-.custom-cursor.hover {
-  width: 20px;
-  height: 20px;
-  background: radial-gradient(circle, #00ff00 0%, #1a5319 50%, transparent 80%);
-  box-shadow: 
-    0 0 15px rgba(0, 255, 0, 0.7),
-    0 0 30px rgba(0, 255, 0, 0.5),
-    0 0 45px rgba(0, 255, 0, 0.3);
-}
-
-.custom-cursor.click {
-  width: 8px;
-  height: 8px;
-  background: radial-gradient(circle, #ffffff 0%, #00ff00 50%, #1a5319 100%);
-}
- */
 .nunito-sans-regular {
   font-family: "Nunito Sans", sans-serif;
   font-optical-sizing: auto;
