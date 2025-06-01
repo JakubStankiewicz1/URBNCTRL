@@ -6,6 +6,7 @@ import HomeHeroScrolling from '../../components/HomeHeroScrolling/HomeHeroScroll
 import HomeLocationOne from '../../components/HomeLocationOne/HomeLocationOne';
 import HomeImages from '../../components/HomeImages/HomeImages';
 import HomeCollection from '../../components/HomeCollection/HomeCollection';
+import Fotter from '../../components/Fotter/Fotter';
 
 const Home = () => {
   return (
@@ -29,6 +30,8 @@ const Home = () => {
       <HomeImages />
 
       <HomeCollection />
+
+      <Fotter />
     </div>
   )
 }
