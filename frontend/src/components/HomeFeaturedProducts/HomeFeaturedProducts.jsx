@@ -2,6 +2,7 @@ import React from 'react';
 import "./homeFeaturedProducts.css";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
+import ProductElement from '../ProductElement/ProductElement';
 
 
 const HomeFeaturedProducts = () => {
@@ -67,8 +68,26 @@ const HomeFeaturedProducts = () => {
                     </div>
                 </div>
 
+
+
+                
+                
+                
                 {/* Middle Part */}
-                <div className="homeFeaturedProductsContainerDivMiddle"></div>
+                <div className="homeFeaturedProductsContainerDivMiddle">
+                    <div className="homeFeaturedProductsContainerDivMiddleContainer">
+                        <div className="homeFeaturedProductsContainerDivMiddleContainerDiv">
+
+                            <ProductElement />
+
+                        </div>
+                    </div>
+                </div>
+
+
+
+
+
 
                 {/* Bottom Part */}
                 <div className="homeFeaturedProductsContainerDivBottom"></div>

@@ -121,7 +121,11 @@
     border-radius: 50%;
     position: relative;
     overflow: visible;
-    transition: border-color 0.3s;
+    cursor: pointer;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    background: rgba(255, 255, 255, 0.1);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
 }
 
 .homeFeaturedProductsContainerDivTopContainerRight::after,
@@ -200,4 +204,10 @@
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+
+
+.homeFeaturedProductsContainerDivMiddle {
+    margin-top: 50px;
 }

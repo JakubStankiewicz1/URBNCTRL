@@ -1,0 +1,62 @@
+[
+    {
+        "id": 1,
+        "name": "Product 1",
+        "description": "Description for Product 1",
+        "price": 29.99,
+        "images": [
+            "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
+            "https://image.pngaaa.com/607/3340607-middle.png"
+        ]
+    },
+    {
+        "id": 2,
+        "name": "Product 2",
+        "description": "Description for Product 2",
+        "price": 49.99,
+        "images": [
+            "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
+            "https://image.pngaaa.com/607/3340607-middle.png"
+        ]
+    },
+    {
+        "id": 3,
+        "name": "Product 3",
+        "description": "Description for Product 3",
+        "price": 19.99,
+        "images": [
+            "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
+            "https://image.pngaaa.com/607/3340607-middle.png"
+        ]
+    },
+    {
+        "id": 4,
+        "name": "Product 4",
+        "description": "Description for Product 4",
+        "price": 39.99,
+        "images": [
+            "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
+            "https://image.pngaaa.com/607/3340607-middle.png"
+        ]
+    },
+    {
+        "id": 5,
+        "name": "Product 5",
+        "description": "Description for Product 5",
+        "price": 59.99,
+        "images": [
+            "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
+            "https://image.pngaaa.com/607/3340607-middle.png"
+        ]
+    },
+    {
+        "id": 6,
+        "name": "Product 6",
+        "description": "Description for Product 6",
+        "price": 24.99,
+        "images": [
+            "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
+            "https://image.pngaaa.com/607/3340607-middle.png"
+        ]
+    }
+]
