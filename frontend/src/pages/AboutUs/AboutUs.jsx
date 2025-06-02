@@ -3,6 +3,7 @@ import "./aboutUs.css";
 import AboutUsHero from '../../components/AboutUsHero/AboutUsHero';
 import AboutUsInfo from '../../components/AboutUsInfo/AboutUsInfo';
 import AboutUsInfoScroll from '../../components/AboutUsInfoScroll/AboutUsInfoScroll';
+import AboutUsInfoTwo from '../../components/AboutUsInfoTwo/AboutUsInfoTwo';
 
 const AboutUs = () => {
   return (
@@ -10,6 +11,7 @@ const AboutUs = () => {
         <AboutUsHero />
         <AboutUsInfo />
         <AboutUsInfoScroll />
+        <AboutUsInfoTwo />
     </div>
   )
 }

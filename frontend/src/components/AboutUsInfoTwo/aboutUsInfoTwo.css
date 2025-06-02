@@ -1,0 +1,118 @@
+.aboutUsInfoTwo {
+    width: 100%;
+    height: 100%;
+
+    background-color: #000000;
+
+    padding-top: 240px;
+    padding-bottom: 70px;
+}
+
+.aboutUsInfoTwoContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.aboutUsInfoTwoContainerDiv {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+}
+
+
+
+
+.aboutUsInfoTwoContainerDivLeft,
+.aboutUsInfoTwoContainerDivRight {
+    display: flex;
+    flex: 1;
+}
+
+
+.aboutUsInfoTwoContainerDivLeftContainer {
+    /* width: 0%; */
+    margin-left: auto;
+    margin-right: 50px;
+    /* background-color: lightcoral; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 35px;
+}
+
+.aboutUsInfoTwoContainerDivLeftContainerOneContainerText {
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+
+.aboutUsInfoTwoContainerDivLeftContainerTwoContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.aboutUsInfoTwoContainerDivLeftContainerTwoContainerText {
+    color: #F2F2F2;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 23px;
+}
+
+
+
+
+.aboutUsInfoTwoContainerDivRight {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+}
+
+.aboutUsInfoTwoContainerDivRightContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    /* gap: 20px; */
+}
+
+
+.aboutUsInfoTwoContainerDivRightContainerOne {
+    width: 600px;
+    height: 820px;
+
+    background-color: blue;
+
+    /* left bottom radius */
+    border-bottom-right-radius: 7px;
+    border-top-right-radius: 7px;
+
+    position: relative;
+}
+
+.aboutUsInfoTwoContainerDivRightContainerTwo {
+    width: 400px;
+    height: 560px;
+
+    background-color: red;
+
+    border-radius: 5px;
+
+    position: absolute;
+    transform: translateX(66%) translateY(-35%);
+}
