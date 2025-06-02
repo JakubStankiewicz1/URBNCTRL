@@ -1,0 +1,60 @@
+.communityHeader {
+  width: 100%;
+  height: 100%;
+
+  background-color: #000000;
+  padding-top: 120px;
+  padding-bottom: 135px;
+}
+
+.communityHeaderContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.communityHeaderContainerDiv {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.communityHeaderContainerDivTopContainerText {
+  color: #ffffff;
+  font-size: 45px;
+  font-weight: 800;
+  line-height: 55px;
+  text-transform: uppercase;
+  letter-spacing: -3px;
+}
+
+.communityHeaderContainerDivBottom {
+  margin-top: 35px;
+}
+
+.communityHeaderContainerDivBottomContainer {
+  width: 60%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.communityHeaderContainerDivBottomContainerText {
+  color: #ffffff;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 23px;
+  text-align: center;
+}
+
+.communityHeaderContainerDivMiddle {
+  margin-top: 15px;
+}
+
+.communityHeaderContainerDivMiddleContainerDiv {
+  width: 120px;
+  height: 3px;
+  background-color: #da2228;
+}

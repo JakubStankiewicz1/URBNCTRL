@@ -8,6 +8,7 @@ import MenuOverlay from './components/Navbar/MenuOverlay';
 import HamburgerMenuOpen from './components/HamburgerMenuOpen/HamburgerMenuOpen';
 import { ProductProvider } from './context/ProductContext';
 import AboutUs from './pages/AboutUs/AboutUs';
+import Community from './pages/Community/Community';
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -22,6 +23,7 @@ const App = () => {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
+            <Route path="/community" element={<Community />} />
           </Routes>
         </div>
       </div>
