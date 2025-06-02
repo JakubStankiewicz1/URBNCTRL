@@ -1,5 +1,6 @@
 import React from "react";
 import "./navbar.css";
+import { NavLink } from "react-router-dom";
 
 const MenuOverlay = ({ onClose }) => {
   return (
@@ -14,7 +15,7 @@ const MenuOverlay = ({ onClose }) => {
             <li><b>SHOP</b></li>
             <li><b>FEATURES</b></li>
             <li><b>SUBMISSIONS</b></li>
-            <li><b>ABOUT</b></li>
+            <li><NavLink to="/about">ABOUT</NavLink></li>
             <li><b>CONTACT</b></li>
             <li><b>AGENCY</b></li>
           </ul>

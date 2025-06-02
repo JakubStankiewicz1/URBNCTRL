@@ -7,6 +7,7 @@ import Navbar from './components/Navbar/Navbar';
 import MenuOverlay from './components/Navbar/MenuOverlay';
 import HamburgerMenuOpen from './components/HamburgerMenuOpen/HamburgerMenuOpen';
 import { ProductProvider } from './context/ProductContext';
+import AboutUs from './pages/AboutUs/AboutUs';
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -20,6 +21,7 @@ const App = () => {
           {/* <CustomCursor /> */}
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/about" element={<AboutUs />} />
           </Routes>
         </div>
       </div>
