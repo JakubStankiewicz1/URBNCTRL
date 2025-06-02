@@ -34,12 +34,11 @@ const HomeFeaturedProducts = () => {
         behavior: smooth ? 'smooth' : 'auto'
       });
     }
-  };
-  const handlePrevious = () => {
+  };  const handlePrevious = () => {
     if (products.length === 0 || !containerRef.current) return;
     
     const currentScroll = containerRef.current.scrollLeft;
-    const newPosition = currentScroll - productWidth;
+    const newPosition = currentScroll - productWidth; // Strzałka w lewo = przewiń w lewo (zmniejsz scrollLeft)
     scrollToPosition(newPosition);
   };
 
@@ -47,7 +46,7 @@ const HomeFeaturedProducts = () => {
     if (products.length === 0 || !containerRef.current) return;
     
     const currentScroll = containerRef.current.scrollLeft;
-    const newPosition = currentScroll + productWidth;
+    const newPosition = currentScroll + productWidth; // Strzałka w prawo = przewiń w prawo (zwiększ scrollLeft)
     scrollToPosition(newPosition);
   };
 
