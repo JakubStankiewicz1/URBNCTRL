@@ -6,7 +6,7 @@
         "price": 29.99,
         "images": [
             "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
-            "https://image.pngaaa.com/607/3340607-middle.png"
+            "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png"
         ]
     },
     {
@@ -16,7 +16,7 @@
         "price": 49.99,
         "images": [
             "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
-            "https://image.pngaaa.com/607/3340607-middle.png"
+            "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png"
         ]
     },
     {
@@ -26,7 +26,7 @@
         "price": 19.99,
         "images": [
             "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
-            "https://image.pngaaa.com/607/3340607-middle.png"
+            "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png"
         ]
     },
     {
@@ -36,7 +36,7 @@
         "price": 39.99,
         "images": [
             "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
-            "https://image.pngaaa.com/607/3340607-middle.png"
+            "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png"
         ]
     },
     {
@@ -46,7 +46,7 @@
         "price": 59.99,
         "images": [
             "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TQVE7-1083/up/1.png",
-            "https://image.pngaaa.com/607/3340607-middle.png"
+            "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png"
         ]
     },
     {
@@ -56,7 +56,47 @@
         "price": 24.99,
         "images": [
             "https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-signature-chunky-stripes-hoodie--FOKM01U39644_PM2_Front%20view.jpg",
-            "https://image.pngaaa.com/607/3340607-middle.png"
+            "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png"
+        ]
+    },
+    {
+        "id": 7,
+        "name": "Product 7",
+        "description": "Description for Product 7",
+        "price": 34.99,
+        "images": [
+            "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+            "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png"
+        ]
+    },
+    {
+        "id": 8,
+        "name": "Product 8",
+        "description": "Description for Product 8",
+        "price": 44.99,
+        "images": [
+            "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+            "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png"
+        ]
+    },
+    {
+        "id": 9,
+        "name": "Product 9",
+        "description": "Description for Product 9",
+        "price": 54.99,
+        "images": [
+            "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+            "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png"
+        ]
+    },
+    {
+        "id": 10,
+        "name": "Product 10",
+        "description": "Description for Product 10",
+        "price": 64.99,
+        "images": [
+            "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+            "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png"
         ]
     }
 ]

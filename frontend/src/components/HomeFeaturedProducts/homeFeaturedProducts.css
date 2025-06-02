@@ -5,7 +5,7 @@
     background-color: #ffffff;
 
     padding-top: 100px;
-    padding-bottom: 100px;
+    /* padding-bottom: 100px; */
 }
 
 .homeFeaturedProductsContainer {
@@ -210,31 +210,38 @@
 
 .homeFeaturedProductsContainerDivMiddle {
     margin-top: 50px;
-    width: 87%;
+    width: 100%;
     margin-left: auto;
     margin-right: auto;
+    height: auto;
 }
 
 .homeFeaturedProductsContainerDivMiddleContainer {
     width: 100%;
+    height: auto;
     overflow: hidden;
-    position: relative;
 }
 
 .homeFeaturedProductsContainerDivMiddleContainerDiv {
     display: flex;
     gap: 20px;
     overflow-x: auto;
+    overflow-y: hidden; /* Dodane - blokuje scrollowanie w osi Y */
     scroll-behavior: smooth;
     -ms-overflow-style: none;
-    scrollbar-width: none;
-    padding: 10px 0;
+    scrollbar-width: none;    padding: 10px 0;
+    width: 100%;
+    height: 490px; /* Zwiększone z 480px do 490px żeby pomieścić produkty o wysokości 460px + padding */
     cursor: grab;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
 }
+/* 
+.homeFeaturedProductsContainerDivMiddleContainerDiv::-webkit-scrollbar {
+    display: none;
+} */
 
 .homeFeaturedProductsContainerDivMiddleContainerDiv::-webkit-scrollbar {
     display: none;
@@ -259,4 +266,137 @@
     flex-shrink: 0;
     width: 290px;
     height: 445px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.homeFeaturedProductsContainerDivBottom {
+    width: 100%;
+    height: 100%;
+
+    background-color: #ffffff;
+
+    padding-top: 120px;
+    padding-bottom: 30px;
+}
+
+.homeFeaturedProductsContainerDivBottomContainer {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.homeFeaturedProductsContainerDivBottomContainerDiv {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 50px;
+    width: max-content;
+    animation: scroll-left 30s linear infinite;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* .homeHeroScrollingContainerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+    align-items: center;
+} */
+
+.homeFeaturedProductsContainerDivBottomContainerDivElement {
+    display: flex;
+    align-items: center;
+}
+
+.homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne {
+    width: 200px;
+    height: auto;
+}
+
+.homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo {
+    width: 200px;
+    height: auto;
+}
+
+.homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree {
+    width: 200px;
+    height: auto;
+}
+
+.homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour {
+    width: 200px;
+    height: auto;
+}
+
+.homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive {
+    width: 200px;
+    height: auto;
+}
+
+.homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix {
+    width: 200px;
+    height: auto;
 }

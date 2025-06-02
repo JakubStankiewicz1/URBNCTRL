@@ -4,7 +4,16 @@ import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
 import ProductElement from '../ProductElement/ProductElement';
 import { useProducts } from '../../context/ProductContext';
+import assets from '../../assets/assets';
 
+const elements = [
+    { src: assets.HomeFeaturedProductsOne, className: 'homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne' },
+    { src: assets.HomeFeaturedProductsTwo, className: 'homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo' },
+    { src: assets.HomeFeaturedProductsThree, className: 'homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree' },
+    { src: assets.HomeFeaturedProductsFour, className: 'homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour' },
+    { src: assets.HomeFeaturedProductsSix, className: 'homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive' },
+    { src: assets.HomeFeaturedProductsSeven, className: 'homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix' },
+];
 
 const HomeFeaturedProducts = () => {
   const { products, loading } = useProducts();
@@ -137,6 +146,10 @@ const HomeFeaturedProducts = () => {
 
                     </div>
                 </div>
+
+
+
+
                   {/* Middle Part */}
                 <div className="homeFeaturedProductsContainerDivMiddle">
                     <div className="homeFeaturedProductsContainerDivMiddleContainer">                        <div 
@@ -155,8 +168,33 @@ const HomeFeaturedProducts = () => {
                     </div>
                 </div>
 
+
+
                 {/* Bottom Part */}
-                <div className="homeFeaturedProductsContainerDivBottom"></div>
+                <div className="homeFeaturedProductsContainerDivBottom">
+                    <div className="homeFeaturedProductsContainerDivBottomContainer">
+                        <div className="homeFeaturedProductsContainerDivBottomContainerDiv">
+
+
+
+
+                            {[...elements, ...elements].map((el, idx) => (
+                    <div className="homeFeaturedProductsContainerDivBottomContainerDivElement" key={idx}>
+                        <div className="homeFeaturedProductsContainerDivBottomContainerDivElementContainer">
+                            <img src={el.src} alt="" className={el.className} />
+                        </div>
+                    </div>
+                ))}
+
+
+
+
+
+
+
+                        </div>
+                    </div>
+                </div>
 
             </div>
         </div>

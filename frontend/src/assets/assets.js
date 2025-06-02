@@ -20,6 +20,29 @@ import HomeCollectionFour from "./HomeCollectionFour.webp";
 import HomeTrendingFeaturesOne from "./HomeTrendingFeaturesOne.jpg";
 
 
+
+
+
+
+
+import HomeFeaturedProductsOne from "./HomeFeaturedProductsOne.webp"
+import HomeFeaturedProductsTwo from "./HomeFeaturedProductsTwo.png";
+import HomeFeaturedProductsThree from "./HomeFeaturedProductsThree.png";
+import HomeFeaturedProductsFour from "./HomeFeaturedProductsFour.png";
+import HomeFeaturedProductsFive from "./HomeFeaturedProductsFive.png";
+
+import HomeFeaturedProductsSix from "./HomeFeaturedProductsSix.jpg";
+
+import HomeFeaturedProductsSeven from "./HomeFeaturedProductsSeven.jpg";
+
+
+
+
+
+
+
+
+
 // Export font paths
 export const fonts = {
   chineseShanghai: {
@@ -46,5 +69,15 @@ export default {
   HomeCollectionTwo,
   HomeCollectionThree,
   HomeCollectionFour,
-  HomeTrendingFeaturesOne
+  HomeTrendingFeaturesOne,
+
+
+
+  HomeFeaturedProductsOne,
+  HomeFeaturedProductsTwo,
+  HomeFeaturedProductsThree,
+  HomeFeaturedProductsFour,
+  HomeFeaturedProductsFive,
+  HomeFeaturedProductsSix,
+  HomeFeaturedProductsSeven
 }
