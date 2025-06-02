@@ -4,6 +4,7 @@ import AboutUsHero from '../../components/AboutUsHero/AboutUsHero';
 import AboutUsInfo from '../../components/AboutUsInfo/AboutUsInfo';
 import AboutUsInfoScroll from '../../components/AboutUsInfoScroll/AboutUsInfoScroll';
 import AboutUsInfoTwo from '../../components/AboutUsInfoTwo/AboutUsInfoTwo';
+import AboutUsFotter from '../../components/AboutUsFotter/AboutUsFotter';
 
 const AboutUs = () => {
   return (
@@ -12,6 +13,7 @@ const AboutUs = () => {
         <AboutUsInfo />
         <AboutUsInfoScroll />
         <AboutUsInfoTwo />
+        <AboutUsFotter />
     </div>
   )
 }
