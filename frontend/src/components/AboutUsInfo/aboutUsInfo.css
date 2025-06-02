@@ -1,0 +1,44 @@
+.aboutUsInfo {
+    width: 100%;
+    height: 100%;
+}
+
+.aboutUsInfoContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.aboutUsInfoContainerDiv {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+
+
+.aboutUsInfoContainerDivLeft,
+.aboutUsInfoContainerDivRight {
+    display: flex;
+    flex: 1;
+}
+
+
+.aboutUsInfoContainerDivLeftContainerOneContainerText {
+    color: #FFFFFF;
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 48px;
+    text-transform: uppercase;
+}
+
+.aboutUsInfoContainerDivLeftContainerTwoContainerText {
+    color: #F2F2F2;
+    font-size: 17px;
+    font-weight: 300;
+    line-height: 23px;
+}
