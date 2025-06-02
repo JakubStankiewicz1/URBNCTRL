@@ -1,0 +1,129 @@
+.aboutUsHero {
+    width: 100%;
+    height: 100vh;
+
+    background-color: #000000;
+}
+
+.aboutUsHeroContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.aboutUsHeroContainerDiv {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    /* position: relative; */
+}
+
+
+.aboutUsHeroContainerDivInfo {
+    width: 390px;
+    height: 390px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Dodatkowy element dla dolnego i lewego borderu */
+.aboutUsHeroContainerDivInfoBorders {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+}
+
+/* Górny border - rysuje się z lewej do prawej */
+.aboutUsHeroContainerDivInfo::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    z-index: 1;
+    animation: drawHorizontal 0.8s ease-out 0.6s forwards;
+}
+
+/* Prawy border - rysuje się z góry do dołu */
+.aboutUsHeroContainerDivInfo::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 3px;
+    height: 0;
+    background-color: #ffffff;
+    z-index: 1;
+    animation: drawVertical 0.8s ease-out 0.6s forwards;
+}
+
+/* Dolny border - rysuje się z prawej do lewej */
+.aboutUsHeroContainerDivInfoBorders::before {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 0;
+    height: 3px;
+    background-color: #ffffff;
+    z-index: 1;
+    animation: drawHorizontal 0.8s ease-out 0.6s forwards;
+}
+
+/* Lewy border - rysuje się z dołu do góry */
+.aboutUsHeroContainerDivInfoBorders::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 3px;
+    height: 0;
+    background-color: #ffffff;
+    z-index: 1;
+    animation: drawVertical 0.8s ease-out 0.6s forwards;
+}
+
+/* Animacje */
+@keyframes drawHorizontal {
+    from {
+        width: 0;
+    }
+    to {
+        width: 100%;
+    }
+}
+
+@keyframes drawVertical {
+    from {
+        height: 0;
+    }
+    to {
+        height: 100%;
+    }
+}
+
+
+
+
+
+
+
+
+.aboutUsHeroContainerDivInfoContainerOvergroundContainerText {
+    color: #ffffff;
+}
