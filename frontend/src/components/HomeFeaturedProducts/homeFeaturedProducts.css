@@ -1,0 +1,203 @@
+.homeFeaturedProducts {
+    width: 100%;
+    height: 100%;
+
+    background-color: #ffffff;
+
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.homeFeaturedProductsContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.homeFeaturedProductsContainerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeFeaturedProductsContainerDivTop {
+    width: 87%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    /* background-color: antiquewhite; */
+}
+
+.homeFeaturedProductsContainerDivTopContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.homeFeaturedProductsContainerDivTopContainerMiddleContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.homeFeaturedProductsContainerDivTopContainerMiddleContainerOneText {
+    color: rgb(11, 23, 13);
+    font-size: 40px;
+    font-weight: 800;
+    line-height: 47px;
+    text-transform: uppercase;
+    letter-spacing: 0.3px;
+}
+
+
+
+.homeFeaturedProductsContainerDivTopContainerMiddleContainerTwo {
+    width: 100%;
+    height: 100%;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainer {
+    position: relative;
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3px;
+
+
+    /* background-color: yellow; */
+    display: inline-flex;
+    cursor: pointer;
+}
+
+.homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainerOneText {
+    font-size: 13px;
+    font-weight: 800;
+    line-height: 23px;
+    text-transform: uppercase;
+    color: rgb(0, 0, 0);
+    letter-spacing: 0.4px;
+}
+
+.homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainerTwoDiv {
+    width: 120px;
+    height: 2px;
+    background-color: red;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s cubic-bezier(0.77,0,0.175,1);
+}
+
+.homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainer:hover .homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainerTwoDiv {
+    transform: scaleX(1);
+    transform-origin: left;
+}
+
+.homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainer:not(:hover) .homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainerTwoDiv {
+    transform: scaleX(0);
+    transform-origin: right;
+}
+
+.homeFeaturedProductsContainerDivTopContainerRight,
+.homeFeaturedProductsContainerDivTopContainerLeft {
+    width: 40px;
+    height: 40px;
+    border: 2px solid #BFBFBF;
+    border-radius: 50%;
+    position: relative;
+    overflow: visible;
+    transition: border-color 0.3s;
+}
+
+.homeFeaturedProductsContainerDivTopContainerRight::after,
+.homeFeaturedProductsContainerDivTopContainerLeft::after {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid red;
+    box-sizing: border-box;
+    pointer-events: none;
+    transform: rotate(0deg) scale(1);
+    opacity: 0;
+    transition: opacity 0.2s, stroke-dashoffset 0.5s cubic-bezier(0.77,0,0.175,1);
+    z-index: 2;
+    border-color: red;
+    border-style: solid;
+    border-width: 2px;
+    border-right-color: transparent;
+    border-bottom-color: transparent;
+    border-left-color: transparent;
+}
+
+/* .homeFeaturedProductsContainerDivTopContainerRight:hover,
+.homeFeaturedProductsContainerDivTopContainerLeft:hover {
+    border-color: red;
+} */
+
+.homeFeaturedProductsContainerDivTopContainerRight:hover::after,
+.homeFeaturedProductsContainerDivTopContainerLeft:hover::after {
+    opacity: 1;
+    animation: circle-reveal 0.6s cubic-bezier(0.77,0,0.175,1) forwards;
+}
+
+@keyframes circle-reveal {
+    0% {
+        border-right-color: transparent;
+        border-bottom-color: transparent;
+        border-left-color: transparent;
+    }
+    25% {
+        border-right-color: red;
+    }
+    50% {
+        border-bottom-color: red;
+    }
+    75% {
+        border-left-color: red;
+    }
+    100% {
+        border-right-color: red;
+        border-bottom-color: red;
+        border-left-color: red;
+    }
+}
+
+.homeFeaturedProductsContainerDivTopContainerLeftContainer,
+.homeFeaturedProductsContainerDivTopContainerRightContainer,
+.homeFeaturedProductsContainerDivTopContainerRightContainerDiv,
+.homeFeaturedProductsContainerDivTopContainerLeftContainerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeFeaturedProductsContainerDivTopContainerLeftContainerDivIcon,
+.homeFeaturedProductsContainerDivTopContainerRightContainerDivIcon {
+    color: #000000;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
