@@ -1,7 +1,17 @@
 import React from 'react';
 import "./productElement.css";
+import { MdOutlineShoppingBag } from "react-icons/md";
+import { MdOutlineRemoveRedEye } from "react-icons/md";
+import { useProducts } from '../../context/ProductContext';
 
 const ProductElement = ({ id }) => {
+  const { getProductById } = useProducts();
+  const product = getProductById(id);
+
+  if (!product) {
+    return <div>Product not found</div>;
+  }
+
   return (
     <div className='productElement'>
         <div className="productElementContainer">
@@ -11,13 +21,13 @@ const ProductElement = ({ id }) => {
                     <div className="productElementContainerDivTopContainer">
                         <div className="productElementContainerDivTopContainerImageOne">
                             <div className="productElementContainerDivTopContainerImageOneContainer">
-                                <img src="https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png" alt="" className='productElementContainerDivTopContainerImageOneContainerImage' />
+                                <img src={product.images[0]} alt={product.name} className='productElementContainerDivTopContainerImageOneContainerImage' />
                             </div>
                         </div>
 
                         <div className="productElementContainerDivTopContainerImageTwo">
                             <div className="productElementContainerDivTopContainerImageTwoContainer">
-                                <img src="https://img.vitkac.com/uploads/product_thumb/BLUZA%20803265%20TRVH6-8190/up/1.png" alt="" className='productElementContainerDivTopContainerImageTwoContainerImage' />
+                                <img src={product.images[1] || product.images[0]} alt={product.name} className='productElementContainerDivTopContainerImageTwoContainerImage' />
                             </div>
                         </div>
                     </div>
@@ -28,17 +38,49 @@ const ProductElement = ({ id }) => {
                     <div className="productElementContainerDivBottomContainer">
                         <div className="productElementContainerDivBottomContainerOne">
                             <div className="productElementContainerDivBottomContainerOneContainer">
-                                <p className="productElementContainerDivBottomContainerOneContainerText">
-                                    Memory bank hoodie
+                                <p className="productElementContainerDivBottomContainerOneContainerText nunito-sans-regular">
+                                    {product.name}
                                 </p>
                             </div>
                         </div>
 
                         <div className="productElementContainerDivBottomContainerTwo">
                             <div className="productElementContainerDivBottomContainerTwoContainer">
-                                <p className="productElementContainerDivBottomContainerTwoContainerText">
-                                    $29
+                                <p className="productElementContainerDivBottomContainerTwoContainerText nunito-sans-regular">
+                                    ${product.price}
                                 </p>
+                            </div>
+                        </div>
+
+                        <div className="productElementContainerDivBottomContainerThird">
+                            <div className="productElementContainerDivBottomContainerThirdContainer">
+                                {/* Left Part */}
+                                <div className="productElementContainerDivBottomContainerThirdContainerLeft">
+                                    <div className="productElementContainerDivBottomContainerThirdContainerLeftContainer">
+                                        <div className="productElementContainerDivBottomContainerThirdContainerLeftContainerOne">
+                                            <MdOutlineShoppingBag className='productElementContainerDivBottomContainerThirdContainerLeftContainerOneIcon' />
+                                        </div>
+
+                                        <div className="productElementContainerDivBottomContainerThirdContainerLeftContainerTwo">
+                                            <p className="productElementContainerDivBottomContainerThirdContainerLeftContainerTwoText nunito-sans-regular">
+                                                Select options
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {/* Right Part */}
+                                <div className="productElementContainerDivBottomContainerThirdContainerRight">
+                                    <div className="productElementContainerDivBottomContainerThirdContainerRightContainer">
+                                        <div className="productElementContainerDivBottomContainerThirdContainerRightContainerOne">
+                                            <MdOutlineRemoveRedEye className='productElementContainerDivBottomContainerThirdContainerRightContainerOneIcon' />
+                                        </div>                                        <div className="productElementContainerDivBottomContainerThirdContainerRightContainerTwo">
+                                            <p className="productElementContainerDivBottomContainerThirdContainerRightContainerTwoText nunito-sans-regular">
+                                                Quick view
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>

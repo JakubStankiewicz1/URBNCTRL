@@ -210,4 +210,53 @@
 
 .homeFeaturedProductsContainerDivMiddle {
     margin-top: 50px;
+    width: 87%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.homeFeaturedProductsContainerDivMiddleContainer {
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.homeFeaturedProductsContainerDivMiddleContainerDiv {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+    padding: 10px 0;
+    cursor: grab;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.homeFeaturedProductsContainerDivMiddleContainerDiv::-webkit-scrollbar {
+    display: none;
+}
+
+.homeFeaturedProductsContainerDivMiddleContainerDiv:active {
+    cursor: grabbing;
+}
+
+/* Zapobieganie zaznaczaniu tekstu podczas przeciągania */
+.homeFeaturedProductsContainerDivMiddleContainerDiv * {
+    pointer-events: none;
+}
+
+.homeFeaturedProductsContainerDivMiddleContainerDiv .productElement {
+    flex-shrink: 0;
+    pointer-events: auto;
+}
+
+/* Zachowujemy oryginalny rozmiar produktów */
+.homeFeaturedProductsContainerDivMiddleContainerDiv .productElement {
+    flex-shrink: 0;
+    width: 290px;
+    height: 445px;
 }

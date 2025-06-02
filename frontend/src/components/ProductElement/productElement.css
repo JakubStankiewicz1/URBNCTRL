@@ -20,6 +20,13 @@
     align-items: center;
 
     cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.productElementContainerDiv:hover {
+    transform: scale(1.02);
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .productElementContainerDivTop {
@@ -142,18 +149,109 @@
 .productElementContainerDivBottomContainerOneContainerText {
     color: #0B170D;
     font-size: 20px;
-    font-weight: 600;
+    font-weight: 900;
     line-height: 23px;
     text-transform: uppercase;
-    letter-spacing: 0.3px;
+    letter-spacing: 0.px;
     font-style: italic;
 }
 
 .productElementContainerDivBottomContainerTwoContainerText {
     color: #0B170D;
     font-size: 18px;
-    font-weight: 600;
+    font-weight: 800;
     line-height: 23px;
     text-transform: uppercase;
     letter-spacing: 0.3px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Add styles for the two containers that should switch */
+.productElementContainerDivBottomContainerTwo {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+/* Hover effects for price and buttons switching */
+.productElement:hover .productElementContainerDivBottomContainerTwo {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.productElement:hover .productElementContainerDivBottomContainerThird {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+
+
+.productElementContainerDivBottomContainerThird {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    /* margin-top: -20px; */
+    transform: translateY(-30px);
+}
+
+.productElementContainerDivBottomContainerThirdContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.productElementContainerDivBottomContainerThirdContainerLeftContainer,
+.productElementContainerDivBottomContainerThirdContainerRightContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+}
+
+.productElementContainerDivBottomContainerThirdContainerLeftContainerOne,
+.productElementContainerDivBottomContainerThirdContainerLeftContainerTwo,
+.productElementContainerDivBottomContainerThirdContainerRightContainerOne,
+.productElementContainerDivBottomContainerThirdContainerRightContainerTwo {
+    /* width: 100%; */
+    /* height: 100%; */
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+
+    /* gap: 5px; */
+}
+
+
+.productElementContainerDivBottomContainerThirdContainerLeftContainerOneIcon,
+.productElementContainerDivBottomContainerThirdContainerRightContainerOneIcon {
+    color: red;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Text styles for the buttons */
+.productElementContainerDivBottomContainerThirdContainerLeftContainerTwoText,
+.productElementContainerDivBottomContainerThirdContainerRightContainerTwoText {
+    color: #0B170D;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    /* letter-spacing: 0.2px; */
+    margin: 0;
 }
