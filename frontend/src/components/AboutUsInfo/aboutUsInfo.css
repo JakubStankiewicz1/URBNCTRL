@@ -1,6 +1,11 @@
 .aboutUsInfo {
     width: 100%;
     height: 100%;
+
+    background-color: #000000;
+
+    padding-top: 240px;
+    padding-bottom: 100px;
 }
 
 .aboutUsInfoContainer {
@@ -27,6 +32,16 @@
     flex: 1;
 }
 
+.aboutUsInfoContainerDivLeftContainer {
+    width: 70%;
+    margin-left: 90px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 35px;
+}
 
 .aboutUsInfoContainerDivLeftContainerOneContainerText {
     color: #FFFFFF;
@@ -36,9 +51,64 @@
     text-transform: uppercase;
 }
 
+.aboutUsInfoContainerDivLeftContainerTwoContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+}
+
 .aboutUsInfoContainerDivLeftContainerTwoContainerText {
     color: #F2F2F2;
     font-size: 17px;
     font-weight: 300;
     line-height: 23px;
+}
+
+
+
+
+.aboutUsInfoContainerDivRight {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.aboutUsInfoContainerDivRightContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+    /* gap: 20px; */
+}
+
+
+.aboutUsInfoContainerDivRightContainerOne {
+    width: 600px;
+    height: 820px;
+
+    background-color: blue;
+
+    /* left bottom radius */
+    border-bottom-left-radius: 7px;
+    border-top-left-radius: 7px;
+
+    position: relative;
+}
+
+.aboutUsInfoContainerDivRightContainerTwo {
+    width: 400px;
+    height: 560px;
+
+    background-color: red;
+
+    border-radius: 5px;
+
+    position: absolute;
+    transform: translateX(-66%) translateY(-35%);
 }
