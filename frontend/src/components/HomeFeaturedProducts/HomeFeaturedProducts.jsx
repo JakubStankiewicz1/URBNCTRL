@@ -1,18 +1,18 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect } from "react";
 import "./homeFeaturedProducts.css";
 import { GoArrowLeft } from "react-icons/go";
 import { GoArrowRight } from "react-icons/go";
-import ProductElement from '../ProductElement/ProductElement';
-import { useProducts } from '../../context/ProductContext';
-import assets from '../../assets/assets';
+import ProductElement from "../ProductElement/ProductElement";
+import { useProducts } from "../../context/ProductContext";
+import assets from "../../assets/assets";
 
 const elements = [
-    { src: assets.HomeFeaturedProductsOne, className: 'homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne' },
-    { src: assets.HomeFeaturedProductsTwo, className: 'homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo' },
-    { src: assets.HomeFeaturedProductsThree, className: 'homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree' },
-    { src: assets.HomeFeaturedProductsFour, className: 'homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour' },
-    { src: assets.HomeFeaturedProductsSix, className: 'homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive' },
-    { src: assets.HomeFeaturedProductsSeven, className: 'homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix' },
+  { src: assets.HomeFeaturedProductsOne, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne" },
+  { src: assets.HomeFeaturedProductsTwo, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo" },
+  { src: assets.HomeFeaturedProductsThree, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree" },
+  { src: assets.HomeFeaturedProductsFour, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour" },
+  { src: assets.HomeFeaturedProductsSix, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive" },
+  { src: assets.HomeFeaturedProductsSeven, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix" },
 ];
 
 const HomeFeaturedProducts = () => {
@@ -31,12 +31,13 @@ const HomeFeaturedProducts = () => {
     if (containerRef.current) {
       containerRef.current.scrollTo({
         left: position,
-        behavior: smooth ? 'smooth' : 'auto'
+        behavior: smooth ? "smooth" : "auto",
       });
     }
-  };  const handlePrevious = () => {
+  };
+  const handlePrevious = () => {
     if (products.length === 0 || !containerRef.current) return;
-    
+
     const currentScroll = containerRef.current.scrollLeft;
     const newPosition = currentScroll - productWidth; // Strzałka w lewo = przewiń w lewo (zmniejsz scrollLeft)
     scrollToPosition(newPosition);
@@ -44,7 +45,7 @@ const HomeFeaturedProducts = () => {
 
   const handleNext = () => {
     if (products.length === 0 || !containerRef.current) return;
-    
+
     const currentScroll = containerRef.current.scrollLeft;
     const newPosition = currentScroll + productWidth; // Strzałka w prawo = przewiń w prawo (zwiększ scrollLeft)
     scrollToPosition(newPosition);
@@ -56,7 +57,7 @@ const HomeFeaturedProducts = () => {
     setIsDragging(true);
     setStartX(e.pageX - containerRef.current.offsetLeft);
     setScrollLeft(containerRef.current.scrollLeft);
-    containerRef.current.style.cursor = 'grabbing';
+    containerRef.current.style.cursor = "grabbing";
     e.preventDefault();
   };
   const handleMouseMove = (e) => {
@@ -70,14 +71,14 @@ const HomeFeaturedProducts = () => {
   const handleMouseUp = () => {
     setIsDragging(false);
     if (containerRef.current) {
-      containerRef.current.style.cursor = 'grab';
+      containerRef.current.style.cursor = "grab";
     }
   };
 
   const handleMouseLeave = () => {
     setIsDragging(false);
     if (containerRef.current) {
-      containerRef.current.style.cursor = 'grab';
+      containerRef.current.style.cursor = "grab";
     }
   };
   // Ustaw początkową pozycję na środku (tylko raz przy ładowaniu)
@@ -95,110 +96,98 @@ const HomeFeaturedProducts = () => {
   }
 
   return (
-    <div className='homeFeaturedProducts'>
-        <div className="homeFeaturedProductsContainer">
-            <div className="homeFeaturedProductsContainerDiv">
-
-                {/* Top Part */}
-                <div className="homeFeaturedProductsContainerDivTop">
-                    <div className="homeFeaturedProductsContainerDivTopContainer">
-
-                        <div className="homeFeaturedProductsContainerDivTopContainerLeft" onClick={handlePrevious}>
-                            <div className="homeFeaturedProductsContainerDivTopContainerLeftContainer">
-                                <div className="homeFeaturedProductsContainerDivTopContainerLeftContainerDiv">
-                                    <GoArrowLeft className='homeFeaturedProductsContainerDivTopContainerLeftContainerDivIcon' />
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="homeFeaturedProductsContainerDivTopContainerMiddle">
-                            <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainer">
-                                <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerOne">
-                                    <p className="homeFeaturedProductsContainerDivTopContainerMiddleContainerOneText nunito-sans-regular">
-                                        Featured Products
-                                    </p>
-                                </div>
-
-                                <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerTwo">
-                                    <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainer">
-                                        <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainerOne">
-                                            <p className="homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainerOneText nunito-sans-regular">
-                                                View in shop
-                                            </p>
-                                        </div>
-
-                                        <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainerTwo">
-                                            <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainerTwoDiv" />
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div className="homeFeaturedProductsContainerDivTopContainerRight" onClick={handleNext}>
-                            <div className="homeFeaturedProductsContainerDivTopContainerRightContainer">
-                                <div className="homeFeaturedProductsContainerDivTopContainerRightContainerDiv">
-                                    <GoArrowRight className='homeFeaturedProductsContainerDivTopContainerRightContainerDivIcon' />
-                                </div>
-                            </div>
-                        </div>
-
-                    </div>
+    <div className="homeFeaturedProducts">
+      <div className="homeFeaturedProductsContainer">
+        <div className="homeFeaturedProductsContainerDiv">
+          {/* Top Part */}
+          <div className="homeFeaturedProductsContainerDivTop">
+            <div className="homeFeaturedProductsContainerDivTopContainer">
+              <div className="homeFeaturedProductsContainerDivTopContainerLeft" onClick={handlePrevious}>
+                <div className="homeFeaturedProductsContainerDivTopContainerLeftContainer">
+                  <div className="homeFeaturedProductsContainerDivTopContainerLeftContainerDiv">
+                    <GoArrowLeft className="homeFeaturedProductsContainerDivTopContainerLeftContainerDivIcon" />
+                  </div>
                 </div>
+              </div>
 
+              <div className="homeFeaturedProductsContainerDivTopContainerMiddle">
+                <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainer">
+                  <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerOne">
+                    <p className="homeFeaturedProductsContainerDivTopContainerMiddleContainerOneText nunito-sans-regular">Featured Products</p>
+                  </div>
 
+                  <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerTwo">
+                    <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainer">
+                      <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainerOne">
+                        <p className="homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainerOneText nunito-sans-regular">
+                          View in shop
+                        </p>
+                      </div>
 
-
-                  {/* Middle Part */}
-                <div className="homeFeaturedProductsContainerDivMiddle">
-                    <div className="homeFeaturedProductsContainerDivMiddleContainer">                        <div 
-                            className="homeFeaturedProductsContainerDivMiddleContainerDiv" 
-                            ref={containerRef}
-                            onMouseDown={handleMouseDown}
-                            onMouseMove={handleMouseMove}
-                            onMouseUp={handleMouseUp}
-                            onMouseLeave={handleMouseLeave}
-                            style={{ cursor: isDragging ? 'grabbing' : 'grab' }}
-                        >
-                            {duplicatedProducts.map((product, index) => (
-                                <ProductElement key={`${product.id}-${index}`} id={product.id} />
-                            ))}
-                        </div>
+                      <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainerTwo">
+                        <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerTwoContainerTwoDiv" />
+                      </div>
                     </div>
+                  </div>
                 </div>
+              </div>
 
-
-
-                {/* Bottom Part */}
-                <div className="homeFeaturedProductsContainerDivBottom">
-                    <div className="homeFeaturedProductsContainerDivBottomContainer">
-                        <div className="homeFeaturedProductsContainerDivBottomContainerDiv">
-
-
-
-
-                            {[...elements, ...elements].map((el, idx) => (
-                    <div className="homeFeaturedProductsContainerDivBottomContainerDivElement" key={idx}>
-                        <div className="homeFeaturedProductsContainerDivBottomContainerDivElementContainer">
-                            <img src={el.src} alt="" className={el.className} />
-                        </div>
-                    </div>
-                ))}
-
-
-
-
-
-
-
-                        </div>
-                    </div>
+              <div className="homeFeaturedProductsContainerDivTopContainerRight" onClick={handleNext}>
+                <div className="homeFeaturedProductsContainerDivTopContainerRightContainer">
+                  <div className="homeFeaturedProductsContainerDivTopContainerRightContainerDiv">
+                    <GoArrowRight className="homeFeaturedProductsContainerDivTopContainerRightContainerDivIcon" />
+                  </div>
                 </div>
-
+              </div>
             </div>
-        </div>
-    </div>
-  )
-}
+          </div>
 
-export default HomeFeaturedProducts
+          {/* Middle Part */}
+          <div className="homeFeaturedProductsContainerDivMiddle">
+            <div className="homeFeaturedProductsContainerDivMiddleContainer">
+              {" "}
+              <div
+                className="homeFeaturedProductsContainerDivMiddleContainerDiv"
+                ref={containerRef}
+                onMouseDown={handleMouseDown}
+                onMouseMove={handleMouseMove}
+                onMouseUp={handleMouseUp}
+                onMouseLeave={handleMouseLeave}
+                style={{ cursor: isDragging ? "grabbing" : "grab" }}
+              >
+                {duplicatedProducts.map((product, index) => (
+                  <ProductElement key={`${product.id}-${index}`} id={product.id} />
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Bottom Part */}
+          <div className="homeFeaturedProductsContainerDivBottom">
+            <div className="homeFeaturedProductsContainerDivBottomContainer">
+              <div className="homeFeaturedProductsContainerDivBottomContainerDiv">
+                {[...elements, ...elements].map((el, idx) => (
+                  <div className="homeFeaturedProductsContainerDivBottomContainerDivElement" key={idx}>
+                    <div className="homeFeaturedProductsContainerDivBottomContainerDivElementContainer">
+                      <img src={el.src} alt="" className={el.className} />
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+
+
+
+
+
+
+          
+        </div>
+
+      </div>
+    </div>
+  );
+};
+
+export default HomeFeaturedProducts;
