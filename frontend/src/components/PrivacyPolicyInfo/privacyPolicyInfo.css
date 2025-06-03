@@ -1,0 +1,158 @@
+.privacyPolicyInfo {
+    width: 100%;
+    height: 100%;
+
+    background-color: #FFFFFF;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.privacyPolicyInfoContainer {
+    width: 86%;
+    margin-left: auto;
+    margin-right: auto;
+
+    height: 100%;
+}
+
+
+.privacyPolicyInfoContainerDiv {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px
+}
+
+.privacyPolicyInfoContainerDivElement {
+    width: 100%;
+    height: 60px;
+
+    background-color: red;
+}
+
+/* --- AKORDEON --- */
+.privacyPolicyInfoAccordion {
+  width: 100%;
+  background: #fff;
+  border-radius: 8px 8px 0 0;
+  margin-bottom: 0;
+  box-shadow: none;
+  overflow: visible;
+  position: relative;
+}
+
+.privacyPolicyInfoAccordionHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  padding: 0 12px 0 12px;
+  min-height: 60px;
+  -webkit-user-select: none;
+  user-select: none;
+  /* Usuwam niepotrzebny margin/padding, żeby nie pojawiała się żadna linia obok ikony */
+}
+
+.privacyPolicyInfoAccordionTitle {
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 2rem;
+  font-weight: 700;
+  font-style: italic;
+  text-transform: uppercase;
+  color: #595959;
+  letter-spacing: 0.5px;
+  transition: color 0.3s;
+}
+
+.privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionTitle {
+  color: #DA2228;
+}
+
+.privacyPolicyInfoAccordionIcon {
+  width: 32px;
+  height: 32px;
+  border: 2px solid #595959;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 16px;
+  transition: border-color 0.3s;
+  background: #fff;
+  /* Dodaję białe tło, żeby nie było "latającej" kreski */
+  overflow: visible;
+}
+.privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionIcon {
+  border-color: #DA2228;
+}
+.privacyPolicyInfoAccordionIconHorizontal,
+.privacyPolicyInfoAccordionIconVertical {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  background: #595959;
+  border-radius: 2px;
+  transition: background 0.3s, transform 0.3s, opacity 0.3s;
+  /* Usuwam box-shadow, outline, border, żeby nie było "latającej" kreski */
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+.privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionIconHorizontal,
+.privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionIconVertical {
+  background: #DA2228;
+}
+.privacyPolicyInfoAccordionIconHorizontal {
+  width: 16px;
+  height: 2.5px;
+  transform: translate(-50%, -50%) rotate(0deg);
+}
+.privacyPolicyInfoAccordionIconVertical {
+  width: 2.5px;
+  height: 16px;
+  transform: translate(-50%, -50%) rotate(0deg);
+  opacity: 1;
+}
+.privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionIconVertical {
+  opacity: 0;
+  transform: translate(-50%, -50%) scaleY(0.5);
+}
+
+.privacyPolicyInfoAccordionContentWrapper {
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  background: #fff;
+}
+.privacyPolicyInfoAccordionContent {
+  padding: 18px 18px 18px 18px;
+  font-family: "Nunito Sans", sans-serif;
+  font-size: 1.1rem;
+  color: #444;
+  line-height: 1.7;
+  animation: fadeInAccordion 0.4s;
+}
+.privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionContent {
+  color: #da2228;
+}
+@keyframes fadeInAccordion {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+.privacyPolicyInfoAccordionDivider {
+  width: 99%;
+  height: 3px;
+  background: #EBEBEB;
+  margin: 0 auto;
+  border-radius: 2px;
+  position: relative;
+  top: 0;
+}
+
+.privacyPolicyInfoAccordionContentText {
+    color: #0B170D
+}
