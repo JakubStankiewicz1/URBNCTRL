@@ -54,7 +54,6 @@
   min-height: 60px;
   -webkit-user-select: none;
   user-select: none;
-  /* Usuwam niepotrzebny margin/padding, żeby nie pojawiała się żadna linia obok ikony */
 }
 
 .privacyPolicyInfoAccordionTitle {
@@ -68,7 +67,8 @@
   transition: color 0.3s;
 }
 
-.privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionTitle {
+.privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionTitle,
+.privacyPolicyInfoAccordionHeader:hover .privacyPolicyInfoAccordionTitle {
   color: #DA2228;
 }
 
@@ -84,10 +84,10 @@
   margin-left: 16px;
   transition: border-color 0.3s;
   background: #fff;
-  /* Dodaję białe tło, żeby nie było "latającej" kreski */
   overflow: visible;
 }
-.privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionIcon {
+.privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionIcon,
+.privacyPolicyInfoAccordionHeader:hover .privacyPolicyInfoAccordionIcon {
   border-color: #DA2228;
 }
 .privacyPolicyInfoAccordionIconHorizontal,
@@ -98,13 +98,14 @@
   background: #595959;
   border-radius: 2px;
   transition: background 0.3s, transform 0.3s, opacity 0.3s;
-  /* Usuwam box-shadow, outline, border, żeby nie było "latającej" kreski */
   box-shadow: none;
   outline: none;
   border: none;
 }
 .privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionIconHorizontal,
-.privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionIconVertical {
+.privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionIconVertical,
+.privacyPolicyInfoAccordionHeader:hover .privacyPolicyInfoAccordionIconHorizontal,
+.privacyPolicyInfoAccordionHeader:hover .privacyPolicyInfoAccordionIconVertical {
   background: #DA2228;
 }
 .privacyPolicyInfoAccordionIconHorizontal {

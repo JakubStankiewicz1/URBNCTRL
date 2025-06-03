@@ -1,0 +1,49 @@
+.privacyPolicyFotter {
+  width: 100%;
+  height: 100%;
+
+  background-color: #ffffff;
+
+  padding-top: 40px;
+  padding-bottom: 50px;
+}
+
+.privacyPolicyFotterContainer {
+  width: 100%;
+  height: 100%;
+}
+
+.privacyPolicyFotterContainerDiv {
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.privacyPolicyFotterContainerDivTextOne {
+  color: #000000;
+  font-size: 86px;
+  text-transform: uppercase;
+  font-weight: 700;
+  line-height: 38px;
+  text-align: center;
+  /* width: 100%; */
+  text-transform: uppercase;
+  font-style: italic;
+}
+
+.privacyPolicyFotterContainerDivTextTwo {
+  color: #000000;
+  font-size: 72px;
+  text-transform: uppercase;
+  font-weight: 100;
+  line-height: 38px;
+  text-align: center;
+  /* width: 100%; */
+  text-transform: uppercase;
+  font-style: italic;
+  transform: translateY(5px);
+}
