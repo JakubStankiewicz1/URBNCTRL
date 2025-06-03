@@ -1,0 +1,108 @@
+.shopMainProductsGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px 32px;
+  justify-items: center;
+  align-items: start;
+  width: 100%;
+  margin: 0 auto;
+  padding: 40px 0;
+}
+
+@media (max-width: 1200px) {
+  .shopMainProductsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 800px) {
+  .shopMainProductsGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.shopMainHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  padding: 0 0 24px 0;
+  min-height: 48px;
+}
+
+.shopMainHeaderLeft {
+  display: flex;
+  align-items: center;
+  font-size: 17px;
+  color: #0b170d;
+  gap: 0;
+}
+
+.shopMainHeaderBreadcrumbHome {
+  color: #1a7f64;
+  cursor: pointer;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.shopMainHeaderBreadcrumbHome:hover {
+  text-decoration: underline;
+}
+.shopMainHeaderBreadcrumbSeparator {
+  color: #bdbdbd;
+  font-size: 18px;
+}
+.shopMainHeaderBreadcrumbCurrent {
+  color: #bdbdbd;
+  font-weight: 400;
+}
+
+.shopMainHeaderRight {
+  display: flex;
+  align-items: flex-end;
+  gap: 32px;
+}
+.shopMainHeaderResults {
+  color: #222;
+  font-size: 16px;
+  font-weight: 400;
+}
+.shopMainHeaderSorting {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  position: relative;
+  min-width: 120px;
+}
+.shopMainHeaderSortingText {
+  color: #222;
+  font-size: 16px;
+  font-weight: 400;
+  cursor: pointer;
+}
+.shopMainHeaderSortingArrow {
+  font-size: 13px;
+  margin-left: 4px;
+  color: #222;
+  position: absolute;
+  right: 0;
+  top: 2px;
+  pointer-events: none;
+}
+.shopMainHeaderSortingUnderline {
+  width: 100%;
+  height: 2px;
+  background: #0b170d;
+  margin-top: 2px;
+}
+
+@media (max-width: 800px) {
+  .shopMainHeader {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 12px;
+  }
+  .shopMainHeaderRight {
+    gap: 16px;
+  }
+}

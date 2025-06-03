@@ -1,11 +1,13 @@
 import React from 'react';
 import "./shop.css";
 import ShopHero from '../../components/ShopHero/ShopHero';
+import ShopMain from '../../components/ShopMain/ShopMain';
 
 const Shop = () => {
   return (
     <div className='shop'>
         <ShopHero />
+        <ShopMain />
     </div>
   )
 }

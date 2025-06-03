@@ -1,0 +1,227 @@
+/* Larger version of productElement.css for ShopProductElement */
+.shopProductElement {
+    width: 390px;
+    height: 600px;
+}
+
+.shopProductElementContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.shopProductElementContainerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.shopProductElementContainerDiv:hover {
+    transform: scale(1.03);
+    transition: transform 0.3s ease;
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.13);
+}
+
+.shopProductElementContainerDivTop {
+    width: 97%;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    height: 480px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.shopProductElementContainerDivTopContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopProductElementContainerDivTopContainerImageOne {
+    width: 100%;
+    height: 100%;
+    transition: opacity 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopProductElementContainerDivTopContainerImageOneContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopProductElementContainerDivTopContainerImageOneContainerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    transition: opacity 0.4s ease;
+}
+
+.shopProductElementContainerDivTopContainerImageTwo {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopProductElementContainerDivTopContainerImageTwoContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopProductElementContainerDivTopContainerImageTwoContainerImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.shopProductElementContainerDivTopContainer {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopProductElement:hover .shopProductElementContainerDivTopContainerImageOne {
+    opacity: 0;
+}
+
+.shopProductElement:hover .shopProductElementContainerDivTopContainerImageTwo {
+    opacity: 1;
+}
+
+.shopProductElementContainerDivBottom {
+    margin-top: 30px;
+    width: 100%;
+}
+
+.shopProductElementContainerDivBottomContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+}
+
+.shopProductElementContainerDivBottomContainerOneContainerText {
+    color: #0B170D;
+    font-size: 28px;
+    font-weight: 900;
+    line-height: 32px;
+    text-transform: uppercase;
+    letter-spacing: 0.2px;
+    font-style: italic;
+}
+
+.shopProductElementContainerDivBottomContainerTwoContainerText {
+    color: #0B170D;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 28px;
+    text-transform: uppercase;
+    letter-spacing: 0.4px;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.shopProductElementContainerDivBottomContainerTwo {
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.shopProductElement:hover .shopProductElementContainerDivBottomContainerTwo {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.shopProductElement:hover .shopProductElementContainerDivBottomContainerThird {
+    opacity: 1;
+    visibility: visible;
+}
+
+.shopProductElementContainerDivBottomContainerThird {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    transform: translateY(-40px);
+}
+
+.shopProductElementContainerDivBottomContainerThirdContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+}
+
+.shopProductElementContainerDivBottomContainerThirdContainerLeftContainer,
+.shopProductElementContainerDivBottomContainerThirdContainerRightContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.shopProductElementContainerDivBottomContainerThirdContainerLeftContainerOne,
+.shopProductElementContainerDivBottomContainerThirdContainerLeftContainerTwo,
+.shopProductElementContainerDivBottomContainerThirdContainerRightContainerOne,
+.shopProductElementContainerDivBottomContainerThirdContainerRightContainerTwo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopProductElementContainerDivBottomContainerThirdContainerLeftContainerOneIcon,
+.shopProductElementContainerDivBottomContainerThirdContainerRightContainerOneIcon {
+    color: red;
+    width: 28px;
+    height: 28px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.shopProductElementContainerDivBottomContainerThirdContainerLeftContainerTwoText,
+.shopProductElementContainerDivBottomContainerThirdContainerRightContainerTwoText {
+    color: #0B170D;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin: 0;
+}
