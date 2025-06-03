@@ -1,9 +1,12 @@
 import React from 'react';
 import "./contactUs.css";
+import ContactUsHero from '../../components/ContactUsHero/ContactUsHero';
 
 const ContactUs = () => {
   return (
-    <div className='contactUs'>ContactUs</div>
+    <div className='contactUs'>
+        <ContactUsHero />
+    </div>
   )
 }
 
