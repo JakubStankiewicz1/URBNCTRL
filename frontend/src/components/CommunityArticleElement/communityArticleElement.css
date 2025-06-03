@@ -1,0 +1,155 @@
+.communityArticleElement {
+    width: 100%;
+    height: 100%;
+}
+
+.communityArticleElementContainer {
+    width: 100%;
+    height: 100%;
+        display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.communityArticleElementContainerDiv {
+    width: 380px;
+    height: 480px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.communityArticleElementContainerDiv:hover .communityArticleElementContainerDivImage {
+    transform: scale(1.05);
+}
+
+
+
+
+
+
+
+
+
+
+.communityArticleElementContainerDivImage {
+    width: 380px;
+    height: 480px;
+
+    border-radius: 5px;
+
+    position: relative;
+
+    transition: all 0.3s ease-in-out;
+}
+
+.communityArticleElementContainerDivImage {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.communityArticleElementContainerDivImageContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+}
+
+.communityArticleElementContainerDivImageContainerImage {
+    width: 100%;
+    height: 100%;
+
+    border-radius: 5px;
+
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    filter: brightness(0.8);
+    transition: all 0.3s ease-in-out;
+}
+
+
+.communityArticleElementContainerDiv:hover .communityArticleElementContainerDivImageContainerImage {
+    filter: brightness(1);
+}
+
+.communityArticleElementContainerDivInfo {
+    position: absolute;
+    /* width: 80%; */
+    color: white;
+    transform: translateY(50%) translateX(-10%);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.communityArticleElementContainerDivInfoContainer {
+    width: 220px;
+}
+
+.communityArticleElementContainerDivInfoContainerThree {
+    margin-top: 20px;
+}
+
+.communityArticleElementContainerDivInfoContainerThreeContainerButton {
+    width: 160px;
+    height: 50px;
+    background-color: #DA2228;
+    cursor: pointer;
+}
+
+.communityArticleElementContainerDivInfoContainerThreeContainerButtonContainer {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.communityArticleElementContainerDivInfoContainerThreeContainerButtonContainerText {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 800;
+    line-height: 20px;
+    text-transform: uppercase;
+}
+
+.communityArticleElementContainerDivInfoContainerOneContainerText {
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 19px;
+}
+
+.communityArticleElementContainerDivInfoContainerTwo {
+    margin-top: 15px;
+}
+
+.communityArticleElementContainerDivInfoContainerTwoContainerText {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 26px;
+    text-transform: uppercase;
+    font-style: italic;
+}

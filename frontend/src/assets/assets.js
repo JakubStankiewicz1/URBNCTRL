@@ -37,7 +37,7 @@ import HomeFeaturedProductsSeven from "./HomeFeaturedProductsSeven.jpg";
 
 import HomeHeroVideo from "./HomeHeroVideo.mp4";
 
-
+import CommunityArticleElementImageOne from "./CommunityArticleElementImageOne.jpg";
 
 
 
@@ -80,5 +80,7 @@ export default {
   HomeFeaturedProductsFour,  HomeFeaturedProductsFive,
   HomeFeaturedProductsSix,
   HomeFeaturedProductsSeven,
-  HomeHeroVideo
+  HomeHeroVideo,
+
+  CommunityArticleElementImageOne
 }
