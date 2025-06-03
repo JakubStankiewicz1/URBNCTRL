@@ -12,6 +12,7 @@ import Community from './pages/Community/Community';
 import ContactUs from './pages/ContactUs/ContactUs';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import ShippingAndReturns from './pages/ShippingAndReturns/ShippingAndReturns';
+import Shop from './pages/Shop/Shop';
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -30,6 +31,7 @@ const App = () => {
             <Route path="/contact" element={<ContactUs />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/shipping-delivery-and-returns" element={<ShippingAndReturns />} />
+            <Route path="/shop" element={<Shop />} />
           </Routes>
         </div>
       </div>
