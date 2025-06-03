@@ -9,6 +9,7 @@ import HamburgerMenuOpen from './components/HamburgerMenuOpen/HamburgerMenuOpen'
 import { ProductProvider } from './context/ProductContext';
 import AboutUs from './pages/AboutUs/AboutUs';
 import Community from './pages/Community/Community';
+import ContactUs from './pages/ContactUs/ContactUs';
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -24,6 +25,7 @@ const App = () => {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutUs />} />
             <Route path="/community" element={<Community />} />
+            <Route path="/contact" element={<ContactUs />} />
           </Routes>
         </div>
       </div>
