@@ -9,7 +9,9 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
   
   const isDarkMode = location.pathname === '/shop' || 
                      location.pathname === '/privacy-policy' || 
-                     location.pathname.startsWith('/product/');
+                     location.pathname.startsWith('/product/') ||
+                     location.pathname === '/shipping-delivery-and-returns' ||
+                     location.pathname === '/contact';
 
   return (
     <div className={`navbar ${isDarkMode ? 'navbar--dark' : ''}`}>

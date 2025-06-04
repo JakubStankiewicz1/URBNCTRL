@@ -37,13 +37,13 @@ const ShopProductElement = ({ id }) => {
                     <div className="shopProductElementContainerDivTopContainer">
                         <div className="shopProductElementContainerDivTopContainerImageOne">
                             <div className="shopProductElementContainerDivTopContainerImageOneContainer">
-                                <img src={product.images[0]} alt={product.name} className='shopProductElementContainerDivTopContainerImageOneContainerImage' />
+                                <img src={product.images?.primary || product.images?.[0]} alt={product.name} className='shopProductElementContainerDivTopContainerImageOneContainerImage' />
                             </div>
                         </div>
 
                         <div className="shopProductElementContainerDivTopContainerImageTwo">
                             <div className="shopProductElementContainerDivTopContainerImageTwoContainer">
-                                <img src={product.images[1] || product.images[0]} alt={product.name} className='shopProductElementContainerDivTopContainerImageTwoContainerImage' />
+                                <img src={product.images?.secondary || product.images?.[1] || product.images?.primary || product.images?.[0]} alt={product.name} className='shopProductElementContainerDivTopContainerImageTwoContainerImage' />
                             </div>
                         </div>
                     </div>

@@ -138,7 +138,7 @@
   animation: fadeInAccordion 0.4s;
 }
 .shippingAndReturnsInfoAccordion.open .shippingAndReturnsInfoAccordionContent {
-  color: #da2228;
+  color: #0B170D;
 }
 @keyframes fadeInAccordion {
   from { opacity: 0; transform: translateY(-10px); }

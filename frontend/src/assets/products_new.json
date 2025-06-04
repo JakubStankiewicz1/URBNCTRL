@@ -1,0 +1,230 @@
+[
+    {
+        "id": 1,
+        "name": "T-LD X HANA BURTON HOODIE",
+        "category": "Apparel",
+        "description": "Specially designed and produced in collaboration with Hana Burton and City Circuit Tokyo Bay. This heavy weight hoodie is a special limited edition by T-LD to celebrate our Tokyo car meet.",
+        "price": 159,
+        "currency": "$",
+        "availability": "In Stock",
+        "sku": "TLD-HB-001",
+        "brand": "T-LD",
+        "collaboration": "Hana Burton",
+        "features": [
+            "Boxy Fit",
+            "True to Size", 
+            "Front & Rear Print",
+            "Heavy Weight"
+        ],
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["Black", "White"],
+        "material": "100% Cotton",
+        "weight": "Heavy Weight",
+        "fit": "Boxy",
+        "shippingInfo": "Ships from Tokyo, Japan",
+        "images": {
+            "primary": "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
+            "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+            "gallery": [
+                "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
+                "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png"
+            ]
+        },
+        "tags": ["limited edition", "collaboration", "tokyo", "hoodie", "streetwear"],
+        "releaseDate": "2024-12-01",
+        "limitedEdition": true,
+        "featured": true
+    },
+    {
+        "id": 2,
+        "name": "TOKYO DRIFT TEE",
+        "category": "Apparel",
+        "description": "Premium cotton t-shirt featuring exclusive Tokyo Drift graphics. Perfect for car enthusiasts and streetwear lovers.",
+        "price": 45,
+        "currency": "$",
+        "availability": "In Stock",
+        "sku": "TLD-TD-002",
+        "brand": "T-LD",
+        "collaboration": null,
+        "features": [
+            "Regular Fit",
+            "True to Size",
+            "Screen Printed Graphics",
+            "Premium Cotton"
+        ],
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["Black", "White", "Navy"],
+        "material": "100% Premium Cotton",
+        "weight": "Medium Weight",
+        "fit": "Regular",
+        "shippingInfo": "Ships from Tokyo, Japan",
+        "images": {
+            "primary": "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+            "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+            "gallery": [
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+                "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+                "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png"
+            ]
+        },
+        "tags": ["tokyo", "drift", "tee", "streetwear", "graphics"],
+        "releaseDate": "2024-11-15",
+        "limitedEdition": false,
+        "featured": true
+    },
+    {
+        "id": 3,
+        "name": "CIRCUIT RACING JACKET",
+        "category": "Apparel",
+        "description": "Technical racing jacket inspired by Tokyo Bay Circuit. Features water-resistant material and reflective details.",
+        "price": 220,
+        "currency": "$",
+        "availability": "In Stock",
+        "sku": "TLD-CR-003",
+        "brand": "T-LD",
+        "collaboration": "Tokyo Bay Circuit",
+        "features": [
+            "Water Resistant",
+            "Reflective Details",
+            "Technical Fabric",
+            "Racing Inspired"
+        ],
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["Black", "Red", "Navy"],
+        "material": "Technical Polyester Blend",
+        "weight": "Medium Weight",
+        "fit": "Athletic",
+        "shippingInfo": "Ships from Tokyo, Japan",
+        "images": {
+            "primary": "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+            "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+            "gallery": [
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+                "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+                "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png"
+            ]
+        },
+        "tags": ["racing", "jacket", "technical", "circuit", "tokyo"],
+        "releaseDate": "2024-10-20",
+        "limitedEdition": true,
+        "featured": true
+    },
+    {
+        "id": 4,
+        "name": "URBAN CONTROL CAP",
+        "category": "Accessories",
+        "description": "Classic snapback cap with embroidered URBNCTRL logo. Essential streetwear accessory for the modern urbanite.",
+        "price": 35,
+        "currency": "$",
+        "availability": "In Stock",
+        "sku": "TLD-UC-004",
+        "brand": "T-LD",
+        "collaboration": null,
+        "features": [
+            "Snapback Design",
+            "Embroidered Logo",
+            "Adjustable Fit",
+            "Premium Materials"
+        ],
+        "sizes": ["One Size"],
+        "colors": ["Black", "White", "Navy", "Red"],
+        "material": "Cotton Twill",
+        "weight": "Light Weight",
+        "fit": "Adjustable",
+        "shippingInfo": "Ships from Tokyo, Japan",
+        "images": {
+            "primary": "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TQVE7-1083/up/1.png",
+            "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+            "gallery": [
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TQVE7-1083/up/1.png",
+                "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png"
+            ]
+        },
+        "tags": ["cap", "snapback", "accessories", "urban", "logo"],
+        "releaseDate": "2024-09-10",
+        "limitedEdition": false,
+        "featured": false
+    },
+    {
+        "id": 5,
+        "name": "SIGNATURE CHUNKY STRIPES HOODIE",
+        "category": "Apparel",
+        "description": "Luxury hoodie featuring signature chunky stripes design. Made from premium materials with attention to detail.",
+        "price": 280,
+        "currency": "$",
+        "availability": "Limited Stock",
+        "sku": "TLD-SC-005",
+        "brand": "T-LD",
+        "collaboration": "LV Inspired",
+        "features": [
+            "Luxury Materials",
+            "Signature Design",
+            "Chunky Stripes",
+            "Premium Construction"
+        ],
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Multi", "Black"],
+        "material": "Premium Cotton Blend",
+        "weight": "Heavy Weight",
+        "fit": "Relaxed",
+        "shippingInfo": "Ships from Tokyo, Japan",
+        "images": {
+            "primary": "https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-signature-chunky-stripes-hoodie--FOKM01U39644_PM2_Front%20view.jpg",
+            "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+            "gallery": [
+                "https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-signature-chunky-stripes-hoodie--FOKM01U39644_PM2_Front%20view.jpg",
+                "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png"
+            ]
+        },
+        "tags": ["luxury", "hoodie", "stripes", "premium", "signature"],
+        "releaseDate": "2024-08-05",
+        "limitedEdition": true,
+        "featured": true
+    },
+    {
+        "id": 6,
+        "name": "TOKYO NIGHTS SWEATSHIRT",
+        "category": "Apparel",
+        "description": "Comfortable sweatshirt celebrating Tokyo's vibrant nightlife. Perfect for casual wear with urban aesthetic.",
+        "price": 75,
+        "currency": "$",
+        "availability": "In Stock",
+        "sku": "TLD-TN-006",
+        "brand": "T-LD",
+        "collaboration": null,
+        "features": [
+            "Comfortable Fit",
+            "Soft Interior",
+            "Tokyo Graphics",
+            "Everyday Wear"
+        ],
+        "sizes": ["S", "M", "L", "XL", "XXL"],
+        "colors": ["Black", "Grey", "Navy"],
+        "material": "Cotton Fleece Blend",
+        "weight": "Medium Weight",
+        "fit": "Regular",
+        "shippingInfo": "Ships from Tokyo, Japan",
+        "images": {
+            "primary": "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+            "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+            "gallery": [
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+                "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TQVE7-1083/up/1.png"
+            ]
+        },
+        "tags": ["sweatshirt", "tokyo", "nights", "casual", "urban"],
+        "releaseDate": "2024-07-15",
+        "limitedEdition": false,
+        "featured": false
+    }
+]
