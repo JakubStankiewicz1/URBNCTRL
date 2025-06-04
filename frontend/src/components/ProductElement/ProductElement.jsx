@@ -18,16 +18,23 @@ const ProductElement = ({ id }) => {
             <div className="productElementContainerDiv">
                 {/* Top Part */}
                 <div className="productElementContainerDivTop">
-                    <div className="productElementContainerDivTopContainer">
-                        <div className="productElementContainerDivTopContainerImageOne">
+                    <div className="productElementContainerDivTopContainer">                        <div className="productElementContainerDivTopContainerImageOne">
                             <div className="productElementContainerDivTopContainerImageOneContainer">
-                                <img src={product.images[0]} alt={product.name} className='productElementContainerDivTopContainerImageOneContainerImage' />
+                                <img 
+                                    src={product.images?.primary || "https://via.placeholder.com/290x360?text=No+Image"} 
+                                    alt={product.name} 
+                                    className='productElementContainerDivTopContainerImageOneContainerImage' 
+                                />
                             </div>
                         </div>
 
                         <div className="productElementContainerDivTopContainerImageTwo">
                             <div className="productElementContainerDivTopContainerImageTwoContainer">
-                                <img src={product.images[1] || product.images[0]} alt={product.name} className='productElementContainerDivTopContainerImageTwoContainerImage' />
+                                <img 
+                                    src={product.images?.secondary || product.images?.primary || "https://via.placeholder.com/290x360?text=No+Image"} 
+                                    alt={product.name} 
+                                    className='productElementContainerDivTopContainerImageTwoContainerImage' 
+                                />
                             </div>
                         </div>
                     </div>

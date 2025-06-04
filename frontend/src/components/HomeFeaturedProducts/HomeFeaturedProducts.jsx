@@ -6,24 +6,37 @@ import ProductElement from "../ProductElement/ProductElement";
 import { useProducts } from "../../context/ProductContext";
 import assets from "../../assets/assets";
 
-const elements = [
-  { src: assets.HomeFeaturedProductsOne, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne" },
-  { src: assets.HomeFeaturedProductsTwo, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo" },
-  { src: assets.HomeFeaturedProductsThree, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree" },
-  { src: assets.HomeFeaturedProductsFour, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour" },
-  { src: assets.HomeFeaturedProductsSix, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive" },
-  { src: assets.HomeFeaturedProductsSeven, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix" },
-];
 
 const HomeFeaturedProducts = () => {
-  const { products, loading } = useProducts();
+  const { products, loading, getFeaturedProducts } = useProducts();
   const containerRef = useRef(null);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
+  const [featuredProducts, setFeaturedProducts] = useState([]);
+
+  // Brands/partners logos for the scrolling section
+  const elements = [
+    { src: assets.HomeFeaturedProductsOne, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne" },
+    { src: assets.HomeFeaturedProductsTwo, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo" },
+    { src: assets.HomeFeaturedProductsThree, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree" },
+    { src: assets.HomeFeaturedProductsFour, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour" },
+    { src: assets.HomeFeaturedProductsFive, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive" },
+    { src: assets.HomeFeaturedProductsSix, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix" },
+  ];
+
+  // Pobierz featured produkty przy pierwszym renderowaniu
+  useEffect(() => {
+    if (!loading && products.length > 0) {
+      const featured = getFeaturedProducts();
+      setFeaturedProducts(featured);
+    }
+  }, [loading, products, getFeaturedProducts]);
 
   // Duplikujemy produkty dla nieskończonej pętli - więcej kopii dla płynności
-  const duplicatedProducts = products.length > 0 ? [...products, ...products, ...products, ...products, ...products] : [];
+  const duplicatedProducts = featuredProducts.length > 0 
+    ? [...featuredProducts, ...featuredProducts, ...featuredProducts, ...featuredProducts, ...featuredProducts] 
+    : [];
 
   const productWidth = 310; // 290px szerokość + 20px gap
 
@@ -36,7 +49,7 @@ const HomeFeaturedProducts = () => {
     }
   };
   const handlePrevious = () => {
-    if (products.length === 0 || !containerRef.current) return;
+    if (featuredProducts.length === 0 || !containerRef.current) return;
 
     const currentScroll = containerRef.current.scrollLeft;
     const newPosition = currentScroll - productWidth; // Strzałka w lewo = przewiń w lewo (zmniejsz scrollLeft)
@@ -44,7 +57,7 @@ const HomeFeaturedProducts = () => {
   };
 
   const handleNext = () => {
-    if (products.length === 0 || !containerRef.current) return;
+    if (featuredProducts.length === 0 || !containerRef.current) return;
 
     const currentScroll = containerRef.current.scrollLeft;
     const newPosition = currentScroll + productWidth; // Strzałka w prawo = przewiń w prawo (zwiększ scrollLeft)
@@ -81,15 +94,16 @@ const HomeFeaturedProducts = () => {
       containerRef.current.style.cursor = "grab";
     }
   };
+  
   // Ustaw początkową pozycję na środku (tylko raz przy ładowaniu)
   useEffect(() => {
-    if (products.length > 0 && containerRef.current) {
-      const startPosition = products.length * productWidth * 2; // Środek
+    if (featuredProducts.length > 0 && containerRef.current) {
+      const startPosition = featuredProducts.length * productWidth * 2; // Środek
       setTimeout(() => {
         scrollToPosition(startPosition, false);
       }, 100);
     }
-  }, [products.length]);
+  }, [featuredProducts.length]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -176,15 +190,7 @@ const HomeFeaturedProducts = () => {
               </div>
             </div>
           </div>
-
-
-
-
-
-
-          
         </div>
-
       </div>
     </div>
   );

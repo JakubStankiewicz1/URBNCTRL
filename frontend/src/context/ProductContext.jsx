@@ -34,11 +34,11 @@ export const ProductProvider = ({ children }) => {
 
     const getProductById = (id) => {
         return products.find(product => product.id === parseInt(id));
-    };
-
-    const getFeaturedProducts = (limit = 5) => {
-        // Zwracamy pierwsze 'limit' produktów jako featured
-        return products.slice(0, limit);
+    };    const getFeaturedProducts = (limit = 10) => {
+        // Filtrujemy produkty z flagą featured=true
+        const featured = products.filter(product => product.featured === true);
+        // Zwracamy limit produktów lub wszystkie jeśli jest ich mniej niż limit
+        return featured.slice(0, limit);
     };
 
     const value = {
