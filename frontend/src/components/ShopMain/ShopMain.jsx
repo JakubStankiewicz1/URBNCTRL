@@ -1,12 +1,16 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import "./shopMain.css";
 import { useProducts } from '../../context/ProductContext';
 import ShopProductElement from '../ShopProductElement/ShopProductElement';
+import { MdKeyboardArrowRight } from "react-icons/md";
 
 const ShopMain = () => {
   const { products, loading } = useProducts();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedSorting, setSelectedSorting] = useState('Default sorting');
+  const dropdownRef = useRef(null);
+  const sortingTextRef = useRef(null);
+  const underlineRef = useRef(null);
 
   const sortingOptions = [
     'Default sorting',
@@ -15,6 +19,27 @@ const ShopMain = () => {
     'Sort by price: low to high',
     'Sort by price: high to low'
   ];
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+    };
+  }, []);
+
+  // Update underline width when sorting text changes
+  useEffect(() => {
+    if (sortingTextRef.current && underlineRef.current) {
+      const textWidth = sortingTextRef.current.offsetWidth;
+      underlineRef.current.style.width = `${textWidth + 25}px`;
+    }
+  }, [selectedSorting]);
 
   const handleSortingClick = () => {
     setIsDropdownOpen(!isDropdownOpen);
@@ -62,10 +87,12 @@ const ShopMain = () => {
                   <div className="shopMainHeader">
                     <div className="shopMainHeaderLeft">
                       <div className="shopMainHeaderBreadcrumbHome">
-                        <p>Home</p>
+                        <p className='shopMainHeaderBreadcrumbHomeText'>Home</p>
+                        <div className="shopMainHeaderBreadcrumbHomeDiv" />
                       </div>
                       <div className="shopMainHeaderBreadcrumbSeparator">
-                        <p>&gt;</p>
+                        <MdKeyboardArrowRight className='shopMainHeaderBreadcrumbSeparatorIcon' />
+
                       </div>
                       <div className="shopMainHeaderBreadcrumbCurrent">
                         <p>Shop</p>
@@ -73,15 +100,14 @@ const ShopMain = () => {
                     </div>                    <div className="shopMainHeaderRight">
                       <div className="shopMainHeaderResults">
                         <p>Showing all {getSortedProducts().length} results</p>
-                      </div>
-                      <div className="shopMainHeaderSorting" onClick={handleSortingClick}>
+                      </div>                      <div className="shopMainHeaderSorting" ref={dropdownRef} onClick={handleSortingClick}>
                         <div className="shopMainHeaderSortingText">
-                          <p>{selectedSorting}</p>
+                          <p ref={sortingTextRef}>{selectedSorting}</p>
                           <div className="shopMainHeaderSortingArrow">
                             <p>{isDropdownOpen ? '▲' : '▼'}</p>
                           </div>
                         </div>
-                        <div className="shopMainHeaderSortingUnderline" />
+                        <div className="shopMainHeaderSortingUnderline" ref={underlineRef} />
                         
                         {isDropdownOpen && (
                           <div className="shopMainHeaderSortingDropdown">

@@ -1,11 +1,17 @@
 import React from 'react';
+import { useLocation } from 'react-router-dom';
 import "./navbar.css";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { PiUserBold } from "react-icons/pi";
 
 const Navbar = ({ menuOpen, setMenuOpen }) => {
+  const location = useLocation();
+  
+  // Sprawdź czy jesteśmy na stronach wymagających dark mode
+  const isDarkMode = location.pathname === '/shop' || location.pathname === '/privacy-policy';
+
   return (
-    <div className='navbar'>
+    <div className={`navbar ${isDarkMode ? 'navbar--dark' : ''}`}>
         <div className="navbarContainer">
             <div className="navbarContainerDiv">
                 {/* Left Part */}

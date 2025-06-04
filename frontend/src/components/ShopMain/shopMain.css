@@ -1,22 +1,35 @@
 /* Main container styling */
 .shopMain {
   width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .shopMainContainer {
-  max-width: 1400px;
-  margin: 0 auto;
-  padding: 0 20px;
+    width: 87%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  overflow-x: hidden;
 }
 
 .shopMainContainerDiv {
   width: 100%;
+  height: 100%;
+  overflow-x: hidden;
 }
 
 .shopMainContainerDivTop {
-  padding: 40px 0 50px 0;
-  border-bottom: 1px solid #f0f0f0;
+  /* padding: 40px 0 50px 0; */
+  /* border-bottom: 1px solid #f0f0f0; */
   margin-bottom: 50px;
+}
+
+/* Bottom container styling */
+.shopMainContainerDivBottom {
+  width: 100%;
+  height: 6000vh;
+  overflow-x: hidden;
 }
 
 /* Header styling */
@@ -36,29 +49,51 @@
 .shopMainHeaderBreadcrumbHome {
   cursor: pointer;
   transition: all 0.2s ease;
+  position: relative;
+  display: inline-block;
 }
 
 .shopMainHeaderBreadcrumbHome p {
-  color: #d2691e;
+  color: #0B170D;
   font-size: 16px;
   font-weight: 400;
   margin: 0;
   text-decoration: none;
 }
 
-.shopMainHeaderBreadcrumbHome:hover p {
-  text-decoration: underline;
+.shopMainHeaderBreadcrumbHomeDiv {
+  position: absolute;
+  bottom: -3px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #0B170D;
+  transform: scaleX(0);
+  transform-origin: left center;
+  transition: transform 0.3s ease;
 }
 
-.shopMainHeaderBreadcrumbSeparator p {
-  color: #999;
-  font-size: 16px;
-  font-weight: 400;
-  margin: 0;
+.shopMainHeaderBreadcrumbHome:hover .shopMainHeaderBreadcrumbHomeDiv {
+  transform: scaleX(1);
+}
+
+.shopMainHeaderBreadcrumbSeparator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.shopMainHeaderBreadcrumbSeparatorIcon {
+  width: 20px;
+  height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #0B170D;
 }
 
 .shopMainHeaderBreadcrumbCurrent p {
-  color: #999;
+  color: #79807A;
   font-size: 16px;
   font-weight: 400;
   margin: 0;
@@ -71,7 +106,7 @@
 }
 
 .shopMainHeaderResults p {
-  color: #333;
+  color: #0B170D;
   font-size: 16px;
   font-weight: 400;
   margin: 0;
@@ -92,7 +127,6 @@
   align-items: center;
   gap: 8px;
   position: relative;
-  width: 100%;
   justify-content: flex-end;
 }
 
@@ -112,11 +146,16 @@
   transition: transform 0.3s ease;
 }
 
+.shopMainHeaderSorting:hover .shopMainHeaderSortingArrow p {
+  transform: translateY(1px) scale(1.1);
+}
+
 .shopMainHeaderSortingUnderline {
-  width: 100%;
   height: 2px;
   background: #333;
   margin-top: 4px;
+  align-self: flex-end;
+  transition: width 0.3s ease;
 }
 
 /* Dropdown menu */
@@ -131,6 +170,19 @@
   z-index: 1000;
   min-width: 200px;
   overflow: hidden;
+  animation: dropdownFadeIn 0.2s ease-out;
+  transform-origin: top right;
+}
+
+@keyframes dropdownFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
 }
 
 .shopMainHeaderSortingDropdownOption {
@@ -146,15 +198,17 @@
 
 .shopMainHeaderSortingDropdownOption:hover {
   background-color: #f8f8f8;
+  transform: translateX(2px);
 }
 
 .shopMainHeaderSortingDropdownOption.active {
   background-color: #f0f0f0;
   font-weight: 500;
+  border-left: 3px solid #d2691e;
 }
 
 .shopMainHeaderSortingDropdownOption p {
-  color: #333;
+  color: #0B170D;
   font-size: 14px;
   font-weight: 400;
   margin: 0;
@@ -174,7 +228,8 @@
   align-items: start;
   width: 100%;
   margin: 0 auto;
-  padding: 40px 0;
+  padding: 40px 20px;
+  overflow-x: hidden;
 }
 
 @media (max-width: 1200px) {

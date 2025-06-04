@@ -101,3 +101,28 @@
     height: 2px;
     background-color: #fff;
 }
+
+/* Dark mode styles */
+.navbar--dark {
+    background-color: rgba(255, 255, 255, 0.95);
+    -webkit-backdrop-filter: blur(10px);
+    backdrop-filter: blur(10px);
+}
+
+.navbar--dark .navbarContainerLeftContainerText {
+  color: #333;
+}
+
+.navbar--dark .navbarContainerRightContainerElementOneContainerIcon {
+    color: #333;
+}
+
+.navbar--dark .navbarContainerRightContainerElementTwoContainerIcon {
+    color: #333;
+}
+
+.navbar--dark .navbarContainerRightContainerElementThreeContainerMenuLineOne,
+.navbar--dark .navbarContainerRightContainerElementThreeContainerMenuLineTwo,
+.navbar--dark .navbarContainerRightContainerElementThreeContainerMenuLineThree {
+    background-color: #333;
+}

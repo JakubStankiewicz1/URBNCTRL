@@ -1,7 +1,7 @@
 /* Larger version of productElement.css for ShopProductElement */
 .shopProductElement {
     width: 390px;
-    height: 600px;
+    height: 620px;
 }
 
 .shopProductElementContainer {
@@ -20,7 +20,7 @@
 }
 
 .shopProductElementContainerDiv:hover {
-    transform: scale(1.03);
+    transform: scale(1.02);
     transition: transform 0.3s ease;
     box-shadow: 0 6px 16px rgba(0, 0, 0, 0.13);
 }
