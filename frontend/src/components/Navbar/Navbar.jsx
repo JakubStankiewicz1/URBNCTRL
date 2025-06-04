@@ -1,5 +1,5 @@
 import React from 'react';
-import { useLocation } from 'react-router-dom';
+import { NavLink, useLocation } from 'react-router-dom';
 import "./navbar.css";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { PiUserBold } from "react-icons/pi";
@@ -7,8 +7,9 @@ import { PiUserBold } from "react-icons/pi";
 const Navbar = ({ menuOpen, setMenuOpen }) => {
   const location = useLocation();
   
-  // Sprawdź czy jesteśmy na stronach wymagających dark mode
-  const isDarkMode = location.pathname === '/shop' || location.pathname === '/privacy-policy';
+  const isDarkMode = location.pathname === '/shop' || 
+                     location.pathname === '/privacy-policy' || 
+                     location.pathname.startsWith('/product/');
 
   return (
     <div className={`navbar ${isDarkMode ? 'navbar--dark' : ''}`}>
@@ -27,8 +28,6 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
                 <div className="navbarContainerRight">
                     <div className="navbarContainerRightContainer">
 
-
-
                         {/* Element */}
                         <div className="navbarContainerRightContainerElementOne">
                             <div className="navbarContainerRightContainerElementOneContainer">
@@ -44,27 +43,30 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
                         </div>
 
                         {/* Hamburger */}
-                        <div className="navbarContainerRightContainerElementThree" onClick={() => setMenuOpen(!menuOpen)} style={{cursor:'pointer'}}>
+                         <div className="navbarContainerRightContainerElementThree" onClick={() => setMenuOpen(!menuOpen)} style={{cursor:'pointer'}}>
                             <div className="navbarContainerRightContainerElementThreeContainer">
                                 <div className="navbarContainerRightContainerElementThreeContainerMenu">
-                                    <div className="navbarContainerRightContainerElementThreeContainerMenuLineOne" />
-                                    <div className="navbarContainerRightContainerElementThreeContainerMenuLineTwo" />
-                                    <div className="navbarContainerRightContainerElementThreeContainerMenuLineThree" />
+
+                                    <div className="navbarContainerRightContainerElementThreeContainerMenuLineOne">
+                                        <div className="navbarContainerRightContainerElementThreeContainerMenuLineOneDivOne" />
+                                        <div className="navbarContainerRightContainerElementThreeContainerMenuLineOneDivTwo" />
+                                    </div>
+
+                                    <div className="navbarContainerRightContainerElementThreeContainerMenuLineTwo">
+                                        <div className="navbarContainerRightContainerElementThreeContainerMenuLineTwoDivOne" />
+                                        <div className="navbarContainerRightContainerElementThreeContainerMenuLineTwoDivTwo" />
+                                    </div>
+
+                                    <div className="navbarContainerRightContainerElementThreeContainerMenuLineThree">
+                                        <div className="navbarContainerRightContainerElementThreeContainerMenuLineThreeDivOne"></div>
+                                        <div className="navbarContainerRightContainerElementThreeContainerMenuLineThreeDivTwo"></div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
 
-
-
                     </div>
                 </div>
-
-
-
-
-
-
-
 
             </div>
         </div>

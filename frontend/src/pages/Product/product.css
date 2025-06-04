@@ -1,0 +1,251 @@
+.product {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 80px;
+    background-color: #f8f9fa;
+}
+
+.productContainer {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 0;
+}
+
+.productContainerDiv {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* Breadcrumb */
+.productBreadcrumb {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #666;
+}
+
+.productBreadcrumbLink {
+    color: #333;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.productBreadcrumbLink:hover {
+    color: #DA2228;
+}
+
+.productBreadcrumbSeparator {
+    margin: 0 8px;
+    color: #999;
+}
+
+.productBreadcrumbCurrent {
+    color: #DA2228;
+    font-weight: 500;
+}
+
+/* Product Main */
+.productMain {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: start;
+}
+
+.productMainLeft {
+    width: 100%;
+}
+
+.productImageContainer {
+    width: 100%;
+    height: 600px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.productMainImage {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.productMainImage:hover {
+    transform: scale(1.05);
+}
+
+.productMainRight {
+    width: 100%;
+    padding: 20px 0;
+}
+
+.productInfo {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.productTitle {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #333;
+    margin: 0;
+    line-height: 1.2;
+}
+
+.productPrice {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.productPriceAmount {
+    font-size: 2rem;
+    font-weight: 600;
+    color: #DA2228;
+}
+
+.productDescription {
+    color: #666;
+    line-height: 1.6;
+    font-size: 1rem;
+}
+
+.productActions {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 30px 0;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.productQuantity {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.productQuantity label {
+    font-weight: 500;
+    color: #333;
+}
+
+.quantityInput {
+    width: 80px;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 16px;
+    text-align: center;
+    transition: border-color 0.3s ease;
+}
+
+.quantityInput:focus {
+    outline: none;
+    border-color: #DA2228;
+}
+
+.addToCartBtn {
+    background-color: #DA2228;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.addToCartBtn:hover {
+    background-color: #b91c21;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(218, 34, 40, 0.3);
+}
+
+.productMeta {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: #666;
+    font-size: 0.95rem;
+}
+
+.productCategory {
+    display: flex;
+    gap: 5px;
+}
+
+/* Not Found */
+.productNotFound {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f8f9fa;
+}
+
+.productNotFoundContainer {
+    text-align: center;
+    padding: 40px;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.productNotFoundContainer h2 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.productNotFoundContainer button {
+    background-color: #DA2228;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.productNotFoundContainer button:hover {
+    background-color: #b91c21;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .product {
+        padding-top: 60px;
+    }
+    
+    .productContainer {
+        width: 95%;
+        padding: 20px 0;
+    }
+    
+    .productMain {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+    
+    .productImageContainer {
+        height: 400px;
+    }
+    
+    .productTitle {
+        font-size: 2rem;
+    }
+    
+    .productPriceAmount {
+        font-size: 1.5rem;
+    }
+}

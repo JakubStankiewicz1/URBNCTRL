@@ -13,6 +13,7 @@ import ContactUs from './pages/ContactUs/ContactUs';
 import PrivacyPolicy from './pages/PrivacyPolicy/PrivacyPolicy';
 import ShippingAndReturns from './pages/ShippingAndReturns/ShippingAndReturns';
 import Shop from './pages/Shop/Shop';
+import Product from './pages/Product/Product';
 
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -32,6 +33,7 @@ const App = () => {
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/shipping-delivery-and-returns" element={<ShippingAndReturns />} />
             <Route path="/shop" element={<Shop />} />
+            <Route path="/product/:id" element={<Product />} />
           </Routes>
         </div>
       </div>

@@ -1,4 +1,3 @@
-/* Larger version of productElement.css for ShopProductElement */
 .shopProductElement {
     width: 390px;
     height: 620px;
@@ -129,13 +128,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 18px;
+    gap: 12px;
 }
 
 .shopProductElementContainerDivBottomContainerOneContainerText {
     color: #0B170D;
-    font-size: 28px;
-    font-weight: 900;
+    font-size: 23px;
+    font-weight: 800;
     line-height: 32px;
     text-transform: uppercase;
     letter-spacing: 0.2px;
@@ -144,7 +143,7 @@
 
 .shopProductElementContainerDivBottomContainerTwoContainerText {
     color: #0B170D;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 800;
     line-height: 28px;
     text-transform: uppercase;
@@ -175,6 +174,8 @@
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     transform: translateY(-40px);
+
+
 }
 
 .shopProductElementContainerDivBottomContainerThirdContainer {
@@ -185,16 +186,28 @@
     justify-content: center;
     align-items: center;
     gap: 22px;
+    
 }
 
 .shopProductElementContainerDivBottomContainerThirdContainerLeftContainer,
 .shopProductElementContainerDivBottomContainerThirdContainerRightContainer {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
     gap: 8px;
+
+    /* background-color: lightcoral; */
+}
+
+.shopProductElementContainerDivBottomContainerThirdContainerLeftContainer,
+.shopProductElementContainerDivBottomContainerThirdContainerRightContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
 
 .shopProductElementContainerDivBottomContainerThirdContainerLeftContainerOne,
@@ -205,13 +218,14 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    width:
 }
 
 .shopProductElementContainerDivBottomContainerThirdContainerLeftContainerOneIcon,
 .shopProductElementContainerDivBottomContainerThirdContainerRightContainerOneIcon {
     color: red;
-    width: 28px;
-    height: 28px;
+    width: 20px;
+    height: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -220,8 +234,35 @@
 .shopProductElementContainerDivBottomContainerThirdContainerLeftContainerTwoText,
 .shopProductElementContainerDivBottomContainerThirdContainerRightContainerTwoText {
     color: #0B170D;
-    font-size: 17px;
-    font-weight: 700;
+    font-size: 12px;
+    font-weight: 800;
     text-transform: uppercase;
     margin: 0;
+    position: relative;
+    transition: color 0.3s ease;
+}
+
+/* Animated underlines for buttons */
+.shopProductElementContainerDivBottomContainerThirdContainerLeftContainerTwoText::after,
+.shopProductElementContainerDivBottomContainerThirdContainerRightContainerTwoText::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #0B170D;
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.3s ease;
+}
+
+.shopProductElementContainerDivBottomContainerThirdContainerLeftContainer:hover .shopProductElementContainerDivBottomContainerThirdContainerLeftContainerTwoText::after,
+.shopProductElementContainerDivBottomContainerThirdContainerRightContainer:hover .shopProductElementContainerDivBottomContainerThirdContainerRightContainerTwoText::after {
+    transform: scaleX(1);
+}
+
+.shopProductElementContainerDivBottomContainerThirdContainerLeftContainer:hover .shopProductElementContainerDivBottomContainerThirdContainerLeftContainerTwoText,
+.shopProductElementContainerDivBottomContainerThirdContainerRightContainer:hover .shopProductElementContainerDivBottomContainerThirdContainerRightContainerTwoText {
+    color: #0B170D;
 }
