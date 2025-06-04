@@ -1,8 +1,10 @@
 .productElement {
     width: 290px;
-    height: 460px;
-
-    /* border: 1px solid #000; */
+    height: 445px;
+    /* Making the height consistent with the height specified in homeFeaturedProducts.css */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .productElementContainer {
@@ -34,7 +36,7 @@
     margin-top: 5px;
     margin-left: auto;
     margin-right: auto;
-    height: 366px;
+    height: 376px;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
 }
@@ -131,7 +133,7 @@
 }
 
 .productElementContainerDivBottom {
-    margin-top: 20px;
+    margin-top: 30px;
     width: 100%;
 }
 
@@ -194,7 +196,7 @@
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     /* margin-top: -20px; */
-    transform: translateY(-30px);
+    transform: translateY(-65px);
 }
 
 .productElementContainerDivBottomContainerThirdContainer {
@@ -212,11 +214,13 @@
 .productElementContainerDivBottomContainerThirdContainerLeftContainer,
 .productElementContainerDivBottomContainerThirdContainerRightContainer {
     width: 100%;
+    height: 100%;
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    gap: 5px;
+    pointer-events: auto; /* Enable click events */
+    cursor: pointer;
 }
 
 .productElementContainerDivBottomContainerThirdContainerLeftContainerOne,
@@ -254,4 +258,18 @@
     text-transform: uppercase;
     /* letter-spacing: 0.2px; */
     margin: 0;
+}
+
+/* Make sure the interactive elements are clickable */
+.productElementContainerDivBottomContainerThirdContainerLeftContainerOneIcon,
+.productElementContainerDivBottomContainerThirdContainerRightContainerOneIcon,
+.productElementContainerDivBottomContainerThirdContainerLeftContainerTwoText,
+.productElementContainerDivBottomContainerThirdContainerRightContainerTwoText {
+    pointer-events: auto !important;
+}
+
+.homeFeaturedProductsContainerDivMiddleContainerDiv .productElement button,
+.homeFeaturedProductsContainerDivMiddleContainerDiv .productElement a,
+.homeFeaturedProductsContainerDivMiddleContainerDiv .productElement [role="button"] {
+    pointer-events: auto !important;
 }

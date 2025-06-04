@@ -32,11 +32,13 @@ const HomeFeaturedProducts = () => {
       setFeaturedProducts(featured);
     }
   }, [loading, products, getFeaturedProducts]);
-
   // Duplikujemy produkty dla nieskończonej pętli - więcej kopii dla płynności
   const duplicatedProducts = featuredProducts.length > 0 
     ? [...featuredProducts, ...featuredProducts, ...featuredProducts, ...featuredProducts, ...featuredProducts] 
     : [];
+    
+  // Upewnij się, że wszystkie zdjęcia są załadowane
+  console.log("Featured products:", featuredProducts);
 
   const productWidth = 310; // 290px szerokość + 20px gap
 
@@ -63,10 +65,14 @@ const HomeFeaturedProducts = () => {
     const newPosition = currentScroll + productWidth; // Strzałka w prawo = przewiń w prawo (zwiększ scrollLeft)
     scrollToPosition(newPosition);
   };
-
   // Obsługa przeciągania myszką
   const handleMouseDown = (e) => {
     if (!containerRef.current) return;
+    // Skip drag if clicking on a button or clickable element
+    if (e.target.closest('.productElementContainerDivBottomContainerThirdContainerLeftContainer') || 
+        e.target.closest('.productElementContainerDivBottomContainerThirdContainerRightContainer')) {
+      return;
+    }
     setIsDragging(true);
     setStartX(e.pageX - containerRef.current.offsetLeft);
     setScrollLeft(containerRef.current.scrollLeft);

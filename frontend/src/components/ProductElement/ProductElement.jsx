@@ -1,4 +1,5 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 import "./productElement.css";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { MdOutlineRemoveRedEye } from "react-icons/md";
@@ -6,22 +7,35 @@ import { useProducts } from '../../context/ProductContext';
 
 const ProductElement = ({ id }) => {
   const { getProductById } = useProducts();
+  const navigate = useNavigate();
   const product = getProductById(id);
 
   if (!product) {
     return <div>Product not found</div>;
   }
-
+  
+  const handleProductClick = () => {
+    navigate(`/product/${id}`);
+  };
+  
+  const handleQuickView = (e) => {
+    e.stopPropagation();
+    navigate(`/product/${id}`);
+  };
+  
+  const handleSelectOptions = (e) => {
+    e.stopPropagation();
+    navigate(`/product/${id}`);
+  };
   return (
     <div className='productElement'>
         <div className="productElementContainer">
-            <div className="productElementContainerDiv">
+            <div className="productElementContainerDiv" onClick={handleProductClick}>
                 {/* Top Part */}
                 <div className="productElementContainerDivTop">
-                    <div className="productElementContainerDivTopContainer">                        <div className="productElementContainerDivTopContainerImageOne">
-                            <div className="productElementContainerDivTopContainerImageOneContainer">
+                    <div className="productElementContainerDivTopContainer">                        <div className="productElementContainerDivTopContainerImageOne">                            <div className="productElementContainerDivTopContainerImageOneContainer">
                                 <img 
-                                    src={product.images?.primary || "https://via.placeholder.com/290x360?text=No+Image"} 
+                                    src={product.images?.primary || (product.images?.gallery && product.images.gallery[0]) || "https://via.placeholder.com/290x360?text=No+Image"} 
                                     alt={product.name} 
                                     className='productElementContainerDivTopContainerImageOneContainerImage' 
                                 />
@@ -31,7 +45,7 @@ const ProductElement = ({ id }) => {
                         <div className="productElementContainerDivTopContainerImageTwo">
                             <div className="productElementContainerDivTopContainerImageTwoContainer">
                                 <img 
-                                    src={product.images?.secondary || product.images?.primary || "https://via.placeholder.com/290x360?text=No+Image"} 
+                                    src={product.images?.secondary || (product.images?.gallery && product.images.gallery[1]) || product.images?.primary || "https://via.placeholder.com/290x360?text=No+Image"} 
                                     alt={product.name} 
                                     className='productElementContainerDivTopContainerImageTwoContainerImage' 
                                 />
@@ -62,8 +76,7 @@ const ProductElement = ({ id }) => {
                         <div className="productElementContainerDivBottomContainerThird">
                             <div className="productElementContainerDivBottomContainerThirdContainer">
                                 {/* Left Part */}
-                                <div className="productElementContainerDivBottomContainerThirdContainerLeft">
-                                    <div className="productElementContainerDivBottomContainerThirdContainerLeftContainer">
+                                <div className="productElementContainerDivBottomContainerThirdContainerLeft">                                <div className="productElementContainerDivBottomContainerThirdContainerLeftContainer" onClick={handleSelectOptions}>
                                         <div className="productElementContainerDivBottomContainerThirdContainerLeftContainerOne">
                                             <MdOutlineShoppingBag className='productElementContainerDivBottomContainerThirdContainerLeftContainerOneIcon' />
                                         </div>
@@ -76,9 +89,8 @@ const ProductElement = ({ id }) => {
                                     </div>
                                 </div>
 
-                                {/* Right Part */}
-                                <div className="productElementContainerDivBottomContainerThirdContainerRight">
-                                    <div className="productElementContainerDivBottomContainerThirdContainerRightContainer">
+                                {/* Right Part */}                                <div className="productElementContainerDivBottomContainerThirdContainerRight">
+                                    <div className="productElementContainerDivBottomContainerThirdContainerRightContainer" onClick={handleQuickView}>
                                         <div className="productElementContainerDivBottomContainerThirdContainerRightContainerOne">
                                             <MdOutlineRemoveRedEye className='productElementContainerDivBottomContainerThirdContainerRightContainerOneIcon' />
                                         </div>                                        <div className="productElementContainerDivBottomContainerThirdContainerRightContainerTwo">

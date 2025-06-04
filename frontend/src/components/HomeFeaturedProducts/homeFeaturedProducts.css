@@ -214,6 +214,7 @@
     margin-left: auto;
     margin-right: auto;
     height: auto;
+    overflow: hidden;
 }
 
 .homeFeaturedProductsContainerDivMiddleContainer {
@@ -226,17 +227,19 @@
     display: flex;
     gap: 20px;
     overflow-x: auto;
-    overflow-y: hidden; /* Dodane - blokuje scrollowanie w osi Y */
+    overflow-y: hidden; /* Blokuje scrollowanie w osi Y */
     scroll-behavior: smooth;
     -ms-overflow-style: none;
-    scrollbar-width: none;    padding: 10px 0;
+    scrollbar-width: none;
+    padding: 15px 0;
     width: 100%;
-    height: 490px; /* Zwiększone z 480px do 490px żeby pomieścić produkty o wysokości 460px + padding */
+    height: 490px; 
     cursor: grab;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    align-items: center; /* Wyśrodkowanie elementów w pionie */
 }
 /* 
 .homeFeaturedProductsContainerDivMiddleContainerDiv::-webkit-scrollbar {
@@ -256,7 +259,8 @@
     pointer-events: none;
 }
 
-.homeFeaturedProductsContainerDivMiddleContainerDiv .productElement {
+.homeFeaturedProductsContainerDivMiddleContainerDiv .productElement,
+.homeFeaturedProductsContainerDivMiddleContainerDiv .productElement * {
     flex-shrink: 0;
     pointer-events: auto;
 }
@@ -266,6 +270,9 @@
     flex-shrink: 0;
     width: 290px;
     height: 445px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 
