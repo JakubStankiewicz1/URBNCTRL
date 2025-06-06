@@ -1,5 +1,5 @@
 import React from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import "./navbar.css";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { PiUserBold } from "react-icons/pi";
@@ -19,11 +19,11 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
             <div className="navbarContainerDiv">
                 {/* Left Part */}
                 <div className="navbarContainerLeft">
-                    <div className="navbarContainerLeftContainer">
+                    <Link to='/' className="navbarContainerLeftContainer">
                         <p className="navbarContainerLeftContainerText">
                             URBNCTRL
                         </p>
-                    </div>
+                    </Link>
                 </div>
 
                 {/* Right Part */}

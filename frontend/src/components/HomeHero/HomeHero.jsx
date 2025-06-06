@@ -28,18 +28,17 @@ const HomeHero = () => {
 
                 {/* Bottom Part */}
                 <div className="homeHeroContainerOverlayBottom">
-                    <div className="homeHeroContainerOverlayBottomContainer">
-                        <div className="homeHeroContainerOverlayBottomContainerButton">
+                    <div className="homeHeroContainerOverlayBottomContainer">                        <div className="homeHeroContainerOverlayBottomContainerButton">
                             <div className="homeHeroContainerOverlayBottomContainerButtonContainer">
-                                <a href="" onClick={handleStartClick}>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
+                                <div className="homeHeroButton" onClick={handleStartClick}>
+                                    <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderTop"></div>
+                                    <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderRight"></div>
+                                    <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderBottom"></div>
+                                    <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderLeft"></div>
                                     <p className="homeHeroContainerOverlayBottomContainerButtonContainerText">
                                         Start
                                     </p>
-                                </a>
+                                </div>
                             </div>
                         </div>
                     </div>

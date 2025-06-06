@@ -3,6 +3,7 @@ import { useParams, useNavigate } from "react-router-dom";
 import { useProducts } from "../../context/ProductContext";
 import "./product.css";
 import { MdKeyboardArrowRight } from "react-icons/md";
+import RelatedProducts from "../../components/RelatedProducts/RelatedProducts";
 
 const Product = () => {
   const { id } = useParams();
@@ -194,8 +195,10 @@ const Product = () => {
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div>      </div>
+      
+      {/* Related Products Section */}
+      <RelatedProducts currentProductId={id} />
     </div>
   );
 };

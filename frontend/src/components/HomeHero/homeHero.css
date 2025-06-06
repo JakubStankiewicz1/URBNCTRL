@@ -92,13 +92,13 @@
 }
 
 /* Hide button immediately when animation starts */
-.homeHeroContainerOverlay.hide a {
+.homeHeroContainerOverlay.hide .homeHeroButton {
     opacity: 0;
     visibility: hidden;
     transition: opacity 0.1s ease-out, visibility 0.1s ease-out;
 }
 
-.homeHeroContainerOverlay.hide span {
+.homeHeroContainerOverlay.hide .homeHeroButtonAnimatedBorder {
     animation: none !important;
     opacity: 0;
 }
@@ -147,7 +147,7 @@
     align-items: center;
 }
 
-a{
+.homeHeroButton{
     position: relative;
     display: inline-block;
     padding: 25px 30px;
@@ -158,8 +158,9 @@ a{
     transition: .5s;
     overflow: hidden;
     margin-right: 70px;
+    cursor: pointer;
 }
-a:hover{
+.homeHeroButton:hover{
     background-color: #39FF14;
     color: #050801;
     box-shadow: 0 0 5px #39FF14,
@@ -168,11 +169,11 @@ a:hover{
                 0 0 300px #39FF14;
     -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
 }
-span{
+.homeHeroButtonAnimatedBorder{
     position: absolute;
     display: block;
 }
-span:nth-child(1){
+.homeHeroButtonAnimatedBorderTop{
     top: 0;
     left: 0;
     width: 100%;
@@ -188,7 +189,7 @@ span:nth-child(1){
         left: 100%;
     }
 }
-a span:nth-child(2){
+.homeHeroButtonAnimatedBorderRight{
     top: -100%;
     right: 0;
     width: 1px;
@@ -205,7 +206,7 @@ a span:nth-child(2){
         top: 100%;
     }
 }
-a span:nth-child(3){
+.homeHeroButtonAnimatedBorderBottom{
     bottom: 0;
     right: 0;
     width: 100%;
@@ -222,7 +223,7 @@ a span:nth-child(3){
         right: 100%;
     }
 }
-a span:nth-child(4){
+.homeHeroButtonAnimatedBorderLeft{
     bottom: -100%;
     left: 0;
     width: 1px;

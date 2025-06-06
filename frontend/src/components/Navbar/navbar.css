@@ -191,8 +191,16 @@
     color: #333;
 }
 
+.navbar--dark .navbarContainerRightContainerElementOneContainerIcon:hover {
+    color: #DA2228;
+}
+
 .navbar--dark .navbarContainerRightContainerElementTwoContainerIcon {
     color: #333;
+}
+
+.navbar--dark .navbarContainerRightContainerElementTwoContainerIcon:hover {
+    color: #DA2228;
 }
 
 .navbar--dark .navbarContainerRightContainerElementThreeContainerMenuLineOneDivTwo,
