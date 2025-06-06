@@ -52,8 +52,7 @@ const HomeTrendingFeatures = () => {
 
                     {/* Element */}
                     <div className="homeTrendingFeaturesContainerBottomContainerElement">
-                        <div className="homeTrendingFeaturesContainerBottomContainerElementContainer">
-                            {/* Image */}
+                        <div className="homeTrendingFeaturesContainerBottomContainerElementContainer">                            {/* Image */}
                             <div className="homeTrendingFeaturesContainerBottomContainerElementContainerImage">
                                 <div className="homeTrendingFeaturesContainerBottomContainerElementContainerImageContainer">
                                     <img src={assets.HomeTrendingFeaturesOne} alt="" className='homeTrendingFeaturesContainerBottomContainerElementContainerImageContainerImage' />
@@ -113,11 +112,10 @@ const HomeTrendingFeatures = () => {
 
                     {/* Element */}
                     <div className="homeTrendingFeaturesContainerBottomContainerElement">
-                        <div className="homeTrendingFeaturesContainerBottomContainerElementContainer">
-                            {/* Image */}
+                        <div className="homeTrendingFeaturesContainerBottomContainerElementContainer">                            {/* Image */}
                             <div className="homeTrendingFeaturesContainerBottomContainerElementContainerImage">
                                 <div className="homeTrendingFeaturesContainerBottomContainerElementContainerImageContainer">
-                                    <img src={assets.HomeTrendingFeaturesOne} alt="" className='homeTrendingFeaturesContainerBottomContainerElementContainerImageContainerImage' />
+                                    <img src={assets.HomeTrendingFeaturesTwo} alt="" className='homeTrendingFeaturesContainerBottomContainerElementContainerImageContainerImage' />
                                 </div>
                             </div>
 
@@ -127,7 +125,7 @@ const HomeTrendingFeatures = () => {
                                     <div className="homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOne">
                                         <div className="homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainer">
                                             <p className="homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainerText nunito-sans-regular">
-                                                Tokyo Underground
+                                                Street Racing Chronicles
                                             </p>
                                         </div>
                                     </div>
@@ -162,11 +160,10 @@ const HomeTrendingFeatures = () => {
 
                     {/* Element */}
                     <div className="homeTrendingFeaturesContainerBottomContainerElement">
-                        <div className="homeTrendingFeaturesContainerBottomContainerElementContainer">
-                            {/* Image */}
+                        <div className="homeTrendingFeaturesContainerBottomContainerElementContainer">                            {/* Image */}
                             <div className="homeTrendingFeaturesContainerBottomContainerElementContainerImage">
                                 <div className="homeTrendingFeaturesContainerBottomContainerElementContainerImageContainer">
-                                    <img src={assets.HomeTrendingFeaturesOne} alt="" className='homeTrendingFeaturesContainerBottomContainerElementContainerImageContainerImage' />
+                                    <img src={assets.HomeTrendingFeaturesThree} alt="" className='homeTrendingFeaturesContainerBottomContainerElementContainerImageContainerImage' />
                                 </div>
                             </div>
 
@@ -176,7 +173,7 @@ const HomeTrendingFeatures = () => {
                                     <div className="homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOne">
                                         <div className="homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainer">
                                             <p className="homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainerText nunito-sans-regular">
-                                                Tokyo Underground
+                                                Midnight Highway
                                             </p>
                                         </div>
                                     </div>

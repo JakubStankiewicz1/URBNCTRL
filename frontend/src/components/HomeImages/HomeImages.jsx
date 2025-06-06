@@ -1,5 +1,6 @@
 import React, { useRef, useEffect } from 'react';
 import "./homeImages.css";
+import assets from '../../assets/assets';
 
 const HomeImages = () => {
   const scrollRef = useRef(null);
@@ -93,47 +94,80 @@ const HomeImages = () => {
   const originalElements = (
     <>
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer"></div>
+        <div className="homeImagesContainerDivElementContainer">
+          <div className="homeImagesContainerDivElementContainerImage">
+            <img src={assets.HomeImagesOne} alt="" className='homeImagesContainerDivElementContainerImageImg' />
+          </div>
+        </div>
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer"></div>
+        <div className="homeImagesContainerDivElementContainer">
+          <img src={assets.HomeImagesTwo} alt="" className='homeImagesContainerDivElementContainerImageImg' />
+        </div>
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer"></div>
+        <div className="homeImagesContainerDivElementContainer">
+          <img src={assets.HomeImagesThree} alt="" className='homeImagesContainerDivElementContainerImageImg' />
+        </div>
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer"></div>
+        <div className="homeImagesContainerDivElementContainer">
+          <img src={assets.HomeImagesFour} alt="" className='homeImagesContainerDivElementContainerImageImg' />
+        </div>
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer"></div>
+        <div className="homeImagesContainerDivElementContainer">
+          <img src={assets.HomeImagesFive} alt="" className='homeImagesContainerDivElementContainerImageImg' />
+        </div>
       </div>
 
       <div className="homeImagesContainerDivElementGreen">
-        <div className="homeImagesContainerDivElementContainer"></div>
+        <div className="homeImagesContainerDivElementGreenContainer">
+          <div className="homeImagesContainerDivElementGreenContainerImage">
+          <img src={assets.HomeImagesSeven} alt="" className='homeImagesContainerDivElementGreenContainerImageImg' />
+          </div>
+        </div>
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer"></div>
+        <div className="homeImagesContainerDivElementContainer">
+          <img src={assets.HomeImagesSix} alt="" className='homeImagesContainerDivElementContainerImageImg' />
+        </div>
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer"></div>
+        <div className="homeImagesContainerDivElementContainer">
+          <img src={assets.HomeImagesEight} alt="" className='homeImagesContainerDivElementContainerImageImg' />
+        </div>
+      </div>
+
+
+      <div className="homeImagesContainerDivElementGreen">
+        <div className="homeImagesContainerDivElementGreenContainer">
+          <div className="homeImagesContainerDivElementGreenContainerImage">
+          <img src={assets.HomeImagesNine} alt="" className='homeImagesContainerDivElementGreenContainerImageImg' />
+          </div>
+        </div>
       </div>
 
       <div className="homeImagesContainerDivElementGreen">
-        <div className="homeImagesContainerDivElementContainer"></div>
+        <div className="homeImagesContainerDivElementGreenContainer">
+          <div className="homeImagesContainerDivElementGreenContainerImage">
+          <img src={assets.HomeImagesTen} alt="" className='homeImagesContainerDivElementGreenContainerImageImg' />
+          </div>
+        </div>
       </div>
 
       <div className="homeImagesContainerDivElementGreen">
-        <div className="homeImagesContainerDivElementContainer"></div>
-      </div>
-
-      <div className="homeImagesContainerDivElementGreen">
-        <div className="homeImagesContainerDivElementContainer"></div>
+        <div className="homeImagesContainerDivElementGreenContainer">
+          <div className="homeImagesContainerDivElementGreenContainerImage">
+          <img src={assets.HomeImagesEleven} alt="" className='homeImagesContainerDivElementGreenContainerImageImg' />
+          </div>
+        </div>
       </div>
 
 
@@ -147,14 +181,24 @@ const HomeImages = () => {
       {/* <div className="homeImagesContainerDivElementGreen">
         <div className="homeImagesContainerDivElementContainer"></div>
       </div> */}
+
+
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer"></div>
+        <div className="homeImagesContainerDivElementContainer">
+          <img src={assets.HomeImagesTwelve} alt="" className='homeImagesContainerDivElementContainerImageImg' />
+        </div>
       </div>
+
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer"></div>
+        <div className="homeImagesContainerDivElementContainer">
+          <img src={assets.HomeImagesThirteen} alt="" className='homeImagesContainerDivElementContainerImageImg' />
+        </div>
       </div>
+
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer"></div>
+        <div className="homeImagesContainerDivElementContainer">
+          <img src={assets.HomeImagesFourteen} alt="" className='homeImagesContainerDivElementContainerImageImg' />
+        </div>
       </div>
     </>
   );

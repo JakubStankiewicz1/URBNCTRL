@@ -1,6 +1,6 @@
 .productElement {
     width: 290px;
-    height: 445px;
+    height: 465px;
     /* Making the height consistent with the height specified in homeFeaturedProducts.css */
     display: flex;
     justify-content: center;
@@ -196,7 +196,8 @@
     visibility: hidden;
     transition: opacity 0.3s ease, visibility 0.3s ease;
     /* margin-top: -20px; */
-    transform: translateY(-65px);
+    /* transform: translateY(-65px); */
+    transform: translateY(-76%);
 }
 
 .productElementContainerDivBottomContainerThirdContainer {

@@ -64,13 +64,21 @@ const Product = () => {
   }
 
   return (
-    <div className="productInfo">
-      <div className="productInfoBreadcrumb">
-        <div className="productInfoBreadcrumbHome" onClick={() => navigate("/")}>Home</div>
+    <div className="productInfo">      <div className="productInfoBreadcrumb">
+        <div className="productInfoBreadcrumbHome" onClick={() => navigate("/")}>
+          Home
+          <div className="productInfoBreadcrumbHomeDiv" />
+        </div>
         <div className="productInfoBreadcrumbSeparator"><MdKeyboardArrowRight /></div>
-        <div className="productInfoBreadcrumbShop" onClick={() => navigate("/shop")}>Shop</div>
+        <div className="productInfoBreadcrumbShop" onClick={() => navigate("/shop")}>
+          Shop
+          <div className="productInfoBreadcrumbShopDiv" />
+        </div>
         <div className="productInfoBreadcrumbSeparator"><MdKeyboardArrowRight /></div>
-        <div className="productInfoBreadcrumbApparel">Apparel</div>
+        <div className="productInfoBreadcrumbApparel">
+          Apparel
+          <div className="productInfoBreadcrumbApparelDiv" />
+        </div>
         <div className="productInfoBreadcrumbSeparator"><MdKeyboardArrowRight /></div>
         <div className="productInfoBreadcrumbCurrent">{product?.name}</div>
       </div>

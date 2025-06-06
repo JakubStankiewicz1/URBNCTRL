@@ -22,7 +22,7 @@
 
 .relatedProductsGrid {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: nowrap;
   width: 100%;
   height: auto;
@@ -31,37 +31,111 @@
 }
 
 .relatedProductGridItem {
-  flex: 1 1 290px;
-  max-width: 290px;
+  flex-shrink: 0;
+  width: 290px;
+  height: 465px;
   margin-bottom: 30px;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
-/* Responsive adjustments */
-@media (max-width: 1200px) {
-  .relatedProductsGrid {
-    padding: 0 10px;
-  }
+/* Ensure consistent ProductElement sizing in RelatedProducts - Match HomeFeaturedProducts */
+.relatedProductsGrid .productElement {
+  flex-shrink: 0;
+  width: 300px !important;
+  height: 500px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@media (max-width: 992px) {
+/* Force consistent sizing for all ProductElement children */
+.relatedProductsGrid .productElement .productElementContainer {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.relatedProductsGrid .productElement .productElementContainerDiv {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
   .relatedProductsGrid {
-    flex-wrap: wrap;
-    justify-content: center;
+    gap: 20px;
   }
   
   .relatedProductGridItem {
-    margin: 0 15px 30px;
+    width: 270px;
+    height: 425px;
+  }
+  
+  .relatedProductsGrid .productElement {
+    width: 270px !important;
+    height: 425px !important;
   }
 }
 
-@media (max-width: 576px) {
-  .relatedProductsContainer {
-    width: 90%;
+@media (max-width: 1200px) {
+  .relatedProductsGrid {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+  }
+  
+  .relatedProductGridItem {
+    width: 290px;
+    height: 445px;
+  }
+  
+  .relatedProductsGrid .productElement {
+    width: 290px !important;
+    height: 445px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .relatedProductsGrid {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
   }
   
   .relatedProductsHeading {
     font-size: 28px;
+    text-align: center;
+  }
+  
+  .relatedProductGridItem {
+    width: 290px;
+    height: 445px;
+  }
+  
+  .relatedProductsGrid .productElement {
+    width: 290px !important;
+    height: 445px !important;
   }
 }
+
+@media (max-width: 480px) {
+  .relatedProductsContainer {
+    width: 95%;
+  }
+  
+  .relatedProductsHeading {
+    font-size: 24px;
+  }
+  
+  .relatedProductGridItem {
+    width: 270px;
+    height: 425px;
+  }
+  
+  .relatedProductsGrid .productElement {
+    width: 270px !important;
+    height: 425px !important;
+  }
+}
+

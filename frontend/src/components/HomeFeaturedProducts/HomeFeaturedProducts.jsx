@@ -176,7 +176,7 @@ const HomeFeaturedProducts = () => {
                 style={{ cursor: isDragging ? "grabbing" : "grab" }}
               >
                 {duplicatedProducts.map((product, index) => (
-                  <ProductElement key={`${product.id}-${index}`} id={product.id} />
+                  <ProductElement key={`${product.id}-${index}`} id={product.id} className='homeFeaturedProductsContainerDivMiddleContainerDivElement' />
                 ))}
               </div>
             </div>

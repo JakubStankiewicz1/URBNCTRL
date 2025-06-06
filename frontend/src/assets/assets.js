@@ -49,8 +49,30 @@ import CommunityArticleElementImageSix from "./CommunityArticleElementImageSix.j
 import CommunityArticleElementImageSeven from "./CommunityArticleElementImageSeven.jpg";
 import CommunityArticleElementImageEight from "./CommunityArticleElementImageEight.jpg";
 
+import HomeTrendingFeaturesTwo from "./HomeTrendingFeaturesTwo.jpg";
+import HomeTrendingFeaturesThree from "./HomeTrendingFeaturesThree.webp";
 
 
+
+
+
+import HomeImagesOne from "./HomeImagesOne.jpeg";
+import HomeImagesTwo from "./HomeImagesTwo.jpeg";
+import HomeImagesThree from "./HomeImagesThree.jpg";
+import HomeImagesFour from "./HomeImagesFour.webp";
+import HomeImagesFive from "./HomeImagesFive.avif";
+import HomeImagesSix from "./HomeImagesSix.jpg";
+
+import HomeImagesSeven from "./HomeImagesSeven.webp";
+import HomeImagesEight from "./HomeImagesEight.jpg";
+import HomeImagesNine from "./HomeImagesNine.jpg";
+import HomeImagesTen from "./HomeImagesTen.jpg";
+
+import HomeImagesEleven from "./HomeImagesEleven.jpg";
+
+import HomeImagesTwelve from "./HomeImagesTwelve.webp";
+import HomeImagesThirteen from "./HomeImagesThirteen.avif";
+import HomeImagesFourteen from "./HomeImagesFourteen.jpg";
 
 // Export font paths
 export const fonts = {
@@ -85,7 +107,8 @@ export default {
   HomeFeaturedProductsOne,
   HomeFeaturedProductsTwo,
   HomeFeaturedProductsThree,
-  HomeFeaturedProductsFour,  HomeFeaturedProductsFive,
+  HomeFeaturedProductsFour,  
+  HomeFeaturedProductsFive,
   HomeFeaturedProductsSix,
   HomeFeaturedProductsSeven,
   HomeHeroVideo,
@@ -98,5 +121,33 @@ export default {
   CommunityArticleElementImageFive,
   CommunityArticleElementImageSix,
   CommunityArticleElementImageSeven,
-  CommunityArticleElementImageEight
+  CommunityArticleElementImageEight,
+
+
+  HomeTrendingFeaturesTwo,
+  HomeTrendingFeaturesThree,
+
+
+
+
+
+
+
+
+
+  HomeImagesOne,
+  HomeImagesTwo,
+  HomeImagesThree,
+  HomeImagesFour,
+  HomeImagesFive,
+  HomeImagesSix,
+  HomeImagesSeven,
+  HomeImagesEight,
+  HomeImagesNine,
+  HomeImagesTen,
+  HomeImagesEleven,
+
+  HomeImagesTwelve,
+  HomeImagesThirteen,
+  HomeImagesFourteen
 }
