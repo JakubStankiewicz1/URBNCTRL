@@ -1,5 +1,6 @@
 import React from 'react';
 import "./homeLocationOne.css";
+import assets from '../../assets/assets';
 
 const HomeLocationOne = () => {
   return (
@@ -12,11 +13,23 @@ const HomeLocationOne = () => {
                     <div className="homeLocationOneContainerDivLeftContainer">
                         <div className="homeLocationOneContainerDivLeftContainerDiv">
 
-                            <div className="homeLocationOneContainerDivLeftContainerDivOne"></div>
+                            <div className="homeLocationOneContainerDivLeftContainerDivOne">
+                                <div className="homeLocationOneContainerDivLeftContainerDivOneContainer">
+                                    <img src={assets.HomeLocationOneImgOne} alt="" className='homeLocationOneContainerDivLeftContainerDivOneContainerImage' />
+                                </div>
+                            </div>
                             
-                            <div className="homeLocationOneContainerDivLeftContainerDivTwo"></div>
+                            <div className="homeLocationOneContainerDivLeftContainerDivTwo">
+                                <div className="homeLocationOneContainerDivLeftContainerDivTwoContainer">
+                                    <img src={assets.HomeLocationOneImgTwo} alt="" className='homeLocationOneContainerDivLeftContainerDivTwoContainerImage' />
+                                </div>
+                            </div>
 
-                            <div className="homeLocationOneContainerDivLeftContainerDivThree"></div>
+                            <div className="homeLocationOneContainerDivLeftContainerDivThree">
+                                <div className="homeLocationOneContainerDivLeftContainerDivThreeContainer">
+                                    <img src={assets.HomeLocationOneImgThree} alt="" className='homeLocationOneContainerDivLeftContainerDivThreeContainerImage' />
+                                </div>
+                            </div>
 
                         </div>
                     </div>

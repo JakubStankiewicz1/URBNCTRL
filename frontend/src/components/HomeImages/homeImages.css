@@ -62,6 +62,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.homeImagesContainerDivElementContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.homeImagesContainerDivElementContainer:hover::before {
+    opacity: 0.7;
 }
 
 .homeImagesContainerDivElementContainerImageImg {
@@ -90,6 +109,25 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.homeImagesContainerDivElementGreenContainer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.15);
+    z-index: 1;
+    border-radius: 5px;
+    transition: opacity 0.3s ease;
+}
+
+.homeImagesContainerDivElementGreenContainer:hover::before {
+    opacity: 0.7;
 }
 
 .homeImagesContainerDivElementGreenContainerImage {
