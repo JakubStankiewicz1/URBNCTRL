@@ -22,34 +22,13 @@
     align-items: center;
 }
 
-.communityArticleElementContainerDiv:hover .communityArticleElementContainerDivImage {
-    transform: scale(1.05);
-}
-
-
-
-
-
-
-
-
-
-
 .communityArticleElementContainerDivImage {
     width: 380px;
     height: 480px;
-
     border-radius: 5px;
-
     position: relative;
-
     transition: all 0.3s ease-in-out;
-}
-
-.communityArticleElementContainerDivImage {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+    overflow: hidden;
 }
 
 .communityArticleElementContainerDivImageContainer {
@@ -66,13 +45,9 @@
 .communityArticleElementContainerDivImageContainerImage {
     width: 100%;
     height: 100%;
-
     border-radius: 5px;
-
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-
+    object-fit: cover;
+    object-position: center top;
     filter: brightness(0.8);
     transition: all 0.3s ease-in-out;
 }
@@ -80,6 +55,7 @@
 
 .communityArticleElementContainerDiv:hover .communityArticleElementContainerDivImageContainerImage {
     filter: brightness(1);
+    transform: scale(1.05);
 }
 
 .communityArticleElementContainerDivInfo {

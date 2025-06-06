@@ -1,17 +1,14 @@
 import React from 'react';
 import "./communityArticleElement.css";
-import assets from '../../assets/assets';
 
-const CommunityArticleElement = () => {
+const CommunityArticleElement = ({ image, category, title, buttonText = "Read Article" }) => {
   return (
     <div className='communityArticleElement'>
         <div className="communityArticleElementContainer">
-            <div className="communityArticleElementContainerDiv">
-
-                {/* Image */}
+            <div className="communityArticleElementContainerDiv">                {/* Image */}
                 <div className="communityArticleElementContainerDivImage">
                     <div className="communityArticleElementContainerDivImageContainer">
-                        <img src={assets.CommunityArticleElementImageOne} alt="" className='communityArticleElementContainerDivImageContainerImage' />
+                        <img src={image} alt={title} className='communityArticleElementContainerDivImageContainerImage' />
                     </div>
                 </div>
 
@@ -23,7 +20,7 @@ const CommunityArticleElement = () => {
                         <div className="communityArticleElementContainerDivInfoContainerOne">
                             <div className="communityArticleElementContainerDivInfoContainerOneContainer">
                                 <p className="communityArticleElementContainerDivInfoContainerOneContainerText nunito-sans-regular">
-                                    Cars Features
+                                    {category}
                                 </p>
                             </div>
                         </div>
@@ -31,7 +28,7 @@ const CommunityArticleElement = () => {
                         <div className="communityArticleElementContainerDivInfoContainerTwo">
                             <div className="communityArticleElementContainerDivInfoContainerTwoContainer">
                                 <p className="communityArticleElementContainerDivInfoContainerTwoContainerText nunito-sans-regular">
-                                    UNDERGROUND TOKYO: A SHORT FILM BY THE-LOWDOWN.COM
+                                    {title}
                                 </p>
                             </div>
                         </div>
@@ -41,7 +38,7 @@ const CommunityArticleElement = () => {
                                 <div className="communityArticleElementContainerDivInfoContainerThreeContainerButton">
                                     <div className="communityArticleElementContainerDivInfoContainerThreeContainerButtonContainer">
                                         <p className="communityArticleElementContainerDivInfoContainerThreeContainerButtonContainerText nunito-sans-regular">
-                                            Read Article
+                                            {buttonText}
                                         </p>
                                     </div>
                                 </div>

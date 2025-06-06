@@ -1,20 +1,86 @@
 import React, { useState, useRef, useEffect } from 'react';
 import "./communityArticle.css";
 import CommunityArticleElement from '../CommunityArticleElement/CommunityArticleElement';
+import assets from '../../assets/assets';
 
 const CommunityArticle = () => {
+  // Community articles data - Dynamic content instead of hardcoded elements
+  const communityArticlesData = [
+    {
+      id: 1,
+      image: assets.CommunityArticleElementImageOne,
+      category: "Drift Culture",
+      title: "SIDEWAYS LEGENDS: THE ART OF CONTROLLED CHAOS",
+      buttonText: "Read Article"
+    },
+    {
+      id: 2,
+      image: assets.CommunityArticleElementImageTwo,
+      category: "Engine Builds",
+      title: "2JZ-GTE SWAP: FROM STOCK TO 1000HP MONSTER",
+      buttonText: "Read More"
+    },
+    {
+      id: 3,
+      image: assets.CommunityArticleElementImageThree,
+      category: "Suspension Setup",
+      title: "COILOVER SCIENCE: DIALING IN THE PERFECT STANCE",
+      buttonText: "View Guide"
+    },
+    {
+      id: 4,
+      image: assets.CommunityArticleElementImageFour,
+      category: "Street Racing",
+      title: "MIDNIGHT MADNESS: UNDERGROUND RACING DOCUMENTARY",
+      buttonText: "Watch Now"
+    },
+    {
+      id: 5,
+      image: assets.CommunityArticleElementImageFive,
+      category: "Turbo Tech",
+      title: "BOOST MASTERY: PRECISION TURBO INSTALLATIONS",
+      buttonText: "Read Article"
+    },
+    {
+      id: 6,
+      image: assets.CommunityArticleElementImageSix,
+      category: "Build Spotlights",
+      title: "GARAGE KINGS: MEET THE UNDERGROUND BUILDERS",
+      buttonText: "Discover"
+    },
+    {
+      id: 7,
+      image: assets.CommunityArticleElementImageSeven,
+      category: "DIY Tutorials",
+      title: "CARBON FIBER MASTERY: PROFESSIONAL TECHNIQUES",
+      buttonText: "Learn How"
+    },
+    {
+      id: 8,
+      image: assets.CommunityArticleElementImageEight,
+      category: "Industry News",
+      title: "NEXT-GEN PERFORMANCE: THE FUTURE OF TUNING",
+      buttonText: "Read News"    }
+  ];
+
   const [currentSlide, setCurrentSlide] = useState(2); // Start from 2 because of duplicates
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
   const [translateX, setTranslateX] = useState(-2 * 410); // Start position
   const sliderRef = useRef(null);
   
-  const totalSlides = 8; // liczba elementów
+  const totalSlides = communityArticlesData.length;
   const slideWidth = 410; // 380px szerokość + 30px gap
   
-  // Create slides with more duplicates for smoother infinite scroll
-  const slides = Array(totalSlides).fill().map((_, index) => (
-    <CommunityArticleElement key={`slide-${index}`} />
+  // Create slides from data
+  const slides = communityArticlesData.map((article, index) => (
+    <CommunityArticleElement 
+      key={`slide-${article.id}`}
+      image={article.image}
+      category={article.category}
+      title={article.title}
+      buttonText={article.buttonText}
+    />
   ));
   
   // Add more duplicates for seamless infinite loop

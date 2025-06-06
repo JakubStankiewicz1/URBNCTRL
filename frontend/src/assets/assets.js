@@ -41,6 +41,14 @@ import CommunityArticleElementImageOne from "./CommunityArticleElementImageOne.j
 
 
 
+import CommunityArticleElementImageTwo from "./CommunityArticleElementImageTwo.jpg";
+import CommunityArticleElementImageThree from "./CommunityArticleElementImageThree.jpg";
+import CommunityArticleElementImageFour from "./CommunityArticleElementImageFour.jpg";
+import CommunityArticleElementImageFive from "./CommunityArticleElementImageFive.jpg";
+import CommunityArticleElementImageSix from "./CommunityArticleElementImageSix.jpg";
+import CommunityArticleElementImageSeven from "./CommunityArticleElementImageSeven.jpg";
+import CommunityArticleElementImageEight from "./CommunityArticleElementImageEight.jpg";
+
 
 
 
@@ -82,5 +90,13 @@ export default {
   HomeFeaturedProductsSeven,
   HomeHeroVideo,
 
-  CommunityArticleElementImageOne
+  CommunityArticleElementImageOne,
+
+  CommunityArticleElementImageTwo,
+  CommunityArticleElementImageThree,
+  CommunityArticleElementImageFour,
+  CommunityArticleElementImageFive,
+  CommunityArticleElementImageSix,
+  CommunityArticleElementImageSeven,
+  CommunityArticleElementImageEight
 }
