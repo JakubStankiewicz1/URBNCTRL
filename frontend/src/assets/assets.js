@@ -78,6 +78,19 @@ import HomeLocationOneImgOne from "./HomeLocationOneImgOne.jpg";
 import HomeLocationOneImgTwo from "./HomeLocationOneImgTwo.jpg";
 import HomeLocationOneImgThree from "./HomeLocationOneImgThree.webp";
 
+
+
+import HomeHeroImagesTwo from "./HomeHeroImagesTwo.jpg";
+import HomeHeroImagesThree from "./HomeHeroImagesThree.jpg";
+import HomeHeroImagesFour from "./HomeHeroImagesFour.jpg";
+import HomeHeroImagesFive from "./HomeHeroImagesFive.jpg";
+import HomeHeroImagesSix from "./HomeHeroImagesSix.jpg";
+import HomeHeroImagesSeven from "./HomeHeroImagesSeven.jpg";
+import HomeHeroImagesEight from "./HomeHeroImagesEight.jpg";
+
+
+
+
 // Export font paths
 export const fonts = {
   chineseShanghai: {
@@ -159,4 +172,14 @@ export default {
   HomeLocationOneImgOne,
   HomeLocationOneImgTwo,
   HomeLocationOneImgThree,
+
+
+
+  HomeHeroImagesTwo,
+  HomeHeroImagesThree,
+  HomeHeroImagesFour,
+  HomeHeroImagesFive,
+  HomeHeroImagesSix,
+  HomeHeroImagesSeven,
+  HomeHeroImagesEight
 }

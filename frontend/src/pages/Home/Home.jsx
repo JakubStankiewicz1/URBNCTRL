@@ -9,6 +9,7 @@ import HomeCollection from '../../components/HomeCollection/HomeCollection';
 import Fotter from '../../components/Fotter/Fotter';
 import HomeTrendingFeatures from '../../components/HomeTrendingFeatures/HomeTrendingFeatures';
 import HomeFeaturedProducts from '../../components/HomeFeaturedProducts/HomeFeaturedProducts';
+import HomeLocationTwo from '../../components/HomeLocationTwo/HomeLocationTwo';
 
 const Home = () => {
   return (
@@ -24,7 +25,11 @@ const Home = () => {
 
       <HomeTrendingFeatures />
 
+      <HomeLocationTwo />
+
       <HomeCollection />
+
+      
 
 
       <HomeFeaturedProducts />

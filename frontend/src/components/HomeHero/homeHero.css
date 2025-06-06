@@ -240,3 +240,107 @@
         bottom: 100%;
     }
 }
+
+/* Scroll Down Indicator Styles */
+.homeHeroScrollDown {
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    opacity: 0;
+    animation: scrollDownFadeIn 1s ease-out 2s forwards;
+}
+
+.homeHeroScrollDownContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.homeHeroScrollDownIcon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.homeHeroScrollDownIconOval {
+    width: 30px;
+    height: 50px;
+    border: 2px solid #39FF14;
+    border-radius: 25px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    padding-top: 8px;
+    animation: scrollDownPulse 2s ease-in-out infinite;
+}
+
+.homeHeroScrollDownIconDot {
+    width: 6px;
+    height: 6px;
+    background-color: #39FF14;
+    border-radius: 50%;
+    animation: scrollDownDot 2s ease-in-out infinite;
+}
+
+.homeHeroScrollDownText {
+    text-align: center;
+}
+
+.homeHeroScrollDownTextP {
+    color: #39FF14;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    margin: 0;
+    animation: scrollDownTextBlink 3s ease-in-out infinite;
+}
+
+/* Animations */
+@keyframes scrollDownFadeIn {
+    0% {
+        opacity: 0;
+        transform: translateX(-50%) translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(-50%) translateY(0);
+    }
+}
+
+@keyframes scrollDownPulse {
+    0%, 100% {
+        border-color: #39FF14;
+        box-shadow: 0 0 0 0 rgba(57, 255, 20, 0.4);
+    }
+    50% {
+        border-color: #50d505;
+        box-shadow: 0 0 0 10px rgba(57, 255, 20, 0);
+    }
+}
+
+@keyframes scrollDownDot {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translateY(20px);
+        opacity: 0.5;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+@keyframes scrollDownTextBlink {
+    0%, 80%, 100% {
+        opacity: 1;
+    }
+    90% {
+        opacity: 0.5;
+    }
+}
