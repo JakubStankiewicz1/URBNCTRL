@@ -2,6 +2,7 @@ import React from 'react';
 import "./homeCollection.css";
 import { HiOutlineArrowLongRight } from "react-icons/hi2";
 import assets from '../../assets/assets';
+import { NavLink } from 'react-router-dom';
 
 const HomeCollection = () => {
   return (
@@ -51,7 +52,7 @@ const HomeCollection = () => {
                                             <div className="homeCollectionContainerDivTopContainerBottomContainerRightContainerDivArrow">
                                                 <HiOutlineArrowLongRight className='homeCollectionContainerDivTopContainerBottomContainerRightContainerDivArrowIcon' />
                                             </div>
-                                            <div className="homeCollectionContainerDivTopContainerBottomContainerRightContainerDivText">
+                                            <NavLink to='/shop' className="homeCollectionContainerDivTopContainerBottomContainerRightContainerDivText">
                                                 <div className="split-text-container">
                                                     {['V','i','e','w',' ','M','o','r','e'].map((char, index) => (
                                                         <div className="split-letter-container" key={index}>
@@ -66,7 +67,7 @@ const HomeCollection = () => {
                                                         </div>
                                                     ))}
                                                 </div>
-                                            </div>
+                                            </NavLink>
                                         </div>
                                     </div>
                                 </div>

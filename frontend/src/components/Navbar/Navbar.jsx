@@ -3,15 +3,21 @@ import { Link, NavLink, useLocation } from 'react-router-dom';
 import "./navbar.css";
 import { MdOutlineShoppingBag } from "react-icons/md";
 import { PiUserBold } from "react-icons/pi";
+import { useProducts } from '../../context/ProductContext';
 
 const Navbar = ({ menuOpen, setMenuOpen }) => {
   const location = useLocation();
+  const { getCartItemsCount } = useProducts();
   
   const isDarkMode = location.pathname === '/shop' || 
                      location.pathname === '/privacy-policy' || 
                      location.pathname.startsWith('/product/') ||
                      location.pathname === '/shipping-delivery-and-returns' ||
-                     location.pathname === '/contact';
+                     location.pathname === '/contact' ||
+                     location.pathname === '/checkout' ||
+                     location.pathname === '/cart';
+
+  const cartItemsCount = getCartItemsCount();
 
   return (
     <div className={`navbar ${isDarkMode ? 'navbar--dark' : ''}`}>
@@ -35,13 +41,14 @@ const Navbar = ({ menuOpen, setMenuOpen }) => {
                             <div className="navbarContainerRightContainerElementOneContainer">
                                 <PiUserBold  className='navbarContainerRightContainerElementOneContainerIcon' />
                             </div>
-                        </div>
-
-                        {/* Element */}
+                        </div>                        {/* Element */}
                         <div className="navbarContainerRightContainerElementTwo">
-                            <div className="navbarContainerRightContainerElementTwoContainer">
+                            <Link to="/cart" className="navbarContainerRightContainerElementTwoContainer">
                                 <MdOutlineShoppingBag className='navbarContainerRightContainerElementTwoContainerIcon' />
-                            </div>
+                                {cartItemsCount > 0 && (
+                                    <span className="cartBadge">{cartItemsCount}</span>
+                                )}
+                            </Link>
                         </div>
 
                         {/* Hamburger */}

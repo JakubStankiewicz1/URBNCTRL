@@ -5,6 +5,14 @@
   background-color: #fff;
   color: #1a1a1a;
   padding-bottom: 50px;
+
+  /* background-color: red; */
+
+  /* display: flex; */
+  /* flex-direction: column; */
+
+  display: flex;
+  flex-direction: column;
 }
 
 .productInfoBreadcrumb {
@@ -14,6 +22,9 @@
   margin-bottom: 40px;
   font-size: 14px;
   color: #666;
+
+  /* background-color: red; */
+  width: 100%;
 }
 .productInfoBreadcrumbHome,
 .productInfoBreadcrumbShop,
@@ -65,10 +76,15 @@
 
 .productInfoContainer {
   display: grid;
-  grid-template-columns: 1fr 400px;
+  /* grid-template-columns: 1fr 400px; */
   gap: 40px;
   align-items: start;
+
+  /* background-color: red; */
+  /* w */
 }
+
+
 .productInfoContainerDiv {
   display: flex;
   gap: 40px;
@@ -140,10 +156,9 @@
   bottom: 20px;
   left: 50%;
   transform: translateX(-50%);
-  background: rgba(0, 0, 0, 0.8);
-  color: #fff;
+  background: rgba(0, 0, 0, 0.8);  color: #fff;
   padding: 8px 16px;
-  border-radius: 20px;
+  border-radius: 0;
   font-size: 12px;
   pointer-events: none;
 }
@@ -174,7 +189,7 @@
 .productInfoDetailsPreorder {
   background-color: #fef3cd;
   border: 1px solid #fecb6b;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 16px;
   margin-bottom: 24px;
   font-size: 14px;
@@ -264,7 +279,7 @@
   min-width: 48px;
   height: 48px;
   border: 1px solid #A8A8A8;
-  border-radius: 8px;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -312,7 +327,7 @@
   background-color: #1a1a1a;
   color: #fff;
   padding: 8px 12px;
-  border-radius: 6px;
+  border-radius: 0;
   white-space: nowrap;
   font-size: 12px;
   z-index: 1000;
@@ -344,7 +359,7 @@
   display: flex;
   align-items: center;
   border: 1px solid #A8A8A8;
-  border-radius: 8px;
+  border-radius: 0;
   background: #fff;
   padding: 0 10px;
   height: 50px;
@@ -417,7 +432,7 @@
 }
 .productInfoNotFoundContainer {
   background: #fff;
-  border-radius: 12px;
+  border-radius: 0;
   box-shadow: 0 2px 12px rgba(0,0,0,0.08);
   padding: 40px 60px;
   text-align: center;
@@ -432,7 +447,7 @@
   background: #e85a5a;
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 0;
   padding: 12px 32px;
   font-size: 16px;
   font-weight: 600;
@@ -441,4 +456,410 @@
 }
 .productInfoNotFoundButton:hover {
   background: #d44646;
+}
+
+/* Product Info Sections */
+.productInfoSections {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin: 40px 0;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* First row - Shipping and Material */
+.productInfoSectionsRow {
+  display: flex;
+  gap: 2px;
+  margin-bottom: 2px;
+}
+
+/* Second row - Details and Size */
+.productInfoSectionsRowSecond {
+  display: flex;
+  gap: 2px;
+}
+
+/* Shipping Section */
+.productInfoSectionShipping {
+  flex: 1;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  padding: 24px;
+}
+
+.productInfoSectionShippingItem {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 0;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+.productInfoSectionShippingItem:last-child {
+  border-bottom: none;
+}
+
+.productInfoSectionShippingIcon {
+  flex-shrink: 0;
+  width: 24px;
+  height: 24px;
+  color: #333;
+}
+
+.productInfoSectionShippingContent {
+  flex: 1;
+}
+
+.productInfoSectionShippingTitle {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin-bottom: 2px;
+}
+
+.productInfoSectionShippingSubtitle {
+  font-size: 12px;
+  color: #666;
+}
+
+.productInfoSectionShippingPrice {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+/* Material Section */
+.productInfoSectionMaterial {
+  flex: 1;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  padding: 24px;
+}
+
+.productInfoSectionMaterialHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.productInfoSectionMaterialTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.productInfoSectionMaterialContent {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.productInfoSectionMaterialItem {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.productInfoSectionMaterialLabel {
+  font-size: 14px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.productInfoSectionMaterialValue {
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* Product Details Section */
+.productInfoSectionDetails {
+  flex: 1;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  padding: 24px;
+}
+
+.productInfoSectionDetailsHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.productInfoSectionDetailsTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.productInfoSectionDetailsContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.productInfoSectionDetailsItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.productInfoSectionDetailsItem:last-child {
+  border-bottom: none;
+}
+
+.productInfoSectionDetailsLabel {
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 500;
+  flex-shrink: 0;
+  min-width: 140px;
+}
+
+.productInfoSectionDetailsValue {
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+  flex: 1;
+}
+
+/* Size and Fit Section */
+.productInfoSectionSizeFit {
+  flex: 1;
+  background: #f8f8f8;
+  border: 1px solid #e0e0e0;
+  border-radius: 0;
+  padding: 24px;
+}
+
+.productInfoSectionSizeFitHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.productInfoSectionSizeFitTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1a1a1a;
+}
+
+.productInfoSectionSizeFitContent {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.productInfoSectionSizeFitItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 8px 0;
+  border-bottom: 1px solid #eee;
+}
+
+.productInfoSectionSizeFitItem:last-child {
+  border-bottom: none;
+}
+
+.productInfoSectionSizeFitLabel {
+  font-size: 14px;
+  color: #1a1a1a;
+  font-weight: 500;
+  flex-shrink: 0;
+  min-width: 120px;
+}
+
+.productInfoSectionSizeFitValue {
+  font-size: 14px;
+  color: #666;
+  text-align: right;
+  flex: 1;
+}
+
+/* Clickable shipping item */
+.productInfoSectionShippingItemClickable {
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.productInfoSectionShippingItemClickable:hover {
+  background-color: rgba(0, 0, 0, 0.02);
+  border-radius: 0;
+}
+
+/* Sell Modal */
+.sellModal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  padding: 20px;
+  animation: sellModalFadeIn 0.3s ease-out;
+}
+
+@keyframes sellModalFadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.sellModalContent {
+  background: white;
+  border-radius: 0;
+  max-width: 480px;
+  width: 100%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+  animation: sellModalSlideIn 0.3s ease-out;
+  position: relative;
+}
+
+@keyframes sellModalSlideIn {
+  from {
+    transform: translateY(-20px) scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+}
+
+.sellModalHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px 0 24px;
+}
+
+.sellModalTitle {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0;
+}
+
+.sellModalCloseButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 0;
+  color: #999;
+  transition: all 0.2s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.sellModalCloseButton:hover {
+  color: #333;
+}
+
+.sellModalBody {
+  padding: 20px 24px 24px 24px;
+}
+
+.sellModalBody .sellModalBodyContent {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.sellModalIcon {
+  flex-shrink: 0;
+  width: 40px;
+  height: 40px;
+  background: #f8f9fa;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  margin-top: 2px;
+}
+
+.sellModalText {
+  flex: 1;
+}
+
+.sellModalDescription {
+  font-size: 14px;
+  line-height: 1.5;
+  color: #374151;
+  margin: 0;
+  text-align: left;
+}
+
+.sellModalLink {
+  color: #6366f1;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.sellModalLink:hover {
+  text-decoration: underline;
+}
+
+/* Remove old styles that are no longer needed */
+.sellModalActions,
+.sellModalButton,
+.sellModalButtonPrimary,
+.sellModalButtonSecondary {
+  display: none;
+}
+
+/* Responsive modal */
+@media (max-width: 768px) {
+  .sellModal {
+    padding: 16px;
+  }
+    .sellModalContent {
+    border-radius: 0;
+    max-width: 90%;
+  }
+  
+  .sellModalHeader {
+    padding: 16px 20px 0 20px;
+  }
+  
+  .sellModalTitle {
+    font-size: 16px;
+  }
+  
+  .sellModalBody {
+    padding: 16px 20px 20px 20px;
+  }
+    .sellModalBody .sellModalBodyContent {
+    gap: 12px;
+  }
+  
+  .sellModalIcon {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .sellModalDescription {
+    font-size: 13px;
+  }
 }

@@ -1,32 +1,64 @@
 import React from "react";
+import { Link, useNavigate, useLocation } from "react-router-dom";
 import "./hamburgerMenuOpen.css";
 import { CgClose } from "react-icons/cg";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaInstagram } from "react-icons/fa";
+import { useProducts } from "../../context/ProductContext";
 
-const HamburgerMenuOpen = ({ isOpen }) => {
+const HamburgerMenuOpen = ({ isOpen, setMenuOpen }) => {
+  const navigate = useNavigate();
+  const location = useLocation();
+  const { getCartItemsCount } = useProducts();
+
+  const handleCloseMenu = () => {
+    setMenuOpen(false);
+  };
+
+  const handleNavigateAndClose = (path) => {
+    navigate(path);
+    setMenuOpen(false);
+  };
+
+  const handleBackgroundClick = (e) => {
+    // Zamknij menu tylko jeśli kliknięto na tło, nie na zawartość menu
+    if (e.target === e.currentTarget) {
+      setMenuOpen(false);
+    }
+  };
+  // Funkcja do sprawdzania czy strona jest aktywna
+  const isActivePage = (path) => {
+    return location.pathname === path;
+  };
+
+  const cartItemsCount = getCartItemsCount();
+
   return (
-    <div className={`hamburgerMenuOpen ${isOpen ? "open" : ""}`}>
+    <div className={`hamburgerMenuOpen ${isOpen ? "open" : ""}`} onClick={handleBackgroundClick}>
       <div className="hamburgerMenuOpenContainer">
-        {/* Left Part */}
+        {/* Left Part */}{" "}
         <div className="hamburgerMenuOpenContainerLeft">
           <div className="hamburgerMenuOpenContainerLeftContainer">
-            <div className="hamburgerMenuOpenContainerLeftContainerOverlay">
+            <div className="hamburgerMenuOpenContainerLeftContainerOverlay" onClick={handleCloseMenu} style={{ cursor: "pointer" }}>
               <CgClose className="hamburgerMenuOpenContainerLeftContainerIcon" />
             </div>
           </div>
         </div>
-
         {/* Right Part */}
         <div className="hamburgerMenuOpenContainerRight">
           <div className="hamburgerMenuOpenContainerRightContainer">
             {/* Top Part */}
             <div className="hamburgerMenuOpenContainerRightContainerTop">
               <div className="hamburgerMenuOpenContainerRightContainerTopContainer">
-                {/* Element */}
-                <div className="hamburgerMenuOpenContainerRightContainerTopContainerElement">
+                {" "}
+                {/* Element - Home */}
+                <div
+                  className={`hamburgerMenuOpenContainerRightContainerTopContainerElement ${isActivePage("/") ? "active" : ""}`}
+                  onClick={() => handleNavigateAndClose("/")}
+                  style={{ cursor: "pointer" }}
+                >
                   <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainer">
                     <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOne">
                       <p className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText nunito-sans-regular">Home</p>
@@ -37,9 +69,12 @@ const HamburgerMenuOpen = ({ isOpen }) => {
                     </div>
                   </div>
                 </div>
-
-                {/* Element */}
-                <div className="hamburgerMenuOpenContainerRightContainerTopContainerElement">
+                {/* Element - Shop */}
+                <div
+                  className={`hamburgerMenuOpenContainerRightContainerTopContainerElement ${isActivePage("/shop") ? "active" : ""}`}
+                  onClick={() => handleNavigateAndClose("/shop")}
+                  style={{ cursor: "pointer" }}
+                >
                   <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainer">
                     <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOne">
                       <p className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText nunito-sans-regular">Shop</p>
@@ -50,9 +85,12 @@ const HamburgerMenuOpen = ({ isOpen }) => {
                     </div>
                   </div>
                 </div>
-
-                {/* Element */}
-                <div className="hamburgerMenuOpenContainerRightContainerTopContainerElement">
+                {/* Element - Features */}
+                <div
+                  className={`hamburgerMenuOpenContainerRightContainerTopContainerElement ${isActivePage("/community") ? "active" : ""}`}
+                  onClick={() => handleNavigateAndClose("/community")}
+                  style={{ cursor: "pointer" }}
+                >
                   <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainer">
                     <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOne">
                       <p className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText nunito-sans-regular">Features</p>
@@ -62,10 +100,13 @@ const HamburgerMenuOpen = ({ isOpen }) => {
                       <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerTwoDiv" />
                     </div>
                   </div>
-                </div>
-
-                {/* Element */}
-                <div className="hamburgerMenuOpenContainerRightContainerTopContainerElement">
+                </div>{" "}
+                {/* Element - Submissions */}
+                <div
+                  className={`hamburgerMenuOpenContainerRightContainerTopContainerElement ${isActivePage("/community") ? "active" : ""}`}
+                  onClick={() => handleNavigateAndClose("/community")}
+                  style={{ cursor: "pointer" }}
+                >
                   <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainer">
                     <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOne">
                       <p className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText nunito-sans-regular">Submissions</p>
@@ -76,9 +117,12 @@ const HamburgerMenuOpen = ({ isOpen }) => {
                     </div>
                   </div>
                 </div>
-
-                {/* Element */}
-                <div className="hamburgerMenuOpenContainerRightContainerTopContainerElement">
+                {/* Element - About */}
+                <div
+                  className={`hamburgerMenuOpenContainerRightContainerTopContainerElement ${isActivePage("/about") ? "active" : ""}`}
+                  onClick={() => handleNavigateAndClose("/about")}
+                  style={{ cursor: "pointer" }}
+                >
                   <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainer">
                     <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOne">
                       <p className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText nunito-sans-regular">About</p>
@@ -89,9 +133,12 @@ const HamburgerMenuOpen = ({ isOpen }) => {
                     </div>
                   </div>
                 </div>
-
-                {/* Element */}
-                <div className="hamburgerMenuOpenContainerRightContainerTopContainerElement">
+                {/* Element - Contact */}
+                <div
+                  className={`hamburgerMenuOpenContainerRightContainerTopContainerElement ${isActivePage("/contact") ? "active" : ""}`}
+                  onClick={() => handleNavigateAndClose("/contact")}
+                  style={{ cursor: "pointer" }}
+                >
                   <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainer">
                     <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOne">
                       <p className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText nunito-sans-regular">Contact</p>
@@ -101,10 +148,13 @@ const HamburgerMenuOpen = ({ isOpen }) => {
                       <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerTwoDiv" />
                     </div>
                   </div>
-                </div>
-
-                {/* Element */}
-                <div className="hamburgerMenuOpenContainerRightContainerTopContainerElement">
+                </div>{" "}
+                {/* Element - Agency */}
+                <div
+                  className={`hamburgerMenuOpenContainerRightContainerTopContainerElement ${isActivePage("/about") ? "active" : ""}`}
+                  onClick={() => handleNavigateAndClose("/about")}
+                  style={{ cursor: "pointer" }}
+                >
                   <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainer">
                     <div className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOne">
                       <p className="hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText nunito-sans-regular">Agency</p>
@@ -121,32 +171,48 @@ const HamburgerMenuOpen = ({ isOpen }) => {
             {/* Middle Part */}
             <div className="hamburgerMenuOpenContainerRightContainerMiddle">
               <div className="hamburgerMenuOpenContainerRightContainerMiddleContainer">
-                {/* Element */}
-                <div className="hamburgerMenuOpenContainerRightContainerMiddleContainerElement">
+                {/* Element - Privacy Policy */}
+                <div
+                  className={`hamburgerMenuOpenContainerRightContainerMiddleContainerElement ${isActivePage("/privacy-policy") ? "active" : ""}`}
+                  onClick={() => handleNavigateAndClose("/privacy-policy")}
+                  style={{ cursor: "pointer" }}
+                >
                   <div className="hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainer">
                     <p className="hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainerText nunito-sans-regular">Privacy Policy</p>
                   </div>
-                </div>
-
-                {/* Element */}
-                <div className="hamburgerMenuOpenContainerRightContainerMiddleContainerElement">
+                </div>{" "}
+                {/* Element - Shipping & Returns */}
+                <div
+                  className={`hamburgerMenuOpenContainerRightContainerMiddleContainerElement ${
+                    isActivePage("/shipping-delivery-and-returns") ? "active" : ""
+                  }`}
+                  onClick={() => handleNavigateAndClose("/shipping-delivery-and-returns")}
+                  style={{ cursor: "pointer" }}
+                >
                   <div className="hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainer">
                     <p className="hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainerText nunito-sans-regular">
                       Shipping & Returns
                     </p>
                   </div>
                 </div>
+                {/* Element - Cart */}
+                <div
+                  className={`hamburgerMenuOpenContainerRightContainerMiddleContainerElement ${isActivePage("/cart") ? "active" : ""}`}
+                  onClick={() => handleNavigateAndClose("/cart")}
+                  style={{ cursor: "pointer" }}
+                >
+                  {" "}
+                  <div className="hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainer">
+                    <p className="hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainerText nunito-sans-regular">
+                      Cart {cartItemsCount > 0 && `(${cartItemsCount})`}
+                    </p>
+                  </div>
+                </div>
               </div>
             </div>
-
             {/* Bottom Part */}
             <div className="hamburgerMenuOpenContainerRightContainerBottom">
               <div className="hamburgerMenuOpenContainerRightContainerBottomContainer">
-
-
-
-
-
                 {/* Element */}
                 <div className="hamburgerMenuOpenContainerRightContainerBottomContainerElementOne">
                   <div className="hamburgerMenuOpenContainerRightContainerBottomContainerElementOneContainer">
@@ -206,7 +272,6 @@ const HamburgerMenuOpen = ({ isOpen }) => {
                     </div>
                   </div>
                 </div>
-
               </div>
             </div>
           </div>
