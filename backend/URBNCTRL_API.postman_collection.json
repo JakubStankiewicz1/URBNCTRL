@@ -1,0 +1,254 @@
+{
+  "info": {
+    "name": "URBNCTRL API",
+    "_postman_id": "urbnctrl-api-collection",
+    "description": "API testowe dla backendu URBNCTRL",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Products",
+      "item": [
+        {
+          "name": "Get All Products",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/products",
+              "host": ["{{base_url}}"],
+              "path": ["api", "products"]
+            }
+          }
+        },
+        {
+          "name": "Create Product",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"Test Champions Tee\",\n    \"category\": \"Apparel\",\n    \"description\": \"Test product description - premium cotton t-shirt\",\n    \"price\": 59.99,\n    \"currency\": \"$\",\n    \"availability\": \"In Stock\",\n    \"sku\": \"TEST-001\",\n    \"brand\": \"T-LD\",\n    \"collaboration\": \"Test Collaboration\",\n    \"features\": [\n        \"Boxy Fit\",\n        \"True to Size\",\n        \"Front & Rear Print\",\n        \"Heavy Weight\"\n    ],\n    \"sizes\": [\"S\", \"M\", \"L\", \"XL\"],\n    \"sizeStock\": {\n        \"S\": 10,\n        \"M\": 15,\n        \"L\": 12,\n        \"XL\": 8\n    },\n    \"colors\": [\"Black\", \"White\"],\n    \"material\": \"68% Bawełna, 32% Poliester\",\n    \"lining\": \"58% Bawełna, 42% Poliester\",\n    \"weight\": \"Heavy Weight\",\n    \"fit\": \"Boxy\",\n    \"deliveryTime\": \"2-3 dni\",\n    \"careInstructions\": [\n        \"Pranie w pralce w 30°C\",\n        \"Nie wybielać\",\n        \"Prasowanie w niskiej temperaturze\"\n    ],\n    \"productDetails\": {\n        \"sport\": \"Trening i fitness\",\n        \"belt\": \"Elastyczny\",\n        \"neckline\": \"Okrągły\",\n        \"collar\": \"Kaptur\",\n        \"pockets\": \"Kieszeń typu kangur\",\n        \"sleeves\": \"Ściągacz\",\n        \"pattern\": \"Kolor jednolity\",\n        \"details\": \"Elastyczna talia\",\n        \"function\": \"Wiatroszczelny\",\n        \"productNumber\": \"TEST-001\"\n    },\n    \"sizeAndFit\": {\n        \"modelHeight\": \"Osoba na zdjęciu ma 185 cm wzrostu i nosi rozmiar M\",\n        \"fitType\": \"Boxy fit\",\n        \"shape\": \"Prosty\",\n        \"length\": \"Standardowa\",\n        \"sleeveLength\": \"Długi rękaw\"\n    },\n    \"images\": {\n        \"primary\": \"https://example.com/image1.jpg\",\n        \"secondary\": \"https://example.com/image2.jpg\",\n        \"gallery\": [\n            \"https://example.com/image1.jpg\",\n            \"https://example.com/image2.jpg\"\n        ]\n    },\n    \"shippingInfo\": \"Ships from Poland\",\n    \"tags\": [\"test\", \"limited edition\", \"collaboration\"],\n    \"releaseDate\": \"2024-12-01\",\n    \"limitedEdition\": true,\n    \"featured\": true\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/products",
+              "host": ["{{base_url}}"],
+              "path": ["api", "products"]
+            }
+          }
+        },
+        {
+          "name": "Get Product by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/products/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "products", "1"]
+            }
+          }
+        },
+        {
+          "name": "Get Product by SKU",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/products/sku/TEST-001",
+              "host": ["{{base_url}}"],
+              "path": ["api", "products", "sku", "TEST-001"]
+            }
+          }
+        },
+        {
+          "name": "Get Products by Category",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/products/category/Apparel",
+              "host": ["{{base_url}}"],
+              "path": ["api", "products", "category", "Apparel"]
+            }
+          }
+        },
+        {
+          "name": "Get Featured Products",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/products/featured",
+              "host": ["{{base_url}}"],
+              "path": ["api", "products", "featured"]
+            }
+          }
+        },
+        {
+          "name": "Search Products by Name",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/products/search?name=Champions",
+              "host": ["{{base_url}}"],
+              "path": ["api", "products", "search"],
+              "query": [
+                {
+                  "key": "name",
+                  "value": "Champions"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Advanced Search",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/products/search/advanced?category=Apparel&brand=T-LD&featured=true",
+              "host": ["{{base_url}}"],
+              "path": ["api", "products", "search", "advanced"],
+              "query": [
+                {
+                  "key": "category",
+                  "value": "Apparel"
+                },
+                {
+                  "key": "brand",
+                  "value": "T-LD"
+                },
+                {
+                  "key": "featured",
+                  "value": "true"
+                }
+              ]
+            }
+          }
+        },
+        {
+          "name": "Update Product",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"name\": \"UPDATED Champions Tee\",\n    \"category\": \"Apparel\",\n    \"description\": \"UPDATED description\",\n    \"price\": 69.99,\n    \"currency\": \"$\",\n    \"availability\": \"In Stock\",\n    \"sku\": \"TEST-001\",\n    \"brand\": \"T-LD\",\n    \"collaboration\": \"Updated Collaboration\",\n    \"features\": [\n        \"Boxy Fit\",\n        \"True to Size\",\n        \"UPDATED Feature\"\n    ],\n    \"sizes\": [\"S\", \"M\", \"L\", \"XL\"],\n    \"sizeStock\": {\n        \"S\": 5,\n        \"M\": 10,\n        \"L\": 8,\n        \"XL\": 3\n    },\n    \"colors\": [\"Black\", \"White\", \"Gray\"],\n    \"material\": \"100% Bawełna\",\n    \"weight\": \"Medium Weight\",\n    \"fit\": \"Regular\",\n    \"deliveryTime\": \"1-2 dni\",\n    \"careInstructions\": [\n        \"Pranie w 40°C\",\n        \"Można prasować\"\n    ],\n    \"productDetails\": {\n        \"sport\": \"Casual\",\n        \"neckline\": \"V-neck\",\n        \"collar\": \"No collar\"\n    },\n    \"sizeAndFit\": {\n        \"modelHeight\": \"180 cm\",\n        \"fitType\": \"Regular fit\",\n        \"shape\": \"Slim\"\n    },\n    \"images\": {\n        \"primary\": \"https://example.com/updated1.jpg\",\n        \"gallery\": [\n            \"https://example.com/updated1.jpg\"\n        ]\n    },\n    \"shippingInfo\": \"Fast shipping from Warsaw\",\n    \"tags\": [\"updated\", \"test\"],\n    \"releaseDate\": \"2024-12-15\",\n    \"limitedEdition\": false,\n    \"featured\": false\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/products/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "products", "1"]
+            }
+          }
+        },
+        {
+          "name": "Delete Product",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/products/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "products", "1"]
+            }
+          }
+        },
+        {
+          "name": "Check if Product Exists",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/products/1/exists",
+              "host": ["{{base_url}}"],
+              "path": ["api", "products", "1", "exists"]
+            }
+          }
+        },
+        {
+          "name": "Check if SKU Exists",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/products/sku/TEST-001/exists",
+              "host": ["{{base_url}}"],
+              "path": ["api", "products", "sku", "TEST-001", "exists"]
+            }
+          }
+        }
+      ]
+    }
+  ],
+  "variable": [
+    {
+      "key": "base_url",
+      "value": "http://localhost:8081",
+      "type": "string"
+    }
+  ]
+}
