@@ -1,10 +1,12 @@
 .admin-header {
-  background: white;
-  border-bottom: 1px solid #e1e5e9;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  background: var(--bg-secondary);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
   position: sticky;
   top: 0;
   z-index: 100;
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .header-content {
@@ -18,11 +20,15 @@
 }
 
 .header-left h1 {
-  color: #333;
+  color: var(--text-primary);
   font-size: 1.8rem;
   font-weight: 700;
   margin: 0;
   letter-spacing: -0.5px;
+  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .header-right {
@@ -31,38 +37,77 @@
   gap: 20px;
 }
 
+.theme-toggle {
+  background: transparent;
+  border: none;
+  color: var(--text-primary);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+}
+
+.theme-toggle:hover {
+  background: rgba(255, 255, 255, 0.05);
+  transform: rotate(15deg);
+}
+
 .user-info {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: 2px;
+  position: relative;
+  padding-right: 32px;
+}
+
+.user-icon {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--accent-primary);
+  background: rgba(108, 92, 231, 0.15);
+  border-radius: 50%;
+  padding: 5px;
+  box-shadow: 0 0 10px rgba(108, 92, 231, 0.3);
 }
 
 .user-name {
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   font-size: 14px;
 }
 
 .user-email {
   font-size: 12px;
-  color: #666;
+  color: var(--text-secondary);
 }
 
 .logout-button {
-  padding: 8px 16px;
-  background: #dc3545;
+  padding: 9px 18px;
+  background: linear-gradient(135deg, var(--danger) 0%, #fd79a8 100%);
   color: white;
   border: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 600;
   cursor: pointer;
-  transition: background-color 0.2s ease;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 10px rgba(232, 67, 147, 0.3);
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .logout-button:hover {
-  background: #c82333;
+  background: linear-gradient(135deg, #ff3366 0%, #ff5e8f 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(232, 67, 147, 0.4);
 }
 
 @media (max-width: 768px) {
@@ -72,6 +117,26 @@
   
   .header-left h1 {
     font-size: 1.5rem;
+  }
+  
+  .user-name {
+    display: none;
+  }
+  
+  .user-email {
+    display: none;
+  }
+    .theme-toggle {
+    width: 36px;
+    height: 36px;
+  }
+  
+  .logout-button span {
+    display: none;
+  }
+  
+  .logout-button {
+    padding: 8px;
   }
   
   .user-info {

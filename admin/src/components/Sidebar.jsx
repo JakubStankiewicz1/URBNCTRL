@@ -1,5 +1,7 @@
 import { useState } from 'react';
 import './Sidebar.css';
+import { FiHome, FiShoppingBag, FiPackage, FiUsers, FiPieChart, FiSettings, FiChevronLeft, FiChevronRight } from 'react-icons/fi';
+import { HiOutlineBuildingOffice2 } from 'react-icons/hi2';
 
 const Sidebar = ({ activeSection, setActiveSection }) => {
   const [collapsed, setCollapsed] = useState(false);
@@ -7,58 +9,58 @@ const Sidebar = ({ activeSection, setActiveSection }) => {
   const menuItems = [
     {
       id: 'dashboard',
-      icon: '📊',
+      icon: <FiHome size={20} />,
       label: 'Dashboard',
       count: null
     },
     {
       id: 'products',
-      icon: '👕',
+      icon: <FiShoppingBag size={20} />,
       label: 'Produkty',
       count: null
     },
     {
       id: 'orders',
-      icon: '📦',
+      icon: <FiPackage size={20} />,
       label: 'Zamówienia',
       count: 5,
       disabled: true
     },
     {
       id: 'customers',
-      icon: '👥',
+      icon: <FiUsers size={20} />,
       label: 'Klienci',
       count: null,
       disabled: true
     },
     {
       id: 'analytics',
-      icon: '📈',
+      icon: <FiPieChart size={20} />,
       label: 'Analityki',
       count: null,
       disabled: true
     },
     {
       id: 'settings',
-      icon: '⚙️',
+      icon: <FiSettings size={20} />,
       label: 'Ustawienia',
       count: null,
       disabled: true
     }
   ];
-
   return (
     <aside className={`sidebar ${collapsed ? 'collapsed' : ''}`}>
       <div className="sidebar-header">
         <div className="sidebar-logo">
-          <span className="logo-icon">🏙️</span>
+          <span className="logo-icon"><HiOutlineBuildingOffice2 size={24} /></span>
           {!collapsed && <span className="logo-text">URBNCTRL</span>}
         </div>
         <button 
           className="collapse-button"
           onClick={() => setCollapsed(!collapsed)}
+          aria-label={collapsed ? "Expand sidebar" : "Collapse sidebar"}
         >
-          {collapsed ? '→' : '←'}
+          {collapsed ? <FiChevronRight size={18} /> : <FiChevronLeft size={18} />}
         </button>
       </div>
       
