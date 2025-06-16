@@ -1,6 +1,7 @@
 package com.urbnctrl.backend.model;
 
 import jakarta.persistence.*;
+import com.fasterxml.jackson.annotation.JsonManagedReference;
 import java.time.LocalDateTime;
 import java.util.List;
 
@@ -75,9 +76,9 @@ public class Order {
     
     @Column(name = "updated_at")
     private LocalDateTime updatedAt;
-    
-    // Order Items (One-to-Many relationship)
+      // Order Items (One-to-Many relationship)
     @OneToMany(mappedBy = "order", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
+    @JsonManagedReference
     private List<OrderItem> orderItems;
     
     // Constructors
@@ -267,5 +268,21 @@ public class Order {
     @PreUpdate
     public void preUpdate() {
         this.updatedAt = LocalDateTime.now();
+    }
+    
+    @Override
+    public String toString() {
+        return "Order{" +
+                "id=" + id +
+                ", orderNumber='" + orderNumber + '\'' +
+                ", customerEmail='" + customerEmail + '\'' +
+                ", firstName='" + firstName + '\'' +
+                ", lastName='" + lastName + '\'' +
+                ", phone='" + phone + '\'' +
+                ", total=" + total +
+                ", paymentMethod='" + paymentMethod + '\'' +
+                ", orderStatus='" + orderStatus + '\'' +
+                ", orderItemsCount=" + (orderItems != null ? orderItems.size() : 0) +
+                '}';
     }
 }

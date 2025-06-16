@@ -18,13 +18,11 @@ const Sidebar = ({ activeSection, setActiveSection }) => {
       icon: <FiShoppingBag size={20} />,
       label: 'Produkty',
       count: null
-    },
-    {
+    },    {
       id: 'orders',
       icon: <FiPackage size={20} />,
       label: 'Zamówienia',
-      count: 5,
-      disabled: true
+      count: null
     },
     {
       id: 'customers',
