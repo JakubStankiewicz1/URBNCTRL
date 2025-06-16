@@ -15,12 +15,26 @@ body {
 .app {
   min-height: 100vh;
   display: flex;
+  background-color: #f8f9fa;
+}
+
+.app-content {
+  flex: 1;
+  margin-left: 280px;
+  display: flex;
   flex-direction: column;
+  transition: margin-left 0.3s ease;
+}
+
+/* When sidebar is collapsed */
+.app.sidebar-collapsed .app-content {
+  margin-left: 80px;
 }
 
 .main-content {
   flex: 1;
-  padding-top: 20px;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 70px);
 }
 
 .app-loading {
@@ -93,5 +107,13 @@ body {
 @media (max-width: 768px) {
   .main-content {
     padding-top: 15px;
+  }
+  
+  .app-content {
+    margin-left: 0;
+  }
+  
+  .app.sidebar-collapsed .app-content {
+    margin-left: 0;
   }
 }

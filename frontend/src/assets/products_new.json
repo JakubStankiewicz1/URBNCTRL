@@ -1,452 +1,438 @@
-[    {
-        "id": 1,
-        "name": "Champions Tee",
-        "category": "Apparel",
-        "description": "Specially designed and produced in collaboration with Hana Burton and City Circuit Tokyo Bay. This heavy weight hoodie is a special limited edition by T-LD to celebrate our Tokyo car meet.",
-        "price": 59,
-        "currency": "$",
-        "availability": "In Stock",
-        "sku": "TLD-HB-001",
-        "brand": "T-LD",
-        "collaboration": "Hana Burton",
-        "features": [
-            "Boxy Fit",
-            "True to Size", 
-            "Front & Rear Print",
-            "Heavy Weight"
-        ],        "sizes": ["S", "M", "L", "XL", "XXL"],
-        "sizeStock": {"S": 15, "M": 23, "L": 18, "XL": 12, "XXL": 8},
-        "colors": ["Black", "White"],
-        "material": "68% Bawełna, 32% Poliester",
-        "lining": "58% Bawełna, 42% Poliester",
-        "weight": "Heavy Weight",
-        "fit": "Boxy",
-        "deliveryTime": "2-3 dni",        "careInstructions": [
-            "Pranie w pralce w 30°C",
-            "Nie wybielać",
-            "Prasowanie w niskiej temperaturze",
-            "Nie czyścić chemicznie",
-            "Suszenie w cieniu"
-        ],
-        "productDetails": {
-            "sport": "Trening i fitness",
-            "belt": "Elastyczny",
-            "neckline": "Okrągły",
-            "collar": "Kaptur",
-            "pockets": "Kieszeń typu kangur",
-            "sleeves": "Ściągacz",
-            "pattern": "Kolor jednolity",
-            "details": "Elastyczna talia",
-            "function": "Wiatroszczelny",
-            "productNumber": "TLD-HB-001"
-        },
-        "sizeAndFit": {
-            "modelHeight": "Osoba na zdjęciu ma 185 cm wzrostu i nosi rozmiar M",
-            "fitType": "Boxy fit",
-            "shape": "Prosty",
-            "length": "Standardowa",
-            "sleeveLength": "Długi rękaw"
-        },
-        "shippingInfo": "Ships from Tokyo, Japan",
-        "images": {
-            "primary": "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
-            "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-            "gallery": [
-                "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
-                "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png"
-            ]
-        },
-        "tags": ["limited edition", "collaboration", "tokyo", "hoodie", "streetwear"],
-        "releaseDate": "2024-12-01",
-        "limitedEdition": true,
-        "featured": true
-    },    {
-        "id": 2,
-        "name": "TOKYO DRIFT TEE",
-        "category": "Apparel",
-        "description": "Premium cotton t-shirt featuring exclusive Tokyo Drift graphics. Perfect for car enthusiasts and streetwear lovers.",
-        "price": 45,
-        "currency": "$",
-        "availability": "In Stock",
-        "sku": "TLD-TD-002",
-        "brand": "T-LD",
-        "collaboration": null,
-        "features": [
-            "Regular Fit",
-            "True to Size",
-            "Screen Printed Graphics",
-            "Premium Cotton"
-        ],        "sizes": ["S", "M", "L", "XL", "XXL"],
-        "sizeStock": {"S": 8, "M": 12, "L": 15, "XL": 10, "XXL": 5},
-        "colors": ["Black", "White", "Navy"],
-        "material": "92% Bawełna, 8% Elastan",
-        "lining": null,
-        "weight": "Medium Weight",
-        "fit": "Regular",
-        "deliveryTime": "1-2 dni",        "careInstructions": [
-            "Pranie w pralce w 30°C",
-            "Nie wybielać chlorem",
-            "Prasowanie z lewej strony",
-            "Nie czyścić chemicznie",
-            "Suszenie na płasko"
-        ],
-        "productDetails": {
-            "sport": "Casualwear",
-            "belt": null,
-            "neckline": "Okrągły",
-            "collar": "Crew neck",
-            "pockets": "Bez kieszeni",
-            "sleeves": "Krótki rękaw",
-            "pattern": "Nadruk graficzny",
-            "details": "Screen print",
-            "function": "Oddychający",
-            "productNumber": "TLD-TD-002"
-        },
-        "sizeAndFit": {
-            "modelHeight": "Osoba na zdjęciu ma 180 cm wzrostu i nosi rozmiar L",
-            "fitType": "Regular fit",
-            "shape": "Prosty",
-            "length": "Standardowa",
-            "sleeveLength": "Krótki rękaw"
-        },
-        "shippingInfo": "Ships from Tokyo, Japan",
-        "images": {
-            "primary": "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
-            "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-            "gallery": [
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
-                "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
-                "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png"
-            ]
-        },
-        "tags": ["tokyo", "drift", "tee", "streetwear", "graphics"],
-        "releaseDate": "2024-11-15",
-        "limitedEdition": false,
-        "featured": true
-    },    {
-        "id": 3,
-        "name": "CIRCUIT RACING JACKET",
-        "category": "Apparel",
-        "description": "Technical racing jacket inspired by Tokyo Bay Circuit. Features water-resistant material and reflective details.",
-        "price": 220,
-        "currency": "$",
-        "availability": "In Stock",
-        "sku": "TLD-CR-003",
-        "brand": "T-LD",
-        "collaboration": "Tokyo Bay Circuit",
-        "features": [
-            "Water Resistant",
-            "Reflective Details",
-            "Technical Fabric",
-            "Racing Inspired"
-        ],        "sizes": ["S", "M", "L", "XL", "XXL"],
-        "sizeStock": {"S": 5, "M": 8, "L": 12, "XL": 6, "XXL": 3},
-        "colors": ["Black", "Red", "Navy"],
-        "material": "85% Poliester, 15% Elastan",
-        "lining": "100% Poliester (mesh)",
-        "weight": "Medium Weight",
-        "fit": "Athletic",
-        "deliveryTime": "3-5 dni",        "careInstructions": [
-            "Pranie w pralce w 40°C",
-            "Nie wybielać",
-            "Nie prasować na nadruki",
-            "Można czyścić chemicznie",
-            "Suszenie w pozycji wiszącej"
-        ],
-        "productDetails": {
-            "sport": "Motorsport",
-            "belt": "Regulowany",
-            "neckline": "Stójka",
-            "collar": "Racing collar",
-            "pockets": "Boczne kieszenie",
-            "sleeves": "Długi rękaw",
-            "pattern": "Jednolity z detalami",
-            "details": "Odblaskowe elementy",
-            "function": "Wodoodporny",
-            "productNumber": "TLD-CR-003"
-        },
-        "sizeAndFit": {
-            "modelHeight": "Osoba na zdjęciu ma 188 cm wzrostu i nosi rozmiar L",
-            "fitType": "Athletic fit",
-            "shape": "Sportowy",
-            "length": "Standardowa",
-            "sleeveLength": "Długi rękaw"
-        },
-        "shippingInfo": "Ships from Tokyo, Japan",
-        "images": {
-            "primary": "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
-            "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-            "gallery": [
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
-                "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
-                "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png"
-            ]
-        },
-        "tags": ["racing", "jacket", "technical", "circuit", "tokyo"],
-        "releaseDate": "2024-10-20",
-        "limitedEdition": true,
-        "featured": true
-    },    {
-        "id": 4,
-        "name": "URBAN CONTROL CAP",
-        "category": "Accessories",
-        "description": "Classic snapback cap with embroidered URBNCTRL logo. Essential streetwear accessory for the modern urbanite.",
-        "price": 35,
-        "currency": "$",
-        "availability": "In Stock",
-        "sku": "TLD-UC-004",
-        "brand": "T-LD",
-        "collaboration": null,
-        "features": [
-            "Snapback Design",
-            "Embroidered Logo",
-            "Adjustable Fit",
-            "Premium Materials"
-        ],        "sizes": ["One Size"],
-        "sizeStock": {"One Size": 25},
-        "colors": ["Black", "White", "Navy", "Red"],
-        "material": "100% Bawełna (twill)",
-        "lining": "65% Bawełna, 35% Poliester",
-        "weight": "Light Weight",
-        "fit": "Adjustable",
-        "deliveryTime": "1-2 dni",        "careInstructions": [
-            "Pranie ręczne w zimnej wodzie",
-            "Nie wybielać",
-            "Nie prasować haftu",
-            "Nie czyścić chemicznie",
-            "Suszenie na powietrzu"
-        ],
-        "productDetails": {
-            "sport": "Streetwear",
-            "belt": "Regulowany pasek",
-            "neckline": null,
-            "collar": null,
-            "pockets": null,
-            "sleeves": null,
-            "pattern": "Haft logo",
-            "details": "Snapback",
-            "function": "UV Protection",
-            "productNumber": "TLD-UC-004"
-        },
-        "sizeAndFit": {
-            "modelHeight": "One Size - regulowany",
-            "fitType": "Adjustable",
-            "shape": "Klasyczny",
-            "length": "Standardowy daszek",
-            "sleeveLength": null
-        },
-        "shippingInfo": "Ships from Tokyo, Japan",
-        "images": {
-            "primary": "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TQVE7-1083/up/1.png",
-            "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-            "gallery": [
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TQVE7-1083/up/1.png",
-                "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png"
-            ]
-        },
-        "tags": ["cap", "snapback", "accessories", "urban", "logo"],
-        "releaseDate": "2024-09-10",
-        "limitedEdition": false,
-        "featured": false
-    },    {
-        "id": 5,
-        "name": "CHUNKY HOODIE",
-        "category": "Apparel",
-        "description": "Luxury hoodie featuring signature chunky stripes design. Made from premium materials with attention to detail.",
-        "price": 280,
-        "currency": "$",
-        "availability": "Limited Stock",
-        "sku": "TLD-SC-005",
-        "brand": "T-LD",
-        "collaboration": "LV Inspired",
-        "features": [
-            "Luxury Materials",
-            "Signature Design",
-            "Chunky Stripes",
-            "Premium Construction"
-        ],        "sizes": ["S", "M", "L", "XL"],
-        "sizeStock": {"S": 2, "M": 4, "L": 3, "XL": 1},
-        "colors": ["Multi", "Black"],
-        "material": "78% Bawełna, 22% Poliamid",
-        "lining": "100% Bawełna organiczna",
-        "weight": "Heavy Weight",
-        "fit": "Relaxed",
-        "deliveryTime": "5-7 dni",        "careInstructions": [
-            "Pranie w pralce w 30°C na delikatnym cyklu",
-            "Nie wybielać",
-            "Prasowanie przez ściereczkę",
-            "Można czyścić chemicznie",
-            "Suszenie na płasko"
-        ],
-        "productDetails": {
-            "sport": "Luxury streetwear",
-            "belt": "Elastyczny",
-            "neckline": "Okrągły",
-            "collar": "Kaptur",
-            "pockets": "Kieszeń typu kangur",
-            "sleeves": "Ściągacz",
-            "pattern": "Paski chunky",
-            "details": "Luksusowe wykończenie",
-            "function": "Premium comfort",
-            "productNumber": "TLD-SC-005"
-        },
-        "sizeAndFit": {
-            "modelHeight": "Osoba na zdjęciu ma 183 cm wzrostu i nosi rozmiar M",
-            "fitType": "Relaxed fit",
-            "shape": "Luźny",
-            "length": "Standardowa",
-            "sleeveLength": "Długi rękaw"
-        },
-        "shippingInfo": "Ships from Tokyo, Japan",
-        "images": {
-            "primary": "https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-signature-chunky-stripes-hoodie--FOKM01U39644_PM2_Front%20view.jpg",
-            "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-            "gallery": [
-                "https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-signature-chunky-stripes-hoodie--FOKM01U39644_PM2_Front%20view.jpg",
-                "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png"
-            ]
-        },
-        "tags": ["luxury", "hoodie", "stripes", "premium", "signature"],
-        "releaseDate": "2024-08-05",
-        "limitedEdition": true,
-        "featured": true    },    {
-        "id": 6,
-        "name": "MEMORY BANK HOODIE",
-        "category": "Apparel",
-        "description": "Expanding upon our 'Art In Motion' series, the Memory Bank One Hoodie calls upon moments captured in our latest short film – Club De Ultrace: Changing Tomorrow. Featuring a hand applied print on a mid-weight, dropped shoulder, crop Hoodie, this piece is a staple.",
-        "price": 129,
-        "currency": "$",
-        "availability": "Pre-Order",
-        "sku": "TLD-MB-006",
-        "brand": "T-LD",
-        "collaboration": "Art In Motion",
-        "features": [
-            "Relaxed, boxy fit",
-            "Dropped shoulders",
-            "Cropped length for modern look",
-            "Specially designed with no drawstrings",
-            "350GSM 80% cotton"
-        ],        "sizes": ["S", "M", "L", "XL", "XXL"],
-        "sizeStock": {"S": 0, "M": 2, "L": 5, "XL": 3, "XXL": 1},
-        "colors": ["Black"],
-        "material": "80% Bawełna, 20% Poliester (350GSM)",
-        "lining": "60% Bawełna, 40% Poliester (fleece)",
-        "weight": "Mid Weight",
-        "fit": "Relaxed, boxy fit",
-        "deliveryTime": "7-10 dni (pre-order)",        "careInstructions": [
-            "Pranie w pralce w 30°C",
-            "Nie wybielać",
-            "Nie prasować nadruku",
-            "Nie czyścić chemicznie",
-            "Suszenie w niskich temperaturach"
-        ],
-        "productDetails": {
-            "sport": "Art & Culture",
-            "belt": "Elastyczny",
-            "neckline": "Okrągły",
-            "collar": "Kaptur bez sznurków",
-            "pockets": "Kieszeń typu kangur",
-            "sleeves": "Dropped shoulder",
-            "pattern": "Nadruk artystyczny",
-            "details": "Cropped length",
-            "function": "Mid-weight comfort",
-            "productNumber": "TLD-MB-006"
-        },
-        "sizeAndFit": {
-            "modelHeight": "Osoba na zdjęciu ma 175 cm wzrostu i nosi rozmiar M",
-            "fitType": "Relaxed, boxy fit",
-            "shape": "Boxy",
-            "length": "Skrócona",
-            "sleeveLength": "Długi rękaw"
-        },
-        "shippingInfo": "This is a pre-order item. Shipping begins April 7.",
-        "fitGuide": "This is relaxed fit. Keep your regular size for a boxy fit.",
-        "images": {
-            "primary": "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
-            "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-            "gallery": [
-                "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
-                "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png"
-            ]
-        },
-        "tags": ["memory bank", "art in motion", "hoodie", "pre-order", "limited"],
-        "releaseDate": "2025-04-07",
-        "limitedEdition": true,
-        "featured": true,
-        "preOrder": true
-    },    {
-        "id": 7,
-        "name": "TOKYO NIGHTS SWEATSHIRT",
-        "category": "Apparel",
-        "description": "Comfortable sweatshirt celebrating Tokyo's vibrant nightlife. Perfect for casual wear with urban aesthetic.",
-        "price": 75,
-        "currency": "$",
-        "availability": "In Stock",
-        "sku": "TLD-TN-007",
-        "brand": "T-LD",
-        "collaboration": null,
-        "features": [
-            "Comfortable Fit",
-            "Soft Interior",
-            "Tokyo Graphics",
-            "Everyday Wear"
-        ],        "sizes": ["S", "M", "L", "XL", "XXL"],
-        "sizeStock": {"S": 12, "M": 18, "L": 20, "XL": 15, "XXL": 8},
-        "colors": ["Black", "Grey", "Navy"],
-        "material": "70% Bawełna, 30% Poliester (fleece)",
-        "lining": "100% Poliester (brushed)",
-        "weight": "Medium Weight",
-        "fit": "Regular",
-        "deliveryTime": "2-4 dni",        "careInstructions": [
-            "Pranie w pralce w 40°C",
-            "Nie wybielać chlorem",
-            "Prasowanie w średniej temperaturze",
-            "Nie czyścić chemicznie",
-            "Suszenie w suszarce w niskiej temperaturze"
-        ],
-        "productDetails": {
-            "sport": "Urban lifestyle",
-            "belt": "Elastyczny",
-            "neckline": "Okrągły",
-            "collar": "Crew neck",
-            "pockets": "Bez kieszeni",
-            "sleeves": "Długi rękaw",
-            "pattern": "Tokyo graphics",
-            "details": "Soft brushed interior",
-            "function": "Comfort wear",
-            "productNumber": "TLD-TN-007"
-        },
-        "sizeAndFit": {
-            "modelHeight": "Osoba na zdjęciu ma 182 cm wzrostu i nosi rozmiar L",
-            "fitType": "Regular fit",
-            "shape": "Prosty",
-            "length": "Standardowa",
-            "sleeveLength": "Długi rękaw"
-        },
-        "shippingInfo": "Ships from Tokyo, Japan",
-        "images": {
-            "primary": "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
-            "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-            "gallery": [
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
-                "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
-                "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TQVE7-1083/up/1.png"
-            ]
-        },
-        "tags": ["sweatshirt", "tokyo", "nights", "casual", "urban"],
-        "releaseDate": "2024-07-15",
-        "limitedEdition": false,
-        "featured": false
-    }
+[
+  {
+    "id": 1,
+    "name": "Champions Tee",
+    "category": "Apparel",
+    "description": "Specially designed and produced in collaboration with Hana Burton and City Circuit Tokyo Bay. This heavy weight hoodie is a special limited edition by T-LD to celebrate our Tokyo car meet.",
+    "price": 59,
+    "currency": "$",
+    "availability": "In Stock",
+    "sku": "TLD-HB-001",
+    "brand": "T-LD",
+    "collaboration": "Hana Burton",
+    "features": ["Boxy Fit", "True to Size", "Front & Rear Print", "Heavy Weight"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "sizeStock": { "S": 15, "M": 23, "L": 18, "XL": 12, "XXL": 8 },
+    "colors": ["Black", "White"],
+    "material": "68% Bawełna, 32% Poliester",
+    "lining": "58% Bawełna, 42% Poliester",
+    "weight": "Heavy Weight",
+    "fit": "Boxy",
+    "deliveryTime": "2-3 dni",
+    "careInstructions": [
+      "Pranie w pralce w 30°C",
+      "Nie wybielać",
+      "Prasowanie w niskiej temperaturze",
+      "Nie czyścić chemicznie",
+      "Suszenie w cieniu"
+    ],
+    "productDetails": {
+      "sport": "Trening i fitness",
+      "belt": "Elastyczny",
+      "neckline": "Okrągły",
+      "collar": "Kaptur",
+      "pockets": "Kieszeń typu kangur",
+      "sleeves": "Ściągacz",
+      "pattern": "Kolor jednolity",
+      "details": "Elastyczna talia",
+      "function": "Wiatroszczelny",
+      "productNumber": "TLD-HB-001"
+    },
+    "sizeAndFit": {
+      "modelHeight": "Osoba na zdjęciu ma 185 cm wzrostu i nosi rozmiar M",
+      "fitType": "Boxy fit",
+      "shape": "Prosty",
+      "length": "Standardowa",
+      "sleeveLength": "Długi rękaw"
+    },
+    "shippingInfo": "Ships from Tokyo, Japan",
+    "images": {
+      "primary": "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
+      "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+      "gallery": [
+        "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
+        "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png"
+      ]
+    },
+    "tags": ["limited edition", "collaboration", "tokyo", "hoodie", "streetwear"],
+    "releaseDate": "2024-12-01",
+    "limitedEdition": true,
+    "featured": true
+  },
+  {
+    "id": 2,
+    "name": "TOKYO DRIFT TEE",
+    "category": "Apparel",
+    "description": "Premium cotton t-shirt featuring exclusive Tokyo Drift graphics. Perfect for car enthusiasts and streetwear lovers.",
+    "price": 45,
+    "currency": "$",
+    "availability": "In Stock",
+    "sku": "TLD-TD-002",
+    "brand": "T-LD",
+    "collaboration": null,
+    "features": ["Regular Fit", "True to Size", "Screen Printed Graphics", "Premium Cotton"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "sizeStock": { "S": 8, "M": 12, "L": 15, "XL": 10, "XXL": 5 },
+    "colors": ["Black", "White", "Navy"],
+    "material": "92% Bawełna, 8% Elastan",
+    "lining": null,
+    "weight": "Medium Weight",
+    "fit": "Regular",
+    "deliveryTime": "1-2 dni",
+    "careInstructions": [
+      "Pranie w pralce w 30°C",
+      "Nie wybielać chlorem",
+      "Prasowanie z lewej strony",
+      "Nie czyścić chemicznie",
+      "Suszenie na płasko"
+    ],
+    "productDetails": {
+      "sport": "Casualwear",
+      "belt": null,
+      "neckline": "Okrągły",
+      "collar": "Crew neck",
+      "pockets": "Bez kieszeni",
+      "sleeves": "Krótki rękaw",
+      "pattern": "Nadruk graficzny",
+      "details": "Screen print",
+      "function": "Oddychający",
+      "productNumber": "TLD-TD-002"
+    },
+    "sizeAndFit": {
+      "modelHeight": "Osoba na zdjęciu ma 180 cm wzrostu i nosi rozmiar L",
+      "fitType": "Regular fit",
+      "shape": "Prosty",
+      "length": "Standardowa",
+      "sleeveLength": "Krótki rękaw"
+    },
+    "shippingInfo": "Ships from Tokyo, Japan",
+    "images": {
+      "primary": "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+      "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+      "gallery": [
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+        "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+        "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png"
+      ]
+    },
+    "tags": ["tokyo", "drift", "tee", "streetwear", "graphics"],
+    "releaseDate": "2024-11-15",
+    "limitedEdition": false,
+    "featured": true
+  },
+  {
+    "id": 3,
+    "name": "CIRCUIT RACING JACKET",
+    "category": "Apparel",
+    "description": "Technical racing jacket inspired by Tokyo Bay Circuit. Features water-resistant material and reflective details.",
+    "price": 220,
+    "currency": "$",
+    "availability": "In Stock",
+    "sku": "TLD-CR-003",
+    "brand": "T-LD",
+    "collaboration": "Tokyo Bay Circuit",
+    "features": ["Water Resistant", "Reflective Details", "Technical Fabric", "Racing Inspired"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "sizeStock": { "S": 5, "M": 8, "L": 12, "XL": 6, "XXL": 3 },
+    "colors": ["Black", "Red", "Navy"],
+    "material": "85% Poliester, 15% Elastan",
+    "lining": "100% Poliester (mesh)",
+    "weight": "Medium Weight",
+    "fit": "Athletic",
+    "deliveryTime": "3-5 dni",
+    "careInstructions": [
+      "Pranie w pralce w 40°C",
+      "Nie wybielać",
+      "Nie prasować na nadruki",
+      "Można czyścić chemicznie",
+      "Suszenie w pozycji wiszącej"
+    ],
+    "productDetails": {
+      "sport": "Motorsport",
+      "belt": "Regulowany",
+      "neckline": "Stójka",
+      "collar": "Racing collar",
+      "pockets": "Boczne kieszenie",
+      "sleeves": "Długi rękaw",
+      "pattern": "Jednolity z detalami",
+      "details": "Odblaskowe elementy",
+      "function": "Wodoodporny",
+      "productNumber": "TLD-CR-003"
+    },
+    "sizeAndFit": {
+      "modelHeight": "Osoba na zdjęciu ma 188 cm wzrostu i nosi rozmiar L",
+      "fitType": "Athletic fit",
+      "shape": "Sportowy",
+      "length": "Standardowa",
+      "sleeveLength": "Długi rękaw"
+    },
+    "shippingInfo": "Ships from Tokyo, Japan",
+    "images": {
+      "primary": "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+      "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+      "gallery": [
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+        "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+        "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png"
+      ]
+    },
+    "tags": ["racing", "jacket", "technical", "circuit", "tokyo"],
+    "releaseDate": "2024-10-20",
+    "limitedEdition": true,
+    "featured": true
+  },
+  {
+    "id": 4,
+    "name": "URBAN CONTROL CAP",
+    "category": "Accessories",
+    "description": "Classic snapback cap with embroidered URBNCTRL logo. Essential streetwear accessory for the modern urbanite.",
+    "price": 35,
+    "currency": "$",
+    "availability": "In Stock",
+    "sku": "TLD-UC-004",
+    "brand": "T-LD",
+    "collaboration": null,
+    "features": ["Snapback Design", "Embroidered Logo", "Adjustable Fit", "Premium Materials"],
+    "sizes": ["One Size"],
+    "sizeStock": { "One Size": 25 },
+    "colors": ["Black", "White", "Navy", "Red"],
+    "material": "100% Bawełna (twill)",
+    "lining": "65% Bawełna, 35% Poliester",
+    "weight": "Light Weight",
+    "fit": "Adjustable",
+    "deliveryTime": "1-2 dni",
+    "careInstructions": ["Pranie ręczne w zimnej wodzie", "Nie wybielać", "Nie prasować haftu", "Nie czyścić chemicznie", "Suszenie na powietrzu"],
+    "productDetails": {
+      "sport": "Streetwear",
+      "belt": "Regulowany pasek",
+      "neckline": null,
+      "collar": null,
+      "pockets": null,
+      "sleeves": null,
+      "pattern": "Haft logo",
+      "details": "Snapback",
+      "function": "UV Protection",
+      "productNumber": "TLD-UC-004"
+    },
+    "sizeAndFit": {
+      "modelHeight": "One Size - regulowany",
+      "fitType": "Adjustable",
+      "shape": "Klasyczny",
+      "length": "Standardowy daszek",
+      "sleeveLength": null
+    },
+    "shippingInfo": "Ships from Tokyo, Japan",
+    "images": {
+      "primary": "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TQVE7-1083/up/1.png",
+      "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+      "gallery": [
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TQVE7-1083/up/1.png",
+        "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png"
+      ]
+    },
+    "tags": ["cap", "snapback", "accessories", "urban", "logo"],
+    "releaseDate": "2024-09-10",
+    "limitedEdition": false,
+    "featured": false
+  },
+  {
+    "id": 5,
+    "name": "CHUNKY HOODIE",
+    "category": "Apparel",
+    "description": "Luxury hoodie featuring signature chunky stripes design. Made from premium materials with attention to detail.",
+    "price": 280,
+    "currency": "$",
+    "availability": "Limited Stock",
+    "sku": "TLD-SC-005",
+    "brand": "T-LD",
+    "collaboration": "LV Inspired",
+    "features": ["Luxury Materials", "Signature Design", "Chunky Stripes", "Premium Construction"],
+    "sizes": ["S", "M", "L", "XL"],
+    "sizeStock": { "S": 2, "M": 4, "L": 3, "XL": 1 },
+    "colors": ["Multi", "Black"],
+    "material": "78% Bawełna, 22% Poliamid",
+    "lining": "100% Bawełna organiczna",
+    "weight": "Heavy Weight",
+    "fit": "Relaxed",
+    "deliveryTime": "5-7 dni",
+    "careInstructions": [
+      "Pranie w pralce w 30°C na delikatnym cyklu",
+      "Nie wybielać",
+      "Prasowanie przez ściereczkę",
+      "Można czyścić chemicznie",
+      "Suszenie na płasko"
+    ],
+    "productDetails": {
+      "sport": "Luxury streetwear",
+      "belt": "Elastyczny",
+      "neckline": "Okrągły",
+      "collar": "Kaptur",
+      "pockets": "Kieszeń typu kangur",
+      "sleeves": "Ściągacz",
+      "pattern": "Paski chunky",
+      "details": "Luksusowe wykończenie",
+      "function": "Premium comfort",
+      "productNumber": "TLD-SC-005"
+    },
+    "sizeAndFit": {
+      "modelHeight": "Osoba na zdjęciu ma 183 cm wzrostu i nosi rozmiar M",
+      "fitType": "Relaxed fit",
+      "shape": "Luźny",
+      "length": "Standardowa",
+      "sleeveLength": "Długi rękaw"
+    },
+    "shippingInfo": "Ships from Tokyo, Japan",
+    "images": {
+      "primary": "https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-signature-chunky-stripes-hoodie--FOKM01U39644_PM2_Front%20view.jpg",
+      "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+      "gallery": [
+        "https://eu.louisvuitton.com/images/is/image/lv/1/PP_VP_L/louis-vuitton-signature-chunky-stripes-hoodie--FOKM01U39644_PM2_Front%20view.jpg",
+        "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png"
+      ]
+    },
+    "tags": ["luxury", "hoodie", "stripes", "premium", "signature"],
+    "releaseDate": "2024-08-05",
+    "limitedEdition": true,
+    "featured": true
+  },
+  {
+    "id": 6,
+    "name": "MEMORY BANK HOODIE",
+    "category": "Apparel",
+    "description": "Expanding upon our 'Art In Motion' series, the Memory Bank One Hoodie calls upon moments captured in our latest short film – Club De Ultrace: Changing Tomorrow. Featuring a hand applied print on a mid-weight, dropped shoulder, crop Hoodie, this piece is a staple.",
+    "price": 129,
+    "currency": "$",
+    "availability": "Pre-Order",
+    "sku": "TLD-MB-006",
+    "brand": "T-LD",
+    "collaboration": "Art In Motion",
+    "features": [
+      "Relaxed, boxy fit",
+      "Dropped shoulders",
+      "Cropped length for modern look",
+      "Specially designed with no drawstrings",
+      "350GSM 80% cotton"
+    ],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "sizeStock": { "S": 0, "M": 2, "L": 5, "XL": 3, "XXL": 1 },
+    "colors": ["Black"],
+    "material": "80% Bawełna, 20% Poliester (350GSM)",
+    "lining": "60% Bawełna, 40% Poliester (fleece)",
+    "weight": "Mid Weight",
+    "fit": "Relaxed, boxy fit",
+    "deliveryTime": "7-10 dni (pre-order)",
+    "careInstructions": [
+      "Pranie w pralce w 30°C",
+      "Nie wybielać",
+      "Nie prasować nadruku",
+      "Nie czyścić chemicznie",
+      "Suszenie w niskich temperaturach"
+    ],
+    "productDetails": {
+      "sport": "Art & Culture",
+      "belt": "Elastyczny",
+      "neckline": "Okrągły",
+      "collar": "Kaptur bez sznurków",
+      "pockets": "Kieszeń typu kangur",
+      "sleeves": "Dropped shoulder",
+      "pattern": "Nadruk artystyczny",
+      "details": "Cropped length",
+      "function": "Mid-weight comfort",
+      "productNumber": "TLD-MB-006"
+    },
+    "sizeAndFit": {
+      "modelHeight": "Osoba na zdjęciu ma 175 cm wzrostu i nosi rozmiar M",
+      "fitType": "Relaxed, boxy fit",
+      "shape": "Boxy",
+      "length": "Skrócona",
+      "sleeveLength": "Długi rękaw"
+    },
+    "shippingInfo": "This is a pre-order item. Shipping begins April 7.",
+    "fitGuide": "This is relaxed fit. Keep your regular size for a boxy fit.",
+    "images": {
+      "primary": "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
+      "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+      "gallery": [
+        "https://image.goat.com/750/attachments/product_template_pictures/images/101/834/605/original/1442072_00.png.png",
+        "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png"
+      ]
+    },
+    "tags": ["memory bank", "art in motion", "hoodie", "pre-order", "limited"],
+    "releaseDate": "2025-04-07",
+    "limitedEdition": true,
+    "featured": true,
+    "preOrder": true
+  },
+  {
+    "id": 7,
+    "name": "TOKYO NIGHTS SWEATSHIRT",
+    "category": "Apparel",
+    "description": "Comfortable sweatshirt celebrating Tokyo's vibrant nightlife. Perfect for casual wear with urban aesthetic.",
+    "price": 75,
+    "currency": "$",
+    "availability": "In Stock",
+    "sku": "TLD-TN-007",
+    "brand": "T-LD",
+    "collaboration": null,
+    "features": ["Comfortable Fit", "Soft Interior", "Tokyo Graphics", "Everyday Wear"],
+    "sizes": ["S", "M", "L", "XL", "XXL"],
+    "sizeStock": { "S": 12, "M": 18, "L": 20, "XL": 15, "XXL": 8 },
+    "colors": ["Black", "Grey", "Navy"],
+    "material": "70% Bawełna, 30% Poliester (fleece)",
+    "lining": "100% Poliester (brushed)",
+    "weight": "Medium Weight",
+    "fit": "Regular",
+    "deliveryTime": "2-4 dni",
+    "careInstructions": [
+      "Pranie w pralce w 40°C",
+      "Nie wybielać chlorem",
+      "Prasowanie w średniej temperaturze",
+      "Nie czyścić chemicznie",
+      "Suszenie w suszarce w niskiej temperaturze"
+    ],
+    "productDetails": {
+      "sport": "Urban lifestyle",
+      "belt": "Elastyczny",
+      "neckline": "Okrągły",
+      "collar": "Crew neck",
+      "pockets": "Bez kieszeni",
+      "sleeves": "Długi rękaw",
+      "pattern": "Tokyo graphics",
+      "details": "Soft brushed interior",
+      "function": "Comfort wear",
+      "productNumber": "TLD-TN-007"
+    },
+    "sizeAndFit": {
+      "modelHeight": "Osoba na zdjęciu ma 182 cm wzrostu i nosi rozmiar L",
+      "fitType": "Regular fit",
+      "shape": "Prosty",
+      "length": "Standardowa",
+      "sleeveLength": "Długi rękaw"
+    },
+    "shippingInfo": "Ships from Tokyo, Japan",
+    "images": {
+      "primary": "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+      "secondary": "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+      "gallery": [
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png",
+        "https://image.goat.com/750/attachments/product_template_pictures/images/100/581/304/original/745463_00.png.png",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20744441%20TOVB1-4530/up/1.png",
+        "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TQVE7-1083/up/1.png"
+      ]
+    },
+    "tags": ["sweatshirt", "tokyo", "nights", "casual", "urban"],
+    "releaseDate": "2024-07-15",
+    "limitedEdition": false,
+    "featured": false
+  }
 ]

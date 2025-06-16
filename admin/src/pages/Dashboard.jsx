@@ -37,16 +37,16 @@ const Dashboard = () => {
                          product.category?.toLowerCase().includes(searchTerm.toLowerCase());
     
     if (filter === 'all') return matchesSearch;
-    if (filter === 'featured') return matchesSearch && product.featured;
-    if (filter === 'low-stock') return matchesSearch && product.stock < 10;
+    if (filter === 'in-stock') return matchesSearch && product.availability === 'In Stock';
+    if (filter === 'out-of-stock') return matchesSearch && product.availability === 'Out of Stock';
     
     return matchesSearch && product.category === filter;
   });
 
   const stats = {
     total: products.length,
-    featured: products.filter(p => p.featured).length,
-    lowStock: products.filter(p => p.stock < 10).length,
+    inStock: products.filter(p => p.availability === 'In Stock').length,
+    outOfStock: products.filter(p => p.availability === 'Out of Stock').length,
     categories: [...new Set(products.map(p => p.category))].length
   };
 
@@ -82,12 +82,12 @@ const Dashboard = () => {
           <div className="stat-label">Wszystkie produkty</div>
         </div>
         <div className="stat-card">
-          <div className="stat-number">{stats.featured}</div>
-          <div className="stat-label">Wyróżnione</div>
+          <div className="stat-number">{stats.inStock}</div>
+          <div className="stat-label">W magazynie</div>
         </div>
         <div className="stat-card">
-          <div className="stat-number">{stats.lowStock}</div>
-          <div className="stat-label">Niski stan</div>
+          <div className="stat-number">{stats.outOfStock}</div>
+          <div className="stat-label">Wyprzedane</div>
         </div>
         <div className="stat-card">
           <div className="stat-number">{stats.categories}</div>
@@ -108,9 +108,11 @@ const Dashboard = () => {
         <div className="filter-select">
           <select value={filter} onChange={(e) => setFilter(e.target.value)}>
             <option value="all">Wszystkie produkty</option>
-            <option value="featured">Wyróżnione</option>
-            <option value="low-stock">Niski stan magazynowy</option>
-            <option value="Odzież">Odzież</option>
+            <option value="in-stock">W magazynie</option>
+            <option value="out-of-stock">Wyprzedane</option>
+            <option value="Apparel">Odzież</option>
+            <option value="Hoodies">Bluzy z kapturem</option>
+            <option value="T-Shirts">Koszulki</option>
             <option value="Obuwie">Obuwie</option>
             <option value="Akcesoria">Akcesoria</option>
             <option value="Torby">Torby</option>
@@ -133,13 +135,14 @@ const Dashboard = () => {
           <table className="products-table">
             <thead>
               <tr>
-                <th>Zdjęcie</th>
                 <th>Nazwa</th>
                 <th>Marka</th>
                 <th>Kategoria</th>
                 <th>Cena</th>
-                <th>Stan magazynowy</th>
-                <th>Status</th>
+                <th>SKU</th>
+                <th>Materiał</th>
+                <th>Rozmiary</th>
+                <th>Dostępność</th>
                 <th>Akcje</th>
               </tr>
             </thead>
@@ -147,33 +150,32 @@ const Dashboard = () => {
               {filteredProducts.map(product => (
                 <tr key={product.id}>
                   <td>
-                    <div className="product-image">
-                      {product.imageUrl ? (
-                        <img src={product.imageUrl} alt={product.name} />
-                      ) : (
-                        <div className="image-placeholder">Brak zdjęcia</div>
-                      )}
-                    </div>
-                  </td>
-                  <td>
                     <div className="product-name">
                       {product.name}
-                      {product.featured && <span className="featured-badge">★</span>}
+                      {product.collaboration && (
+                        <small className="collaboration">× {product.collaboration}</small>
+                      )}
                     </div>
                   </td>
                   <td>{product.brand || '-'}</td>
                   <td>
                     <span className="category-badge">{product.category}</span>
                   </td>
-                  <td className="price">{product.price?.toFixed(2)} PLN</td>
-                  <td>
-                    <span className={`stock ${product.stock < 10 ? 'low-stock' : ''}`}>
-                      {product.stock}
-                    </span>
+                  <td className="price">
+                    {product.price?.toFixed(2)} {product.currency}
                   </td>
                   <td>
-                    <span className={`status ${product.stock > 0 ? 'available' : 'out-of-stock'}`}>
-                      {product.stock > 0 ? 'Dostępny' : 'Wyprzedany'}
+                    <code>{product.sku}</code>
+                  </td>
+                  <td>
+                    <small>{product.material || '-'}</small>
+                  </td>
+                  <td>
+                    <small>{product.sizes?.join(', ') || '-'}</small>
+                  </td>
+                  <td>
+                    <span className={`availability ${product.availability?.toLowerCase().replace(/\s+/g, '-')}`}>
+                      {product.availability}
                     </span>
                   </td>
                   <td>

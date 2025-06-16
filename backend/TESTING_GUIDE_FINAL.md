@@ -1,9 +1,9 @@
 # 🚀 JAK PRZETESTOWAĆ BACKEND W POSTMAN
 
-## ✅ AKTUALNE ENDPOINTY (PO REFAKTORINGU)
+## ✅ AKTUALNE ENDPOINTY (ROZSZERZONE)
 
 **Base URL:** `http://localhost:8081`
-**Endpoint Path:** `/api/products` (już nie `/api/simple-products`)
+**Endpoint Path:** `/api/simple-products`
 
 ---
 
@@ -11,17 +11,17 @@
 
 ### 1. **SPRAWDŹ CZY API DZIAŁA**
 ```
-GET http://localhost:8081/api/products/test
+GET http://localhost:8081/api/simple-products/test
 ```
 **Oczekiwany wynik:**
 - Status: `200 OK`
-- Body: `"Product API works!"`
+- Body: `"Simple API works!"`
 
 ---
 
 ### 2. **POBIERZ LISTĘ PRODUKTÓW (PUSTA NA POCZĄTKU)**
 ```
-GET http://localhost:8081/api/products
+GET http://localhost:8081/api/simple-products
 ```
 **Oczekiwany wynik:**
 - Status: `200 OK`
@@ -29,23 +29,29 @@ GET http://localhost:8081/api/products
 
 ---
 
-### 3. **DODAJ NOWY PRODUKT**
+### 3. **DODAJ NOWY PRODUKT (PRZYKŁAD CHAMPIONS TEE)**
 ```
-POST http://localhost:8081/api/products
+POST http://localhost:8081/api/simple-products
 Content-Type: application/json
 ```
 
 **Body:**
 ```json
 {
-    "name": "Test Product",
-    "category": "Test Category",
-    "description": "This is a test product for the clean API",
-    "price": 29.99,
+    "name": "Champions Tee",
+    "category": "Apparel",
+    "description": "High quality cotton t-shirt",
+    "price": 19.99,
     "currency": "$",
     "availability": "In Stock",
-    "sku": "TEST-001",
-    "brand": "TestBrand"
+    "sku": "CT-001",
+    "brand": "Champions",
+    "images": ["http://example.com/champions-tee.jpg"],
+    "tags": ["tee", "cotton", "apparel"],
+    "metadata": {
+        "warranty": "6 months",
+        "origin": "USA"
+    }
 }
 ```
 
@@ -57,7 +63,7 @@ Content-Type: application/json
 
 ### 4. **SPRAWDŹ CZY PRODUKT ZOSTAŁ DODANY**
 ```
-GET http://localhost:8081/api/products
+GET http://localhost:8081/api/simple-products
 ```
 **Oczekiwany wynik:**
 - Status: `200 OK`
@@ -67,7 +73,7 @@ GET http://localhost:8081/api/products
 
 ### 5. **POBIERZ PRODUKT PO ID**
 ```
-GET http://localhost:8081/api/products/1
+GET http://localhost:8081/api/simple-products/1
 ```
 **Oczekiwany wynik:**
 - Status: `200 OK`
@@ -77,7 +83,7 @@ GET http://localhost:8081/api/products/1
 
 ### 6. **ZAKTUALIZUJ PRODUKT**
 ```
-PUT http://localhost:8081/api/products/1
+PUT http://localhost:8081/api/simple-products/1
 Content-Type: application/json
 ```
 
@@ -91,7 +97,13 @@ Content-Type: application/json
     "currency": "$",
     "availability": "Limited Stock",
     "sku": "TEST-001",
-    "brand": "UpdatedBrand"
+    "brand": "UpdatedBrand",
+    "images": ["http://example.com/image1-updated.jpg"],
+    "tags": ["updated", "api"],
+    "metadata": {
+        "warranty": "1 year",
+        "origin": "Canada"
+    }
 }
 ```
 
@@ -103,7 +115,7 @@ Content-Type: application/json
 
 ### 7. **USUŃ PRODUKT**
 ```
-DELETE http://localhost:8081/api/products/1
+DELETE http://localhost:8081/api/simple-products/1
 ```
 **Oczekiwany wynik:**
 - Status: `204 No Content`
@@ -113,7 +125,7 @@ DELETE http://localhost:8081/api/products/1
 
 ### 8. **SPRAWDŹ CZY PRODUKT ZOSTAŁ USUNIĘTY**
 ```
-GET http://localhost:8081/api/products/1
+GET http://localhost:8081/api/simple-products/1
 ```
 **Oczekiwany wynik:**
 - Status: `404 Not Found`
@@ -124,13 +136,13 @@ GET http://localhost:8081/api/products/1
 
 ### Dodanie produktu z tym samym SKU (duplikat)
 ```
-POST http://localhost:8081/api/products
+POST http://localhost:8081/api/simple-products
 ```
 Dodaj drugi produkt z tym samym SKU - powinien zwrócić `409 Conflict`
 
 ### Dodanie produktu z brakującymi polami
 ```
-POST http://localhost:8081/api/products
+POST http://localhost:8081/api/simple-products
 ```
 **Body:**
 ```json
@@ -145,14 +157,14 @@ POST http://localhost:8081/api/products
 
 ## 📋 KOLEJNOŚĆ TESTOWANIA
 
-1. ✅ `GET /api/products/test` - sprawdź czy API działa
-2. ✅ `GET /api/products` - pusta lista
-3. ✅ `POST /api/products` - dodaj produkt
-4. ✅ `GET /api/products` - sprawdź czy został dodany
-5. ✅ `GET /api/products/1` - pobierz po ID
-6. ✅ `PUT /api/products/1` - zaktualizuj
-7. ✅ `DELETE /api/products/1` - usuń
-8. ✅ `GET /api/products/1` - sprawdź czy został usunięty
+1. ✅ `GET /api/simple-products/test` - sprawdź czy API działa
+2. ✅ `GET /api/simple-products` - pusta lista
+3. ✅ `POST /api/simple-products` - dodaj produkt
+4. ✅ `GET /api/simple-products` - sprawdź czy został dodany
+5. ✅ `GET /api/simple-products/1` - pobierz po ID
+6. ✅ `PUT /api/simple-products/1` - zaktualizuj
+7. ✅ `DELETE /api/simple-products/1` - usuń
+8. ✅ `GET /api/simple-products/1` - sprawdź czy został usunięty
 
 ---
 
@@ -164,7 +176,7 @@ POST http://localhost:8081/api/products
 3. Sprawdź czy baza danych MySQL działa
 
 ### Jeśli dostajesz 404 Not Found:
-1. Sprawdź czy używasz poprawnego URL: `/api/products`
+1. Sprawdź czy używasz poprawnego URL: `/api/simple-products`
 2. Sprawdź czy aplikacja działa na porcie 8081
 
 ### Jeśli dostajesz Connection Error:
@@ -176,8 +188,8 @@ POST http://localhost:8081/api/products
 ## 🎉 GOTOWE!
 
 Teraz masz:
-- ✅ Czyste endpointy: `/api/products`
-- ✅ Czyste nazwy plików: `Product.java`, `ProductController.java`
+- ✅ Działające endpointy: `/api/simple-products`
+- ✅ Czyste nazwy plików: `SimpleProduct.java`, `SimpleProductController.java`
 - ✅ Działający backend gotowy do testowania
 
 **URUCHOM APLIKACJĘ I TESTUJ W POSTMAN!** 🚀

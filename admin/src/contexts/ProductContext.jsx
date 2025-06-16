@@ -23,7 +23,7 @@ export const ProductProvider = ({ children }) => {
     setLoading(true);
     setError(null);
     try {
-      const response = await axios.get(`${API_BASE_URL}/products`);
+      const response = await axios.get(`${API_BASE_URL}/simple-products`);
       setProducts(response.data);
     } catch (err) {
       setError('Błąd podczas pobierania produktów');
@@ -37,7 +37,7 @@ export const ProductProvider = ({ children }) => {
   const addProduct = async (productData) => {
     setError(null);
     try {
-      const response = await axios.post(`${API_BASE_URL}/products`, productData);
+      const response = await axios.post(`${API_BASE_URL}/simple-products`, productData);
       setProducts(prev => [...prev, response.data]);
       return { success: true, data: response.data };
     } catch (err) {
@@ -51,7 +51,7 @@ export const ProductProvider = ({ children }) => {
   const updateProduct = async (id, productData) => {
     setError(null);
     try {
-      const response = await axios.put(`${API_BASE_URL}/products/${id}`, productData);
+      const response = await axios.put(`${API_BASE_URL}/simple-products/${id}`, productData);
       setProducts(prev => prev.map(product => 
         product.id === id ? response.data : product
       ));
@@ -67,7 +67,7 @@ export const ProductProvider = ({ children }) => {
   const deleteProduct = async (id) => {
     setError(null);
     try {
-      await axios.delete(`${API_BASE_URL}/products/${id}`);
+      await axios.delete(`${API_BASE_URL}/simple-products/${id}`);
       setProducts(prev => prev.filter(product => product.id !== id));
       return { success: true };
     } catch (err) {
