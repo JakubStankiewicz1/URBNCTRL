@@ -1,6 +1,6 @@
 .sidebar {
   width: 280px;
-  background: linear-gradient(180deg, #1a1a2e 0%, #16213e 100%);
+  background: var(--bg-secondary);
   color: white;
   display: flex;
   flex-direction: column;
@@ -10,7 +10,6 @@
   top: 0;
   height: 100vh;
   z-index: 1000;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
   border-right: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -39,19 +38,15 @@
   justify-content: center;
   width: 40px;
   height: 40px;
-  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  box-shadow: 0 4px 10px rgba(108, 92, 231, 0.3);
 }
 
 .logo-text {
   font-size: 20px;
   font-weight: 700;
   letter-spacing: -0.5px;
-  background: linear-gradient(135deg, #ffffff 30%, #d8d8ff 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-primary);
 }
 
 .collapse-button {
@@ -88,12 +83,12 @@
 }
 
 .sidebar-nav::-webkit-scrollbar-thumb {
-  background: rgba(108, 92, 231, 0.3);
+  background: rgba(255, 255, 255, 0.1);
   border-radius: 4px;
 }
 
 .sidebar-nav::-webkit-scrollbar-thumb:hover {
-  background: rgba(108, 92, 231, 0.5);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .nav-list {
@@ -123,24 +118,19 @@
   font-size: 14px;
   font-weight: 500;
   position: relative;
-  -webkit-backdrop-filter: blur(5px);
-  backdrop-filter: blur(5px);
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border: 1px solid rgba(255, 255, 255, 0.02);
 }
 
 .nav-link:hover:not(.disabled) {
-  background: rgba(108, 92, 231, 0.1);
+  background: rgba(255, 255, 255, 0.1);
   color: white;
   transform: translateX(5px);
-  border-color: rgba(108, 92, 231, 0.2);
 }
 
 .nav-link.active {
-  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-  color: white;
-  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
-  border-color: rgba(108, 92, 231, 0.5);
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
 .nav-link.disabled {
@@ -154,10 +144,13 @@
   justify-content: center;
   width: 36px;
   height: 36px;
-  background: rgba(255, 255, 255, 0.08);
   border-radius: 8px;
   transition: all 0.3s ease;
   padding: 4px;
+}
+
+.active .nav-icon {
+  color: #000000;
 }
 
 .nav-label {

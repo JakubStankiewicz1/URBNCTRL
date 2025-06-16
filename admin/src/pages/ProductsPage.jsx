@@ -2,8 +2,9 @@ import { useState } from 'react';
 import { useProducts } from '../contexts/ProductContext';
 import ProductForm from '../components/ProductForm';
 import './ProductsPage.css';
+import { FiBox, FiStar, FiAward, FiCheck, FiPlusCircle } from 'react-icons/fi';
 
-const ProductsPage = () => {
+const ProductsPage = ({ onAddProduct }) => {
   const { products, loading, error, deleteProduct } = useProducts();
   const [showForm, setShowForm] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
@@ -21,10 +22,13 @@ const ProductsPage = () => {
       await deleteProduct(product.id);
     }
   };
-
   const handleAddNew = () => {
-    setEditingProduct(null);
-    setShowForm(true);
+    if (onAddProduct) {
+      onAddProduct();
+    } else {
+      setEditingProduct(null);
+      setShowForm(true);
+    }
   };
 
   const handleFormClose = () => {
@@ -71,10 +75,9 @@ const ProductsPage = () => {
         <div className="header-content">
           <h1>Zarządzanie Produktami</h1>
           <p>Zarządzaj swoim katalogiem produktów URBNCTRL</p>
-        </div>
-        <button onClick={handleAddNew} className="add-product-button">
-          <span className="button-icon">+</span>
-          Dodaj Produkt
+        </div>        <button onClick={handleAddNew} className="add-product-button">
+          <FiPlusCircle size={20} />
+          <span>Dodaj Produkt</span>
         </button>
       </div>
 
@@ -87,28 +90,35 @@ const ProductsPage = () => {
 
       <div className="stats-overview">
         <div className="stat-card">
-          <div className="stat-icon">📦</div>
+          <div className="stat-icon">
+            <FiBox size={24} />
+          </div>
           <div className="stat-info">
             <div className="stat-number">{stats.total}</div>
             <div className="stat-label">Wszystkie produkty</div>
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">⭐</div>
+          <div className="stat-icon">
+            <FiStar size={24} />
+          </div>
           <div className="stat-info">
             <div className="stat-number">{stats.featured}</div>
             <div className="stat-label">Polecane</div>
           </div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-icon">💎</div>
+        </div>        <div className="stat-card">
+          <div className="stat-icon">
+            <FiAward size={24} />
+          </div>
           <div className="stat-info">
             <div className="stat-number">{stats.limited}</div>
             <div className="stat-label">Limitowane</div>
           </div>
         </div>
         <div className="stat-card">
-          <div className="stat-icon">✅</div>
+          <div className="stat-icon">
+            <FiCheck size={24} />
+          </div>
           <div className="stat-info">
             <div className="stat-number">{stats.inStock}</div>
             <div className="stat-label">W magazynie</div>

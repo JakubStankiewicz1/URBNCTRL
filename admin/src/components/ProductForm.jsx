@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useProducts } from '../contexts/ProductContext';
 import './ProductForm.css';
 
-const ProductForm = ({ product, onClose, onSuccess }) => {
+const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
   const { addProduct, updateProduct } = useProducts();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
@@ -18,19 +18,21 @@ const ProductForm = ({ product, onClose, onSuccess }) => {
     brand: product?.brand || '',
     availability: product?.availability || 'In Stock',
     sku: product?.sku || '',
-    
-    // Extended fields
+      // Extended fields
     collaboration: product?.collaboration || '',
     features: product?.features || [],
+    featuresText: product?.features?.join(', ') || '',
     sizes: product?.sizes || [],
     sizeStock: product?.sizeStock || {},
     colors: product?.colors || [],
+    colorsText: product?.colors?.join(', ') || '',
     material: product?.material || '',
     lining: product?.lining || '',
     weight: product?.weight || 'Medium Weight',
     fit: product?.fit || 'Regular',
     deliveryTime: product?.deliveryTime || '2-4 dni',
     careInstructions: product?.careInstructions || [],
+    careInstructionsText: product?.careInstructions?.join(', ') || '',
     shippingInfo: product?.shippingInfo || '',
     tags: product?.tags || [],
     releaseDate: product?.releaseDate || '',
@@ -55,11 +57,11 @@ const ProductForm = ({ product, onClose, onSuccess }) => {
     shape: product?.shape || '',
     length: product?.length || '',
     sleeveLength: product?.sleeveLength || '',
-    
-    // Images (flattened)
+      // Images (flattened)
     primaryImage: product?.primaryImage || '',
     secondaryImage: product?.secondaryImage || '',
-    galleryImages: product?.galleryImages || []
+    galleryImages: product?.galleryImages || [],
+    galleryImagesText: product?.galleryImages?.join(', ') || ''
   });
 
   const steps = [
@@ -77,12 +79,12 @@ const ProductForm = ({ product, onClose, onSuccess }) => {
       [name]: type === 'checkbox' ? checked : value
     }));
   };
-
   const handleArrayChange = (fieldName, value) => {
-    const values = value.split(',').map(v => v.trim()).filter(v => v);
+    // Zachowuj surową wartość tekstową podczas pisania
     setFormData(prev => ({
       ...prev,
-      [fieldName]: values
+      [`${fieldName}Text`]: value, // Przechowuj surowy tekst
+      [fieldName]: value.split(',').map(v => v.trim()).filter(v => v) // Parsuj do array
     }));
   };
 
@@ -372,24 +374,22 @@ const ProductForm = ({ product, onClose, onSuccess }) => {
                   <option value="Heavy Weight">Ciężka</option>
                 </select>
               </div>
-              
-              <div className="form-group full-width">
+                <div className="form-group full-width">
                 <label htmlFor="features">Cechy produktu</label>
                 <input
                   type="text"
                   id="features"
-                  value={formData.features.join(', ')}
+                  value={formData.featuresText}
                   onChange={(e) => handleArrayChange('features', e.target.value)}
                   placeholder="np. Comfortable Fit, Soft Interior, Tokyo Graphics"
                 />
                 <small>Oddzielone przecinkami</small>
               </div>
               
-              <div className="form-group full-width">
-                <label htmlFor="careInstructions">Instrukcje pielęgnacji</label>
+              <div className="form-group full-width">                <label htmlFor="careInstructions">Instrukcje pielęgnacji</label>
                 <textarea
                   id="careInstructions"
-                  value={formData.careInstructions.join(', ')}
+                  value={formData.careInstructionsText}
                   onChange={(e) => handleArrayChange('careInstructions', e.target.value)}
                   rows="3"
                   placeholder="Pranie w pralce w 30°C, Nie wybielać..."
@@ -403,31 +403,62 @@ const ProductForm = ({ product, onClose, onSuccess }) => {
       case 3:
         return (
           <div className="step-content">
-            <div className="form-grid">
-              <div className="form-group full-width">
-                <label htmlFor="sizes">Dostępne rozmiary</label>
-                <div className="size-selector">
+            <div className="form-grid">              <div className="form-group full-width">
+                <label htmlFor="sizes">Dostępne rozmiary i ilość</label>
+                <div className="size-stock-container">
                   {['XS', 'S', 'M', 'L', 'XL', 'XXL'].map(size => (
-                    <label key={size} className="size-option">
-                      <input
-                        type="checkbox"
-                        checked={formData.sizes.includes(size)}
-                        onChange={(e) => {
-                          if (e.target.checked) {
-                            setFormData(prev => ({
-                              ...prev,
-                              sizes: [...prev.sizes, size]
-                            }));
-                          } else {
-                            setFormData(prev => ({
-                              ...prev,
-                              sizes: prev.sizes.filter(s => s !== size)
-                            }));
-                          }
-                        }}
-                      />
-                      <span className="size-label">{size}</span>
-                    </label>
+                    <div key={size} className="size-stock-item">
+                      <label className="size-option">
+                        <input
+                          type="checkbox"
+                          checked={formData.sizes.includes(size)}
+                          onChange={(e) => {
+                            if (e.target.checked) {
+                              setFormData(prev => ({
+                                ...prev,
+                                sizes: [...prev.sizes, size],
+                                sizeStock: {
+                                  ...prev.sizeStock,
+                                  [size]: prev.sizeStock[size] || 0
+                                }
+                              }));
+                            } else {
+                              const newSizeStock = {...formData.sizeStock};
+                              delete newSizeStock[size];
+                              
+                              setFormData(prev => ({
+                                ...prev,
+                                sizes: prev.sizes.filter(s => s !== size),
+                                sizeStock: newSizeStock
+                              }));
+                            }
+                          }}
+                        />
+                        <span className="size-label">{size}</span>
+                      </label>
+                      
+                      {formData.sizes.includes(size) && (
+                        <div className="size-quantity">
+                          <label htmlFor={`quantity-${size}`}>Ilość:</label>
+                          <input
+                            type="number"
+                            id={`quantity-${size}`}
+                            min="0"
+                            value={formData.sizeStock[size] || 0}
+                            onChange={(e) => {
+                              const value = parseInt(e.target.value) || 0;
+                              setFormData(prev => ({
+                                ...prev,
+                                sizeStock: {
+                                  ...prev.sizeStock,
+                                  [size]: value
+                                }
+                              }));
+                            }}
+                          />
+                        </div>
+                      )}
+                    </div>
                   ))}
                 </div>
               </div>
@@ -435,9 +466,8 @@ const ProductForm = ({ product, onClose, onSuccess }) => {
               <div className="form-group full-width">
                 <label htmlFor="colors">Dostępne kolory</label>
                 <input
-                  type="text"
-                  id="colors"
-                  value={formData.colors.join(', ')}
+                  type="text"                  id="colors"
+                  value={formData.colorsText}
                   onChange={(e) => handleArrayChange('colors', e.target.value)}
                   placeholder="np. Black, White, Navy"
                 />
@@ -466,8 +496,7 @@ const ProductForm = ({ product, onClose, onSuccess }) => {
               <div className="form-group full-width">
                 <label htmlFor="galleryImages">Galeria zdjęć</label>
                 <textarea
-                  id="galleryImages"
-                  value={formData.galleryImages.join(', ')}
+                  id="galleryImages"                  value={formData.galleryImagesText}
                   onChange={(e) => handleArrayChange('galleryImages', e.target.value)}
                   rows="4"
                   placeholder="https://example.com/img1.jpg, https://example.com/img2.jpg"
@@ -494,9 +523,16 @@ const ProductForm = ({ product, onClose, onSuccess }) => {
               
               <div className="summary-section">
                 <h4>Szczegóły</h4>
-                <p><strong>Materiał:</strong> {formData.material || 'Nie podano'}</p>
-                <p><strong>Waga:</strong> {formData.weight}</p>
+                <p><strong>Materiał:</strong> {formData.material || 'Nie podano'}</p>                <p><strong>Waga:</strong> {formData.weight}</p>
                 <p><strong>Rozmiary:</strong> {formData.sizes.join(', ') || 'Nie wybrano'}</p>
+                <p><strong>Stan magazynowy:</strong></p>
+                <ul className="size-stock-list">
+                  {formData.sizes.map(size => (
+                    <li key={size}>
+                      {size}: {formData.sizeStock[size] || 0} szt.
+                    </li>
+                  ))}
+                </ul>
                 <p><strong>Kolory:</strong> {formData.colors.join(', ') || 'Nie podano'}</p>
               </div>
             </div>
@@ -507,15 +543,9 @@ const ProductForm = ({ product, onClose, onSuccess }) => {
         return null;
     }
   };
-
   return (
-    <div className="modal-overlay">
-      <div className="product-form-modal modern">
-        <div className="modal-header">
-          <h2>{product ? 'Edytuj Produkt' : 'Dodaj Nowy Produkt'}</h2>
-          <button onClick={onClose} className="close-button">×</button>
-        </div>
-        
+    isPageView ? (
+      <div className="product-form-container">
         <div className="step-indicator">
           {steps.map(step => (
             <div 
@@ -528,7 +558,7 @@ const ProductForm = ({ product, onClose, onSuccess }) => {
           ))}
         </div>
         
-        <form onSubmit={handleSubmit} className="product-form modern">
+        <form onSubmit={handleSubmit} className="product-form">
           {error && <div className="error-message">{error}</div>}
           
           {renderStep()}
@@ -551,14 +581,61 @@ const ProductForm = ({ product, onClose, onSuccess }) => {
                 </button>
               )}
             </div>
-            
-            <button type="button" onClick={onClose} className="cancel-button">
-              Anuluj
-            </button>
           </div>
         </form>
       </div>
-    </div>
+    ) : (
+      <div className="modal-overlay">
+        <div className="product-form-modal">
+          <div className="modal-header">
+            <h2>{product ? 'Edytuj Produkt' : 'Dodaj Nowy Produkt'}</h2>
+            <button onClick={onClose} className="close-button">×</button>
+          </div>
+          
+          <div className="step-indicator">
+            {steps.map(step => (
+              <div 
+                key={step.id} 
+                className={`step ${currentStep === step.id ? 'active' : ''} ${currentStep > step.id ? 'completed' : ''}`}
+              >
+                <div className="step-icon">{step.icon}</div>
+                <div className="step-title">{step.title}</div>
+              </div>
+            ))}
+          </div>
+          
+          <form onSubmit={handleSubmit} className="product-form">
+            {error && <div className="error-message">{error}</div>}
+            
+            {renderStep()}
+            
+            <div className="form-actions">
+              <div className="action-buttons">
+                {currentStep > 1 && (
+                  <button type="button" onClick={prevStep} className="prev-button">
+                    ← Poprzedni
+                  </button>
+                )}
+                
+                {currentStep < steps.length ? (
+                  <button type="button" onClick={nextStep} className="next-button">
+                    Następny →
+                  </button>
+                ) : (
+                  <button type="submit" disabled={loading} className="submit-button">
+                    {loading ? 'Zapisywanie...' : (product ? 'Aktualizuj Produkt' : 'Dodaj Produkt')}
+                  </button>
+                )}
+              </div>
+              
+              <button type="button" onClick={onClose} className="cancel-button">
+                Anuluj
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    )
   );
 };
 

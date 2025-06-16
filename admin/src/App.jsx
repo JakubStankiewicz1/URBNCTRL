@@ -5,12 +5,14 @@ import Header from './components/Header';
 import Sidebar from './components/Sidebar';
 import Dashboard from './pages/Dashboard';
 import ProductsPage from './pages/ProductsPage';
+import AddProductPage from './pages/AddProductPage';
 import { useState } from 'react';
 import './App.css'
 
 function AppContent() {
   const { user, loading } = useAuth();
   const [activeSection, setActiveSection] = useState('products');
+  const [addingProduct, setAddingProduct] = useState(false);
 
   if (loading) {
     return (
@@ -26,13 +28,17 @@ function AppContent() {
   }
 
   const renderContent = () => {
+    if (addingProduct) {
+      return <AddProductPage onBack={() => setAddingProduct(false)} />;
+    }
+    
     switch (activeSection) {
       case 'dashboard':
         return <Dashboard />;
       case 'products':
-        return <ProductsPage />;
+        return <ProductsPage onAddProduct={() => setAddingProduct(true)} />;
       default:
-        return <ProductsPage />;
+        return <ProductsPage onAddProduct={() => setAddingProduct(true)} />;
     }
   };
 

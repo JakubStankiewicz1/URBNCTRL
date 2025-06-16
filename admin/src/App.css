@@ -6,17 +6,17 @@
 }
 
 :root {
-  --bg-primary: #121212;
-  --bg-secondary: #1e1e1e;
-  --bg-tertiary: #2d2d2d;
-  --accent-primary: #6c5ce7;
-  --accent-secondary: #a29bfe;
-  --text-primary: #f8f9fc;
-  --text-secondary: #b3b3b3;
+  --bg-primary: #000000;
+  --bg-secondary: #111111;
+  --bg-tertiary: #222222;
+  --accent-primary: #ffffff;
+  --accent-secondary: #aaaaaa;
+  --text-primary: #ffffff;
+  --text-secondary: #aaaaaa;
   --danger: #e84393;
-  --success: #00b894;
-  --warning: #fdcb6e;
-  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  --success: #22c55e;
+  --warning: #f59e0b;
+  --card-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
   --transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 
@@ -66,12 +66,12 @@ body {
 .app-loading .spinner {
   width: 50px;
   height: 50px;
-  border: 4px solid rgba(108, 92, 231, 0.1);
+  border: 4px solid rgba(255, 255, 255, 0.1);
   border-top: 4px solid var(--accent-primary);
   border-radius: 50%;
   animation: spin 1s linear infinite;
   margin-bottom: 20px;
-  box-shadow: 0 0 20px rgba(108, 92, 231, 0.25);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.25);
 }
 
 @keyframes spin {
@@ -82,10 +82,7 @@ body {
 .app-loading p {
   font-size: 16px;
   font-weight: 500;
-  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-  -webkit-background-clip: text;
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-primary);
 }
 
 /* Utility classes */
@@ -139,7 +136,7 @@ body {
 .card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
-  border-color: rgba(108, 92, 231, 0.2);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 /* Button styles */
@@ -157,14 +154,14 @@ body {
 }
 
 .btn-primary {
-  background: linear-gradient(135deg, var(--accent-primary) 0%, var(--accent-secondary) 100%);
-  color: white;
-  box-shadow: 0 4px 15px rgba(108, 92, 231, 0.3);
+  background: #ffffff;
+  color: #000000;
+  box-shadow: 0 4px 15px rgba(255, 255, 255, 0.2);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(108, 92, 231, 0.4);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
 }
 
 .btn-danger {
