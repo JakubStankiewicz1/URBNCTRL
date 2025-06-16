@@ -136,6 +136,6 @@ table {
 
 /* Custom selection color */
 ::selection {
-  background-color: var(--accent-primary);
-  color: white;
+  background-color: #000000;
+  color: #ffffff;
 }

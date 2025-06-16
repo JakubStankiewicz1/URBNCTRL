@@ -1,14 +1,15 @@
-import { useState } from 'react';
-import { useProducts } from '../contexts/ProductContext';
-import ProductForm from '../components/ProductForm';
-import './Dashboard.css';
+import { useState } from "react";
+import { useProducts } from "../contexts/ProductContext";
+import ProductForm from "../components/ProductForm";
+import { FiEdit, FiTrash2, FiSearch } from "react-icons/fi";
+import "./Dashboard.css";
 
 const Dashboard = () => {
   const { products, loading, error, deleteProduct } = useProducts();
   const [showForm, setShowForm] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
-  const [filter, setFilter] = useState('all');
-  const [searchTerm, setSearchTerm] = useState('');
+  const [filter, setFilter] = useState("all");
+  const [searchTerm, setSearchTerm] = useState("");
 
   const handleEdit = (product) => {
     setEditingProduct(product);
@@ -31,30 +32,30 @@ const Dashboard = () => {
     setEditingProduct(null);
   };
 
-  const filteredProducts = products.filter(product => {
-    const matchesSearch = product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.brand?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         product.category?.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    if (filter === 'all') return matchesSearch;
-    if (filter === 'in-stock') return matchesSearch && product.availability === 'In Stock';
-    if (filter === 'out-of-stock') return matchesSearch && product.availability === 'Out of Stock';
-    
+  const filteredProducts = products.filter((product) => {
+    const matchesSearch =
+      product.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.brand?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+      product.category?.toLowerCase().includes(searchTerm.toLowerCase());
+
+    if (filter === "all") return matchesSearch;
+    if (filter === "in-stock") return matchesSearch && product.availability === "In Stock";
+    if (filter === "out-of-stock") return matchesSearch && product.availability === "Out of Stock";
+
     return matchesSearch && product.category === filter;
   });
 
   const stats = {
     total: products.length,
-    inStock: products.filter(p => p.availability === 'In Stock').length,
-    outOfStock: products.filter(p => p.availability === 'Out of Stock').length,
-    categories: [...new Set(products.map(p => p.category))].length
+    inStock: products.filter((p) => p.availability === "In Stock").length,
+    outOfStock: products.filter((p) => p.availability === "Out of Stock").length,
+    categories: [...new Set(products.map((p) => p.category))].length,
   };
-
   if (loading) {
     return (
       <div className="dashboard">
         <div className="dashboard-loading">
-          <div className="spinner"></div>
+          <div className="dashboard-spinner"></div>
           <p>Ładowanie produktów...</p>
         </div>
       </div>
@@ -63,49 +64,38 @@ const Dashboard = () => {
 
   return (
     <div className="dashboard">
-      <div className="dashboard-header">
+      {" "}
+      {/* <div className="dashboard-header">
         <h1>Panel Zarządzania Produktami</h1>
-        <button onClick={handleAddNew} className="add-button">
+        <button onClick={handleAddNew} className="dashboard-add-button">
           + Dodaj Produkt
         </button>
-      </div>
+      </div> */}
+      {error && <div className="dashboard-error-banner">{error}</div>}
+      <div className="dashboard-stats-grid">
+        <div className="dashboard-stat-card">
+          <div className="dashboard-stat-number">{stats.total}</div>
+          <div className="dashboard-stat-label">Wszystkie produkty</div>
+        </div>
+        <div className="dashboard-stat-card">
+          <div className="dashboard-stat-number">{stats.inStock}</div>
+          <div className="dashboard-stat-label">W magazynie</div>
+        </div>
+        <div className="dashboard-stat-card">
+          <div className="dashboard-stat-number">{stats.outOfStock}</div>
+          <div className="dashboard-stat-label">Wyprzedane</div>
+        </div>
+        <div className="dashboard-stat-card">
+          <div className="dashboard-stat-number">{stats.categories}</div>
+          <div className="dashboard-stat-label">Kategorie</div>
+        </div>
+      </div>{" "}      <div className="dashboard-controls">
+        <div className="dashboard-search-box">
+          <FiSearch className="dashboard-search-icon" />
+          <input type="text" placeholder="Szukaj produktów..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+        </div>
 
-      {error && (
-        <div className="error-banner">
-          {error}
-        </div>
-      )}
-
-      <div className="stats-grid">
-        <div className="stat-card">
-          <div className="stat-number">{stats.total}</div>
-          <div className="stat-label">Wszystkie produkty</div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-number">{stats.inStock}</div>
-          <div className="stat-label">W magazynie</div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-number">{stats.outOfStock}</div>
-          <div className="stat-label">Wyprzedane</div>
-        </div>
-        <div className="stat-card">
-          <div className="stat-number">{stats.categories}</div>
-          <div className="stat-label">Kategorie</div>
-        </div>
-      </div>
-
-      <div className="dashboard-controls">
-        <div className="search-box">
-          <input
-            type="text"
-            placeholder="Szukaj produktów..."
-            value={searchTerm}
-            onChange={(e) => setSearchTerm(e.target.value)}
-          />
-        </div>
-        
-        <div className="filter-select">
+        <div className="dashboard-filter-select">
           <select value={filter} onChange={(e) => setFilter(e.target.value)}>
             <option value="all">Wszystkie produkty</option>
             <option value="in-stock">W magazynie</option>
@@ -119,20 +109,18 @@ const Dashboard = () => {
             <option value="Biżuteria">Biżuteria</option>
           </select>
         </div>
-      </div>
-
-      <div className="products-table-container">
+      </div>{" "}
+      <div className="dashboard-products-table-container">
         {filteredProducts.length === 0 ? (
-          <div className="no-products">
+          <div className="dashboard-no-products">
             <p>
-              {searchTerm || filter !== 'all' 
-                ? 'Nie znaleziono produktów spełniających kryteria.' 
-                : 'Nie ma jeszcze żadnych produktów. Dodaj pierwszy produkt!'
-              }
+              {searchTerm || filter !== "all"
+                ? "Nie znaleziono produktów spełniających kryteria."
+                : "Nie ma jeszcze żadnych produktów. Dodaj pierwszy produkt!"}
             </p>
           </div>
         ) : (
-          <table className="products-table">
+          <table className="dashboard-products-table">
             <thead>
               <tr>
                 <th>Nazwa</th>
@@ -147,52 +135,40 @@ const Dashboard = () => {
               </tr>
             </thead>
             <tbody>
-              {filteredProducts.map(product => (
+              {filteredProducts.map((product) => (
                 <tr key={product.id}>
                   <td>
-                    <div className="product-name">
+                    <div className="dashboard-product-name">
                       {product.name}
-                      {product.collaboration && (
-                        <small className="collaboration">× {product.collaboration}</small>
-                      )}
+                      {product.collaboration && <small className="collaboration">× {product.collaboration}</small>}
                     </div>
                   </td>
-                  <td>{product.brand || '-'}</td>
+                  <td>{product.brand || "-"}</td>
                   <td>
-                    <span className="category-badge">{product.category}</span>
+                    <span className="dashboard-category-badge">{product.category}</span>
                   </td>
-                  <td className="price">
+                  <td className="dashboard-price">
                     {product.price?.toFixed(2)} {product.currency}
                   </td>
                   <td>
                     <code>{product.sku}</code>
                   </td>
                   <td>
-                    <small>{product.material || '-'}</small>
+                    <small>{product.material || "-"}</small>
                   </td>
                   <td>
-                    <small>{product.sizes?.join(', ') || '-'}</small>
+                    <small>{product.sizes?.join(", ") || "-"}</small>
                   </td>
                   <td>
-                    <span className={`availability ${product.availability?.toLowerCase().replace(/\s+/g, '-')}`}>
-                      {product.availability}
-                    </span>
-                  </td>
+                    <span className={`dashboard-status ${product.availability?.toLowerCase().replace(/\s+/g, "-")}`}>{product.availability}</span>
+                  </td>{" "}
                   <td>
-                    <div className="actions">
-                      <button 
-                        onClick={() => handleEdit(product)}
-                        className="edit-button"
-                        title="Edytuj"
-                      >
-                        ✏️
+                    <div className="dashboard-actions">
+                      <button onClick={() => handleEdit(product)} className="dashboard-edit-button" title="Edytuj">
+                        <FiEdit />
                       </button>
-                      <button 
-                        onClick={() => handleDelete(product)}
-                        className="delete-button"
-                        title="Usuń"
-                      >
-                        🗑️
+                      <button onClick={() => handleDelete(product)} className="dashboard-delete-button" title="Usuń">
+                        <FiTrash2 />
                       </button>
                     </div>
                   </td>
@@ -202,7 +178,6 @@ const Dashboard = () => {
           </table>
         )}
       </div>
-
       {showForm && (
         <ProductForm
           product={editingProduct}
