@@ -1,0 +1,30 @@
+{
+    "customerEmail": "jan.kowalski@example.com",
+    "firstName": "Jan",
+    "lastName": "Kowalski",
+    "phone": "+48123456789",
+    "shippingAddress": "ul. Testowa 123",
+    "apartment": "10A",
+    "city": "Warszawa",
+    "postcode": "00-001",
+    "country": "Polska",
+    "subtotal": 119.98,
+    "shippingCost": 15.00,
+    "total": 134.98,
+    "paymentMethod": "Credit Card",
+    "orderNote": "Proszę o szybką dostawę",
+    "newsletterSignup": true,
+    "orderItems": [
+        {
+            "productId": 1,
+            "productName": "Test Champions Tee",
+            "productImage": "https://example.com/image1.jpg",
+            "productSku": "TEST-001",
+            "price": 59.99,
+            "quantity": 2,
+            "selectedSize": "M",
+            "selectedColor": "Black",
+            "subtotal": 119.98
+        }
+    ]
+}

@@ -1,8 +1,11 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 import { toast } from 'react-toastify';
-import productsData from '../assets/products_new.json';
+import axios from 'axios';
 
 const ProductContext = createContext();
+
+// API Base URL
+const API_BASE_URL = 'http://localhost:8081/api';
 
 export const useProducts = () => {
     const context = useContext(ProductContext);
@@ -15,17 +18,21 @@ export const useProducts = () => {
 export const ProductProvider = ({ children }) => {
     const [products, setProducts] = useState([]);
     const [loading, setLoading] = useState(true);
-    const [cart, setCart] = useState([]);
-
-    useEffect(() => {
-        // Symulujemy ładowanie danych
+    const [error, setError] = useState(null);
+    const [cart, setCart] = useState([]);    useEffect(() => {
+        // Pobieranie produktów z backend API
         const loadProducts = async () => {
             try {
                 setLoading(true);
-                // W prawdziwej aplikacji tutaj byłby fetch z API
-                setProducts(productsData);
+                setError(null);
+                const response = await axios.get(`${API_BASE_URL}/simple-products`);
+                setProducts(response.data);
+                console.log('Produkty załadowane z API:', response.data);
             } catch (error) {
-                console.error('Error loading products:', error);
+                console.error('Błąd podczas ładowania produktów:', error);
+                setError('Nie udało się załadować produktów. Sprawdź czy backend działa.');
+                // Fallback do pustej tablicy
+                setProducts([]);
             } finally {
                 setLoading(false);
             }
@@ -64,31 +71,35 @@ export const ProductProvider = ({ children }) => {
                 // Jeśli produkt już jest w koszyku, zwiększ ilość
                 toast.success(`Zwiększono ilość "${product.name}" w koszyku`, {
                     position: "top-right",
-                    autoClose: 3000,
-                    hideProgressBar: false,
+                    autoClose: 3000,                    hideProgressBar: false,
                     closeOnClick: true,
                     pauseOnHover: true,
                     draggable: true,
-                });
-                return prevCart.map(item =>
+                });                return prevCart.map(item =>
                     item.id === product.id
                         ? { ...item, quantity: item.quantity + quantity }
                         : item
                 );
             } else {
                 // Jeśli produkt nie ma w koszyku, dodaj nowy
-                toast.success(`"${product.name}" został dodany do koszyka! 🛍️`, {
-                    position: "top-right",
-                    autoClose: 3000,
-                    hideProgressBar: false,
-                    closeOnClick: true,
-                    pauseOnHover: true,
-                    draggable: true,
-                });
-                return [...prevCart, { ...product, quantity }];
+                const newCart = [...prevCart, { ...product, quantity }];
+                
+                // Wyświetl toast dopiero po aktualizacji stanu (nie podczas renderowania)
+                setTimeout(() => {
+                    toast.success(`"${product.name}" został dodany do koszyka! 🛍️`, {
+                        position: "top-right",
+                        autoClose: 3000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                    });
+                }, 0);
+                
+                return newCart;
             }
         });
-    };    const removeFromCart = (productId) => {
+    };const removeFromCart = (productId) => {
         const removedItem = cart.find(item => item.id === productId);
         setCart(prevCart => prevCart.filter(item => item.id !== productId));
         
@@ -128,23 +139,118 @@ export const ProductProvider = ({ children }) => {
             });
         }
         setCart([]);
-    };
-
-    const getCartTotal = () => {
-        return cart.reduce((total, item) => total + (item.price * item.quantity), 0);
+    };    const getCartTotal = () => {
+        return cart.reduce((total, item) => {
+            // Handle BigDecimal or other object types
+            const itemPrice = typeof item.price === 'object' && item.price !== null 
+                ? parseFloat(item.price.toString()) 
+                : parseFloat(item.price) || 0;
+            return total + (itemPrice * item.quantity);
+        }, 0);
     };
 
     const getCartItemsCount = () => {
         return cart.reduce((count, item) => count + item.quantity, 0);
-    };
-
-    const isInCart = (productId) => {
+    };    const isInCart = (productId) => {
         return cart.some(item => item.id === productId);
-    };
+    };    // Składanie zamówienia
+    const placeOrder = async (orderData) => {
+        try {
+            setLoading(true);
+            
+            console.log('=== DEBUGGING ORDER SUBMISSION START ===');
+            console.log('Cart items:', cart);
+            console.log('Order data from form:', orderData);
+            
+            // Sprawdź czy koszyk nie jest pusty
+            if (!cart || cart.length === 0) {
+                throw new Error('Koszyk jest pusty');
+            }
+            
+            // Przygotuj dane zamówienia zgodnie z backendem
+            const orderPayload = {
+                customerEmail: orderData.email,
+                firstName: orderData.firstName,
+                lastName: orderData.lastName,
+                phone: orderData.phone || '',
+                shippingAddress: orderData.address,
+                apartment: orderData.apartment || '',
+                city: orderData.city,
+                postcode: orderData.postcode,
+                country: orderData.country,
+                subtotal: getCartTotal(),
+                shippingCost: 15.0, // Stała opłata za wysyłkę (jak w przykładzie Postman)
+                total: getCartTotal() + 15.0,
+                paymentMethod: orderData.paymentMethod === 'credit' ? 'Credit Card' : orderData.paymentMethod,
+                orderNote: orderData.orderNote || '',
+                newsletterSignup: orderData.newsletter || false,
+                orderItems: cart.map(item => {
+                    console.log('Processing cart item:', item);
+                    
+                    // Konwertuj BigDecimal na number jeśli potrzeba
+                    const itemPrice = typeof item.price === 'object' && item.price !== null 
+                        ? parseFloat(item.price.toString()) 
+                        : parseFloat(item.price) || 0;
+                    
+                    const itemQuantity = parseInt(item.quantity) || 1;
+                    const itemSubtotal = itemPrice * itemQuantity;
+                    
+                    return {
+                        productId: parseInt(item.id),
+                        productName: item.name || 'Unnamed Product',
+                        productImage: item.images?.primary || item.primaryImage || item.galleryImages?.[0] || '',
+                        productSku: item.sku || '',
+                        price: itemPrice,
+                        quantity: itemQuantity,
+                        selectedSize: item.selectedSize || 'M',
+                        selectedColor: item.selectedColor || 'Default',
+                        subtotal: itemSubtotal
+                    };
+                })
+            };
 
-    const value = {
+            console.log('Final order payload:', JSON.stringify(orderPayload, null, 2));
+            console.log('=== DEBUGGING ORDER SUBMISSION END ===');
+            
+            const response = await axios.post(`${API_BASE_URL}/orders`, orderPayload);
+            
+            if (response.data) {
+                // Zamówienie zostało złożone pomyślnie
+                clearCart(); // Wyczyść koszyk
+                return {
+                    success: true,
+                    order: response.data,
+                    orderNumber: response.data.orderNumber
+                };
+            }
+              } catch (error) {
+            console.error('Błąd podczas składania zamówienia:', error);
+            let errorMessage = 'Błąd podczas składania zamówienia';
+            
+            if (error.response?.data) {
+                // Jeśli backend zwrócił konkretny błąd
+                if (typeof error.response.data === 'string') {
+                    errorMessage = error.response.data;
+                } else if (error.response.data.message) {
+                    errorMessage = error.response.data.message;
+                } else {
+                    errorMessage = JSON.stringify(error.response.data);
+                }
+            } else if (error.message) {
+                errorMessage = error.message;
+            }
+            
+            return {
+                success: false,
+                error: errorMessage
+            };
+        } finally {
+            setLoading(false);
+        }
+    };    const value = {
         products,
         loading,
+        error,
         getProductById,
         getFeaturedProducts,
         // Cart functions
@@ -155,7 +261,9 @@ export const ProductProvider = ({ children }) => {
         clearCart,
         getCartTotal,
         getCartItemsCount,
-        isInCart
+        isInCart,
+        // Order functions
+        placeOrder
     };
 
     return (

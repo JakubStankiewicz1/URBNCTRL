@@ -34,16 +34,15 @@ const ShopProductElement = ({ id }) => {
             <div className="shopProductElementContainerDiv" onClick={handleProductClick}>
                 {/* Top Part */}
                 <div className="shopProductElementContainerDivTop">
-                    <div className="shopProductElementContainerDivTopContainer">
-                        <div className="shopProductElementContainerDivTopContainerImageOne">
+                    <div className="shopProductElementContainerDivTopContainer">                        <div className="shopProductElementContainerDivTopContainerImageOne">
                             <div className="shopProductElementContainerDivTopContainerImageOneContainer">
-                                <img src={product.images?.primary || product.images?.[0]} alt={product.name} className='shopProductElementContainerDivTopContainerImageOneContainerImage' />
+                                <img src={product.galleryImages?.[0] || product.images?.primary || product.images?.[0]} alt={product.name} className='shopProductElementContainerDivTopContainerImageOneContainerImage' />
                             </div>
                         </div>
 
                         <div className="shopProductElementContainerDivTopContainerImageTwo">
                             <div className="shopProductElementContainerDivTopContainerImageTwoContainer">
-                                <img src={product.images?.secondary || product.images?.[1] || product.images?.primary || product.images?.[0]} alt={product.name} className='shopProductElementContainerDivTopContainerImageTwoContainerImage' />
+                                <img src={product.galleryImages?.[1] || product.images?.secondary || product.images?.[1] || product.galleryImages?.[0] || product.images?.primary || product.images?.[0]} alt={product.name} className='shopProductElementContainerDivTopContainerImageTwoContainerImage' />
                             </div>
                         </div>
                     </div>

@@ -5,7 +5,7 @@ import { toast } from 'react-toastify';
 import './checkout.css';
 
 const Checkout = () => {
-    const { cart, getCartTotal, clearCart } = useProducts();
+    const { cart, getCartTotal, clearCart, placeOrder, loading } = useProducts();
     const navigate = useNavigate();
     
     const [formData, setFormData] = useState({
@@ -56,32 +56,59 @@ const Checkout = () => {
 
         setErrors(newErrors);
         return Object.keys(newErrors).length === 0;
-    };    const handlePlaceOrder = (e) => {
+    };    const handlePlaceOrder = async (e) => {
         e.preventDefault();
         if (validateForm()) {
-            // Process order
-            toast.success('🎉 Zamówienie zostało złożone pomyślnie! Dziękujemy za zakup!', {
-                position: "top-center",
-                autoClose: 5000,
-                hideProgressBar: false,
-                closeOnClick: true,
-                pauseOnHover: true,
-                draggable: true,
-            });
-            clearCart();
-            // Navigate after a short delay to let user see the toast
-            setTimeout(() => {
-                navigate('/');
-            }, 1500);
+            try {
+                console.log('Form data before sending:', formData);
+                console.log('Cart before sending:', cart);
+                
+                // Składanie zamówienia
+                const result = await placeOrder(formData);
+                
+                if (result.success) {
+                    toast.success(`🎉 Zamówienie ${result.orderNumber} zostało złożone pomyślnie! Dziękujemy za zakup!`, {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                    });
+                    
+                    // Navigate after a short delay to let user see the toast
+                    setTimeout(() => {
+                        navigate('/');
+                    }, 2000);
+                } else {
+                    toast.error(`❌ Błąd podczas składania zamówienia: ${result.error}`, {
+                        position: "top-center",
+                        autoClose: 5000,
+                        hideProgressBar: false,
+                        closeOnClick: true,
+                        pauseOnHover: true,
+                        draggable: true,
+                    });
+                }
+            } catch (error) {
+                toast.error('❌ Wystąpił nieoczekiwany błąd. Spróbuj ponownie.', {
+                    position: "top-center",
+                    autoClose: 5000,
+                    hideProgressBar: false,
+                    closeOnClick: true,
+                    pauseOnHover: true,
+                    draggable: true,
+                });
+            }
         }
-    };
-
-    const formatPrice = (price) => {
-        return `$${price}`;
-    };
-
-    const subtotal = getCartTotal();
-    const shipping = 10;
+    };    const formatPrice = (price) => {
+        // Handle BigDecimal or other object types
+        const numericPrice = typeof price === 'object' && price !== null 
+            ? parseFloat(price.toString()) 
+            : parseFloat(price) || 0;
+        return `$${numericPrice.toFixed(2)}`;
+    };const subtotal = getCartTotal();
+    const shipping = 15; // Zsynchronizowane z ProductContext
     const total = subtotal + shipping;
 
     if (cart.length === 0) {
@@ -399,9 +426,8 @@ const Checkout = () => {
                             <div className="checkoutButtons">
                                 <Link to="/cart" className="returnToCart nunito-sans-regular">
                                     ← Return to Cart
-                                </Link>
-                                <button type="submit" className="placeOrderButton nunito-sans-regular">
-                                    Place Order
+                                </Link>                                <button type="submit" className="placeOrderButton nunito-sans-regular" disabled={loading}>
+                                    {loading ? 'Składanie zamówienia...' : 'Place Order'}
                                 </button>
                             </div>
                         </div>
@@ -413,7 +439,7 @@ const Checkout = () => {
                                 {cart.map((item) => (
                                     <div key={item.id} className="orderItem">
                                         <div className="orderItemImage">
-                                            <img src={item.image} alt={item.name} />
+                                            <img src={item.galleryImages?.[0] || item.primaryImage || item.image} alt={item.name} />
                                             <span className="orderItemQuantity">{item.quantity}</span>
                                         </div>
                                         <div className="orderItemDetails">

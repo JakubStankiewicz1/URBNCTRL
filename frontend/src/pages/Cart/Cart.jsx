@@ -73,7 +73,7 @@ const Cart = () => {
                         <div key={item.id} className="cartTableRow">
                             <div className="cartTableCell product">
                                 <div className="productInfo">
-                                    <img src={item.image} alt={item.name} className="productImage" />
+                                    <img src={item.galleryImages?.[0] || item.primaryImage || item.image} alt={item.name} className="productImage" />
                                     <div className="productDetails">
                                         <h3 className="productName nunito-sans-regular">{item.name}</h3>
                                         {item.selectedSize && (

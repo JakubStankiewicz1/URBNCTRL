@@ -239,6 +239,192 @@
               "host": ["{{base_url}}"],
               "path": ["api", "products", "sku", "TEST-001", "exists"]
             }
+          }        }
+      ]
+    },
+    {
+      "name": "Orders",
+      "item": [
+        {
+          "name": "Create Order",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\n    \"customerEmail\": \"test@example.com\",\n    \"firstName\": \"Jan\",\n    \"lastName\": \"Kowalski\",\n    \"phone\": \"+48123456789\",\n    \"shippingAddress\": \"ul. Testowa 123\",\n    \"apartment\": \"10A\",\n    \"city\": \"Warszawa\",\n    \"postcode\": \"00-001\",\n    \"country\": \"Polska\",\n    \"subtotal\": 119.98,\n    \"shippingCost\": 15.00,\n    \"total\": 134.98,\n    \"paymentMethod\": \"Credit Card\",\n    \"orderNote\": \"Proszę o szybką dostawę\",\n    \"newsletterSignup\": true,\n    \"orderItems\": [\n        {\n            \"productId\": 1,\n            \"productName\": \"Test Champions Tee\",\n            \"productImage\": \"https://example.com/image1.jpg\",\n            \"productSku\": \"TEST-001\",\n            \"price\": 59.99,\n            \"quantity\": 2,\n            \"selectedSize\": \"M\",\n            \"selectedColor\": \"Black\",\n            \"subtotal\": 119.98\n        }\n    ]\n}"
+            },
+            "url": {
+              "raw": "{{base_url}}/api/orders",
+              "host": ["{{base_url}}"],
+              "path": ["api", "orders"]
+            }
+          }
+        },
+        {
+          "name": "Get All Orders",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/orders",
+              "host": ["{{base_url}}"],
+              "path": ["api", "orders"]
+            }
+          }
+        },
+        {
+          "name": "Get Order by ID",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/orders/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "orders", "1"]
+            }
+          }
+        },
+        {
+          "name": "Get Order by Order Number",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/orders/number/ORD-000001",
+              "host": ["{{base_url}}"],
+              "path": ["api", "orders", "number", "ORD-000001"]
+            }
+          }
+        },
+        {
+          "name": "Get Orders by Customer Email",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/orders/customer/test@example.com",
+              "host": ["{{base_url}}"],
+              "path": ["api", "orders", "customer", "test@example.com"]
+            }
+          }
+        },
+        {
+          "name": "Get Orders by Status",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/orders/status/PENDING",
+              "host": ["{{base_url}}"],
+              "path": ["api", "orders", "status", "PENDING"]
+            }
+          }
+        },
+        {
+          "name": "Update Order Status",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\"CONFIRMED\""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/orders/1/status",
+              "host": ["{{base_url}}"],
+              "path": ["api", "orders", "1", "status"]
+            }
+          }
+        },
+        {
+          "name": "Update Payment Status",
+          "request": {
+            "method": "PUT",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "\"PAID\""
+            },
+            "url": {
+              "raw": "{{base_url}}/api/orders/1/payment-status",
+              "host": ["{{base_url}}"],
+              "path": ["api", "orders", "1", "payment-status"]
+            }
+          }
+        },
+        {
+          "name": "Get Order Statistics",
+          "request": {
+            "method": "GET",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/orders/stats",
+              "host": ["{{base_url}}"],
+              "path": ["api", "orders", "stats"]
+            }
+          }
+        },
+        {
+          "name": "Delete Order",
+          "request": {
+            "method": "DELETE",
+            "header": [
+              {
+                "key": "Content-Type",
+                "value": "application/json"
+              }
+            ],
+            "url": {
+              "raw": "{{base_url}}/api/orders/1",
+              "host": ["{{base_url}}"],
+              "path": ["api", "orders", "1"]
+            }
           }
         }
       ]

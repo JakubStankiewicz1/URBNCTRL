@@ -35,7 +35,7 @@ const ProductElement = ({ id }) => {
                 <div className="productElementContainerDivTop">
                     <div className="productElementContainerDivTopContainer">                        <div className="productElementContainerDivTopContainerImageOne">                            <div className="productElementContainerDivTopContainerImageOneContainer">
                                 <img 
-                                    src={product.images?.primary || (product.images?.gallery && product.images.gallery[0]) || "https://via.placeholder.com/290x360?text=No+Image"} 
+                                    src={product.galleryImages?.[0] || product.images?.primary || (product.images?.gallery && product.images.gallery[0]) || "https://via.placeholder.com/290x360?text=No+Image"} 
                                     alt={product.name} 
                                     className='productElementContainerDivTopContainerImageOneContainerImage' 
                                 />
@@ -45,7 +45,7 @@ const ProductElement = ({ id }) => {
                         <div className="productElementContainerDivTopContainerImageTwo">
                             <div className="productElementContainerDivTopContainerImageTwoContainer">
                                 <img 
-                                    src={product.images?.secondary || (product.images?.gallery && product.images.gallery[1]) || product.images?.primary || "https://via.placeholder.com/290x360?text=No+Image"} 
+                                    src={product.galleryImages?.[1] || product.images?.secondary || (product.images?.gallery && product.images.gallery[1]) || product.galleryImages?.[0] || product.images?.primary || "https://via.placeholder.com/290x360?text=No+Image"} 
                                     alt={product.name} 
                                     className='productElementContainerDivTopContainerImageTwoContainerImage' 
                                 />

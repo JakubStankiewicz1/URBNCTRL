@@ -18,13 +18,14 @@ const Product = () => {
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const [isSellModalOpen, setIsSellModalOpen] = useState(false);
   const product = getProductById(parseInt(id));
-
-  const productImages = [
-    product?.images?.primary,
-    product?.images?.secondary || product?.images?.primary,
-    product?.images?.gallery?.[0] || product?.images?.primary,
-    product?.images?.gallery?.[1] || product?.images?.secondary || product?.images?.primary,
-  ];
+  const productImages = product?.galleryImages?.length > 0 
+    ? product.galleryImages 
+    : [
+        product?.images?.primary,
+        product?.images?.secondary || product?.images?.primary,
+        product?.images?.gallery?.[0] || product?.images?.primary,
+        product?.images?.gallery?.[1] || product?.images?.secondary || product?.images?.primary,
+      ].filter(Boolean);
 
   const handleQuantityChange = (change) => {
     setQuantity((prev) => Math.max(1, prev + change));
