@@ -12,11 +12,13 @@ Backend aplikacji URBNCTRL zbudowany w Spring Boot z bazą danych MySQL.
 
 1. Zainstaluj MySQL Server
 2. Utwórz bazę danych:
+
 ```sql
 CREATE DATABASE urbnctrl_db;
 ```
 
 3. Zaktualizuj ustawienia w `src/main/resources/application.properties`:
+
 ```properties
 spring.datasource.username=twoj_uzytkownik
 spring.datasource.password=twoje_haslo
@@ -25,11 +27,13 @@ spring.datasource.password=twoje_haslo
 ## Uruchamianie aplikacji
 
 ### Za pomocą Maven
+
 ```bash
 ./mvnw spring-boot:run
 ```
 
 ### Za pomocą PowerShell (Windows)
+
 ```powershell
 .\mvnw.cmd spring-boot:run
 ```
@@ -57,55 +61,57 @@ spring.datasource.password=twoje_haslo
 
 ```json
 {
-    "name": "Test Product",
-    "category": "Apparel",
-    "description": "Test description",
-    "price": 99.99,
-    "currency": "$",
-    "availability": "In Stock",
-    "sku": "TEST-001",
-    "brand": "T-LD",
-    "collaboration": null,
-    "features": ["Feature 1", "Feature 2"],
-    "sizes": ["S", "M", "L"],
-    "sizeStock": {"S": 10, "M": 15, "L": 12},
-    "colors": ["Black", "White"],
-    "material": "100% Cotton",
-    "weight": "Medium",
-    "fit": "Regular",
-    "deliveryTime": "2-3 dni",
-    "careInstructions": ["Pranie w 30°C"],
-    "productDetails": {
-        "sport": "Casual",
-        "neckline": "Okrągły",
-        "collar": "Crew neck"
-    },
-    "sizeAndFit": {
-        "modelHeight": "185 cm",
-        "fitType": "Regular",
-        "shape": "Prosty"
-    },
-    "images": {
-        "primary": "http://example.com/image1.jpg",
-        "secondary": "http://example.com/image2.jpg",
-        "gallery": ["http://example.com/image1.jpg"]
-    },
-    "shippingInfo": "Ships from Poland",
-    "tags": ["test", "new"],
-    "releaseDate": "2024-12-01",
-    "limitedEdition": false,
-    "featured": true
+  "name": "Test Product",
+  "category": "Apparel",
+  "description": "Test description",
+  "price": 99.99,
+  "currency": "$",
+  "availability": "In Stock",
+  "sku": "TEST-001",
+  "brand": "T-LD",
+  "collaboration": null,
+  "features": ["Feature 1", "Feature 2"],
+  "sizes": ["S", "M", "L"],
+  "sizeStock": { "S": 10, "M": 15, "L": 12 },
+  "colors": ["Black", "White"],
+  "material": "100% Cotton",
+  "weight": "Medium",
+  "fit": "Regular",
+  "deliveryTime": "2-3 dni",
+  "careInstructions": ["Pranie w 30°C"],
+  "productDetails": {
+    "sport": "Casual",
+    "neckline": "Okrągły",
+    "collar": "Crew neck"
+  },
+  "sizeAndFit": {
+    "modelHeight": "185 cm",
+    "fitType": "Regular",
+    "shape": "Prosty"
+  },
+  "images": {
+    "primary": "http://example.com/image1.jpg",
+    "secondary": "http://example.com/image2.jpg",
+    "gallery": ["http://example.com/image1.jpg"]
+  },
+  "shippingInfo": "Ships from Poland",
+  "tags": ["test", "new"],
+  "releaseDate": "2024-12-01",
+  "limitedEdition": false,
+  "featured": true
 }
 ```
 
 ## Testowanie
 
 Możesz przetestować API używając:
+
 - Postman
 - cURL
 - Frontend aplikacji (React/Vite)
 
 ### Przykład cURL:
+
 ```bash
 # Pobierz wszystkie produkty
 curl -X GET http://localhost:8080/api/products
@@ -119,6 +125,7 @@ curl -X POST http://localhost:8080/api/products \
 ## Struktura bazy danych
 
 Aplikacja automatycznie utworzy następujące tabele:
+
 - `products` - główna tabela produktów
 - `product_features` - cechy produktów
 - `product_sizes` - dostępne rozmiary

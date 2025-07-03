@@ -37,7 +37,7 @@ const ContactUsForm = () => {
   const handleFiles = (files) => {
     const newCount = Math.min(fileCount + files.length, maxFiles);
     setFileCount(newCount);
-    // Here you would typically upload or process the files
+    
     console.log("Files to process:", files);
   };
   const onBrowseClick = () => {
@@ -48,14 +48,14 @@ const ContactUsForm = () => {
   };
 
   const handleSelectBlur = () => {
-    // Dodajemy małe opóźnienie żeby animacja była płynna
+    
     setTimeout(() => {
       setSelectOpen(false);
     }, 100);
   };
 
   const handleSelectChange = () => {
-    // Po wyborze opcji też zamykamy select
+    
     setTimeout(() => {
       setSelectOpen(false);
     }, 150);
@@ -68,16 +68,26 @@ const ContactUsForm = () => {
           <div className="contactUsFormContainerDivOne">
             <div className="contactUsFormContainerDivOneContainer">
               <div className="contactUsFormContainerDivOneContainerOne">
-                <input type="text" placeholder="Your Name" className="contactUsFormContainerDivOneContainerOneInput" />
+                <input
+                  type="text"
+                  placeholder="Your Name"
+                  className="contactUsFormContainerDivOneContainerOneInput"
+                />
               </div>
 
               <div className="contactUsFormContainerDivOneContainerTwo">
-                <input type="text" placeholder="Email" className="contactUsFormContainerDivOneContainerTwoInput" />
+                <input
+                  type="text"
+                  placeholder="Email"
+                  className="contactUsFormContainerDivOneContainerTwoInput"
+                />
               </div>
             </div>
           </div>{" "}
           <div className="contactUsFormContainerDivTwo">
-            <div className={`contactUsFormContainerDivTwoContainer ${selectOpen ? "select-open" : ""}`}>
+            <div
+              className={`contactUsFormContainerDivTwoContainer ${selectOpen ? "select-open" : ""}`}
+            >
               {" "}
               <select
                 name="enquiryType"
@@ -90,25 +100,31 @@ const ContactUsForm = () => {
                 <option value="" disabled>
                   Enquiry Type
                 </option>
-                <option value="sales">Sales</option>
-                <option value="support">Support</option>
-                <option value="billing">Billing</option>
+                <option value="collaboration">Creative Collaboration</option>
+                <option value="wholesale">Wholesale Inquiry</option>
+                <option value="press">Press & Media</option>
+                <option value="partnership">Brand Partnership</option>
                 <option value="general">General Inquiry</option>
               </select>
             </div>
           </div>
           <div className="contactUsFormContainerDivThree">
             <div className="contactUsFormContainerDivThreeContainer">
-              <input type="text" placeholder="Your Subject" className="contactUsFormContainerDivThreeContainerInput" />
+              <input
+                type="text"
+                placeholder="Your Subject"
+                className="contactUsFormContainerDivThreeContainerInput"
+              />
             </div>
           </div>
           <div className="contactUsFormContainerDivFour">
             <div className="contactUsFormContainerDivFourContainer">
-              <textarea placeholder="Your Message" className="contactUsFormContainerDivFourContainerTextArea"></textarea>
+              <textarea
+                placeholder="Your Message"
+                className="contactUsFormContainerDivFourContainerTextArea"
+              ></textarea>
             </div>
           </div>{" "}
-
-
           <div
             className={`contactUsFormContainerDivFive ${dragActive ? "drag-active" : ""}`}
             onDragEnter={handleDrag}
@@ -117,23 +133,38 @@ const ContactUsForm = () => {
             onDrop={handleDrop}
           >
             <div className="contactUsFormContainerDivFiveElements">
-                <p className="contactUsFormContainerDivFiveElementsTextOne nunito-sans-regular">DRAG &amp; DROP FILES HERE</p>
-                <p className="contactUsFormContainerDivFiveElementsTextTwo nunito-sans-regular">or</p>
-                <p className="contactUsFormContainerDivFiveElementsTextThree nunito-sans-regular" onClick={onBrowseClick}>
+              <p className="contactUsFormContainerDivFiveElementsTextOne nunito-sans-regular">
+                DRAG &amp; DROP FILES HERE
+              </p>
+              <p className="contactUsFormContainerDivFiveElementsTextTwo nunito-sans-regular">
+                or
+              </p>
+              <p
+                className="contactUsFormContainerDivFiveElementsTextThree nunito-sans-regular"
+                onClick={onBrowseClick}
+              >
                 Browse Files
-                </p>
+              </p>
             </div>
-            
+
             <span className="file-counter">
               {fileCount} of {maxFiles}
             </span>
-            <input type="file" multiple ref={fileInputRef} onChange={handleChange} style={{ display: "none" }} />
+            <input
+              type="file"
+              multiple
+              ref={fileInputRef}
+              onChange={handleChange}
+              style={{ display: "none" }}
+            />
           </div>
           <div className="contactUsFormContainerDivSix">
             <div className="contactUsFormContainerDivSixContainer">
               <div className="contactUsFormContainerDivSixContainerButton">
                 <div className="contactUsFormContainerDivSixContainerButtonContainer">
-                  <p className="contactUsFormContainerDivSixContainerButtonContainerText">Submit</p>
+                  <p className="contactUsFormContainerDivSixContainerButtonContainerText">
+                    Submit
+                  </p>
                 </div>
               </div>
             </div>

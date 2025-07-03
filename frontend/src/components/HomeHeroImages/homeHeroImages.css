@@ -1,17 +1,13 @@
 .homeHeroImages {
   width: 100%;
   height: 100%;
-
   background-color: #000;
-
   padding-top: 100px;
-  /* padding-bottom: 100px; */
 }
 
 .homeHeroImagesContainer {
   width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
 }
@@ -34,15 +30,12 @@
 .homeHeroImagesContainerBottom {
   width: 100%;
   height: 100%;
-
-  /* background-color: darkslategrey; */
 }
 
 .homeHeroImagesContainerTopContainer,
 .homeHeroImagesContainerBottomContainer {
   width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -52,66 +45,43 @@
 .homeHeroImagesContainerTopContainerElement {
   width: 100%;
   height: 348px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-
   color: #fff;
-
   display: flex;
   flex: 1;
-  
   margin-left: 45px;
   margin-right: 45px;
-
 }
-
-
 
 .homeHeroImagesContainerTopContainerElementContainer {
   width: 100%;
   height: 100%;
-  
   margin-top: 45px;
   margin-bottom: 45px;
-
   background-color: red;
   overflow: hidden;
 }
 
 .homeHeroImagesContainerTopContainerElementContainerDiv {
-    width: 100%;
-    height: 100%;
-    
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    
-    /* background-color: lightblue; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .homeHeroImagesContainerTopContainerElementContainerDivImage {
-    width: 100%;
-    height: 100%;
-    
-    object-fit: cover;
-    object-position: center;
-    
-    border: none;
-    outline: none;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border: none;
+  outline: none;
 }
-
-
-
-
-
-
-
-
-
 
 .homeHeroImagesContainerTopContainerDiv {
   width: 3px;

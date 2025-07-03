@@ -1,86 +1,62 @@
-import React from 'react';
+import React from "react";
 import "./aboutUsInfoTwo.css";
+import assets from "../../assets/assets";
 
 const AboutUsInfoTwo = () => {
   return (
-    <div className='aboutUsInfoTwo'>
-
-
-
-
-
-
-        <div className="aboutUsInfoTwoContainer">
-            <div className="aboutUsInfoTwoContainerDiv">
-
-
-                {/* Right Part */}
-                <div className="aboutUsInfoTwoContainerDivRight">
-                    <div className="aboutUsInfoTwoContainerDivRightContainer">
-                        <div className="aboutUsInfoTwoContainerDivRightContainerOne">
-                            <div className="aboutUsInfoTwoContainerDivRightContainerOneContainer"></div>
-                        </div>
-
-                        <div className="aboutUsInfoTwoContainerDivRightContainerTwo">
-                            <div className="aboutUsInfoTwoContainerDivRightContainerTwoContainer"></div>
-                        </div>
-                    </div>
+    <div className="aboutUsInfoTwo">
+      <div className="aboutUsInfoTwoContainer">
+        <div className="aboutUsInfoTwoContainerDiv">
+          {/* Right Part */}
+          <div className="aboutUsInfoTwoContainerDivRight">
+            <div className="aboutUsInfoTwoContainerDivRightContainer">
+              <div className="aboutUsInfoTwoContainerDivRightContainerOne">
+                <div className="aboutUsInfoTwoContainerDivRightContainerOneContainer">
+                  <img src={assets.AboutUsImgThree} alt="" className="aboutUsInfoTwoContainerDivRightContainerOneContainerImg" />
                 </div>
+              </div>
 
-
-                
-
-                {/* Left Part */}
-                <div className="aboutUsInfoTwoContainerDivLeft">
-                    <div className="aboutUsInfoTwoContainerDivLeftContainer">
-                        <div className="aboutUsInfoTwoContainerDivLeftContainerOne">
-                            <div className="aboutUsInfoTwoContainerDivLeftContainerOneContainer">
-                                <p className="aboutUsInfoTwoContainerDivLeftContainerOneContainerText nunito-sans-regular">
-                                    THE-LOWDOWN is an automotive lifestyle brand, publication & agency.
-                                </p>
-                            </div>
-                        </div>
-
-                        <div className="aboutUsInfoTwoContainerDivLeftContainerTwo">
-                            <div className="aboutUsInfoTwoContainerDivLeftContainerTwoContainer">
-                                <p className="aboutUsInfoTwoContainerDivLeftContainerTwoContainerText nunito-sans-regular">
-                                    Today, our platform is a source for trends within automotive enthusiasts and discerning car owners.
-                                </p>
-
-                                <p className="aboutUsInfoTwoContainerDivLeftContainerTwoContainerText nunito-sans-regular">
-                                    Being Sydney-based with creators and collaborators worldwide, our brand and business spans across producing cinematic content, manufacturing in-trend apparel and services in fields throughout media, experiential, events and cutting-edge agency services.
-                                </p>
-
-                                <p className="aboutUsInfoTwoContainerDivLeftContainerTwoContainerText nunito-sans-regular">
-                                    Progression, innovation and an eye for quality are just some of the core values of what drives THE-LOWDOWN.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
+              <div className="aboutUsInfoTwoContainerDivRightContainerTwo">
+                <div className="aboutUsInfoTwoContainerDivRightContainerTwoContainer">
+                  <img src={assets.AboutUsImgFour} alt="" className="aboutUsInfoTwoContainerDivRightContainerTwoContainerImg" />
                 </div>
-
-
-                {/* Right Part */}
-                {/* <div className="aboutUsInfoTwoContainerDivRight">
-                    <div className="aboutUsInfoTwoContainerDivRightContainer">
-                        <div className="aboutUsInfoTwoContainerDivRightContainerOne">
-                            <div className="aboutUsInfoTwoContainerDivRightContainerOneContainer"></div>
-                        </div>
-
-                        <div className="aboutUsInfoTwoContainerDivRightContainerTwo">
-                            <div className="aboutUsInfoTwoContainerDivRightContainerTwoContainer"></div>
-                        </div>
-                    </div>
-                </div> */}
-
+              </div>
             </div>
+          </div>
+
+          {/* Left Part */}
+          <div className="aboutUsInfoTwoContainerDivLeft">
+            <div className="aboutUsInfoTwoContainerDivLeftContainer">
+              <div className="aboutUsInfoTwoContainerDivLeftContainerOne">
+                <div className="aboutUsInfoTwoContainerDivLeftContainerOneContainer">
+                  <p className="aboutUsInfoTwoContainerDivLeftContainerOneContainerText nunito-sans-regular">
+                    URBNCTRL represents the intersection of street culture and refined design philosophy.
+                  </p>
+                </div>
+              </div>
+
+              <div className="aboutUsInfoTwoContainerDivLeftContainerTwo">
+                <div className="aboutUsInfoTwoContainerDivLeftContainerTwoContainer">
+                  <p className="aboutUsInfoTwoContainerDivLeftContainerTwoContainerText nunito-sans-regular">
+                    Our mission is to bridge the gap between underground culture and mainstream fashion, creating pieces that speak to the urban narrative.
+                  </p>
+
+                  <p className="aboutUsInfoTwoContainerDivLeftContainerTwoContainerText nunito-sans-regular">
+                    From concept to creation, we work with emerging artists, designers, and cultural pioneers to develop collections that reflect the pulse of city life. Each piece tells a story of resilience, creativity, and the endless possibilities found in urban environments.
+                  </p>
+
+                  <p className="aboutUsInfoTwoContainerDivLeftContainerTwoContainerText nunito-sans-regular">
+                    Quality craftsmanship, sustainable practices, and cultural authenticity remain at the heart of everything we create at URBNCTRL.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-
-
-
-        
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default AboutUsInfoTwo
+export default AboutUsInfoTwo;

@@ -1,7 +1,6 @@
 .homeTrendingFeatures {
   width: 100%;
   height: 100%;
-
   background-color: #000000;
   padding-top: 100px;
   padding-bottom: 100px;
@@ -61,11 +60,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  /* gap: 10px; */
-  /* margin-left: 20px; */
   border: 1px solid rgb(221, 51, 51);
   border-radius: 100%;
-
   width: 24px;
   height: 24px;
 }
@@ -75,7 +71,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
   width: 100%;
   height: 100%;
 }
@@ -90,23 +85,18 @@
 .homeTrendingFeaturesContainerBottom {
   width: 100%;
   height: 600px;
-
-  /* background-color: red; */
 }
 
 .homeTrendingFeaturesContainerBottomContainer {
   width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
   gap: 50px;
 }
 
 .homeTrendingFeaturesContainerBottomContainerElement {
-  /* background-color: green; */
   width: 100%;
   height: 100%;
 }
@@ -114,7 +104,6 @@
 .homeTrendingFeaturesContainerBottomContainerElementContainer {
   width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -140,21 +129,17 @@
 .homeTrendingFeaturesContainerBottomContainerElementContainerImageContainer {
   width: 100%;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: relative;
 }
 
 .homeTrendingFeaturesContainerBottomContainerElementContainerImageContainerImage {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
   object-position: center;
-
   filter: brightness(0.52);
 }
 .homeTrendingFeaturesContainerBottomContainerElementContainerInfo {
@@ -205,10 +190,8 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
   width: 24px;
   height: 24px;
-
   border: 1px solid rgb(211, 51, 51);
   border-radius: 100%;
 }
@@ -218,7 +201,6 @@
   flex-direction: row;
   justify-content: center;
   align-items: center;
-
   width: 100%;
   height: 100%;
 }

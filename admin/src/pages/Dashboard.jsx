@@ -17,7 +17,9 @@ const Dashboard = () => {
   };
 
   const handleDelete = async (product) => {
-    if (window.confirm(`Czy na pewno chcesz usunąć produkt "${product.name}"?`)) {
+    if (
+      window.confirm(`Czy na pewno chcesz usunąć produkt "${product.name}"?`)
+    ) {
       await deleteProduct(product.id);
     }
   };
@@ -39,8 +41,10 @@ const Dashboard = () => {
       product.category?.toLowerCase().includes(searchTerm.toLowerCase());
 
     if (filter === "all") return matchesSearch;
-    if (filter === "in-stock") return matchesSearch && product.availability === "In Stock";
-    if (filter === "out-of-stock") return matchesSearch && product.availability === "Out of Stock";
+    if (filter === "in-stock")
+      return matchesSearch && product.availability === "In Stock";
+    if (filter === "out-of-stock")
+      return matchesSearch && product.availability === "Out of Stock";
 
     return matchesSearch && product.category === filter;
   });
@@ -48,7 +52,8 @@ const Dashboard = () => {
   const stats = {
     total: products.length,
     inStock: products.filter((p) => p.availability === "In Stock").length,
-    outOfStock: products.filter((p) => p.availability === "Out of Stock").length,
+    outOfStock: products.filter((p) => p.availability === "Out of Stock")
+      .length,
     categories: [...new Set(products.map((p) => p.category))].length,
   };
   if (loading) {
@@ -89,10 +94,16 @@ const Dashboard = () => {
           <div className="dashboard-stat-number">{stats.categories}</div>
           <div className="dashboard-stat-label">Kategorie</div>
         </div>
-      </div>{" "}      <div className="dashboard-controls">
+      </div>{" "}
+      <div className="dashboard-controls">
         <div className="dashboard-search-box">
           <FiSearch className="dashboard-search-icon" />
-          <input type="text" placeholder="Szukaj produktów..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+          <input
+            type="text"
+            placeholder="Szukaj produktów..."
+            value={searchTerm}
+            onChange={(e) => setSearchTerm(e.target.value)}
+          />
         </div>
 
         <div className="dashboard-filter-select">
@@ -140,12 +151,18 @@ const Dashboard = () => {
                   <td>
                     <div className="dashboard-product-name">
                       {product.name}
-                      {product.collaboration && <small className="collaboration">× {product.collaboration}</small>}
+                      {product.collaboration && (
+                        <small className="collaboration">
+                          × {product.collaboration}
+                        </small>
+                      )}
                     </div>
                   </td>
                   <td>{product.brand || "-"}</td>
                   <td>
-                    <span className="dashboard-category-badge">{product.category}</span>
+                    <span className="dashboard-category-badge">
+                      {product.category}
+                    </span>
                   </td>
                   <td className="dashboard-price">
                     {product.price?.toFixed(2)} {product.currency}
@@ -160,14 +177,26 @@ const Dashboard = () => {
                     <small>{product.sizes?.join(", ") || "-"}</small>
                   </td>
                   <td>
-                    <span className={`dashboard-status ${product.availability?.toLowerCase().replace(/\s+/g, "-")}`}>{product.availability}</span>
+                    <span
+                      className={`dashboard-status ${product.availability?.toLowerCase().replace(/\s+/g, "-")}`}
+                    >
+                      {product.availability}
+                    </span>
                   </td>{" "}
                   <td>
                     <div className="dashboard-actions">
-                      <button onClick={() => handleEdit(product)} className="dashboard-edit-button" title="Edytuj">
+                      <button
+                        onClick={() => handleEdit(product)}
+                        className="dashboard-edit-button"
+                        title="Edytuj"
+                      >
                         <FiEdit />
                       </button>
-                      <button onClick={() => handleDelete(product)} className="dashboard-delete-button" title="Usuń">
+                      <button
+                        onClick={() => handleDelete(product)}
+                        className="dashboard-delete-button"
+                        title="Usuń"
+                      >
                         <FiTrash2 />
                       </button>
                     </div>

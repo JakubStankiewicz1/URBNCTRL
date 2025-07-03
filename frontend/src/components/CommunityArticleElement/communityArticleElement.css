@@ -1,131 +1,118 @@
 .communityArticleElement {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .communityArticleElementContainer {
-    width: 100%;
-    height: 100%;
-        display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .communityArticleElementContainerDiv {
-    width: 380px;
-    height: 480px;
+  width: 380px;
+  height: 480px;
 
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .communityArticleElementContainerDivImage {
-    width: 380px;
-    height: 480px;
-    border-radius: 5px;
-    position: relative;
-    transition: all 0.3s ease-in-out;
-    overflow: hidden;
+  width: 380px;
+  height: 480px;
+  border-radius: 5px;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  overflow: hidden;
 }
 
 .communityArticleElementContainerDivImageContainer {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    position: relative;
+  position: relative;
 }
 
 .communityArticleElementContainerDivImageContainerImage {
-    width: 100%;
-    height: 100%;
-    border-radius: 5px;
-    object-fit: cover;
-    object-position: center top;
-    filter: brightness(0.8);
-    transition: all 0.3s ease-in-out;
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  object-fit: cover;
+  object-position: center top;
+  filter: brightness(0.8);
+  transition: all 0.3s ease-in-out;
 }
 
-
-.communityArticleElementContainerDiv:hover .communityArticleElementContainerDivImageContainerImage {
-    filter: brightness(1);
-    transform: scale(1.05);
+.communityArticleElementContainerDiv:hover
+  .communityArticleElementContainerDivImageContainerImage {
+  filter: brightness(1);
+  transform: scale(1.05);
 }
 
 .communityArticleElementContainerDivInfo {
-    position: absolute;
-    /* width: 80%; */
-    color: white;
-    transform: translateY(50%) translateX(-10%);
+  position: absolute;
+  /* width: 80%; */
+  color: white;
+  transform: translateY(50%) translateX(-10%);
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .communityArticleElementContainerDivInfoContainer {
-    width: 220px;
+  width: 220px;
 }
 
 .communityArticleElementContainerDivInfoContainerThree {
-    margin-top: 20px;
+  margin-top: 20px;
 }
 
 .communityArticleElementContainerDivInfoContainerThreeContainerButton {
-    width: 160px;
-    height: 50px;
-    background-color: #DA2228;
-    cursor: pointer;
+  width: 160px;
+  height: 50px;
+  background-color: #da2228;
+  cursor: pointer;
 }
 
 .communityArticleElementContainerDivInfoContainerThreeContainerButtonContainer {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .communityArticleElementContainerDivInfoContainerThreeContainerButtonContainerText {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 800;
-    line-height: 20px;
-    text-transform: uppercase;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 800;
+  line-height: 20px;
+  text-transform: uppercase;
 }
 
 .communityArticleElementContainerDivInfoContainerOneContainerText {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 19px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 19px;
 }
 
 .communityArticleElementContainerDivInfoContainerTwo {
-    margin-top: 15px;
+  margin-top: 15px;
 }
 
 .communityArticleElementContainerDivInfoContainerTwoContainerText {
-    color: #ffffff;
-    font-size: 24px;
-    font-weight: 800;
-    line-height: 26px;
-    text-transform: uppercase;
-    font-style: italic;
+  color: #ffffff;
+  font-size: 24px;
+  font-weight: 800;
+  line-height: 26px;
+  text-transform: uppercase;
+  font-style: italic;
 }

@@ -10,7 +10,7 @@ const AboutUsFotter = () => {
             urbnctrl
           </p>
           <div className="aboutUsFotterContainerDivTextTwo nunito-sans-regular">
-            .com
+            .studio
           </div>
         </div>
       </div>

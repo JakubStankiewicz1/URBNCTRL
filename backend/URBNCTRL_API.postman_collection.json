@@ -239,7 +239,8 @@
               "host": ["{{base_url}}"],
               "path": ["api", "products", "sku", "TEST-001", "exists"]
             }
-          }        }
+          }
+        }
       ]
     },
     {

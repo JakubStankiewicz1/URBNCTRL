@@ -94,8 +94,12 @@
 }
 
 @keyframes orderspageSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .orderspage-error-message {
@@ -781,42 +785,42 @@
   .orderspage-container {
     padding: 1rem;
   }
-  
+
   .orderspage-header {
     flex-direction: column;
     gap: 1rem;
     align-items: flex-start;
   }
-  
+
   .orderspage-filters-section {
     flex-direction: column;
   }
-  
+
   .orderspage-search-box {
     min-width: auto;
   }
-  
+
   .orderspage-table-container {
     overflow-x: auto;
   }
-  
+
   .orderspage-table {
     min-width: 800px;
   }
-  
+
   .orderspage-modal-overlay {
     padding: 1rem;
   }
-  
+
   .orderspage-order-details-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .orderspage-order-item {
     flex-direction: column;
     text-align: center;
   }
-  
+
   .orderspage-item-pricing {
     align-items: center;
   }

@@ -78,7 +78,7 @@
 }
 
 .step::after {
-  content: '';
+  content: "";
   position: absolute;
   top: 20px;
   right: -50%;
@@ -457,33 +457,33 @@
     height: 100vh;
     max-height: none;
   }
-  
+
   .form-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .step-indicator {
     padding: 15px 20px;
   }
-  
+
   .step-title {
     display: none;
   }
-  
+
   .summary-grid {
     grid-template-columns: 1fr;
   }
-  
+
   .form-actions {
     flex-direction: column;
     gap: 15px;
   }
-  
+
   .action-buttons {
     width: 100%;
     justify-content: space-between;
   }
-  
+
   .prev-button,
   .next-button,
   .submit-button,

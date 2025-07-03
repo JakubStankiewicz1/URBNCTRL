@@ -21,7 +21,8 @@
   margin: 0;
 }
 
-.dashboard-add-button {  padding: 12px 24px;
+.dashboard-add-button {
+  padding: 12px 24px;
   background: linear-gradient(135deg, #28a745 0%, #20c997 100%);
   color: white;
   border: none;
@@ -46,7 +47,8 @@
   color: var(--text-secondary);
 }
 
-.dashboard-spinner {  width: 40px;
+.dashboard-spinner {
+  width: 40px;
   height: 40px;
   border: 4px solid rgba(255, 255, 255, 0.1);
   border-top: 4px solid var(--text-primary);
@@ -56,8 +58,12 @@
 }
 
 @keyframes dashboardSpin {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
 
 .dashboard-error-banner {
@@ -363,31 +369,31 @@
   .dashboard {
     padding: 15px;
   }
-  
+
   .dashboard-header {
     flex-direction: column;
     gap: 16px;
     align-items: stretch;
   }
-  
+
   .dashboard-stats-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 15px;
   }
-  
+
   .dashboard-controls {
     flex-direction: column;
     align-items: stretch;
   }
-  
+
   .dashboard-filter-select select {
     min-width: auto;
   }
-  
+
   .dashboard-products-table-container {
     overflow-x: auto;
   }
-  
+
   .dashboard-products-table {
     min-width: 800px;
   }

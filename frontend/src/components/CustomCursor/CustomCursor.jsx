@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef } from "react";
 
 const CustomCursor = () => {
   const cursorRef = useRef(null);
@@ -25,53 +25,55 @@ const CustomCursor = () => {
 
     const handleMouseEnter = () => {
       isHoveringRef.current = true;
-      cursor.classList.add('hover');
+      cursor.classList.add("hover");
     };
 
     const handleMouseLeave = () => {
       isHoveringRef.current = false;
-      cursor.classList.remove('hover');
+      cursor.classList.remove("hover");
     };
 
     const handleMouseDown = () => {
       isClickingRef.current = true;
-      cursor.classList.add('click');
+      cursor.classList.add("click");
     };
 
     const handleMouseUp = () => {
       isClickingRef.current = false;
-      cursor.classList.remove('click');
+      cursor.classList.remove("click");
     };
 
     // Start the smooth animation loop
     updateCursorPosition();
 
     // Add event listeners
-    document.addEventListener('mousemove', updatePosition, { passive: true });
-    document.addEventListener('mousedown', handleMouseDown, { passive: true });
-    document.addEventListener('mouseup', handleMouseUp, { passive: true });
+    document.addEventListener("mousemove", updatePosition, { passive: true });
+    document.addEventListener("mousedown", handleMouseDown, { passive: true });
+    document.addEventListener("mouseup", handleMouseUp, { passive: true });
 
     // Add hover effects to interactive elements
     const addHoverListeners = () => {
-      const interactiveElements = document.querySelectorAll('a, button, [role="button"], input, textarea, select, [onclick]');
-      
-      interactiveElements.forEach(el => {
-        el.addEventListener('mouseenter', handleMouseEnter, { passive: true });
-        el.addEventListener('mouseleave', handleMouseLeave, { passive: true });
+      const interactiveElements = document.querySelectorAll(
+        'a, button, [role="button"], input, textarea, select, [onclick]',
+      );
+
+      interactiveElements.forEach((el) => {
+        el.addEventListener("mouseenter", handleMouseEnter, { passive: true });
+        el.addEventListener("mouseleave", handleMouseLeave, { passive: true });
       });
     };
 
     // Initial setup and observer for dynamic content
     addHoverListeners();
-    
+
     const observer = new MutationObserver(addHoverListeners);
     observer.observe(document.body, { childList: true, subtree: true });
 
     // Cleanup
     return () => {
-      document.removeEventListener('mousemove', updatePosition);
-      document.removeEventListener('mousedown', handleMouseDown);
-      document.removeEventListener('mouseup', handleMouseUp);
+      document.removeEventListener("mousemove", updatePosition);
+      document.removeEventListener("mousedown", handleMouseDown);
+      document.removeEventListener("mouseup", handleMouseUp);
       observer.disconnect();
     };
   }, []);
@@ -81,8 +83,8 @@ const CustomCursor = () => {
       ref={cursorRef}
       className="custom-cursor"
       style={{
-        left: '0px',
-        top: '0px',
+        left: "0px",
+        top: "0px",
       }}
     />
   );

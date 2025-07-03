@@ -1,58 +1,56 @@
 .shippingAndReturnsHero {
-    width: 100%;
-    height: 100%;
-
-    background-color: #FFFFFF;
-
-    padding-top: 150px;
-    padding-bottom: 100px;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  padding-top: 150px;
+  padding-bottom: 100px;
 }
 
 .shippingAndReturnsHeroContainer {
-    width: 85%;
-    margin-left: auto;
-    margin-right: auto;
+  width: 85%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .shippingAndReturnsHeroContainerDiv {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 54px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 54px;
 }
 
 .shippingAndReturnsHeroContainerDivTopContainerText {
-    color: #0B170D;
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 47px;
-    text-transform: uppercase;
+  color: #0b170d;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 47px;
+  text-transform: uppercase;
 }
 
 .shippingAndReturnsHeroContainerDivBottom {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .shippingAndReturnsHeroContainerDivBottomContainer {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 25px;
 }
 
 .shippingAndReturnsHeroContainerDivBottomContainerTextOne,
 .shippingAndReturnsHeroContainerDivBottomContainerTextTwo,
 .shippingAndReturnsHeroContainerDivBottomContainerTextThree {
-    color: #0B170D;
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 23px;
+  color: #0b170d;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 23px;
 }

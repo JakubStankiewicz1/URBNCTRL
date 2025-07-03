@@ -1,7 +1,7 @@
-import { useAuth } from '../contexts/AuthContext';
-import './Header.css';
-import { FiLogOut, FiUser } from 'react-icons/fi';
-import { useState } from 'react';
+import { useAuth } from "../contexts/AuthContext";
+import "./Header.css";
+import { FiLogOut, FiUser } from "react-icons/fi";
+import { useState } from "react";
 
 const Header = () => {
   const { user, logout } = useAuth();
@@ -16,8 +16,12 @@ const Header = () => {
         <div className="header-right">
           <div className="user-info">
             <div className="user-details">
-              <span className="user-name">Witaj, {user?.name || 'Administrator'}</span>
-              <span className="user-email">{user?.email || 'admin@urbnctrl.com'}</span>
+              <span className="user-name">
+                Witaj, {user?.name || "Administrator"}
+              </span>
+              <span className="user-email">
+                {user?.email || "admin@urbnctrl.com"}
+              </span>
             </div>
             <FiUser className="user-icon" size={18} />
           </div>

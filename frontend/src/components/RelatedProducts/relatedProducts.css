@@ -1,9 +1,7 @@
 .relatedProducts {
   width: 100%;
-  /* padding: 80px 0; */
   background-color: #fff;
   margin-top: 50px;
-  /* border-top: 1px solid #eaeaea; */
 }
 
 .relatedProductsContainer {
@@ -14,7 +12,7 @@
 .relatedProductsHeading {
   font-size: 32px;
   font-weight: 800;
-  color: #0B170D;
+  color: #0b170d;
   margin-bottom: 40px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -40,7 +38,6 @@
   align-items: center;
 }
 
-/* Ensure consistent ProductElement sizing in RelatedProducts - Match HomeFeaturedProducts */
 .relatedProductsGrid .productElement {
   flex-shrink: 0;
   width: 300px !important;
@@ -50,7 +47,6 @@
   align-items: center;
 }
 
-/* Force consistent sizing for all ProductElement children */
 .relatedProductsGrid .productElement .productElementContainer {
   width: 100% !important;
   height: 100% !important;
@@ -61,17 +57,16 @@
   height: 100% !important;
 }
 
-/* Responsive Design */
 @media (max-width: 1400px) {
   .relatedProductsGrid {
     gap: 20px;
   }
-  
+
   .relatedProductGridItem {
     width: 270px;
     height: 425px;
   }
-  
+
   .relatedProductsGrid .productElement {
     width: 270px !important;
     height: 425px !important;
@@ -84,12 +79,12 @@
     justify-content: center;
     gap: 25px;
   }
-  
+
   .relatedProductGridItem {
     width: 290px;
     height: 445px;
   }
-  
+
   .relatedProductsGrid .productElement {
     width: 290px !important;
     height: 445px !important;
@@ -102,17 +97,17 @@
     align-items: center;
     gap: 30px;
   }
-  
+
   .relatedProductsHeading {
     font-size: 28px;
     text-align: center;
   }
-  
+
   .relatedProductGridItem {
     width: 290px;
     height: 445px;
   }
-  
+
   .relatedProductsGrid .productElement {
     width: 290px !important;
     height: 445px !important;
@@ -123,19 +118,18 @@
   .relatedProductsContainer {
     width: 95%;
   }
-  
+
   .relatedProductsHeading {
     font-size: 24px;
   }
-  
+
   .relatedProductGridItem {
     width: 270px;
     height: 425px;
   }
-  
+
   .relatedProductsGrid .productElement {
     width: 270px !important;
     height: 425px !important;
   }
 }
-

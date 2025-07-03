@@ -1,8 +1,8 @@
 :root {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   line-height: 1.6;
   font-weight: 400;
-  
+
   /* Dark theme variables */
   --bg-primary: #121212;
   --bg-secondary: #1e1e1e;
@@ -14,7 +14,7 @@
   --danger: #e84393;
   --success: #00b894;
   --warning: #fdcb6e;
-  
+
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -40,7 +40,12 @@ body {
 }
 
 /* Typography */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   color: var(--text-primary);
   line-height: 1.2;
   margin-bottom: 0.5rem;
@@ -93,7 +98,9 @@ button:disabled {
 }
 
 /* Form elements */
-input, select, textarea {
+input,
+select,
+textarea {
   font-family: inherit;
   font-size: inherit;
   background-color: var(--bg-tertiary);
@@ -101,7 +108,9 @@ input, select, textarea {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-input:focus, select:focus, textarea:focus {
+input:focus,
+select:focus,
+textarea:focus {
   outline: none;
   border-color: var(--accent-primary);
   box-shadow: 0 0 0 2px rgba(108, 92, 231, 0.2);

@@ -1,262 +1,246 @@
 .hamburgerMenuOpen {
-    width: 100vw;
-    position: fixed;
-    height: 100vh;
-    background-color: #DA2228;
-    top: 0;
-    left: 0;
-    z-index: -1;
-    opacity: 0;
-    visibility: hidden;
-    /* transition: opacity 0.6s ease, visibility 0.6s ease; */
+  width: 100vw;
+  position: fixed;
+  height: 100vh;
+  background-color: #da2228;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0;
+  visibility: hidden;
+  /* transition: opacity 0.6s ease, visibility 0.6s ease; */
 }
 
 .hamburgerMenuOpen.open {
-    opacity: 1;
-    visibility: visible;
-    z-index: 999999;
+  opacity: 1;
+  visibility: visible;
+  z-index: 999999;
 }
 
-
 .hamburgerMenuOpenContainer {
-    margin-left: 60vw;
-    display: flex;
-    flex-direction: row;
-    gap: 50px;
-    height: 100vh;
-    z-index: 999999;
-    /* background-color: yellow; */
+  margin-left: 60vw;
+  display: flex;
+  flex-direction: row;
+  gap: 50px;
+  height: 100vh;
+  z-index: 999999;
+  /* background-color: yellow; */
 }
 
 .hamburgerMenuOpenContainerLeft {
-    height: 100%;
-    transform: translateX(-30px);
-    /* background-color: green; */
+  height: 100%;
+  transform: translateX(-30px);
+  /* background-color: green; */
 }
 
 .hamburgerMenuOpenContainerLeftContainer {
-    height: 100%;
-        display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .hamburgerMenuOpenContainerLeftContainerOverlay {
-    width: 45px;
-    height: 45px;
-    background-color: #000;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 50%;
-    transform: translateX(-50%);
-    z-index: 999999;
-    position: relative;
+  width: 45px;
+  height: 45px;
+  background-color: #000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transform: translateX(-50%);
+  z-index: 999999;
+  position: relative;
 }
 
 .hamburgerMenuOpenContainerLeftContainerIcon {
-    width: 25px;
-    height: 25px;
-    color: #DA2228;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-        z-index: 9999;
-
+  width: 25px;
+  height: 25px;
+  color: #da2228;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
 }
-
 
 .hamburgerMenuOpenContainerRight {
-    height: 100%;
+  height: 100%;
 
-    /* background-color: yellow; */
+  /* background-color: yellow; */
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .hamburgerMenuOpenContainerRightContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    justify-content: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: center;
 }
 
-
 .hamburgerMenuOpenContainerRightContainerTopContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 11px;
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
 }
 
 .hamburgerMenuOpenContainerRightContainerTopContainerElementContainer {
-    /* background-color: green; */
-    cursor: pointer;
-    display: inline-block;
-    width: auto;
-    /* padding: 0 10px; opcjonalnie, żeby tekst nie był przyklejony do krawędzi */
+  /* background-color: green; */
+  cursor: pointer;
+  display: inline-block;
+  width: auto;
+  /* padding: 0 10px; opcjonalnie, żeby tekst nie był przyklejony do krawędzi */
 }
-
 
 .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText {
-    color: #000000;
-    font-size: 20px;
-    font-weight: 800;
-    text-transform: uppercase;
-    line-height: 30px;
-    font-style: italic;
-    transition: all 0.2s ease-in-out;
+  color: #000000;
+  font-size: 20px;
+  font-weight: 800;
+  text-transform: uppercase;
+  line-height: 30px;
+  font-style: italic;
+  transition: all 0.2s ease-in-out;
 }
 
-.hamburgerMenuOpenContainerRightContainerTopContainerElementContainer:hover .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText {
-    color: #ffffff;
+.hamburgerMenuOpenContainerRightContainerTopContainerElementContainer:hover
+  .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText {
+  color: #ffffff;
 }
 
 .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerTwo {
-    width: 100%;
+  width: 100%;
 }
 
 .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerTwoDiv {
-    width: 0%;
-    height: 2px;
-    background-color: #ffffff;
-    transition: all 0.2s ease-in-out;
+  width: 0%;
+  height: 2px;
+  background-color: #ffffff;
+  transition: all 0.2s ease-in-out;
 }
 
-.hamburgerMenuOpenContainerRightContainerTopContainerElementContainer:hover .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerTwoDiv {
-    width: 100%;
+.hamburgerMenuOpenContainerRightContainerTopContainerElementContainer:hover
+  .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerTwoDiv {
+  width: 100%;
 }
 
 .hamburgerMenuOpenContainerRightContainerMiddle {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .hamburgerMenuOpenContainerRightContainerMiddleContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 18px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
 }
 .hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainer {
-    /* background-color: yellow; */
-    display: inline-block;
-    cursor: pointer
+  /* background-color: yellow; */
+  display: inline-block;
+  cursor: pointer;
 }
 
 .hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainerText {
-    color: #000000;
-    font-size: 17px;
-    font-weight: 800;
-    line-height: 23px;
-    text-transform: uppercase;
-    transition: all 0.2s ease-in-out;
+  color: #000000;
+  font-size: 17px;
+  font-weight: 800;
+  line-height: 23px;
+  text-transform: uppercase;
+  transition: all 0.2s ease-in-out;
 }
 
-.hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainer:hover .hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainerText {
-    color: #ffffff;
+.hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainer:hover
+  .hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainerText {
+  color: #ffffff;
 }
 
 /* Hover effects dla menu items */
 .hamburgerMenuOpenContainerRightContainerTopContainerElement:hover,
 .hamburgerMenuOpenContainerRightContainerMiddleContainerElement:hover {
-    transform: translateX(-5px);
+  transform: translateX(-5px);
 }
 
-.hamburgerMenuOpenContainerRightContainerTopContainerElement:hover .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText,
-.hamburgerMenuOpenContainerRightContainerMiddleContainerElement:hover .hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainerText {
-    color: #fff;
+.hamburgerMenuOpenContainerRightContainerTopContainerElement:hover
+  .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText,
+.hamburgerMenuOpenContainerRightContainerMiddleContainerElement:hover
+  .hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainerText {
+  color: #fff;
 }
 
 .hamburgerMenuOpenContainerRightContainerTopContainerElement,
 .hamburgerMenuOpenContainerRightContainerMiddleContainerElement {
-    transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 
 .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText,
 .hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainerText {
-    transition: color 0.3s ease-in-out;
+  transition: color 0.3s ease-in-out;
 }
 
-
-
-
-
-
-
-
-
-
-
 .hamburgerMenuOpenContainerRightContainerBottom {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .hamburgerMenuOpenContainerRightContainerBottomContainer {
-    display: flex;
-    flex-direction: row;
-    gap: 20px;
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
 }
 
-
 .hamburgerMenuOpenContainerRightContainerBottomContainerElementOneContainerMain {
-    display: flex;
-    flex-direction: column;
-    gap: 3px;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
 }
 
 .hamburgerMenuOpenContainerRightContainerBottomContainerElementOne {
-    width: 22px;
-    height: 22px;
-    /* background-color: antiquewhite; */
-    gap: 5px;
-    cursor: pointer;
-    object-fit: cover;
-    object-fit: contain;
-    transition: all 0.5s ease-in-out;
-    position: relative;
-    overflow: hidden;
+  width: 22px;
+  height: 22px;
+  /* background-color: antiquewhite; */
+  gap: 5px;
+  cursor: pointer;
+  object-fit: cover;
+  object-fit: contain;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+  overflow: hidden;
 }
 
 .hamburgerMenuOpenContainerRightContainerBottomContainerElementOneContainer {
-    /* transition: transform 0.6s cubic-bezier(.77,0,.18,1); */
-    transition: all 0.2s ease-in-out;
+  /* transition: transform 0.6s cubic-bezier(.77,0,.18,1); */
+  transition: all 0.2s ease-in-out;
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* gap: 20px; */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* gap: 20px; */
 }
 
 .hamburgerMenuOpenContainerRightContainerBottomContainerElementOneContainerOneIcon {
-    width: 22px;
-    height: 22px;
-    color: #000;
+  width: 22px;
+  height: 22px;
+  color: #000;
 }
 
 .hamburgerMenuOpenContainerRightContainerBottomContainerElementOneContainerTwoIcon {
-    width: 22px;
-    height: 22px;
-    color: #fff;
+  width: 22px;
+  height: 22px;
+  color: #fff;
 }
 
-
-
-
-
-
-.hamburgerMenuOpenContainerRightContainerBottomContainerElementOne:hover .hamburgerMenuOpenContainerRightContainerBottomContainerElementOneContainer {
-    transform: translateY(-50%);
+.hamburgerMenuOpenContainerRightContainerBottomContainerElementOne:hover
+  .hamburgerMenuOpenContainerRightContainerBottomContainerElementOneContainer {
+  transform: translateY(-50%);
 }
 
 /* Active state styles dla aktualnej strony */
 .hamburgerMenuOpenContainerRightContainerTopContainerElement.active,
 .hamburgerMenuOpenContainerRightContainerMiddleContainerElement.active {
-    position: relative;
+  position: relative;
 }
 
 /* .hamburgerMenuOpenContainerRightContainerTopContainerElement.active::before,
@@ -273,25 +257,28 @@
     animation: slideIn 0.3s ease-out;
 } */
 
-.hamburgerMenuOpenContainerRightContainerTopContainerElement.active .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText,
-.hamburgerMenuOpenContainerRightContainerMiddleContainerElement.active .hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainerText {
-    color: #fff;
-    font-weight: 700;
-    /* transform: translateX(-5px); */
+.hamburgerMenuOpenContainerRightContainerTopContainerElement.active
+  .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerOneText,
+.hamburgerMenuOpenContainerRightContainerMiddleContainerElement.active
+  .hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainerText {
+  color: #fff;
+  font-weight: 700;
+  /* transform: translateX(-5px); */
 }
 
-.hamburgerMenuOpenContainerRightContainerTopContainerElement.active .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerTwoDiv {
-    background: #fff;
-    width: 100%;
+.hamburgerMenuOpenContainerRightContainerTopContainerElement.active
+  .hamburgerMenuOpenContainerRightContainerTopContainerElementContainerTwoDiv {
+  background: #fff;
+  width: 100%;
 }
 
 @keyframes slideIn {
-    from {
-        width: 0;
-        opacity: 0;
-    }
-    to {
-        width: 4px;
-        opacity: 1;
-    }
+  from {
+    width: 0;
+    opacity: 0;
+  }
+  to {
+    width: 4px;
+    opacity: 1;
+  }
 }

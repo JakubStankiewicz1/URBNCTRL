@@ -1,8 +1,8 @@
-import { useState } from 'react';
-import { useProducts } from '../contexts/ProductContext';
-import ProductForm from '../components/ProductForm';
-import './AddProductPage.css';
-import { FiArrowLeft } from 'react-icons/fi';
+import { useState } from "react";
+import { useProducts } from "../contexts/ProductContext";
+import ProductForm from "../components/ProductForm";
+import "./AddProductPage.css";
+import { FiArrowLeft } from "react-icons/fi";
 
 const AddProductPage = ({ onBack }) => {
   const [loading, setLoading] = useState(false);

@@ -1,41 +1,33 @@
 .privacyPolicyInfo {
-    width: 100%;
-    height: 100%;
-
-    background-color: #FFFFFF;
-    /* padding-top: 100px; */
-    padding-bottom: 100px;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  padding-bottom: 100px;
 }
 
 .privacyPolicyInfoContainer {
-    width: 86%;
-    margin-left: auto;
-    margin-right: auto;
-
-    height: 100%;
-    /* background-color: red; */
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
 }
 
-
 .privacyPolicyInfoContainerDiv {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 .privacyPolicyInfoContainerDivElement {
-    width: 100%;
-    height: 60px;
-
-    background-color: red;
+  width: 100%;
+  height: 60px;
+  background-color: red;
 }
 
-/* --- AKORDEON --- */
 .privacyPolicyInfoAccordion {
   width: 100%;
   background: #fff;
@@ -50,7 +42,6 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  /* padding: 0 12px 0 12px; */
   min-height: 60px;
   -webkit-user-select: none;
   user-select: none;
@@ -69,7 +60,7 @@
 
 .privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionTitle,
 .privacyPolicyInfoAccordionHeader:hover .privacyPolicyInfoAccordionTitle {
-  color: #DA2228;
+  color: #da2228;
 }
 
 .privacyPolicyInfoAccordionIcon {
@@ -88,7 +79,7 @@
 }
 .privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionIcon,
 .privacyPolicyInfoAccordionHeader:hover .privacyPolicyInfoAccordionIcon {
-  border-color: #DA2228;
+  border-color: #da2228;
 }
 .privacyPolicyInfoAccordionIconHorizontal,
 .privacyPolicyInfoAccordionIconVertical {
@@ -97,16 +88,21 @@
   top: 50%;
   background: #595959;
   border-radius: 2px;
-  transition: background 0.3s, transform 0.3s, opacity 0.3s;
+  transition:
+    background 0.3s,
+    transform 0.3s,
+    opacity 0.3s;
   box-shadow: none;
   outline: none;
   border: none;
 }
 .privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionIconHorizontal,
 .privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionIconVertical,
-.privacyPolicyInfoAccordionHeader:hover .privacyPolicyInfoAccordionIconHorizontal,
-.privacyPolicyInfoAccordionHeader:hover .privacyPolicyInfoAccordionIconVertical {
-  background: #DA2228;
+.privacyPolicyInfoAccordionHeader:hover
+  .privacyPolicyInfoAccordionIconHorizontal,
+.privacyPolicyInfoAccordionHeader:hover
+  .privacyPolicyInfoAccordionIconVertical {
+  background: #da2228;
 }
 .privacyPolicyInfoAccordionIconHorizontal {
   width: 16px;
@@ -138,22 +134,27 @@
   animation: fadeInAccordion 0.4s;
 }
 .privacyPolicyInfoAccordion.open .privacyPolicyInfoAccordionContent {
-  color: #0B170D;
+  color: #0b170d;
 }
 @keyframes fadeInAccordion {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .privacyPolicyInfoAccordionDivider {
   width: 100%;
   height: 3px;
-  background: #EBEBEB;
+  background: #ebebeb;
   margin: 0 auto;
-  /* border-radius: 2px; */
   position: relative;
   top: 0;
 }
 
 .privacyPolicyInfoAccordionContentText {
-    color: #0B170D
+  color: #0b170d;
 }

@@ -1,346 +1,337 @@
-/* *{
-    margin: 0;
-    padding:0;
-    font-family: sans-serif;
-    box-sizing: border-box;
-    text-decoration: none;
-}
-.wrapper{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-color: #000;
-} */
-
 .homeHero {
-    width: 100%;
-    height: 100vh;
-    background-color: res;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  height: 100vh;
+  background: linear-gradient(120deg, #181818 0%, #232526 100%);
+  position: relative;
+  overflow: hidden;
 }
 
 .homeHeroContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
 }
 
-/* Video Background */
 .homeHeroVideo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 2s ease-in-out, visibility 2s ease-in-out;
-    z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 2s ease-in-out,
+    visibility 2s ease-in-out;
+  z-index: 1;
 }
 
 .homeHeroVideo.show {
-    opacity: 1;
-    visibility: visible;
+  opacity: 1;
+  visibility: visible;
 }
 
 .homeHeroVideo video {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .homeHeroVideoOverlay {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.4);
-    z-index: 2;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4);
+  z-index: 2;
 }
 
-/* Main Overlay */
 .homeHeroContainerOverlay {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    position: relative;
-    z-index: 3;
-    opacity: 1;
-    visibility: visible;
-    background: #000;
-    transition: none;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  z-index: 3;
+  opacity: 1;
+  visibility: visible;
+  background: #000;
+  transition: none;
 }
 
 .homeHeroContainerOverlay.hide {
-    background: #000;
-    -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
-    mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
-    -webkit-mask-size: 2300% 100%;
-    mask-size: 2300% 100%;
-    -webkit-mask-position: 100% 0;
-    mask-position: 100% 0;
-    animation: maskDisappear 0.7s steps(22) forwards;
+  background: #000;
+  -webkit-mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  mask: url("https://raw.githubusercontent.com/robin-dela/css-mask-animation/master/img/nature-sprite.png");
+  -webkit-mask-size: 2300% 100%;
+  mask-size: 2300% 100%;
+  -webkit-mask-position: 100% 0;
+  mask-position: 100% 0;
+  animation: maskDisappear 0.7s steps(22) forwards;
 }
 
-/* Hide button immediately when animation starts */
 .homeHeroContainerOverlay.hide .homeHeroButton {
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.1s ease-out, visibility 0.1s ease-out;
+  opacity: 0;
+  visibility: hidden;
+  transition:
+    opacity 0.1s ease-out,
+    visibility 0.1s ease-out;
 }
 
 .homeHeroContainerOverlay.hide .homeHeroButtonAnimatedBorder {
-    animation: none !important;
-    opacity: 0;
+  animation: none !important;
+  opacity: 0;
 }
 
 @keyframes maskDisappear {
-    0% {
-        -webkit-mask-position: 100% 0;
-        mask-position: 100% 0;
-    }
-    99% {
-        -webkit-mask-position: 0% 0;
-        mask-position: 0% 0;
-        opacity: 1;
-        visibility: visible;
-    }
-    100% {
-        -webkit-mask-position: 0% 0;
-        mask-position: 0% 0;
-        opacity: 0;
-        visibility: hidden;
-    }
+  0% {
+    -webkit-mask-position: 100% 0;
+    mask-position: 100% 0;
+  }
+  99% {
+    -webkit-mask-position: 0% 0;
+    mask-position: 0% 0;
+    opacity: 1;
+    visibility: visible;
+  }
+  100% {
+    -webkit-mask-position: 0% 0;
+    mask-position: 0% 0;
+    opacity: 0;
+    visibility: hidden;
+  }
 }
 
 .homeHeroContainerOverlayBottom {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .homeHeroContainerOverlayBottomContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .homeHeroContainerOverlayBottomContainerButton {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .homeHeroContainerOverlayBottomContainerButtonContainer {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.homeHeroButton{
-    position: relative;
-    display: inline-block;
-    padding: 25px 30px;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-    color: #39FF14;
-    font-size: 1.2rem;
-    transition: .5s;
-    overflow: hidden;
-    margin-right: 70px;
-    cursor: pointer;
+.homeHeroButton {
+  position: relative;
+  display: inline-block;
+  padding: 25px 30px;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  color: #39ff14;
+  font-size: 1.2rem;
+  transition: 0.5s;
+  overflow: hidden;
+  margin-right: 70px;
+  cursor: pointer;
 }
-.homeHeroButton:hover{
-    background-color: #39FF14;
-    color: #050801;
-    box-shadow: 0 0 5px #39FF14,
-                0 0 25px #39FF14,
-                0 0 50px #39FF14,
-                0 0 300px #39FF14;
-    -webkit-box-reflect: below 1px linear-gradient(transparent,#0005);
+.homeHeroButton:hover {
+  background-color: #39ff14;
+  color: #050801;
+  box-shadow:
+    0 0 5px #39ff14,
+    0 0 25px #39ff14,
+    0 0 50px #39ff14,
+    0 0 300px #39ff14;
+  -webkit-box-reflect: below 1px linear-gradient(transparent, #0005);
 }
-.homeHeroButtonAnimatedBorder{
-    position: absolute;
-    display: block;
+.homeHeroButtonAnimatedBorder {
+  position: absolute;
+  display: block;
 }
-.homeHeroButtonAnimatedBorderTop{
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(90deg,transparent,#39FF14);
-    animation: animate1 1s infinite;
+.homeHeroButtonAnimatedBorderTop {
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #39ff14);
+  animation: animate1 1s infinite;
 }
-@keyframes animate1{
-    0%{
-        left:-100%;
-    }
-    100%{
-        left: 100%;
-    }
+@keyframes animate1 {
+  0% {
+    left: -100%;
+  }
+  100% {
+    left: 100%;
+  }
 }
-.homeHeroButtonAnimatedBorderRight{
+.homeHeroButtonAnimatedBorderRight {
+  top: -100%;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(180deg, transparent, #39ff14);
+  animation: animate2 1s infinite;
+  animation-delay: 0.25s;
+}
+@keyframes animate2 {
+  0% {
     top: -100%;
-    right: 0;
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(180deg,transparent,#39FF14);
-    animation: animate2 1s infinite;
-    animation-delay: .25s;
+  }
+  100% {
+    top: 100%;
+  }
 }
-@keyframes animate2{
-    0%{
-        top:-100%;
-    }
-    100%{
-        top: 100%;
-    }
+.homeHeroButtonAnimatedBorderBottom {
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(270deg, transparent, #39ff14);
+  animation: animate3 1s infinite;
+  animation-delay: 0.5s;
 }
-.homeHeroButtonAnimatedBorderBottom{
-    bottom: 0;
-    right: 0;
-    width: 100%;
-    height: 1px;
-    background: linear-gradient(270deg,transparent,#39FF14);
-    animation: animate3 1s infinite;
-    animation-delay: .5s;
+@keyframes animate3 {
+  0% {
+    right: -100%;
+  }
+  100% {
+    right: 100%;
+  }
 }
-@keyframes animate3{
-    0%{
-        right: -100%;
-    }
-    100%{
-        right: 100%;
-    }
+.homeHeroButtonAnimatedBorderLeft {
+  bottom: -100%;
+  left: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(360deg, transparent, #39ff14);
+  animation: animate4 1s infinite;
+  animation-delay: 0.75s;
 }
-.homeHeroButtonAnimatedBorderLeft{
+@keyframes animate4 {
+  0% {
     bottom: -100%;
-    left: 0;
-    width: 1px;
-    height: 100%;
-    background: linear-gradient(360deg,transparent,#39FF14);
-    animation: animate4 1s infinite;
-    animation-delay: .75s;
-}
-@keyframes animate4{
-    0%{
-        bottom: -100%;
-    }
-    100%{
-        bottom: 100%;
-    }
+  }
+  100% {
+    bottom: 100%;
+  }
 }
 
-/* Scroll Down Indicator Styles */
 .homeHeroScrollDown {
-    position: absolute;
-    bottom: 40px;
-    left: 50%;
-    transform: translateX(-50%);
-    z-index: 10;
-    opacity: 0;
-    animation: scrollDownFadeIn 1s ease-out 2s forwards;
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  opacity: 0;
+  animation: scrollDownFadeIn 1s ease-out 2s forwards;
 }
 
 .homeHeroScrollDownContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
 }
 
 .homeHeroScrollDownIcon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .homeHeroScrollDownIconOval {
-    width: 30px;
-    height: 50px;
-    border: 2px solid #39FF14;
-    border-radius: 25px;
-    position: relative;
-    display: flex;
-    justify-content: center;
-    padding-top: 8px;
-    animation: scrollDownPulse 2s ease-in-out infinite;
+  width: 30px;
+  height: 50px;
+  border: 2px solid #39ff14;
+  border-radius: 25px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 8px;
+  animation: scrollDownPulse 2s ease-in-out infinite;
 }
 
 .homeHeroScrollDownIconDot {
-    width: 6px;
-    height: 6px;
-    background-color: #39FF14;
-    border-radius: 50%;
-    animation: scrollDownDot 2s ease-in-out infinite;
+  width: 6px;
+  height: 6px;
+  background-color: #39ff14;
+  border-radius: 50%;
+  animation: scrollDownDot 2s ease-in-out infinite;
 }
 
 .homeHeroScrollDownText {
-    text-align: center;
+  text-align: center;
 }
 
 .homeHeroScrollDownTextP {
-    color: #39FF14;
-    font-size: 0.8rem;
-    font-weight: 600;
-    letter-spacing: 2px;
-    margin: 0;
-    animation: scrollDownTextBlink 3s ease-in-out infinite;
+  color: #39ff14;
+  font-size: 0.9rem;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  margin: 0;
+  animation: scrollDownTextBlink 3s ease-in-out infinite;
+  text-shadow:
+    0 2px 8px #000,
+    0 0 2px #39ff14;
 }
 
-/* Animations */
 @keyframes scrollDownFadeIn {
-    0% {
-        opacity: 0;
-        transform: translateX(-50%) translateY(20px);
-    }
-    100% {
-        opacity: 1;
-        transform: translateX(-50%) translateY(0);
-    }
+  0% {
+    opacity: 0;
+    transform: translateX(-50%) translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
 }
 
 @keyframes scrollDownPulse {
-    0%, 100% {
-        border-color: #39FF14;
-        box-shadow: 0 0 0 0 rgba(57, 255, 20, 0.4);
-    }
-    50% {
-        border-color: #50d505;
-        box-shadow: 0 0 0 10px rgba(57, 255, 20, 0);
-    }
+  0%,
+  100% {
+    border-color: #39ff14;
+    box-shadow: 0 0 0 0 rgba(57, 255, 20, 0.4);
+  }
+  50% {
+    border-color: #50d505;
+    box-shadow: 0 0 0 10px rgba(57, 255, 20, 0);
+  }
 }
 
 @keyframes scrollDownDot {
-    0% {
-        transform: translateY(0);
-        opacity: 1;
-    }
-    50% {
-        transform: translateY(20px);
-        opacity: 0.5;
-    }
-    100% {
-        transform: translateY(0);
-        opacity: 1;
-    }
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  50% {
+    transform: translateY(20px);
+    opacity: 0.5;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
 }
 
 @keyframes scrollDownTextBlink {
-    0%, 80%, 100% {
-        opacity: 1;
-    }
-    90% {
-        opacity: 0.5;
-    }
+  0%,
+  80%,
+  100% {
+    opacity: 1;
+  }
+  90% {
+    opacity: 0.5;
+  }
 }

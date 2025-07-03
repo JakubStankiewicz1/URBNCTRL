@@ -1,10 +1,10 @@
 {
-    "name": "Test Product",
-    "category": "Test Category",
-    "description": "This is a test product for the clean API",
-    "price": 29.99,
-    "currency": "$",
-    "availability": "In Stock",
-    "sku": "TEST-001",
-    "brand": "TestBrand"
+  "name": "Test Product",
+  "category": "Test Category",
+  "description": "This is a test product for the clean API",
+  "price": 29.99,
+  "currency": "$",
+  "availability": "In Stock",
+  "sku": "TEST-001",
+  "brand": "TestBrand"
 }

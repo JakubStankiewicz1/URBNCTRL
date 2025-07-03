@@ -1,195 +1,172 @@
 .aboutUsHero {
-    width: 100%;
-    height: 100vh;
-
-    background-color: #000000;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    position: relative;
-    overflow: hidden;
-    animation: backgroundFadeOut 0.5s ease-out 1.4s forwards;
+  width: 100%;
+  height: 100vh;
+  background-color: #000000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+  animation: backgroundFadeOut 0.5s ease-out 1.4s forwards;
 }
 
 .aboutUsHeroVideo {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    opacity: 0;
-    z-index: 1;
-    animation: videoReveal 1s ease-out 1.4s forwards;
-    filter: brightness(0.4);
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  z-index: 1;
+  animation: videoReveal 1s ease-out 1.4s forwards;
+  filter: brightness(0.4);
 }
 
 .aboutUsHeroContainer {
-    width: 100%;
-    height: 100%;
-    position: relative;
-    z-index: 2;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 2;
 }
 
 .aboutUsHeroContainerDiv {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    /* position: relative; */
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
-
 
 .aboutUsHeroContainerDivInfo {
-    width: 390px;
-    height: 310px;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-
-    position: relative;
-    transition: all 0.3s ease-in-out;
-
-    transform: translateY(-40px);
+  width: 390px;
+  height: 310px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+  transform: translateY(-40px);
 }
 
-/* Dodatkowy element dla dolnego i lewego borderu */
 .aboutUsHeroContainerDivInfoBorders {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
 }
 
-/* Górny border - rysuje się z lewej do prawej */
 .aboutUsHeroContainerDivInfo::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 0;
-    height: 3px;
-    background-color: red;
-    z-index: 1;
-    animation: drawHorizontal 0.8s ease-out 0.6s forwards;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 3px;
+  background-color: red;
+  z-index: 1;
+  animation: drawHorizontal 0.8s ease-out 0.6s forwards;
 }
 
-/* Prawy border - rysuje się z góry do dołu */
 .aboutUsHeroContainerDivInfo::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 3px;
-    height: 0;
-    background-color: red;
-    z-index: 1;
-    animation: drawVertical 0.8s ease-out 0.6s forwards;
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 3px;
+  height: 0;
+  background-color: red;
+  z-index: 1;
+  animation: drawVertical 0.8s ease-out 0.6s forwards;
 }
 
-/* Dolny border - rysuje się z prawej do lewej */
 .aboutUsHeroContainerDivInfoBorders::before {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 3px;
-    background-color: red;
-    z-index: 1;
-    animation: drawHorizontal 0.8s ease-out 0.6s forwards;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0;
+  height: 3px;
+  background-color: red;
+  z-index: 1;
+  animation: drawHorizontal 0.8s ease-out 0.6s forwards;
 }
 
-/* Lewy border - rysuje się z dołu do góry */
 .aboutUsHeroContainerDivInfoBorders::after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 3px;
-    height: 0;
-    background-color: red;
-    z-index: 1;
-    animation: drawVertical 0.8s ease-out 0.6s forwards;
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 3px;
+  height: 0;
+  background-color: red;
+  z-index: 1;
+  animation: drawVertical 0.8s ease-out 0.6s forwards;
 }
 
-/* Animacje */
 @keyframes drawHorizontal {
-    from {
-        width: 0;
-    }
-    to {
-        width: 100%;
-    }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes drawVertical {
-    from {
-        height: 0;
-    }
-    to {
-        height: 100%;
-    }
+  from {
+    height: 0;
+  }
+  to {
+    height: 100%;
+  }
 }
 
-
-
-
-
-
 .aboutUsHeroContainerDivInfoContainer {
-    background-color: rgba(0, 0, 0, 0.35);
-    width: 100%;
-    height: 100%;
-    
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  background-color: rgba(0, 0, 0, 0.35);
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .aboutUsHeroContainerDivInfoContainerOverground {
-    width: 78%;
-    height: 78%;
-    /* background-color: blue; */
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  width: 78%;
+  height: 78%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .aboutUsHeroContainerDivInfoContainerOvergroundContainerText {
-    color: #ffffff;
-    text-align: center;
-    font-size: 18px;
-    font-weight: 800;
-    line-height: 23px;
+  color: #ffffff;
+  text-align: center;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 23px;
 }
 
-/* Animacja pojawiania się video */
 @keyframes videoReveal {
-    from {
-        opacity: 0;
-    }
-    to {
-        opacity: 1;
-    }
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
-/* Animacja znikania czarnego tła */
 @keyframes backgroundFadeOut {
-    from {
-        background-color: #000000;
-    }
-    to {
-        background-color: transparent;
-    }
+  from {
+    background-color: #000000;
+  }
+  to {
+    background-color: transparent;
+  }
 }

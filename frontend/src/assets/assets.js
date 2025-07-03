@@ -1,6 +1,6 @@
 // Font imports
-import ChineseShangaiTTF from './fonts/ChineseShangaiDemoVersionRegular-p7Eyy.ttf';
-import ChineseShangaiOTF from './fonts/ChineseShangaiDemoVersionRegular-DOmnE.otf';
+import ChineseShangaiTTF from "./fonts/ChineseShangaiDemoVersionRegular-p7Eyy.ttf";
+import ChineseShangaiOTF from "./fonts/ChineseShangaiDemoVersionRegular-DOmnE.otf";
 import HomeHeroImagesOne from "./HomeHeroImagesOne.jpg";
 import HomeHeroScrollingAlpina from "./HomeHeroScrollingAlpina.png";
 import HomeHeroScrollingNovitec from "./HomeHeroScrollingNovitec.png";
@@ -16,16 +16,9 @@ import HomeCollectionTwo from "./HomeCollectionTwo.webp";
 import HomeCollectionThree from "./HomeCollectionThree.webp";
 import HomeCollectionFour from "./HomeCollectionFour.webp";
 
-
 import HomeTrendingFeaturesOne from "./HomeTrendingFeaturesOne.jpg";
 
-
-
-
-
-
-
-import HomeFeaturedProductsOne from "./HomeFeaturedProductsOne.webp"
+import HomeFeaturedProductsOne from "./HomeFeaturedProductsOne.webp";
 import HomeFeaturedProductsTwo from "./HomeFeaturedProductsTwo.png";
 import HomeFeaturedProductsThree from "./HomeFeaturedProductsThree.png";
 import HomeFeaturedProductsFour from "./HomeFeaturedProductsFour.png";
@@ -39,8 +32,6 @@ import HomeHeroVideo from "./HomeHeroVideo.mp4";
 
 import CommunityArticleElementImageOne from "./CommunityArticleElementImageOne.jpg";
 
-
-
 import CommunityArticleElementImageTwo from "./CommunityArticleElementImageTwo.jpg";
 import CommunityArticleElementImageThree from "./CommunityArticleElementImageThree.jpg";
 import CommunityArticleElementImageFour from "./CommunityArticleElementImageFour.jpg";
@@ -51,10 +42,6 @@ import CommunityArticleElementImageEight from "./CommunityArticleElementImageEig
 
 import HomeTrendingFeaturesTwo from "./HomeTrendingFeaturesTwo.jpg";
 import HomeTrendingFeaturesThree from "./HomeTrendingFeaturesThree.webp";
-
-
-
-
 
 import HomeImagesOne from "./HomeImagesOne.jpeg";
 import HomeImagesTwo from "./HomeImagesTwo.jpeg";
@@ -78,8 +65,6 @@ import HomeLocationOneImgOne from "./HomeLocationOneImgOne.jpg";
 import HomeLocationOneImgTwo from "./HomeLocationOneImgTwo.jpg";
 import HomeLocationOneImgThree from "./HomeLocationOneImgThree.webp";
 
-
-
 import HomeHeroImagesTwo from "./HomeHeroImagesTwo.jpg";
 import HomeHeroImagesThree from "./HomeHeroImagesThree.jpg";
 import HomeHeroImagesFour from "./HomeHeroImagesFour.jpg";
@@ -88,16 +73,18 @@ import HomeHeroImagesSix from "./HomeHeroImagesSix.jpg";
 import HomeHeroImagesSeven from "./HomeHeroImagesSeven.jpg";
 import HomeHeroImagesEight from "./HomeHeroImagesEight.jpg";
 
-
-
+import AboutUsImgOne from './AboutUsImgOne.jpg';
+import AboutUsImgTwo from './AboutUsImgTwo.jpg';
+import AboutUsImgThree from './AboutUsImgThree.jpg';
+import AboutUsImgFour from './AboutUsImgFour.jpg';
 
 // Export font paths
 export const fonts = {
   chineseShanghai: {
     ttf: ChineseShangaiTTF,
     otf: ChineseShangaiOTF,
-    family: 'Chinese Shanghai'
-  }
+    family: "Chinese Shanghai",
+  },
 };
 
 // Export individual fonts for direct use
@@ -119,12 +106,10 @@ export default {
   HomeCollectionFour,
   HomeTrendingFeaturesOne,
 
-
-
   HomeFeaturedProductsOne,
   HomeFeaturedProductsTwo,
   HomeFeaturedProductsThree,
-  HomeFeaturedProductsFour,  
+  HomeFeaturedProductsFour,
   HomeFeaturedProductsFive,
   HomeFeaturedProductsSix,
   HomeFeaturedProductsSeven,
@@ -140,17 +125,8 @@ export default {
   CommunityArticleElementImageSeven,
   CommunityArticleElementImageEight,
 
-
   HomeTrendingFeaturesTwo,
   HomeTrendingFeaturesThree,
-
-
-
-
-
-
-
-
 
   HomeImagesOne,
   HomeImagesTwo,
@@ -168,12 +144,9 @@ export default {
   HomeImagesThirteen,
   HomeImagesFourteen,
 
-
   HomeLocationOneImgOne,
   HomeLocationOneImgTwo,
   HomeLocationOneImgThree,
-
-
 
   HomeHeroImagesTwo,
   HomeHeroImagesThree,
@@ -181,5 +154,11 @@ export default {
   HomeHeroImagesFive,
   HomeHeroImagesSix,
   HomeHeroImagesSeven,
-  HomeHeroImagesEight
-}
+  HomeHeroImagesEight,
+
+
+  AboutUsImgOne,
+  AboutUsImgTwo,
+  AboutUsImgThree,
+  AboutUsImgFour,
+};

@@ -2,7 +2,18 @@ import { useState } from "react";
 import { useProducts } from "../contexts/ProductContext";
 import ProductForm from "../components/ProductForm";
 import "./ProductsPage.css";
-import { FiBox, FiStar, FiAward, FiCheck, FiPlusCircle, FiEdit, FiTrash2, FiSearch, FiGrid, FiList } from "react-icons/fi";
+import {
+  FiBox,
+  FiStar,
+  FiAward,
+  FiCheck,
+  FiPlusCircle,
+  FiEdit,
+  FiTrash2,
+  FiSearch,
+  FiGrid,
+  FiList,
+} from "react-icons/fi";
 
 const ProductsPage = ({ onAddProduct }) => {
   const { products, loading, error, deleteProduct } = useProducts();
@@ -18,7 +29,9 @@ const ProductsPage = ({ onAddProduct }) => {
   };
 
   const handleDelete = async (product) => {
-    if (window.confirm(`Czy na pewno chcesz usunąć produkt "${product.name}"?`)) {
+    if (
+      window.confirm(`Czy na pewno chcesz usunąć produkt "${product.name}"?`)
+    ) {
       await deleteProduct(product.id);
     }
   };
@@ -45,8 +58,10 @@ const ProductsPage = ({ onAddProduct }) => {
     if (filter === "all") return matchesSearch;
     if (filter === "featured") return matchesSearch && product.featured;
     if (filter === "limited") return matchesSearch && product.limitedEdition;
-    if (filter === "in-stock") return matchesSearch && product.availability === "In Stock";
-    if (filter === "out-of-stock") return matchesSearch && product.availability === "Out of Stock";
+    if (filter === "in-stock")
+      return matchesSearch && product.availability === "In Stock";
+    if (filter === "out-of-stock")
+      return matchesSearch && product.availability === "Out of Stock";
 
     return matchesSearch && product.category === filter;
   });
@@ -56,7 +71,8 @@ const ProductsPage = ({ onAddProduct }) => {
     featured: products.filter((p) => p.featured).length,
     limited: products.filter((p) => p.limitedEdition).length,
     inStock: products.filter((p) => p.availability === "In Stock").length,
-    outOfStock: products.filter((p) => p.availability === "Out of Stock").length,
+    outOfStock: products.filter((p) => p.availability === "Out of Stock")
+      .length,
   };
   if (loading) {
     return (
@@ -126,12 +142,22 @@ const ProductsPage = ({ onAddProduct }) => {
         </div>
       </div>{" "}
       <div className="productspage-controls">
-        <div className="productspage-search-filters">          <div className="productspage-search-input">
+        <div className="productspage-search-filters">
+          {" "}
+          <div className="productspage-search-input">
             <FiSearch className="productspage-search-icon" />
-            <input type="text" placeholder="Szukaj produktów..." value={searchTerm} onChange={(e) => setSearchTerm(e.target.value)} />
+            <input
+              type="text"
+              placeholder="Szukaj produktów..."
+              value={searchTerm}
+              onChange={(e) => setSearchTerm(e.target.value)}
+            />
           </div>
-
-          <select value={filter} onChange={(e) => setFilter(e.target.value)} className="productspage-filter-select">
+          <select
+            value={filter}
+            onChange={(e) => setFilter(e.target.value)}
+            className="productspage-filter-select"
+          >
             <option value="all">Wszystkie produkty</option>
             <option value="featured">Polecane</option>
             <option value="limited">Limitowane</option>
@@ -141,17 +167,25 @@ const ProductsPage = ({ onAddProduct }) => {
             <option value="Hoodies">Bluzy</option>
             <option value="T-Shirts">Koszulki</option>
           </select>
-        </div>        <div className="productspage-view-controls">
-          <button className={`productspage-view-button ${viewMode === "grid" ? "active" : ""}`} onClick={() => setViewMode("grid")}>
+        </div>{" "}
+        <div className="productspage-view-controls">
+          <button
+            className={`productspage-view-button ${viewMode === "grid" ? "active" : ""}`}
+            onClick={() => setViewMode("grid")}
+          >
             <FiGrid className="productspage-view-icon" />
             Siatka
           </button>
-          <button className={`productspage-view-button ${viewMode === "table" ? "active" : ""}`} onClick={() => setViewMode("table")}>
+          <button
+            className={`productspage-view-button ${viewMode === "table" ? "active" : ""}`}
+            onClick={() => setViewMode("table")}
+          >
             <FiList className="productspage-view-icon" />
             Lista
           </button>
         </div>
-      </div>{" "}      {filteredProducts.length === 0 ? (
+      </div>{" "}
+      {filteredProducts.length === 0 ? (
         <div className="productspage-empty-state">
           <FiBox className="productspage-empty-icon" />
           <h3>Brak produktów</h3>
@@ -161,7 +195,10 @@ const ProductsPage = ({ onAddProduct }) => {
               : "Nie masz jeszcze żadnych produktów. Dodaj pierwszy produkt do swojego katalogu!"}
           </p>
           {!searchTerm && filter === "all" && (
-            <button onClick={handleAddNew} className="productspage-add-first-product">
+            <button
+              onClick={handleAddNew}
+              className="productspage-add-first-product"
+            >
               Dodaj pierwszy produkt
             </button>
           )}
@@ -182,30 +219,52 @@ const ProductsPage = ({ onAddProduct }) => {
                       </div>
                     )}
                     <div className="productspage-product-badges">
-                      {product.featured && <span className="productspage-badge featured">⭐ Polecane</span>}
-                      {product.limitedEdition && <span className="productspage-badge limited">💎 Limited</span>}
+                      {product.featured && (
+                        <span className="productspage-badge featured">
+                          ⭐ Polecane
+                        </span>
+                      )}
+                      {product.limitedEdition && (
+                        <span className="productspage-badge limited">
+                          💎 Limited
+                        </span>
+                      )}
                     </div>
                   </div>
 
                   <div className="productspage-product-info">
-                    <h3 className="productspage-product-name">{product.name}</h3>
-                    <p className="productspage-product-brand">{product.brand}</p>
-                    <p className="productspage-product-category">{product.category}</p>
+                    <h3 className="productspage-product-name">
+                      {product.name}
+                    </h3>
+                    <p className="productspage-product-brand">
+                      {product.brand}
+                    </p>
+                    <p className="productspage-product-category">
+                      {product.category}
+                    </p>
 
                     <div className="productspage-product-details">
                       <div className="productspage-product-price">
                         {product.price} {product.currency}
                       </div>
-                      <div className={`productspage-product-status ${product.availability?.toLowerCase().replace(/\s+/g, "-")}`}>
+                      <div
+                        className={`productspage-product-status ${product.availability?.toLowerCase().replace(/\s+/g, "-")}`}
+                      >
                         {product.availability}
                       </div>
                     </div>
 
                     <div className="productspage-product-actions">
-                      <button onClick={() => handleEdit(product)} className="productspage-action-button edit">
+                      <button
+                        onClick={() => handleEdit(product)}
+                        className="productspage-action-button edit"
+                      >
                         <FiEdit /> Edytuj
                       </button>
-                      <button onClick={() => handleDelete(product)} className="productspage-action-button delete">
+                      <button
+                        onClick={() => handleDelete(product)}
+                        className="productspage-action-button delete"
+                      >
                         <FiTrash2 /> Usuń
                       </button>
                     </div>
@@ -233,35 +292,54 @@ const ProductsPage = ({ onAddProduct }) => {
                         <div className="productspage-table-product">
                           <div className="productspage-table-product-image">
                             {product.primaryImage ? (
-                              <img src={product.primaryImage} alt={product.name} />
+                              <img
+                                src={product.primaryImage}
+                                alt={product.name}
+                              />
                             ) : (
-                              <div className="productspage-image-placeholder">📷</div>
+                              <div className="productspage-image-placeholder">
+                                📷
+                              </div>
                             )}
                           </div>
                           <div className="productspage-table-product-info">
                             <h4>{product.name}</h4>
-                            <span className="productspage-sku">SKU: {product.sku}</span>
+                            <span className="productspage-sku">
+                              SKU: {product.sku}
+                            </span>
                           </div>
                         </div>
                       </td>
                       <td>{product.brand}</td>
                       <td>
-                        <span className="productspage-category-tag">{product.category}</span>
+                        <span className="productspage-category-tag">
+                          {product.category}
+                        </span>
                       </td>
                       <td className="productspage-price-cell">
                         {product.price} {product.currency}
                       </td>
                       <td>
-                        <span className={`productspage-status-badge ${product.availability?.toLowerCase().replace(/\s+/g, "-")}`}>
+                        <span
+                          className={`productspage-status-badge ${product.availability?.toLowerCase().replace(/\s+/g, "-")}`}
+                        >
                           {product.availability}
                         </span>
                       </td>
                       <td>
                         <div className="productspage-table-actions">
-                          <button onClick={() => handleEdit(product)} className="productspage-table-action edit" title="Edytuj">
+                          <button
+                            onClick={() => handleEdit(product)}
+                            className="productspage-table-action edit"
+                            title="Edytuj"
+                          >
                             <FiEdit />
                           </button>
-                          <button onClick={() => handleDelete(product)} className="productspage-table-action delete" title="Usuń">
+                          <button
+                            onClick={() => handleDelete(product)}
+                            className="productspage-table-action delete"
+                            title="Usuń"
+                          >
                             <FiTrash2 />
                           </button>
                         </div>

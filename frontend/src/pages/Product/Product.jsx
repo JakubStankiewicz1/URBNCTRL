@@ -18,14 +18,17 @@ const Product = () => {
   const [isAddingToCart, setIsAddingToCart] = useState(false);
   const [isSellModalOpen, setIsSellModalOpen] = useState(false);
   const product = getProductById(parseInt(id));
-  const productImages = product?.galleryImages?.length > 0 
-    ? product.galleryImages 
-    : [
-        product?.images?.primary,
-        product?.images?.secondary || product?.images?.primary,
-        product?.images?.gallery?.[0] || product?.images?.primary,
-        product?.images?.gallery?.[1] || product?.images?.secondary || product?.images?.primary,
-      ].filter(Boolean);
+  const productImages =
+    product?.galleryImages?.length > 0
+      ? product.galleryImages
+      : [
+          product?.images?.primary,
+          product?.images?.secondary || product?.images?.primary,
+          product?.images?.gallery?.[0] || product?.images?.primary,
+          product?.images?.gallery?.[1] ||
+            product?.images?.secondary ||
+            product?.images?.primary,
+        ].filter(Boolean);
 
   const handleQuantityChange = (change) => {
     setQuantity((prev) => Math.max(1, prev + change));
@@ -60,23 +63,20 @@ const Product = () => {
 
     setIsAddingToCart(true);
 
-    // Symulujemy krótkie opóźnienie dla lepszego UX
     setTimeout(() => {
       const productToAdd = {
         ...product,
         selectedSize,
-        id: product.id + "_" + selectedSize, // Unique ID dla różnych rozmiarów
+        id: product.id + "_" + selectedSize,
       };
 
       addToCart(productToAdd, quantity);
       setIsAddingToCart(false);
 
-      // Optional: Reset quantity po dodaniu
       setQuantity(1);
     }, 500);
   };
 
-  // Handle modal close on Escape key
   useEffect(() => {
     const handleEscape = (e) => {
       if (e.key === "Escape" && isSellModalOpen) {
@@ -86,7 +86,7 @@ const Product = () => {
 
     if (isSellModalOpen) {
       document.addEventListener("keydown", handleEscape);
-      document.body.style.overflow = "hidden"; // Prevent background scroll
+      document.body.style.overflow = "hidden";
     }
 
     return () => {
@@ -100,7 +100,10 @@ const Product = () => {
       <div className="productInfoNotFound">
         <div className="productInfoNotFoundContainer">
           <div className="productInfoNotFoundTitle">Product not found</div>
-          <div className="productInfoNotFoundButton" onClick={() => navigate("/shop")}>
+          <div
+            className="productInfoNotFoundButton"
+            onClick={() => navigate("/shop")}
+          >
             Back to Shop
           </div>
         </div>
@@ -112,14 +115,20 @@ const Product = () => {
     <div className="productInfo">
       {" "}
       <div className="productInfoBreadcrumb">
-        <div className="productInfoBreadcrumbHome" onClick={() => navigate("/")}>
+        <div
+          className="productInfoBreadcrumbHome"
+          onClick={() => navigate("/")}
+        >
           Home
           <div className="productInfoBreadcrumbHomeDiv" />
         </div>
         <div className="productInfoBreadcrumbSeparator">
           <MdKeyboardArrowRight />
         </div>
-        <div className="productInfoBreadcrumbShop" onClick={() => navigate("/shop")}>
+        <div
+          className="productInfoBreadcrumbShop"
+          onClick={() => navigate("/shop")}
+        >
           Shop
           <div className="productInfoBreadcrumbShopDiv" />
         </div>
@@ -145,7 +154,11 @@ const Product = () => {
                   className={`productInfoGalleryThumbnailItem${selectedImage === index ? " productInfoGalleryThumbnailActive" : ""}`}
                   onClick={() => setSelectedImage(index)}
                 >
-                  <img src={image} alt={`View ${index + 1}`} className="productInfoGalleryThumbnailImage" />
+                  <img
+                    src={image}
+                    alt={`View ${index + 1}`}
+                    className="productInfoGalleryThumbnailImage"
+                  />
                 </div>
               ))}
             </div>
@@ -171,7 +184,11 @@ const Product = () => {
                       : { cursor: "zoom-in" }
                   }
                 />
-                {isZoomed && <div className="productInfoGalleryMainImageZoomHint">Click to zoom out</div>}
+                {isZoomed && (
+                  <div className="productInfoGalleryMainImageZoomHint">
+                    Click to zoom out
+                  </div>
+                )}
               </div>
             </div>
           </div>
@@ -181,10 +198,20 @@ const Product = () => {
               {product?.currency}
               {product?.price}
             </div>
-            {product?.preOrder && <div className="productInfoDetailsPreorder">Please Note: This is a pre-order item. Shipping begins April 7.</div>}
+            {product?.preOrder && (
+              <div className="productInfoDetailsPreorder">
+                Please Note: This is a pre-order item. Shipping begins April 7.
+              </div>
+            )}
             <div className="productInfoDetailsDesc">
-              <div className="productInfoDetailsDescLine">{product?.description}</div>
-              {product?.collaboration && <div className="productInfoDetailsDescHighlight">Collaboration with {product.collaboration}</div>}
+              <div className="productInfoDetailsDescLine">
+                {product?.description}
+              </div>
+              {product?.collaboration && (
+                <div className="productInfoDetailsDescHighlight">
+                  Collaboration with {product.collaboration}
+                </div>
+              )}
             </div>
             {product?.features && product.features.length > 0 && (
               <div className="productInfoDetailsFeatures">
@@ -200,11 +227,17 @@ const Product = () => {
             )}
             {product?.fitGuide && (
               <div className="productInfoDetailsFitGuide">
-                <div className="productInfoDetailsFitGuideTitle">Fit guide:</div>
-                <div className="productInfoDetailsFitGuideText">{product.fitGuide}</div>
+                <div className="productInfoDetailsFitGuideTitle">
+                  Fit guide:
+                </div>
+                <div className="productInfoDetailsFitGuideText">
+                  {product.fitGuide}
+                </div>
               </div>
             )}
-            <div className="productInfoDetailsShipping">{product?.shippingInfo}</div>
+            <div className="productInfoDetailsShipping">
+              {product?.shippingInfo}
+            </div>
             <div className="productInfoDetailsSizeSection">
               <div className="productInfoDetailsSizeTitle">Size</div>
               <div className="productInfoDetailsSizeOptions">
@@ -212,16 +245,28 @@ const Product = () => {
                   <div
                     key={size}
                     className={`productInfoDetailsSizeOption${selectedSize === size ? " productInfoDetailsSizeOptionSelected" : ""}${
-                      isSizeOutOfStock(size) ? " productInfoDetailsSizeOptionOut" : ""
+                      isSizeOutOfStock(size)
+                        ? " productInfoDetailsSizeOptionOut"
+                        : ""
                     }`}
-                    onClick={() => !isSizeOutOfStock(size) && setSelectedSize(size)}
+                    onClick={() =>
+                      !isSizeOutOfStock(size) && setSelectedSize(size)
+                    }
                     onMouseEnter={() => setHoveredSize(size)}
                     onMouseLeave={() => setHoveredSize(null)}
                   >
-                    <div className="productInfoDetailsSizeOptionText">{size}</div>
-                    {isSizeOutOfStock(size) && <div className="productInfoDetailsSizeOptionStock">Out of Stock</div>}
+                    <div className="productInfoDetailsSizeOptionText">
+                      {size}
+                    </div>
+                    {isSizeOutOfStock(size) && (
+                      <div className="productInfoDetailsSizeOptionStock">
+                        Out of Stock
+                      </div>
+                    )}
                     {!isSizeOutOfStock(size) && getSizeStock(size) < 5 && (
-                      <div className="productInfoDetailsSizeOptionStock">Only {getSizeStock(size)} left</div>
+                      <div className="productInfoDetailsSizeOptionStock">
+                        Only {getSizeStock(size)} left
+                      </div>
                     )}
                     {hoveredSize === size && (
                       <div className="productInfoDetailsSizeOptionTooltip">
@@ -229,8 +274,8 @@ const Product = () => {
                           {isSizeOutOfStock(size)
                             ? "This size is currently out of stock"
                             : getSizeStock(size) < 5
-                            ? `Only ${getSizeStock(size)} items left in size ${size}`
-                            : `${size}`}
+                              ? `Only ${getSizeStock(size)} items left in size ${size}`
+                              : `${size}`}
                         </div>
                       </div>
                     )}
@@ -239,7 +284,9 @@ const Product = () => {
               </div>
             </div>
             <div className="productInfoActions">
-              <div className={`productInfoActionsQuantity${!selectedSize ? " productInfoActionsQuantityDisabled" : ""}`}>
+              <div
+                className={`productInfoActionsQuantity${!selectedSize ? " productInfoActionsQuantityDisabled" : ""}`}
+              >
                 <button
                   className="productInfoActionsQuantityBtn"
                   onClick={() => selectedSize && handleQuantityChange(-1)}
@@ -247,17 +294,30 @@ const Product = () => {
                 >
                   -
                 </button>
-                <div className="productInfoActionsQuantityValue">{quantity}</div>
-                <button className="productInfoActionsQuantityBtn" onClick={() => selectedSize && handleQuantityChange(1)} disabled={!selectedSize}>
+                <div className="productInfoActionsQuantityValue">
+                  {quantity}
+                </div>
+                <button
+                  className="productInfoActionsQuantityBtn"
+                  onClick={() => selectedSize && handleQuantityChange(1)}
+                  disabled={!selectedSize}
+                >
                   +
                 </button>
               </div>{" "}
               <div
                 className={`productInfoActionsAddToCart${!selectedSize ? " productInfoActionsAddToCartDisabled" : ""}`}
-                onClick={selectedSize && !isAddingToCart ? handleAddToCart : undefined}
-                style={{ cursor: selectedSize && !isAddingToCart ? "pointer" : "not-allowed" }}
+                onClick={
+                  selectedSize && !isAddingToCart ? handleAddToCart : undefined
+                }
+                style={{
+                  cursor:
+                    selectedSize && !isAddingToCart ? "pointer" : "not-allowed",
+                }}
               >
-                <div className="productInfoActionsAddToCartText">{isAddingToCart ? "ADDING..." : "ADD TO CART"}</div>
+                <div className="productInfoActionsAddToCartText">
+                  {isAddingToCart ? "ADDING..." : "ADD TO CART"}
+                </div>
               </div>
             </div>
           </div>
@@ -271,8 +331,20 @@ const Product = () => {
           <div className="productInfoSectionShipping">
             <div className="productInfoSectionShippingItem">
               <div className="productInfoSectionShippingIcon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M3 6H21L19 16H5L3 6Z" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M3 6H21L19 16H5L3 6Z"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                   <path
                     d="M8 21C9.10457 21 10 20.1046 10 19C10 17.8954 9.10457 17 8 17C6.89543 17 6 17.8954 6 19C6 20.1046 6.89543 21 8 21Z"
                     stroke="currentColor"
@@ -291,27 +363,79 @@ const Product = () => {
                     ? `Śro ${product.deliveryTime?.split("-")[0]} Cze - Pią ${product.deliveryTime?.split("-")[1]} Cze`
                     : "Śro 18 Cze - Pią 20 Cze"}
                 </div>
-                <div className="productInfoSectionShippingSubtitle">Przesyłka standardowa</div>
+                <div className="productInfoSectionShippingSubtitle">
+                  Przesyłka standardowa
+                </div>
               </div>
               <div className="productInfoSectionShippingPrice">za darmo</div>
             </div>
             <div className="productInfoSectionShippingItem">
               <div className="productInfoSectionShippingIcon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="2" />
-                  <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" strokeWidth="2" />
-                  <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" strokeWidth="2" />
-                  <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" strokeWidth="2" />
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="18"
+                    rx="2"
+                    ry="2"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="16"
+                    y1="2"
+                    x2="16"
+                    y2="6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="8"
+                    y1="2"
+                    x2="8"
+                    y2="6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="3"
+                    y1="10"
+                    x2="21"
+                    y2="10"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
                 </svg>
               </div>
               <div className="productInfoSectionShippingContent">
-                <div className="productInfoSectionShippingTitle">Bezpłatna przesyłka i zwrot</div>
+                <div className="productInfoSectionShippingTitle">
+                  Bezpłatna przesyłka i zwrot
+                </div>
               </div>
             </div>
             <div className="productInfoSectionShippingItem">
               <div className="productInfoSectionShippingIcon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M9 12L11 14L15 10" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M9 12L11 14L15 10"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
                   <path
                     d="M21 12C21 16.9706 16.9706 21 12 21C7.02944 21 3 16.9706 3 12C3 7.02944 7.02944 3 12 3C16.9706 3 21 7.02944 21 12Z"
                     stroke="currentColor"
@@ -320,26 +444,95 @@ const Product = () => {
                 </svg>
               </div>
               <div className="productInfoSectionShippingContent">
-                <div className="productInfoSectionShippingTitle">30-dniowe prawo zwrotu</div>
+                <div className="productInfoSectionShippingTitle">
+                  30-dniowe prawo zwrotu
+                </div>
               </div>
             </div>{" "}
-            <div className="productInfoSectionShippingItem productInfoSectionShippingItemClickable" onClick={() => setIsSellModalOpen(true)}>
+            <div
+              className="productInfoSectionShippingItem productInfoSectionShippingItemClickable"
+              onClick={() => setIsSellModalOpen(true)}
+            >
               <div className="productInfoSectionShippingIcon">
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="currentColor" strokeWidth="2" />
-                  <line x1="16" y1="2" x2="16" y2="6" stroke="currentColor" strokeWidth="2" />
-                  <line x1="8" y1="2" x2="8" y2="6" stroke="currentColor" strokeWidth="2" />
-                  <line x1="3" y1="10" x2="21" y2="10" stroke="currentColor" strokeWidth="2" />
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <rect
+                    x="3"
+                    y="4"
+                    width="18"
+                    height="18"
+                    rx="2"
+                    ry="2"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="16"
+                    y1="2"
+                    x2="16"
+                    y2="6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="8"
+                    y1="2"
+                    x2="8"
+                    y2="6"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="3"
+                    y1="10"
+                    x2="21"
+                    y2="10"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
                 </svg>
               </div>
               <div className="productInfoSectionShippingContent">
-                <div className="productInfoSectionShippingTitle">Odsprzedam swoje rzeczy</div>
+                <div className="productInfoSectionShippingTitle">
+                  Odsprzedam swoje rzeczy
+                </div>
               </div>
               <div className="productInfoSectionShippingIcon">
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="2" />
-                  <line x1="12" y1="16" x2="12" y2="12" stroke="currentColor" strokeWidth="2" />
-                  <line x1="12" y1="8" x2="12.01" y2="8" stroke="currentColor" strokeWidth="2" />
+                <svg
+                  width="16"
+                  height="16"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <circle
+                    cx="12"
+                    cy="12"
+                    r="10"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="12"
+                    y1="16"
+                    x2="12"
+                    y2="12"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="12"
+                    y1="8"
+                    x2="12.01"
+                    y2="8"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
                 </svg>
               </div>
             </div>
@@ -348,27 +541,42 @@ const Product = () => {
           <div className="productInfoSectionMaterial">
             {" "}
             <div className="productInfoSectionMaterialHeader">
-              <div className="productInfoSectionMaterialTitle">Materiał i wskazówki pielęgnacyjne</div>
+              <div className="productInfoSectionMaterialTitle">
+                Materiał i wskazówki pielęgnacyjne
+              </div>
             </div>
             <div className="productInfoSectionMaterialContent">
               {product?.material && (
                 <div className="productInfoSectionMaterialItem">
-                  <div className="productInfoSectionMaterialLabel">Materiał:</div>
-                  <div className="productInfoSectionMaterialValue">{product.material}</div>
+                  <div className="productInfoSectionMaterialLabel">
+                    Materiał:
+                  </div>
+                  <div className="productInfoSectionMaterialValue">
+                    {product.material}
+                  </div>
                 </div>
               )}
               {product?.lining && (
                 <div className="productInfoSectionMaterialItem">
-                  <div className="productInfoSectionMaterialLabel">Podszewka:</div>
-                  <div className="productInfoSectionMaterialValue">{product.lining}</div>
+                  <div className="productInfoSectionMaterialLabel">
+                    Podszewka:
+                  </div>
+                  <div className="productInfoSectionMaterialValue">
+                    {product.lining}
+                  </div>
                 </div>
               )}
-              {product?.careInstructions && product.careInstructions.length > 0 && (
-                <div className="productInfoSectionMaterialItem">
-                  <div className="productInfoSectionMaterialLabel">Wskazówki pielęgnacyjne:</div>
-                  <div className="productInfoSectionMaterialValue">{product.careInstructions.join(", ")}</div>
-                </div>
-              )}{" "}
+              {product?.careInstructions &&
+                product.careInstructions.length > 0 && (
+                  <div className="productInfoSectionMaterialItem">
+                    <div className="productInfoSectionMaterialLabel">
+                      Wskazówki pielęgnacyjne:
+                    </div>
+                    <div className="productInfoSectionMaterialValue">
+                      {product.careInstructions.join(", ")}
+                    </div>
+                  </div>
+                )}{" "}
             </div>
           </div>{" "}
         </div>
@@ -378,68 +586,104 @@ const Product = () => {
           {/* Product Details Section */}
           <div className="productInfoSectionDetails">
             <div className="productInfoSectionDetailsHeader">
-              <div className="productInfoSectionDetailsTitle">Szczegóły produktu</div>
+              <div className="productInfoSectionDetailsTitle">
+                Szczegóły produktu
+              </div>
             </div>
 
             <div className="productInfoSectionDetailsContent">
               {product?.productDetails?.sport && (
                 <div className="productInfoSectionDetailsItem">
-                  <div className="productInfoSectionDetailsLabel">Rodzaj sportu:</div>
-                  <div className="productInfoSectionDetailsValue">{product.productDetails.sport}</div>
+                  <div className="productInfoSectionDetailsLabel">
+                    Rodzaj sportu:
+                  </div>
+                  <div className="productInfoSectionDetailsValue">
+                    {product.productDetails.sport}
+                  </div>
                 </div>
               )}
               {product?.productDetails?.belt && (
                 <div className="productInfoSectionDetailsItem">
                   <div className="productInfoSectionDetailsLabel">Pas:</div>
-                  <div className="productInfoSectionDetailsValue">{product.productDetails.belt}</div>
+                  <div className="productInfoSectionDetailsValue">
+                    {product.productDetails.belt}
+                  </div>
                 </div>
               )}
               {product?.productDetails?.neckline && (
                 <div className="productInfoSectionDetailsItem">
-                  <div className="productInfoSectionDetailsLabel">Rodzaj dekoltu:</div>
-                  <div className="productInfoSectionDetailsValue">{product.productDetails.neckline}</div>
+                  <div className="productInfoSectionDetailsLabel">
+                    Rodzaj dekoltu:
+                  </div>
+                  <div className="productInfoSectionDetailsValue">
+                    {product.productDetails.neckline}
+                  </div>
                 </div>
               )}
               {product?.productDetails?.collar && (
                 <div className="productInfoSectionDetailsItem">
-                  <div className="productInfoSectionDetailsLabel">Kształt kołnierza:</div>
-                  <div className="productInfoSectionDetailsValue">{product.productDetails.collar}</div>
+                  <div className="productInfoSectionDetailsLabel">
+                    Kształt kołnierza:
+                  </div>
+                  <div className="productInfoSectionDetailsValue">
+                    {product.productDetails.collar}
+                  </div>
                 </div>
               )}
               {product?.productDetails?.pockets && (
                 <div className="productInfoSectionDetailsItem">
-                  <div className="productInfoSectionDetailsLabel">Kieszenie:</div>
-                  <div className="productInfoSectionDetailsValue">{product.productDetails.pockets}</div>
+                  <div className="productInfoSectionDetailsLabel">
+                    Kieszenie:
+                  </div>
+                  <div className="productInfoSectionDetailsValue">
+                    {product.productDetails.pockets}
+                  </div>
                 </div>
               )}
               {product?.productDetails?.sleeves && (
                 <div className="productInfoSectionDetailsItem">
-                  <div className="productInfoSectionDetailsLabel">Mankiety:</div>
-                  <div className="productInfoSectionDetailsValue">{product.productDetails.sleeves}</div>
+                  <div className="productInfoSectionDetailsLabel">
+                    Mankiety:
+                  </div>
+                  <div className="productInfoSectionDetailsValue">
+                    {product.productDetails.sleeves}
+                  </div>
                 </div>
               )}
               {product?.productDetails?.pattern && (
                 <div className="productInfoSectionDetailsItem">
                   <div className="productInfoSectionDetailsLabel">Wzór:</div>
-                  <div className="productInfoSectionDetailsValue">{product.productDetails.pattern}</div>
+                  <div className="productInfoSectionDetailsValue">
+                    {product.productDetails.pattern}
+                  </div>
                 </div>
               )}
               {product?.productDetails?.details && (
                 <div className="productInfoSectionDetailsItem">
-                  <div className="productInfoSectionDetailsLabel">Szczegóły:</div>
-                  <div className="productInfoSectionDetailsValue">{product.productDetails.details}</div>
+                  <div className="productInfoSectionDetailsLabel">
+                    Szczegóły:
+                  </div>
+                  <div className="productInfoSectionDetailsValue">
+                    {product.productDetails.details}
+                  </div>
                 </div>
               )}
               {product?.productDetails?.function && (
                 <div className="productInfoSectionDetailsItem">
                   <div className="productInfoSectionDetailsLabel">Funkcja:</div>
-                  <div className="productInfoSectionDetailsValue">{product.productDetails.function}</div>
+                  <div className="productInfoSectionDetailsValue">
+                    {product.productDetails.function}
+                  </div>
                 </div>
               )}
               {product?.productDetails?.productNumber && (
                 <div className="productInfoSectionDetailsItem">
-                  <div className="productInfoSectionDetailsLabel">Numer produktu:</div>
-                  <div className="productInfoSectionDetailsValue">{product.productDetails.productNumber}</div>
+                  <div className="productInfoSectionDetailsLabel">
+                    Numer produktu:
+                  </div>
+                  <div className="productInfoSectionDetailsValue">
+                    {product.productDetails.productNumber}
+                  </div>
                 </div>
               )}{" "}
             </div>
@@ -448,42 +692,58 @@ const Product = () => {
           {/* Size and Fit Section */}
           <div className="productInfoSectionSizeFit">
             <div className="productInfoSectionSizeFitHeader">
-              <div className="productInfoSectionSizeFitTitle">Rozmiar i krój</div>
+              <div className="productInfoSectionSizeFitTitle">
+                Rozmiar i krój
+              </div>
             </div>
 
             <div className="productInfoSectionSizeFitContent">
               {product?.sizeAndFit?.modelHeight && (
                 <div className="productInfoSectionSizeFitItem">
-                  <div className="productInfoSectionSizeFitLabel">Wzrost modela:</div>
-                  <div className="productInfoSectionSizeFitValue">{product.sizeAndFit.modelHeight}</div>
+                  <div className="productInfoSectionSizeFitLabel">
+                    Wzrost modela:
+                  </div>
+                  <div className="productInfoSectionSizeFitValue">
+                    {product.sizeAndFit.modelHeight}
+                  </div>
                 </div>
               )}
 
               {product?.sizeAndFit?.fitType && (
                 <div className="productInfoSectionSizeFitItem">
                   <div className="productInfoSectionSizeFitLabel">Fason:</div>
-                  <div className="productInfoSectionSizeFitValue">{product.sizeAndFit.fitType}</div>
+                  <div className="productInfoSectionSizeFitValue">
+                    {product.sizeAndFit.fitType}
+                  </div>
                 </div>
               )}
 
               {product?.sizeAndFit?.shape && (
                 <div className="productInfoSectionSizeFitItem">
                   <div className="productInfoSectionSizeFitLabel">Kształt:</div>
-                  <div className="productInfoSectionSizeFitValue">{product.sizeAndFit.shape}</div>
+                  <div className="productInfoSectionSizeFitValue">
+                    {product.sizeAndFit.shape}
+                  </div>
                 </div>
               )}
 
               {product?.sizeAndFit?.length && (
                 <div className="productInfoSectionSizeFitItem">
                   <div className="productInfoSectionSizeFitLabel">Długość:</div>
-                  <div className="productInfoSectionSizeFitValue">{product.sizeAndFit.length}</div>
+                  <div className="productInfoSectionSizeFitValue">
+                    {product.sizeAndFit.length}
+                  </div>
                 </div>
               )}
 
               {product?.sizeAndFit?.sleeveLength && (
                 <div className="productInfoSectionSizeFitItem">
-                  <div className="productInfoSectionSizeFitLabel">Długość rękaw:</div>
-                  <div className="productInfoSectionSizeFitValue">{product.sizeAndFit.sleeveLength}</div>
+                  <div className="productInfoSectionSizeFitLabel">
+                    Długość rękaw:
+                  </div>
+                  <div className="productInfoSectionSizeFitValue">
+                    {product.sizeAndFit.sleeveLength}
+                  </div>
                 </div>
               )}
             </div>
@@ -493,32 +753,50 @@ const Product = () => {
       {/* Sell Modal */}
       {isSellModalOpen && (
         <div className="sellModal" onClick={() => setIsSellModalOpen(false)}>
-          <div className="sellModalContent" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="sellModalContent"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="sellModalHeader">
               <h2 className="sellModalTitle">Odsprzedaj swoje rzeczy</h2>
-              <button className="sellModalCloseButton" onClick={() => setIsSellModalOpen(false)}>
-                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" strokeWidth="2" />
-                  <line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" strokeWidth="2" />
+              <button
+                className="sellModalCloseButton"
+                onClick={() => setIsSellModalOpen(false)}
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <line
+                    x1="18"
+                    y1="6"
+                    x2="6"
+                    y2="18"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
+                  <line
+                    x1="6"
+                    y1="6"
+                    x2="18"
+                    y2="18"
+                    stroke="currentColor"
+                    strokeWidth="2"
+                  />
                 </svg>
               </button>
             </div>{" "}
             <div className="sellModalBody">
               <div className="sellModalBodyContent">
-                {/* <div className="sellModalIcon">
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M3 6h18" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M8 6V4a2 2 0 012-2h4a2 2 0 012 2v2" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M10 11v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                    <path d="M14 11v6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-                  </svg>
-                </div> */}
 
                 <div className="sellModalText">
                   <p className="sellModalDescription">
-                    Chcesz rozstać się z tą rzeczą, a okres na zwrot już minął? Jeżeli jest tylko lekko używana, możesz nam ją odsprzedać w zamian za
-                    kartę upominkową.{" "}
+                    Chcesz rozstać się z tą rzeczą, a okres na zwrot już minął?
+                    Jeżeli jest tylko lekko używana, możesz nam ją odsprzedać w
+                    zamian za kartę upominkową.{" "}
                     <a href="#" className="sellModalLink">
                       Dowiedz się więcej
                     </a>

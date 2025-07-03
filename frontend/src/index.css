@@ -1,10 +1,13 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Dirt&display=swap");
 
 @font-face {
-  font-family: 'Chinese Shanghai';
-  src: url('./assets/fonts/ChineseShangaiDemoVersionRegular-p7Eyy.ttf') format('truetype'),
-       url('./assets/fonts/ChineseShangaiDemoVersionRegular-DOmnE.otf') format('opentype');
+  font-family: "Chinese Shanghai";
+  src:
+    url("./assets/fonts/ChineseShangaiDemoVersionRegular-p7Eyy.ttf")
+      format("truetype"),
+    url("./assets/fonts/ChineseShangaiDemoVersionRegular-DOmnE.otf")
+      format("opentype");
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -15,16 +18,15 @@
   padding: 0;
   box-sizing: border-box;
   font-family: "Lato", sans-serif;
-  /* cursor: none; */
 }
 
 html {
   scroll-behavior: smooth;
 }
 
-::selection {
-  background-color: #000000;
-  color: #FFFFFF;
+NavLink {
+  text-decoration: none;
+  color: inherit;
 }
 
 a {
@@ -32,9 +34,64 @@ a {
   color: inherit;
 }
 
-body {
-  position: relative;
-  overflow-x: hidden;
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #da2228 0%, #b91c1c 100%);
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #b91c1c 0%, #991b1b 100%);
+  width: 12px;
+}
+
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #da2228 #f1f1f1;
+}
+
+.dark-scrollbar::-webkit-scrollbar-track {
+  background: #1a1a1a;
+}
+
+.dark-scrollbar::-webkit-scrollbar-thumb {
+  background: linear-gradient(135deg, #da2228 0%, #b91c1c 100%);
+}
+
+.dark-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(135deg, #ff3333 0%, #da2228 100%);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.custom-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.custom-scroll-container::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 3px;
+}
+
+.custom-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(218, 34, 40, 0.7);
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+
+.custom-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: rgba(218, 34, 40, 1);
 }
 
 .nunito-sans-regular {
@@ -45,4 +102,10 @@ body {
   font-variation-settings:
     "wdth" 100,
     "YTLC" 500;
+}
+
+.rubik-dirt-regular {
+  font-family: "Rubik Dirt", system-ui;
+  font-weight: 400;
+  font-style: normal;
 }

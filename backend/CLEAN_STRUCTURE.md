@@ -34,6 +34,7 @@ backend/
 **Base URL:** `http://localhost:8081`
 
 ### Produkty (SimpleProduct)
+
 - `GET /api/simple-products/test` - Test API
 - `GET /api/simple-products` - Lista wszystkich produktów
 - `GET /api/simple-products/{id}` - Produkt po ID
@@ -45,23 +46,24 @@ backend/
 
 ```json
 {
-    "id": 1,
-    "name": "Nazwa produktu",
-    "category": "Kategoria",
-    "description": "Opis produktu",
-    "price": 99.99,
-    "currency": "$",
-    "availability": "In Stock",
-    "sku": "UNIQUE-SKU-001",
-    "brand": "Marka"
+  "id": 1,
+  "name": "Nazwa produktu",
+  "category": "Kategoria",
+  "description": "Opis produktu",
+  "price": 99.99,
+  "currency": "$",
+  "availability": "In Stock",
+  "sku": "UNIQUE-SKU-001",
+  "brand": "Marka"
 }
 ```
 
 ## 🗑️ USUNIĘTE ELEMENTY
 
 ### Pliki usunięte z projektu:
+
 - ❌ `Product.java` (złożony model)
-- ❌ `ProductDetails.java` 
+- ❌ `ProductDetails.java`
 - ❌ `ProductImages.java`
 - ❌ `SizeAndFit.java`
 - ❌ `ProductController.java`
@@ -72,11 +74,13 @@ backend/
 - ❌ Duplikaty plików testowych
 
 ### Stare endpointy (już nie działają):
+
 - ❌ `/api/products/*` - zastąpione przez `/api/simple-products/*`
 
 ## 🎯 GOTOWE DO ROZBUDOWY
 
 Teraz masz:
+
 1. ✅ **Czysty kod** - tylko to co potrzebne
 2. ✅ **Działający backend** - przetestowany w Postman
 3. ✅ **Prostą strukturę** - łatwa do rozbudowy
@@ -85,6 +89,7 @@ Teraz masz:
 ## 🔄 KOLEJNE KROKI
 
 Gdy będziesz chciał dodać więcej funkcjonalności:
+
 1. Rozbuduj model `SimpleProduct` o nowe pola
 2. Dodaj nowe endpointy w `SimpleProductController`
 3. Rozszerz `SimpleProductService` o nową logikę

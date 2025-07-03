@@ -228,14 +228,18 @@
     transform: translateX(-100%);
     /* box-shadow: 0 0 25px rgba(0, 0, 0, 0.2); */
   }
-  
+
   .sidebar.mobile-open {
     transform: translateX(0);
   }
 }
 
 /* Smooth transitions for items */
-.nav-link, .logo-icon, .collapse-button, .coming-soon, .nav-count {
+.nav-link,
+.logo-icon,
+.collapse-button,
+.coming-soon,
+.nav-count {
   transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
 }
 

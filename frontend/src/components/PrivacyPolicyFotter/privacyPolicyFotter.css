@@ -1,9 +1,7 @@
 .privacyPolicyFotter {
   width: 100%;
   height: 100%;
-
   background-color: #ffffff;
-
   padding-top: 40px;
   padding-bottom: 50px;
 }
@@ -16,7 +14,6 @@
 .privacyPolicyFotterContainerDiv {
   width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -30,7 +27,6 @@
   font-weight: 700;
   line-height: 38px;
   text-align: center;
-  /* width: 100%; */
   text-transform: uppercase;
   font-style: italic;
 }
@@ -42,7 +38,6 @@
   font-weight: 100;
   line-height: 38px;
   text-align: center;
-  /* width: 100%; */
   text-transform: uppercase;
   font-style: italic;
   transform: translateY(5px);

@@ -60,17 +60,35 @@ const Login = () => {
             <form onSubmit={handleSubmit} className="login-form">
               <div className="form-group">
                 <label htmlFor="email">Email</label>
-                <input type="email" id="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="admin@urbnctrl.com" required />
+                <input
+                  type="email"
+                  id="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                  placeholder="admin@urbnctrl.com"
+                  required
+                />
               </div>
 
               <div className="form-group">
                 <label htmlFor="password">Password</label>
-                <input type="password" id="password" value={password} onChange={(e) => setPassword(e.target.value)} placeholder="••••••••" required />
+                <input
+                  type="password"
+                  id="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                  placeholder="••••••••"
+                  required
+                />
               </div>
 
               <div className="form-options">
                 <label className="checkbox-container">
-                  <input type="checkbox" checked={rememberMe} onChange={(e) => setRememberMe(e.target.checked)} />
+                  <input
+                    type="checkbox"
+                    checked={rememberMe}
+                    onChange={(e) => setRememberMe(e.target.checked)}
+                  />
                   <span className="checkmark"></span>
                   Remember me
                 </label>
@@ -83,7 +101,8 @@ const Login = () => {
 
             <div className="login-footer">
               <p>
-                Not a member? <span className="create-account">Create an account</span>
+                Not a member?{" "}
+                <span className="create-account">Create an account</span>
               </p>
             </div>
 

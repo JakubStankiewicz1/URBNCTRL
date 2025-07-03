@@ -1,17 +1,17 @@
-import { createContext, useContext, useState, useEffect } from 'react';
-import axios from 'axios';
+import { createContext, useContext, useState, useEffect } from "react";
+import axios from "axios";
 
 const ProductContext = createContext();
 
 export const useProducts = () => {
   const context = useContext(ProductContext);
   if (!context) {
-    throw new Error('useProducts must be used within a ProductProvider');
+    throw new Error("useProducts must be used within a ProductProvider");
   }
   return context;
 };
 
-const API_BASE_URL = 'http://localhost:8081/api';
+const API_BASE_URL = "http://localhost:8081/api";
 
 export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
@@ -26,8 +26,8 @@ export const ProductProvider = ({ children }) => {
       const response = await axios.get(`${API_BASE_URL}/simple-products`);
       setProducts(response.data);
     } catch (err) {
-      setError('Błąd podczas pobierania produktów');
-      console.error('Error fetching products:', err);
+      setError("Błąd podczas pobierania produktów");
+      console.error("Error fetching products:", err);
     } finally {
       setLoading(false);
     }
@@ -37,11 +37,14 @@ export const ProductProvider = ({ children }) => {
   const addProduct = async (productData) => {
     setError(null);
     try {
-      const response = await axios.post(`${API_BASE_URL}/simple-products`, productData);
-      setProducts(prev => [...prev, response.data]);
+      const response = await axios.post(
+        `${API_BASE_URL}/simple-products`,
+        productData,
+      );
+      setProducts((prev) => [...prev, response.data]);
       return { success: true, data: response.data };
     } catch (err) {
-      const errorMsg = 'Błąd podczas dodawania produktu';
+      const errorMsg = "Błąd podczas dodawania produktu";
       setError(errorMsg);
       return { success: false, error: errorMsg };
     }
@@ -51,13 +54,16 @@ export const ProductProvider = ({ children }) => {
   const updateProduct = async (id, productData) => {
     setError(null);
     try {
-      const response = await axios.put(`${API_BASE_URL}/simple-products/${id}`, productData);
-      setProducts(prev => prev.map(product => 
-        product.id === id ? response.data : product
-      ));
+      const response = await axios.put(
+        `${API_BASE_URL}/simple-products/${id}`,
+        productData,
+      );
+      setProducts((prev) =>
+        prev.map((product) => (product.id === id ? response.data : product)),
+      );
       return { success: true, data: response.data };
     } catch (err) {
-      const errorMsg = 'Błąd podczas aktualizacji produktu';
+      const errorMsg = "Błąd podczas aktualizacji produktu";
       setError(errorMsg);
       return { success: false, error: errorMsg };
     }
@@ -68,10 +74,10 @@ export const ProductProvider = ({ children }) => {
     setError(null);
     try {
       await axios.delete(`${API_BASE_URL}/simple-products/${id}`);
-      setProducts(prev => prev.filter(product => product.id !== id));
+      setProducts((prev) => prev.filter((product) => product.id !== id));
       return { success: true };
     } catch (err) {
-      const errorMsg = 'Błąd podczas usuwania produktu';
+      const errorMsg = "Błąd podczas usuwania produktu";
       setError(errorMsg);
       return { success: false, error: errorMsg };
     }
@@ -88,12 +94,10 @@ export const ProductProvider = ({ children }) => {
     fetchProducts,
     addProduct,
     updateProduct,
-    deleteProduct
+    deleteProduct,
   };
 
   return (
-    <ProductContext.Provider value={value}>
-      {children}
-    </ProductContext.Provider>
+    <ProductContext.Provider value={value}>{children}</ProductContext.Provider>
   );
 };

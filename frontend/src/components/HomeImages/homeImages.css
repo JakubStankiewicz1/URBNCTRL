@@ -1,145 +1,143 @@
 .homeImages {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 
+  background-color: #000000;
 
-    background-color: #000000;
-
-    padding-top: 100px;
-    padding-bottom: 100px;
+  padding-top: 100px;
+  padding-bottom: 100px;
 }
 
 .homeImagesContainer {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .homeImagesScroll {
-    width: 100%;
-    overflow-x: scroll;
-    overflow-y: hidden;
-    scrollbar-width: none;
-    -ms-overflow-style: none;
-    cursor: grab;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+  cursor: grab;
 }
 
 .homeImagesScroll:active,
 .homeImagesScroll.dragging {
-    cursor: grabbing;
+  cursor: grabbing;
 }
 
 .homeImagesScroll::-webkit-scrollbar {
-    display: none;
+  display: none;
 }
 
 .homeImagesContainerDiv {
-    width: max-content;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    gap: 40px;
-    align-items: center;
-    justify-content: flex-start;
-}
-
-
-.homeImagesContainerDivElement {
-    min-width: 870px;
-    height: 490px;
-    flex: 0 0 auto;
-    background-color: red;
+  width: max-content;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 40px;
+  align-items: center;
+  justify-content: flex-start;
 }
 
 .homeImagesContainerDivElement {
-    width: 870px;
-    height: 490px;
-    flex: 0 0 auto;
+  min-width: 870px;
+  height: 490px;
+  flex: 0 0 auto;
+  background-color: red;
+}
+
+.homeImagesContainerDivElement {
+  width: 870px;
+  height: 490px;
+  flex: 0 0 auto;
 }
 
 .homeImagesContainerDivElementContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .homeImagesContainerDivElementContainer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.15);
-    z-index: 1;
-    transition: opacity 0.3s ease;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  transition: opacity 0.3s ease;
 }
 
 .homeImagesContainerDivElementContainer:hover::before {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .homeImagesContainerDivElementContainerImageImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .homeImagesContainerDivElementGreen {
-    min-width: 395px;
-    height: 490px;
-    flex: 0 0 auto;
+  min-width: 395px;
+  height: 490px;
+  flex: 0 0 auto;
 }
 
 .homeImagesContainerDivElementGreen {
-    width: 395px;
-    height: 490px;
-    flex: 0 0 auto;
+  width: 395px;
+  height: 490px;
+  flex: 0 0 auto;
 }
 
 .homeImagesContainerDivElementGreenContainer {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
 }
 
 .homeImagesContainerDivElementGreenContainer::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.15);
-    z-index: 1;
-    /* border-radius: 5px; */
-    transition: opacity 0.3s ease;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.15);
+  z-index: 1;
+  /* border-radius: 5px; */
+  transition: opacity 0.3s ease;
 }
 
 .homeImagesContainerDivElementGreenContainer:hover::before {
-    opacity: 0.7;
+  opacity: 0.7;
 }
 
 .homeImagesContainerDivElementGreenContainerImage {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    /* border-radius: 5px; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* border-radius: 5px; */
 }
 
 .homeImagesContainerDivElementGreenContainerImageImg {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    object-position: center;
-    /* border-radius: 5px; */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  /* border-radius: 5px; */
 }

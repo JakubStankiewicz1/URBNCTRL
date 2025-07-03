@@ -10,7 +10,12 @@
     "sku": "TLD-HB-001",
     "brand": "T-LD",
     "collaboration": "Hana Burton",
-    "features": ["Boxy Fit", "True to Size", "Front & Rear Print", "Heavy Weight"],
+    "features": [
+      "Boxy Fit",
+      "True to Size",
+      "Front & Rear Print",
+      "Heavy Weight"
+    ],
     "sizes": ["S", "M", "L", "XL", "XXL"],
     "sizeStock": { "S": 15, "M": 23, "L": 18, "XL": 12, "XXL": 8 },
     "colors": ["Black", "White"],
@@ -56,7 +61,13 @@
         "https://img.vitkac.com/uploads/product_thumb/BLUZA%20739024%20TOVD8-1055/up/1.png"
       ]
     },
-    "tags": ["limited edition", "collaboration", "tokyo", "hoodie", "streetwear"],
+    "tags": [
+      "limited edition",
+      "collaboration",
+      "tokyo",
+      "hoodie",
+      "streetwear"
+    ],
     "releaseDate": "2024-12-01",
     "limitedEdition": true,
     "featured": true
@@ -72,7 +83,12 @@
     "sku": "TLD-TD-002",
     "brand": "T-LD",
     "collaboration": null,
-    "features": ["Regular Fit", "True to Size", "Screen Printed Graphics", "Premium Cotton"],
+    "features": [
+      "Regular Fit",
+      "True to Size",
+      "Screen Printed Graphics",
+      "Premium Cotton"
+    ],
     "sizes": ["S", "M", "L", "XL", "XXL"],
     "sizeStock": { "S": 8, "M": 12, "L": 15, "XL": 10, "XXL": 5 },
     "colors": ["Black", "White", "Navy"],
@@ -134,7 +150,12 @@
     "sku": "TLD-CR-003",
     "brand": "T-LD",
     "collaboration": "Tokyo Bay Circuit",
-    "features": ["Water Resistant", "Reflective Details", "Technical Fabric", "Racing Inspired"],
+    "features": [
+      "Water Resistant",
+      "Reflective Details",
+      "Technical Fabric",
+      "Racing Inspired"
+    ],
     "sizes": ["S", "M", "L", "XL", "XXL"],
     "sizeStock": { "S": 5, "M": 8, "L": 12, "XL": 6, "XXL": 3 },
     "colors": ["Black", "Red", "Navy"],
@@ -196,7 +217,12 @@
     "sku": "TLD-UC-004",
     "brand": "T-LD",
     "collaboration": null,
-    "features": ["Snapback Design", "Embroidered Logo", "Adjustable Fit", "Premium Materials"],
+    "features": [
+      "Snapback Design",
+      "Embroidered Logo",
+      "Adjustable Fit",
+      "Premium Materials"
+    ],
     "sizes": ["One Size"],
     "sizeStock": { "One Size": 25 },
     "colors": ["Black", "White", "Navy", "Red"],
@@ -205,7 +231,13 @@
     "weight": "Light Weight",
     "fit": "Adjustable",
     "deliveryTime": "1-2 dni",
-    "careInstructions": ["Pranie ręczne w zimnej wodzie", "Nie wybielać", "Nie prasować haftu", "Nie czyścić chemicznie", "Suszenie na powietrzu"],
+    "careInstructions": [
+      "Pranie ręczne w zimnej wodzie",
+      "Nie wybielać",
+      "Nie prasować haftu",
+      "Nie czyścić chemicznie",
+      "Suszenie na powietrzu"
+    ],
     "productDetails": {
       "sport": "Streetwear",
       "belt": "Regulowany pasek",
@@ -252,7 +284,12 @@
     "sku": "TLD-SC-005",
     "brand": "T-LD",
     "collaboration": "LV Inspired",
-    "features": ["Luxury Materials", "Signature Design", "Chunky Stripes", "Premium Construction"],
+    "features": [
+      "Luxury Materials",
+      "Signature Design",
+      "Chunky Stripes",
+      "Premium Construction"
+    ],
     "sizes": ["S", "M", "L", "XL"],
     "sizeStock": { "S": 2, "M": 4, "L": 3, "XL": 1 },
     "colors": ["Multi", "Black"],
@@ -384,7 +421,12 @@
     "sku": "TLD-TN-007",
     "brand": "T-LD",
     "collaboration": null,
-    "features": ["Comfortable Fit", "Soft Interior", "Tokyo Graphics", "Everyday Wear"],
+    "features": [
+      "Comfortable Fit",
+      "Soft Interior",
+      "Tokyo Graphics",
+      "Everyday Wear"
+    ],
     "sizes": ["S", "M", "L", "XL", "XXL"],
     "sizeStock": { "S": 12, "M": 18, "L": 20, "XL": 15, "XXL": 8 },
     "colors": ["Black", "Grey", "Navy"],

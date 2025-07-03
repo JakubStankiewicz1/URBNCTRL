@@ -1,118 +1,125 @@
 .aboutUsInfoTwo {
-    width: 100%;
-    height: 100%;
-
-    background-color: #000000;
-
-    padding-top: 240px;
-    padding-bottom: 70px;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  padding-top: 240px;
+  padding-bottom: 70px;
 }
 
 .aboutUsInfoTwoContainer {
-    width: 100%;
-    height: 100%;
+  width: 100%;
+  height: 100%;
 }
 
 .aboutUsInfoTwoContainerDiv {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-    gap: 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 60px;
 }
-
-
-
 
 .aboutUsInfoTwoContainerDivLeft,
 .aboutUsInfoTwoContainerDivRight {
-    display: flex;
-    flex: 1;
+  display: flex;
+  flex: 1;
 }
 
-
 .aboutUsInfoTwoContainerDivLeftContainer {
-    /* width: 0%; */
-    margin-left: auto;
-    margin-right: 50px;
-    /* background-color: lightcoral; */
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 35px;
+  margin-left: auto;
+  margin-right: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 35px;
 }
 
 .aboutUsInfoTwoContainerDivLeftContainerOneContainerText {
-    color: #FFFFFF;
-    font-size: 40px;
-    font-weight: 800;
-    line-height: 48px;
-    text-transform: uppercase;
+  color: #ffffff;
+  font-size: 40px;
+  font-weight: 800;
+  line-height: 48px;
+  text-transform: uppercase;
 }
 
 .aboutUsInfoTwoContainerDivLeftContainerTwoContainer {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    gap: 20px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 20px;
 }
 
 .aboutUsInfoTwoContainerDivLeftContainerTwoContainerText {
-    color: #F2F2F2;
-    font-size: 17px;
-    font-weight: 300;
-    line-height: 23px;
+  color: #f2f2f2;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 23px;
 }
 
-
-
-
 .aboutUsInfoTwoContainerDivRight {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: flex-start;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
 }
 
 .aboutUsInfoTwoContainerDivRightContainer {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    /* gap: 20px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
-
 .aboutUsInfoTwoContainerDivRightContainerOne {
-    width: 600px;
-    height: 820px;
+  width: 600px;
+  height: 820px;
+  border-bottom-right-radius: 7px;
+  border-top-right-radius: 7px;
+  position: relative;
+}
 
-    background-color: blue;
+.aboutUsInfoTwoContainerDivRightContainerOneContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    /* left bottom radius */
-    border-bottom-right-radius: 7px;
-    border-top-right-radius: 7px;
-
-    position: relative;
+.aboutUsInfoTwoContainerDivRightContainerOneContainerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 7px;
 }
 
 .aboutUsInfoTwoContainerDivRightContainerTwo {
-    width: 400px;
-    height: 560px;
+  width: 400px;
+  height: 560px;
+  border-radius: 5px;
+  position: absolute;
+  transform: translateX(66%) translateY(-35%);
+}
 
-    background-color: red;
+.aboutUsInfoTwoContainerDivRightContainerTwoContainer {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
 
-    border-radius: 5px;
-
-    position: absolute;
-    transform: translateX(66%) translateY(-35%);
+.aboutUsInfoTwoContainerDivRightContainerTwoContainerImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 5px;
 }

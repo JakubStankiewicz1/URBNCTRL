@@ -6,7 +6,6 @@ import ProductElement from "../ProductElement/ProductElement";
 import { useProducts } from "../../context/ProductContext";
 import assets from "../../assets/assets";
 
-
 const HomeFeaturedProducts = () => {
   const { products, loading, getFeaturedProducts } = useProducts();
   const containerRef = useRef(null);
@@ -15,32 +14,60 @@ const HomeFeaturedProducts = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
   const [featuredProducts, setFeaturedProducts] = useState([]);
 
-  // Brands/partners logos for the scrolling section
   const elements = [
-    { src: assets.HomeFeaturedProductsOne, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne" },
-    { src: assets.HomeFeaturedProductsTwo, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo" },
-    { src: assets.HomeFeaturedProductsThree, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree" },
-    { src: assets.HomeFeaturedProductsFour, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour" },
-    { src: assets.HomeFeaturedProductsFive, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive" },
-    { src: assets.HomeFeaturedProductsSix, className: "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix" },
+    {
+      src: assets.HomeFeaturedProductsOne,
+      className:
+        "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne",
+    },
+    {
+      src: assets.HomeFeaturedProductsTwo,
+      className:
+        "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo",
+    },
+    {
+      src: assets.HomeFeaturedProductsThree,
+      className:
+        "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree",
+    },
+    {
+      src: assets.HomeFeaturedProductsFour,
+      className:
+        "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour",
+    },
+    {
+      src: assets.HomeFeaturedProductsFive,
+      className:
+        "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive",
+    },
+    {
+      src: assets.HomeFeaturedProductsSix,
+      className:
+        "homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix",
+    },
   ];
 
-  // Pobierz featured produkty przy pierwszym renderowaniu
   useEffect(() => {
     if (!loading && products.length > 0) {
       const featured = getFeaturedProducts();
       setFeaturedProducts(featured);
     }
   }, [loading, products, getFeaturedProducts]);
-  // Duplikujemy produkty dla nieskończonej pętli - więcej kopii dla płynności
-  const duplicatedProducts = featuredProducts.length > 0 
-    ? [...featuredProducts, ...featuredProducts, ...featuredProducts, ...featuredProducts, ...featuredProducts] 
-    : [];
-    
-  // Upewnij się, że wszystkie zdjęcia są załadowane
+
+  const duplicatedProducts =
+    featuredProducts.length > 0
+      ? [
+          ...featuredProducts,
+          ...featuredProducts,
+          ...featuredProducts,
+          ...featuredProducts,
+          ...featuredProducts,
+        ]
+      : [];
+
   console.log("Featured products:", featuredProducts);
 
-  const productWidth = 310; // 290px szerokość + 20px gap
+  const productWidth = 310;
 
   const scrollToPosition = (position, smooth = true) => {
     if (containerRef.current) {
@@ -54,7 +81,7 @@ const HomeFeaturedProducts = () => {
     if (featuredProducts.length === 0 || !containerRef.current) return;
 
     const currentScroll = containerRef.current.scrollLeft;
-    const newPosition = currentScroll - productWidth; // Strzałka w lewo = przewiń w lewo (zmniejsz scrollLeft)
+    const newPosition = currentScroll - productWidth;
     scrollToPosition(newPosition);
   };
 
@@ -62,15 +89,21 @@ const HomeFeaturedProducts = () => {
     if (featuredProducts.length === 0 || !containerRef.current) return;
 
     const currentScroll = containerRef.current.scrollLeft;
-    const newPosition = currentScroll + productWidth; // Strzałka w prawo = przewiń w prawo (zwiększ scrollLeft)
+    const newPosition = currentScroll + productWidth;
     scrollToPosition(newPosition);
   };
-  // Obsługa przeciągania myszką
+
   const handleMouseDown = (e) => {
     if (!containerRef.current) return;
-    // Skip drag if clicking on a button or clickable element
-    if (e.target.closest('.productElementContainerDivBottomContainerThirdContainerLeftContainer') || 
-        e.target.closest('.productElementContainerDivBottomContainerThirdContainerRightContainer')) {
+
+    if (
+      e.target.closest(
+        ".productElementContainerDivBottomContainerThirdContainerLeftContainer",
+      ) ||
+      e.target.closest(
+        ".productElementContainerDivBottomContainerThirdContainerRightContainer",
+      )
+    ) {
       return;
     }
     setIsDragging(true);
@@ -83,7 +116,7 @@ const HomeFeaturedProducts = () => {
     if (!isDragging || !containerRef.current) return;
     e.preventDefault();
     const x = e.pageX - containerRef.current.offsetLeft;
-    const walk = (x - startX) * 1.5; // Zmniejszona czułość dla lepszej kontroli
+    const walk = (x - startX) * 1.5;
     containerRef.current.scrollLeft = scrollLeft - walk;
   };
 
@@ -100,11 +133,11 @@ const HomeFeaturedProducts = () => {
       containerRef.current.style.cursor = "grab";
     }
   };
-  
-  // Ustaw początkową pozycję na środku (tylko raz przy ładowaniu)
+
+
   useEffect(() => {
     if (featuredProducts.length > 0 && containerRef.current) {
-      const startPosition = featuredProducts.length * productWidth * 2; // Środek
+      const startPosition = featuredProducts.length * productWidth * 2;
       setTimeout(() => {
         scrollToPosition(startPosition, false);
       }, 100);
@@ -122,7 +155,10 @@ const HomeFeaturedProducts = () => {
           {/* Top Part */}
           <div className="homeFeaturedProductsContainerDivTop">
             <div className="homeFeaturedProductsContainerDivTopContainer">
-              <div className="homeFeaturedProductsContainerDivTopContainerLeft" onClick={handlePrevious}>
+              <div
+                className="homeFeaturedProductsContainerDivTopContainerLeft"
+                onClick={handlePrevious}
+              >
                 <div className="homeFeaturedProductsContainerDivTopContainerLeftContainer">
                   <div className="homeFeaturedProductsContainerDivTopContainerLeftContainerDiv">
                     <GoArrowLeft className="homeFeaturedProductsContainerDivTopContainerLeftContainerDivIcon" />
@@ -133,7 +169,9 @@ const HomeFeaturedProducts = () => {
               <div className="homeFeaturedProductsContainerDivTopContainerMiddle">
                 <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainer">
                   <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerOne">
-                    <p className="homeFeaturedProductsContainerDivTopContainerMiddleContainerOneText nunito-sans-regular">Featured Products</p>
+                    <p className="homeFeaturedProductsContainerDivTopContainerMiddleContainerOneText nunito-sans-regular">
+                      Featured Products
+                    </p>
                   </div>
 
                   <div className="homeFeaturedProductsContainerDivTopContainerMiddleContainerTwo">
@@ -152,7 +190,10 @@ const HomeFeaturedProducts = () => {
                 </div>
               </div>
 
-              <div className="homeFeaturedProductsContainerDivTopContainerRight" onClick={handleNext}>
+              <div
+                className="homeFeaturedProductsContainerDivTopContainerRight"
+                onClick={handleNext}
+              >
                 <div className="homeFeaturedProductsContainerDivTopContainerRightContainer">
                   <div className="homeFeaturedProductsContainerDivTopContainerRightContainerDiv">
                     <GoArrowRight className="homeFeaturedProductsContainerDivTopContainerRightContainerDivIcon" />
@@ -176,7 +217,11 @@ const HomeFeaturedProducts = () => {
                 style={{ cursor: isDragging ? "grabbing" : "grab" }}
               >
                 {duplicatedProducts.map((product, index) => (
-                  <ProductElement key={`${product.id}-${index}`} id={product.id} className='homeFeaturedProductsContainerDivMiddleContainerDivElement' />
+                  <ProductElement
+                    key={`${product.id}-${index}`}
+                    id={product.id}
+                    className="homeFeaturedProductsContainerDivMiddleContainerDivElement"
+                  />
                 ))}
               </div>
             </div>
@@ -187,7 +232,10 @@ const HomeFeaturedProducts = () => {
             <div className="homeFeaturedProductsContainerDivBottomContainer">
               <div className="homeFeaturedProductsContainerDivBottomContainerDiv">
                 {[...elements, ...elements].map((el, idx) => (
-                  <div className="homeFeaturedProductsContainerDivBottomContainerDivElement" key={idx}>
+                  <div
+                    className="homeFeaturedProductsContainerDivBottomContainerDivElement"
+                    key={idx}
+                  >
                     <div className="homeFeaturedProductsContainerDivBottomContainerDivElementContainer">
                       <img src={el.src} alt="" className={el.className} />
                     </div>

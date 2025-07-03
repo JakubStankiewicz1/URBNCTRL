@@ -1,40 +1,45 @@
-import React from 'react';
+import React from "react";
 import "./shippingAndReturnsInfo.css";
 import { useState } from "react";
 
-
 const ACCORDION_DATA = [
   {
-    title: "PERSONAL IDENTIFICATION INFORMATION",
+    title: "SHIPPING INFORMATION",
     content:
-      "We may collect personal identification information from Users in a variety of ways, including, but not limited to, when Users visit our site, register on the site, place an order, subscribe to the newsletter, respond to a survey, fill out a form, and in connection with other activities, services, features or resources we make available on our Site. Users may be asked for, as appropriate, name, email address, mailing address, phone number, credit card information. Users may, however, visit our Site anonymously. We will collect personal identification information from Users only if they voluntarily submit such information to us. Users can always refuse to supply personally identification information, except that it may prevent them from engaging in certain Site related activities.",
+      "We offer worldwide shipping through trusted carriers including DHL, FedEx, and UPS. Standard shipping typically takes 5-10 business days, while express shipping takes 2-5 business days. All orders are carefully packaged in sustainable materials to protect your items during transit. You will receive tracking information once your order has been dispatched.",
   },
   {
-    title: "NON-PERSONAL IDENTIFICATION INFORMATION",
+    title: "SHIPPING COSTS",
     content:
-      "We may collect non-personal identification information about Users whenever they interact with our Site. Non-personal identification information may include the browser name, the type of computer and technical information about Users means of connection to our Site, such as the operating system and the Internet service providers utilized and other similar information.",
+      "Shipping costs vary by destination and package weight. Orders over $150 qualify for FREE worldwide shipping. Standard shipping rates: USA/Canada $15, Europe $18, Asia-Pacific $20, Rest of World $25. Express shipping available for additional $15-25 depending on destination. All shipping costs are calculated at checkout.",
   },
   {
-    title: "WEB BROWSER COOKIES",
+    title: "RETURNS & EXCHANGES",
     content:
-      "Our Site may use \"cookies\" to enhance User experience. User's web browser places cookies on their hard drive for record-keeping purposes and sometimes to track information about them. User may choose to set their web browser to refuse cookies, or to alert you when cookies are being sent. If they do so, note that some parts of the Site may not function properly.",
+      "We accept returns within 30 days of delivery for unworn items in original condition with tags attached. Items must be returned in original packaging. Return shipping costs are the responsibility of the customer unless the item was defective or incorrect. Exchanges are available for different sizes or colors of the same item, subject to availability.",
+  },
+  {
+    title: "RETURN PROCESS",
+    content:
+      "To initiate a return, please contact our customer service team at hello@urbnctrl.studio with your order number and reason for return. We will provide you with a return authorization number and shipping instructions. Please allow 5-10 business days for processing once we receive your returned items.",
+  },
+  {
+    title: "REFUND POLICY",
+    content:
+      "Refunds will be processed to the original payment method within 5-10 business days of receiving your returned items. Please note that original shipping costs are non-refundable unless the return is due to our error. Items returned after 30 days or without return authorization may not be eligible for refund.",
+  },
+  {
+    title: "INTERNATIONAL ORDERS",
+    content:
+      "International customers are responsible for any customs duties, taxes, or fees imposed by their country. These charges are not included in our shipping costs and vary by destination. Please check with your local customs office for specific requirements. URBNCTRL is not responsible for delays caused by customs processing.",
   },
 ];
 
-
 const ShippingAndReturnsInfo = () => {
-    const [openIndex, setOpenIndex] = useState(null);
-
-
+  const [openIndex, setOpenIndex] = useState(null);
 
   return (
-
-
-
-
-
-
-        <div className="shippingAndReturnsInfo">
+    <div className="shippingAndReturnsInfo">
       <div className="shippingAndReturnsInfoContainer">
         <div className="shippingAndReturnsInfoContainerDiv">
           {ACCORDION_DATA.map((item, idx) => (
@@ -46,9 +51,7 @@ const ShippingAndReturnsInfo = () => {
             >
               <div
                 className="shippingAndReturnsInfoAccordionHeader"
-                onClick={() =>
-                  setOpenIndex(openIndex === idx ? null : idx)
-                }
+                onClick={() => setOpenIndex(openIndex === idx ? null : idx)}
               >
                 <div className="shippingAndReturnsInfoAccordionTitle">
                   {item.title}
@@ -76,17 +79,7 @@ const ShippingAndReturnsInfo = () => {
         </div>
       </div>
     </div>
+  );
+};
 
-
-
-
-
-        
-  )
-
-
-
-
-}
-
-export default ShippingAndReturnsInfo
+export default ShippingAndReturnsInfo;

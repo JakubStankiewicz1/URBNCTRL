@@ -1,7 +1,6 @@
 .communityHeader {
   width: 100%;
   height: 100%;
-
   background-color: #000000;
   padding-top: 120px;
   padding-bottom: 55px;
@@ -15,7 +14,6 @@
 .communityHeaderContainerDiv {
   width: 100%;
   height: 100%;
-
   display: flex;
   flex-direction: column;
   justify-content: center;

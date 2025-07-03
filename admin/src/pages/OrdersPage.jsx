@@ -1,10 +1,20 @@
-import React, { useState, useEffect } from 'react';
-import { FiSearch, FiFilter, FiDownload, FiEye, FiTrash2, FiPackage, FiCheck, FiX, FiClock, FiTruck } from 'react-icons/fi';
-import { useOrders } from '../contexts/OrderContext';
-import './OrdersPage.css';
+import React, { useState, useEffect } from "react";
+import {
+  FiSearch,
+  FiFilter,
+  FiDownload,
+  FiEye,
+  FiTrash2,
+  FiPackage,
+  FiCheck,
+  FiX,
+  FiClock,
+  FiTruck,
+} from "react-icons/fi";
+import { useOrders } from "../contexts/OrderContext";
+import "./OrdersPage.css";
 
 import { FaWrench } from "react-icons/fa";
-
 
 const OrdersPage = () => {
   const {
@@ -19,11 +29,11 @@ const OrdersPage = () => {
     deleteOrder,
     formatPrice,
     formatDate,
-    setError
+    setError,
   } = useOrders();
 
-  const [searchTerm, setSearchTerm] = useState('');
-  const [statusFilter, setStatusFilter] = useState('ALL');
+  const [searchTerm, setSearchTerm] = useState("");
+  const [statusFilter, setStatusFilter] = useState("ALL");
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [showOrderDetails, setShowOrderDetails] = useState(false);
 
@@ -33,32 +43,35 @@ const OrdersPage = () => {
   }, []);
   const getStatusIcon = (status) => {
     switch (status?.toUpperCase()) {
-      case 'PENDING':
+      case "PENDING":
         return <FiClock className="orderspage-status-icon pending" />;
-      case 'CONFIRMED':
+      case "CONFIRMED":
         return <FiCheck className="orderspage-status-icon confirmed" />;
-      case 'SHIPPED':
+      case "SHIPPED":
         return <FiTruck className="orderspage-status-icon shipped" />;
-      case 'DELIVERED':
+      case "DELIVERED":
         return <FiPackage className="orderspage-status-icon delivered" />;
-      case 'CANCELLED':
+      case "CANCELLED":
         return <FiX className="orderspage-status-icon cancelled" />;
       default:
         return <FiClock className="orderspage-status-icon pending" />;
     }
   };
   const getStatusClass = (status) => {
-    return `orderspage-status-badge ${status?.toLowerCase() || 'pending'}`;
+    return `orderspage-status-badge ${status?.toLowerCase() || "pending"}`;
   };
 
-  const filteredOrders = orders.filter(order => {
-    const matchesSearch = 
+  const filteredOrders = orders.filter((order) => {
+    const matchesSearch =
       order.orderNumber?.toLowerCase().includes(searchTerm.toLowerCase()) ||
       order.customerEmail?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      `${order.firstName} ${order.lastName}`.toLowerCase().includes(searchTerm.toLowerCase());
-    
-    const matchesStatus = statusFilter === 'ALL' || order.orderStatus === statusFilter;
-    
+      `${order.firstName} ${order.lastName}`
+        .toLowerCase()
+        .includes(searchTerm.toLowerCase());
+
+    const matchesStatus =
+      statusFilter === "ALL" || order.orderStatus === statusFilter;
+
     return matchesSearch && matchesStatus;
   });
   if (loading) {
@@ -83,14 +96,12 @@ const OrdersPage = () => {
           </button>
         </div>
       </div> */}
-
       {error && (
         <div className="orderspage-error-message">
           <FiX size={16} />
           {error}
         </div>
       )}
-
       {/* Statystyki */}
       <div className="orderspage-stats-grid">
         <div className="orderspage-stat-card">
@@ -103,26 +114,36 @@ const OrdersPage = () => {
         <div className="orderspage-stat-card">
           <FiClock className="orderspage-stat-icon pending" />
           <div className="orderspage-stat-content">
-            <h3>{stats.pendingOrders || orders.filter(o => o.orderStatus === 'PENDING').length}</h3>
+            <h3>
+              {stats.pendingOrders ||
+                orders.filter((o) => o.orderStatus === "PENDING").length}
+            </h3>
             <p>Oczekujące</p>
           </div>
         </div>
         <div className="orderspage-stat-card">
           <FiCheck className="orderspage-stat-icon confirmed" />
           <div className="orderspage-stat-content">
-            <h3>{stats.completedOrders || orders.filter(o => o.orderStatus === 'DELIVERED').length}</h3>
+            <h3>
+              {stats.completedOrders ||
+                orders.filter((o) => o.orderStatus === "DELIVERED").length}
+            </h3>
             <p>Zrealizowane</p>
           </div>
         </div>
         <div className="orderspage-stat-card">
           <span className="orderspage-stat-currency">PLN</span>
           <div className="orderspage-stat-content">
-            <h3>{formatPrice(stats.totalRevenue || orders.reduce((sum, o) => sum + (o.total || 0), 0))}</h3>
+            <h3>
+              {formatPrice(
+                stats.totalRevenue ||
+                  orders.reduce((sum, o) => sum + (o.total || 0), 0),
+              )}
+            </h3>
             <p>Łączne przychody</p>
           </div>
         </div>
       </div>
-
       {/* Filtry i wyszukiwanie */}
       <div className="orderspage-filters-section">
         <div className="orderspage-search-box">
@@ -136,8 +157,8 @@ const OrdersPage = () => {
         </div>
         <div className="orderspage-filter-group">
           <FiFilter className="orderspage-filter-icon" />
-          <select 
-            value={statusFilter} 
+          <select
+            value={statusFilter}
             onChange={(e) => setStatusFilter(e.target.value)}
             className="orderspage-filter-select"
           >
@@ -149,7 +170,8 @@ const OrdersPage = () => {
             <option value="CANCELLED">Anulowane</option>
           </select>
         </div>
-      </div>      {/* Lista zamówień */}
+      </div>{" "}
+      {/* Lista zamówień */}
       <div className="orderspage-table-container">
         <table className="orderspage-table">
           <thead>
@@ -167,40 +189,50 @@ const OrdersPage = () => {
             {filteredOrders.length === 0 ? (
               <tr>
                 <td colSpan="7" className="orderspage-no-orders">
-                  {searchTerm || statusFilter !== 'ALL' ? 'Brak zamówień spełniających kryteria' : 'Brak zamówień'}
+                  {searchTerm || statusFilter !== "ALL"
+                    ? "Brak zamówień spełniających kryteria"
+                    : "Brak zamówień"}
                 </td>
               </tr>
             ) : (
-              filteredOrders.map(order => (
+              filteredOrders.map((order) => (
                 <tr key={order.id} className="orderspage-order-row">
                   <td>
-                    <span className="orderspage-order-number">{order.orderNumber}</span>
+                    <span className="orderspage-order-number">
+                      {order.orderNumber}
+                    </span>
                   </td>
                   <td>
                     <div className="orderspage-customer-info">
                       <span className="orderspage-customer-name">{`${order.firstName} ${order.lastName}`}</span>
-                      <span className="orderspage-customer-email">{order.customerEmail}</span>
+                      <span className="orderspage-customer-email">
+                        {order.customerEmail}
+                      </span>
                     </div>
                   </td>
                   <td>{formatDate(order.createdAt)}</td>
                   <td>
-                    <span className="orderspage-order-total">{formatPrice(order.total)}</span>
+                    <span className="orderspage-order-total">
+                      {formatPrice(order.total)}
+                    </span>
                   </td>
                   <td>
                     <span className={getStatusClass(order.orderStatus)}>
                       {getStatusIcon(order.orderStatus)}
-                      {order.orderStatus || 'PENDING'}
+                      {order.orderStatus || "PENDING"}
                     </span>
                   </td>
                   <td>
-                    <span className={`orderspage-payment-status ${order.paymentStatus?.toLowerCase() || 'pending'}`}>
-                      {order.paymentStatus || 'PENDING'}
+                    <span
+                      className={`orderspage-payment-status ${order.paymentStatus?.toLowerCase() || "pending"}`}
+                    >
+                      {order.paymentStatus || "PENDING"}
                     </span>
                   </td>
                   <td>
                     <div className="orderspage-action-buttons">
-                      <button 
-                        className="orderspage-btn-icon" 
+                      <button
+                        className="orderspage-btn-icon"
                         onClick={() => {
                           setSelectedOrder(order);
                           setShowOrderDetails(true);
@@ -209,8 +241,8 @@ const OrdersPage = () => {
                       >
                         <FiEye size={16} />
                       </button>
-                      <button 
-                        className="orderspage-btn-icon danger" 
+                      <button
+                        className="orderspage-btn-icon danger"
                         onClick={() => deleteOrder(order.id)}
                         title="Usuń zamówienie"
                       >
@@ -223,20 +255,27 @@ const OrdersPage = () => {
             )}
           </tbody>
         </table>
-      </div>      {/* Modal szczegółów zamówienia */}
+      </div>{" "}
+      {/* Modal szczegółów zamówienia */}
       {showOrderDetails && selectedOrder && (
-        <div className="orderspage-modal-overlay" onClick={() => setShowOrderDetails(false)}>
-          <div className="orderspage-modal-content" onClick={(e) => e.stopPropagation()}>
+        <div
+          className="orderspage-modal-overlay"
+          onClick={() => setShowOrderDetails(false)}
+        >
+          <div
+            className="orderspage-modal-content"
+            onClick={(e) => e.stopPropagation()}
+          >
             <div className="orderspage-modal-header">
               <h2>Szczegóły zamówienia {selectedOrder.orderNumber}</h2>
-              <button 
+              <button
                 className="orderspage-modal-close"
                 onClick={() => setShowOrderDetails(false)}
               >
                 <FiX size={20} />
               </button>
             </div>
-            
+
             <div className="orderspage-modal-body">
               <div className="orderspage-order-details-grid">
                 {/* Informacje o kliencie */}
@@ -310,9 +349,11 @@ const OrdersPage = () => {
                   <div className="orderspage-status-controls">
                     <div className="orderspage-status-control">
                       <label>Status zamówienia:</label>
-                      <select 
-                        value={selectedOrder.orderStatus || 'PENDING'}
-                        onChange={(e) => updateOrderStatus(selectedOrder.id, e.target.value)}
+                      <select
+                        value={selectedOrder.orderStatus || "PENDING"}
+                        onChange={(e) =>
+                          updateOrderStatus(selectedOrder.id, e.target.value)
+                        }
                         className="orderspage-status-select"
                       >
                         <option value="PENDING">Oczekujące</option>
@@ -324,9 +365,11 @@ const OrdersPage = () => {
                     </div>
                     <div className="orderspage-status-control">
                       <label>Status płatności:</label>
-                      <select 
-                        value={selectedOrder.paymentStatus || 'PENDING'}
-                        onChange={(e) => updatePaymentStatus(selectedOrder.id, e.target.value)}
+                      <select
+                        value={selectedOrder.paymentStatus || "PENDING"}
+                        onChange={(e) =>
+                          updatePaymentStatus(selectedOrder.id, e.target.value)
+                        }
                         className="orderspage-status-select"
                       >
                         <option value="PENDING">Oczekująca</option>
@@ -337,7 +380,8 @@ const OrdersPage = () => {
                     </div>
                   </div>
                 </div>
-              </div>              {/* Produkty w zamówieniu */}
+              </div>{" "}
+              {/* Produkty w zamówieniu */}
               <div className="orderspage-order-items-section">
                 <h3>Produkty w zamówieniu</h3>
                 <div className="orderspage-order-items">
@@ -355,18 +399,28 @@ const OrdersPage = () => {
                       <div className="orderspage-item-details">
                         <h4>{item.productName}</h4>
                         <p>SKU: {item.productSku}</p>
-                        {item.selectedSize && <p>Rozmiar: {item.selectedSize}</p>}
-                        {item.selectedColor && <p>Kolor: {item.selectedColor}</p>}
+                        {item.selectedSize && (
+                          <p>Rozmiar: {item.selectedSize}</p>
+                        )}
+                        {item.selectedColor && (
+                          <p>Kolor: {item.selectedColor}</p>
+                        )}
                       </div>
                       <div className="orderspage-item-pricing">
-                        <span className="orderspage-item-price">{formatPrice(item.price)}</span>
-                        <span className="orderspage-item-quantity">x {item.quantity}</span>
-                        <span className="orderspage-item-subtotal">{formatPrice(item.subtotal)}</span>
+                        <span className="orderspage-item-price">
+                          {formatPrice(item.price)}
+                        </span>
+                        <span className="orderspage-item-quantity">
+                          x {item.quantity}
+                        </span>
+                        <span className="orderspage-item-subtotal">
+                          {formatPrice(item.subtotal)}
+                        </span>
                       </div>
                     </div>
                   ))}
                 </div>
-                
+
                 <div className="orderspage-order-summary">
                   <div className="orderspage-summary-row">
                     <span>Wartość produktów:</span>

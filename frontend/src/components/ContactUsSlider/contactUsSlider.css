@@ -1,71 +1,67 @@
-
-
 .contactUsSlider {
-    width: 100%;
-    height: 100%;
-
-    background-color: #ffffff;
-
-    padding-top: 125px;
-    padding-bottom: 40px;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  padding-top: 125px;
+  padding-bottom: 40px;
 }
 
 .contactUsSliderContainer {
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-    position: relative;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
 .contactUsSliderContainerDiv {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    gap: 50px;
-    width: max-content;
-    animation: scroll-right 30s linear infinite;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+  width: max-content;
+  animation: scroll-right 30s linear infinite;
 }
 
 @keyframes scroll-right {
-    0% {
-        transform: translateX(-50%);
-    }
-    100% {
-        transform: translateX(0);
-    }
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .contactUsSliderContainerDivElement {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }
 
 .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix {
-    width: 200px;
-    height: auto;
+  width: 200px;
+  height: auto;
 }

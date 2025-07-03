@@ -1,186 +1,225 @@
 .navbar {
-    width: 100%;
-    height: 45px;
-    z-index: 100;
-    position: absolute;
-    left: 0;
-    top: 0;
+  width: 100%;
+  height: 45px;
+  z-index: 100;
+  position: absolute;
+  left: 0;
+  top: 0;
+  transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.navbar--hidden {
+  opacity: 0;
+  transform: translateY(-100%);
+  pointer-events: none;
+}
+
+.navbar:not(.navbar--hidden) {
+  animation: navbarSlideIn 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+}
+
+@keyframes navbarSlideIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-100%);
+    filter: blur(10px);
+  }
+  50% {
+    opacity: 0.5;
+    transform: translateY(-20px);
+    filter: blur(5px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0px);
+  }
+}
+
+.navbar * {
+  transition: all 0.3s ease;
 }
 
 .navbarContainer {
-    width: 95%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbarContainerDiv {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .navbarContainerLeftContainerText {
-  font-family: 'Chinese Shanghai';
-    font-size: 28px;
-    color: #fff;
+  font-family: "Rubik Dirt", system-ui;
+  font-size: 34px;
+  font-weight: 500;
+  color: #fff;
 }
 
 .navbarContainerRight {
-    height: 100%;
+  height: 100%;
 }
 
 .navbarContainerRightContainer {
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;
 }
 
 .navbarContainerRightContainerElementOneContainerIcon {
-    width: 24px;
-    height: 24px;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+  width: 24px;
+  height: 24px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbarContainerRightContainerElementOneContainerIcon:hover {
-    color: #DA2228;
+  color: #da2228;
 }
 
 .navbarContainerRightContainerElementTwoContainerIcon {
-    width: 24px;
-    height: 24px;
-    color: white;
-    cursor: pointer;
-    transition: all 0.3s ease-in-out;
+  width: 24px;
+  height: 24px;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbarContainerRightContainerElementTwoContainerIcon:hover {
-    color: #DA2228;
+  color: #da2228;
 }
 
 .navbarContainerRightContainerElementThree {
-    justify-content: flex-end;
-    cursor: pointer;
+  justify-content: flex-end;
+  cursor: pointer;
 }
 
 .navbarContainerRightContainerElementThreeContainer {
-    width: 26px;
-    height: 26px;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
+  width: 26px;
+  height: 26px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
 
-    cursor: pointer;
+  cursor: pointer;
 }
 
-.navbarContainerRightContainerElementThreeContainer:hover .navbarContainerRightContainerElementThreeContainerMenuLineOne {
-    transform: translateX(27px);
+.navbarContainerRightContainerElementThreeContainer:hover
+  .navbarContainerRightContainerElementThreeContainerMenuLineOne {
+  transform: translateX(27px);
 }
 
-.navbarContainerRightContainerElementThreeContainer:hover .navbarContainerRightContainerElementThreeContainerMenuLineTwo {
-    transform: translateX(27px);
+.navbarContainerRightContainerElementThreeContainer:hover
+  .navbarContainerRightContainerElementThreeContainerMenuLineTwo {
+  transform: translateX(27px);
 }
 
-.navbarContainerRightContainerElementThreeContainer:hover .navbarContainerRightContainerElementThreeContainerMenuLineThree {
-    transform: translateX(27px);
+.navbarContainerRightContainerElementThreeContainer:hover
+  .navbarContainerRightContainerElementThreeContainerMenuLineThree {
+  transform: translateX(27px);
 }
 
 .navbarContainerRightContainerElementThreeContainerMenu {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: flex-end;
-    padding: 2px 0;
-    width: 100%;
-    height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+  padding: 2px 0;
+  width: 100%;
+  height: 100%;
 }
 
 .navbarContainerRightContainerElementThreeContainerMenuLineOne {
-    display: flex;
-    flex-direction: row;
-    gap: 3px;
-    align-items: center;
-    justify-content: flex-end;
-    transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbarContainerRightContainerElementThreeContainerMenuLineTwo {
-    display: flex;
-    flex-direction: row;
-    gap: 3px;
-    align-items: center;
-    justify-content: flex-end;
-    transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  gap: 3px;
+  align-items: center;
+  justify-content: flex-end;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbarContainerRightContainerElementThreeContainerMenuLineThree {
-    display: flex;
-    flex-direction: row;
-    gap: 9px;
-    align-items: center;
-    justify-content: flex-start;
-    margin-right: 6px;
-    transition: all 0.3s ease-in-out;
+  display: flex;
+  flex-direction: row;
+  gap: 9px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-right: 6px;
+  transition: all 0.3s ease-in-out;
 }
 
 .navbarContainerRightContainerElementThreeContainerMenuLineOneDivOne {
-    width: 24px;
-    height: 2px;
-    background-color: red;
-    display: flex;
+  width: 24px;
+  height: 2px;
+  background-color: red;
+  display: flex;
 }
 
 .navbarContainerRightContainerElementThreeContainerMenuLineOneDivTwo {
-    width: 24px;
-    height: 2px;
-    background-color: #fff;
-    display: flex;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  display: flex;
 }
 
 .navbarContainerRightContainerElementThreeContainerMenuLineTwoDivOne {
-    width: 24px;
-    height: 2px;
-    background-color: red;
-    display: flex;
+  width: 24px;
+  height: 2px;
+  background-color: red;
+  display: flex;
 }
 
 .navbarContainerRightContainerElementThreeContainerMenuLineTwoDivTwo {
-    width: 24px;
-    height: 2px;
-    background-color: #fff;
-    display: flex;
+  width: 24px;
+  height: 2px;
+  background-color: #fff;
+  display: flex;
 }
 
 .navbarContainerRightContainerElementThreeContainerMenuLineThreeDivOne {
-    width: 18px;
-    height: 2px;
-    background-color: red;
-    display: flex;
+  width: 18px;
+  height: 2px;
+  background-color: red;
+  display: flex;
 }
 
 .navbarContainerRightContainerElementThreeContainerMenuLineThreeDivTwo {
-    width: 18px;
-    height: 2px;
-    background-color: #fff;
-    display: flex;
+  width: 18px;
+  height: 2px;
+  background-color: #fff;
+  display: flex;
 }
 
 .navbar--dark {
-    background-color: rgba(255, 255, 255, 0.95);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.95);
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .navbar--dark .navbarContainerLeftContainerText {
@@ -188,51 +227,53 @@
 }
 
 .navbar--dark .navbarContainerRightContainerElementOneContainerIcon {
-    color: #333;
+  color: #333;
 }
 
 .navbar--dark .navbarContainerRightContainerElementOneContainerIcon:hover {
-    color: #DA2228;
+  color: #da2228;
 }
 
 .navbar--dark .navbarContainerRightContainerElementTwoContainerIcon {
-    color: #333;
+  color: #333;
 }
 
 .navbar--dark .navbarContainerRightContainerElementTwoContainerIcon:hover {
-    color: #DA2228;
+  color: #da2228;
 }
 
-.navbar--dark .navbarContainerRightContainerElementThreeContainerMenuLineOneDivTwo,
-.navbar--dark .navbarContainerRightContainerElementThreeContainerMenuLineTwoDivTwo,
-.navbar--dark .navbarContainerRightContainerElementThreeContainerMenuLineThreeDivTwo {
-    background-color: #333;
+.navbar--dark
+  .navbarContainerRightContainerElementThreeContainerMenuLineOneDivTwo,
+.navbar--dark
+  .navbarContainerRightContainerElementThreeContainerMenuLineTwoDivTwo,
+.navbar--dark
+  .navbarContainerRightContainerElementThreeContainerMenuLineThreeDivTwo {
+  background-color: #333;
 }
 
-/* Cart Badge Styles */
 .navbarContainerRightContainerElementTwoContainer {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 
 .cartBadge {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background: #DA2228;
-    color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 600;
-    font-family: 'Nunito Sans', sans-serif;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #da2228;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: "Nunito Sans", sans-serif;
 }
 
 .navbar--dark .cartBadge {
-    background: #DA2228;
-    color: white;
+  background: #da2228;
+  color: white;
 }

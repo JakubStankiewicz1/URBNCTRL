@@ -1,6 +1,15 @@
 import { useState } from "react";
 import "./Sidebar.css";
-import { FiHome, FiShoppingBag, FiPackage, FiUsers, FiPieChart, FiSettings, FiChevronLeft, FiChevronRight } from "react-icons/fi";
+import {
+  FiHome,
+  FiShoppingBag,
+  FiPackage,
+  FiUsers,
+  FiPieChart,
+  FiSettings,
+  FiChevronLeft,
+  FiChevronRight,
+} from "react-icons/fi";
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 
 const Sidebar = ({ activeSection, setActiveSection }) => {
@@ -57,10 +66,16 @@ const Sidebar = ({ activeSection, setActiveSection }) => {
         <button
           className="collapse-button"
           onClick={() => setCollapsed(!collapsed)}
-          aria-label={collapsed ? "Expand sidebar (Alt+M)" : "Collapse sidebar (Alt+M)"}
+          aria-label={
+            collapsed ? "Expand sidebar (Alt+M)" : "Collapse sidebar (Alt+M)"
+          }
           title={`${collapsed ? "Rozwiń" : "Zwiń"} sidebar (Alt+M)`}
         >
-          {collapsed ? <FiChevronRight size={18} /> : <FiChevronLeft size={18} />}
+          {collapsed ? (
+            <FiChevronRight size={18} />
+          ) : (
+            <FiChevronLeft size={18} />
+          )}
         </button>
       </div>
 
@@ -77,8 +92,12 @@ const Sidebar = ({ activeSection, setActiveSection }) => {
                 {!collapsed && (
                   <>
                     <span className="nav-label">{item.label}</span>
-                    {item.count && <span className="nav-count">{item.count}</span>}
-                    {item.disabled && <span className="coming-soon">Wkrótce</span>}
+                    {item.count && (
+                      <span className="nav-count">{item.count}</span>
+                    )}
+                    {item.disabled && (
+                      <span className="coming-soon">Wkrótce</span>
+                    )}
                   </>
                 )}
               </button>

@@ -1,19 +1,19 @@
-import { AuthProvider, useAuth } from './contexts/AuthContext';
-import { ProductProvider } from './contexts/ProductContext';
-import { OrderProvider } from './contexts/OrderContext';
-import Login from './components/Login';
-import Header from './components/Header';
-import Sidebar from './components/Sidebar';
-import Dashboard from './pages/Dashboard';
-import ProductsPage from './pages/ProductsPage';
-import AddProductPage from './pages/AddProductPage';
-import OrdersPage from './pages/OrdersPage';
-import { useState } from 'react';
-import './App.css'
+import { AuthProvider, useAuth } from "./contexts/AuthContext";
+import { ProductProvider } from "./contexts/ProductContext";
+import { OrderProvider } from "./contexts/OrderContext";
+import Login from "./components/Login";
+import Header from "./components/Header";
+import Sidebar from "./components/Sidebar";
+import Dashboard from "./pages/Dashboard";
+import ProductsPage from "./pages/ProductsPage";
+import AddProductPage from "./pages/AddProductPage";
+import OrdersPage from "./pages/OrdersPage";
+import { useState } from "react";
+import "./App.css";
 
 function AppContent() {
   const { user, loading } = useAuth();
-  const [activeSection, setActiveSection] = useState('products');
+  const [activeSection, setActiveSection] = useState("products");
   const [addingProduct, setAddingProduct] = useState(false);
 
   if (loading) {
@@ -32,13 +32,13 @@ function AppContent() {
     if (addingProduct) {
       return <AddProductPage onBack={() => setAddingProduct(false)} />;
     }
-    
+
     switch (activeSection) {
-      case 'dashboard':
+      case "dashboard":
         return <Dashboard />;
-      case 'products':
+      case "products":
         return <ProductsPage onAddProduct={() => setAddingProduct(true)} />;
-      case 'orders':
+      case "orders":
         return <OrdersPage />;
       default:
         return <ProductsPage onAddProduct={() => setAddingProduct(true)} />;
@@ -48,12 +48,13 @@ function AppContent() {
     <ProductProvider>
       <OrderProvider>
         <div className="app">
-          <Sidebar activeSection={activeSection} setActiveSection={setActiveSection} />
+          <Sidebar
+            activeSection={activeSection}
+            setActiveSection={setActiveSection}
+          />
           <div className="app-content">
             <Header />
-            <main className="main-content">
-              {renderContent()}
-            </main>
+            <main className="main-content">{renderContent()}</main>
           </div>
         </div>
       </OrderProvider>
@@ -69,4 +70,4 @@ function App() {
   );
 }
 
-export default App
+export default App;

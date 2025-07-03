@@ -1,90 +1,93 @@
-import { useState } from 'react';
-import { useProducts } from '../contexts/ProductContext';
-import './ProductForm.css';
+import { useState } from "react";
+import { useProducts } from "../contexts/ProductContext";
+import "./ProductForm.css";
 
 const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
   const { addProduct, updateProduct } = useProducts();
   const [loading, setLoading] = useState(false);
-  const [error, setError] = useState('');
+  const [error, setError] = useState("");
   const [currentStep, setCurrentStep] = useState(1);
-  
+
   const [formData, setFormData] = useState({
     // Basic fields
-    name: product?.name || '',
-    description: product?.description || '',
-    price: product?.price || '',
-    currency: product?.currency || '$',
-    category: product?.category || '',
-    brand: product?.brand || '',
-    availability: product?.availability || 'In Stock',
-    sku: product?.sku || '',
-      // Extended fields
-    collaboration: product?.collaboration || '',
+    name: product?.name || "",
+    description: product?.description || "",
+    price: product?.price || "",
+    currency: product?.currency || "$",
+    category: product?.category || "",
+    brand: product?.brand || "",
+    availability: product?.availability || "In Stock",
+    sku: product?.sku || "",
+    // Extended fields
+    collaboration: product?.collaboration || "",
     features: product?.features || [],
-    featuresText: product?.features?.join(', ') || '',
+    featuresText: product?.features?.join(", ") || "",
     sizes: product?.sizes || [],
     sizeStock: product?.sizeStock || {},
     colors: product?.colors || [],
-    colorsText: product?.colors?.join(', ') || '',
-    material: product?.material || '',
-    lining: product?.lining || '',
-    weight: product?.weight || 'Medium Weight',
-    fit: product?.fit || 'Regular',
-    deliveryTime: product?.deliveryTime || '2-4 dni',
+    colorsText: product?.colors?.join(", ") || "",
+    material: product?.material || "",
+    lining: product?.lining || "",
+    weight: product?.weight || "Medium Weight",
+    fit: product?.fit || "Regular",
+    deliveryTime: product?.deliveryTime || "2-4 dni",
     careInstructions: product?.careInstructions || [],
-    careInstructionsText: product?.careInstructions?.join(', ') || '',
-    shippingInfo: product?.shippingInfo || '',
+    careInstructionsText: product?.careInstructions?.join(", ") || "",
+    shippingInfo: product?.shippingInfo || "",
     tags: product?.tags || [],
-    releaseDate: product?.releaseDate || '',
+    releaseDate: product?.releaseDate || "",
     limitedEdition: product?.limitedEdition || false,
     featured: product?.featured || false,
-    
+
     // Product details (flattened)
-    sport: product?.sport || '',
-    belt: product?.belt || '',
-    neckline: product?.neckline || '',
-    collar: product?.collar || '',
-    pockets: product?.pockets || '',
-    sleeves: product?.sleeves || '',
-    pattern: product?.pattern || '',
-    details: product?.details || '',
-    function: product?.function || '',
-    productNumber: product?.productNumber || '',
-    
+    sport: product?.sport || "",
+    belt: product?.belt || "",
+    neckline: product?.neckline || "",
+    collar: product?.collar || "",
+    pockets: product?.pockets || "",
+    sleeves: product?.sleeves || "",
+    pattern: product?.pattern || "",
+    details: product?.details || "",
+    function: product?.function || "",
+    productNumber: product?.productNumber || "",
+
     // Size and fit (flattened)
-    modelHeight: product?.modelHeight || '',
-    fitType: product?.fitType || 'Regular fit',
-    shape: product?.shape || '',
-    length: product?.length || '',
-    sleeveLength: product?.sleeveLength || '',
-      // Images (flattened)
-    primaryImage: product?.primaryImage || '',
-    secondaryImage: product?.secondaryImage || '',
+    modelHeight: product?.modelHeight || "",
+    fitType: product?.fitType || "Regular fit",
+    shape: product?.shape || "",
+    length: product?.length || "",
+    sleeveLength: product?.sleeveLength || "",
+    // Images (flattened)
+    primaryImage: product?.primaryImage || "",
+    secondaryImage: product?.secondaryImage || "",
     galleryImages: product?.galleryImages || [],
-    galleryImagesText: product?.galleryImages?.join(', ') || ''
+    galleryImagesText: product?.galleryImages?.join(", ") || "",
   });
 
   const steps = [
-    { id: 1, title: 'Podstawowe informacje', icon: '📝' },
-    { id: 2, title: 'Szczegóły produktu', icon: '🔧' },
-    { id: 3, title: 'Rozmiary i kolory', icon: '📏' },
-    { id: 4, title: 'Zdjęcia i media', icon: '📸' },
-    { id: 5, title: 'Podsumowanie', icon: '✅' }
+    { id: 1, title: "Podstawowe informacje", icon: "📝" },
+    { id: 2, title: "Szczegóły produktu", icon: "🔧" },
+    { id: 3, title: "Rozmiary i kolory", icon: "📏" },
+    { id: 4, title: "Zdjęcia i media", icon: "📸" },
+    { id: 5, title: "Podsumowanie", icon: "✅" },
   ];
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
-      [name]: type === 'checkbox' ? checked : value
+      [name]: type === "checkbox" ? checked : value,
     }));
   };
   const handleArrayChange = (fieldName, value) => {
     // Zachowuj surową wartość tekstową podczas pisania
-    setFormData(prev => ({
+    setFormData((prev) => ({
       ...prev,
       [`${fieldName}Text`]: value, // Przechowuj surowy tekst
-      [fieldName]: value.split(',').map(v => v.trim()).filter(v => v) // Parsuj do array
+      [fieldName]: value
+        .split(",")
+        .map((v) => v.trim())
+        .filter((v) => v), // Parsuj do array
     }));
   };
 
@@ -102,17 +105,25 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
 
   const generateSKU = () => {
     const timestamp = Date.now().toString().slice(-6);
-    const categoryPrefix = formData.category ? formData.category.substring(0, 3).toUpperCase() : 'PRD';
+    const categoryPrefix = formData.category
+      ? formData.category.substring(0, 3).toUpperCase()
+      : "PRD";
     return `${categoryPrefix}-${timestamp}`;
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setLoading(true);
-    setError('');
+    setError("");
 
-    if (!formData.name || !formData.price || !formData.category || !formData.sku || !formData.brand) {
-      setError('Nazwa, cena, kategoria, SKU i marka są wymagane');
+    if (
+      !formData.name ||
+      !formData.price ||
+      !formData.category ||
+      !formData.sku ||
+      !formData.brand
+    ) {
+      setError("Nazwa, cena, kategoria, SKU i marka są wymagane");
       setLoading(false);
       return;
     }
@@ -159,7 +170,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
       sleeveLength: formData.sleeveLength,
       primaryImage: formData.primaryImage,
       secondaryImage: formData.secondaryImage,
-      galleryImages: formData.galleryImages
+      galleryImages: formData.galleryImages,
     };
 
     let result;
@@ -175,7 +186,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
       onSuccess?.();
       onClose();
     } else {
-      setError(result.error || 'Wystąpił błąd podczas zapisywania produktu');
+      setError(result.error || "Wystąpił błąd podczas zapisywania produktu");
     }
   };
 
@@ -197,7 +208,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                   required
                 />
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="brand">Marka *</label>
                 <select
@@ -213,7 +224,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                   <option value="Inne">Inne</option>
                 </select>
               </div>
-              
+
               <div className="form-group full-width">
                 <label htmlFor="description">Opis produktu</label>
                 <textarea
@@ -225,7 +236,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                   placeholder="Opisz produkt..."
                 />
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="category">Kategoria *</label>
                 <select
@@ -242,7 +253,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                   <option value="Accessories">Akcesoria</option>
                 </select>
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="price">Cena *</label>
                 <div className="price-input">
@@ -268,7 +279,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                   </select>
                 </div>
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="sku">SKU (kod produktu) *</label>
                 <div className="sku-input">
@@ -281,16 +292,18 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                     placeholder="TLD-XXX-001"
                     required
                   />
-                  <button 
-                    type="button" 
-                    onClick={() => setFormData(prev => ({ ...prev, sku: generateSKU() }))}
+                  <button
+                    type="button"
+                    onClick={() =>
+                      setFormData((prev) => ({ ...prev, sku: generateSKU() }))
+                    }
                     className="generate-button"
                   >
                     Generuj
                   </button>
                 </div>
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="availability">Dostępność</label>
                 <select
@@ -305,7 +318,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                   <option value="Pre-order">Przedsprzedaż</option>
                 </select>
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="collaboration">Współpraca</label>
                 <input
@@ -317,7 +330,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                   placeholder="np. Hana Burton"
                 />
               </div>
-              
+
               <div className="checkbox-group">
                 <label className="checkbox-label">
                   <input
@@ -329,7 +342,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                   <span className="checkmark"></span>
                   Produkt polecany
                 </label>
-                
+
                 <label className="checkbox-label">
                   <input
                     type="checkbox"
@@ -344,7 +357,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
             </div>
           </div>
         );
-      
+
       case 2:
         return (
           <div className="step-content">
@@ -360,7 +373,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                   placeholder="np. 70% Bawełna, 30% Poliester"
                 />
               </div>
-              
+
               <div className="form-group">
                 <label htmlFor="weight">Waga</label>
                 <select
@@ -374,23 +387,29 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                   <option value="Heavy Weight">Ciężka</option>
                 </select>
               </div>
-                <div className="form-group full-width">
+              <div className="form-group full-width">
                 <label htmlFor="features">Cechy produktu</label>
                 <input
                   type="text"
                   id="features"
                   value={formData.featuresText}
-                  onChange={(e) => handleArrayChange('features', e.target.value)}
+                  onChange={(e) =>
+                    handleArrayChange("features", e.target.value)
+                  }
                   placeholder="np. Comfortable Fit, Soft Interior, Tokyo Graphics"
                 />
                 <small>Oddzielone przecinkami</small>
               </div>
-              
-              <div className="form-group full-width">                <label htmlFor="careInstructions">Instrukcje pielęgnacji</label>
+
+              <div className="form-group full-width">
+                {" "}
+                <label htmlFor="careInstructions">Instrukcje pielęgnacji</label>
                 <textarea
                   id="careInstructions"
                   value={formData.careInstructionsText}
-                  onChange={(e) => handleArrayChange('careInstructions', e.target.value)}
+                  onChange={(e) =>
+                    handleArrayChange("careInstructions", e.target.value)
+                  }
                   rows="3"
                   placeholder="Pranie w pralce w 30°C, Nie wybielać..."
                 />
@@ -399,14 +418,16 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
             </div>
           </div>
         );
-        
+
       case 3:
         return (
           <div className="step-content">
-            <div className="form-grid">              <div className="form-group full-width">
+            <div className="form-grid">
+              {" "}
+              <div className="form-group full-width">
                 <label htmlFor="sizes">Dostępne rozmiary i ilość</label>
                 <div className="size-stock-container">
-                  {['XS', 'S', 'M', 'L', 'XL', 'XXL'].map(size => (
+                  {["XS", "S", "M", "L", "XL", "XXL"].map((size) => (
                     <div key={size} className="size-stock-item">
                       <label className="size-option">
                         <input
@@ -414,29 +435,29 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                           checked={formData.sizes.includes(size)}
                           onChange={(e) => {
                             if (e.target.checked) {
-                              setFormData(prev => ({
+                              setFormData((prev) => ({
                                 ...prev,
                                 sizes: [...prev.sizes, size],
                                 sizeStock: {
                                   ...prev.sizeStock,
-                                  [size]: prev.sizeStock[size] || 0
-                                }
+                                  [size]: prev.sizeStock[size] || 0,
+                                },
                               }));
                             } else {
-                              const newSizeStock = {...formData.sizeStock};
+                              const newSizeStock = { ...formData.sizeStock };
                               delete newSizeStock[size];
-                              
-                              setFormData(prev => ({
+
+                              setFormData((prev) => ({
                                 ...prev,
-                                sizes: prev.sizes.filter(s => s !== size),
-                                sizeStock: newSizeStock
+                                sizes: prev.sizes.filter((s) => s !== size),
+                                sizeStock: newSizeStock,
                               }));
                             }
                           }}
                         />
                         <span className="size-label">{size}</span>
                       </label>
-                      
+
                       {formData.sizes.includes(size) && (
                         <div className="size-quantity">
                           <label htmlFor={`quantity-${size}`}>Ilość:</label>
@@ -447,12 +468,12 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                             value={formData.sizeStock[size] || 0}
                             onChange={(e) => {
                               const value = parseInt(e.target.value) || 0;
-                              setFormData(prev => ({
+                              setFormData((prev) => ({
                                 ...prev,
                                 sizeStock: {
                                   ...prev.sizeStock,
-                                  [size]: value
-                                }
+                                  [size]: value,
+                                },
                               }));
                             }}
                           />
@@ -462,13 +483,13 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                   ))}
                 </div>
               </div>
-              
               <div className="form-group full-width">
                 <label htmlFor="colors">Dostępne kolory</label>
                 <input
-                  type="text"                  id="colors"
+                  type="text"
+                  id="colors"
                   value={formData.colorsText}
-                  onChange={(e) => handleArrayChange('colors', e.target.value)}
+                  onChange={(e) => handleArrayChange("colors", e.target.value)}
                   placeholder="np. Black, White, Navy"
                 />
                 <small>Oddzielone przecinkami</small>
@@ -476,7 +497,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
             </div>
           </div>
         );
-        
+
       case 4:
         return (
           <div className="step-content">
@@ -492,12 +513,15 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
                   placeholder="https://example.com/image.jpg"
                 />
               </div>
-              
+
               <div className="form-group full-width">
                 <label htmlFor="galleryImages">Galeria zdjęć</label>
                 <textarea
-                  id="galleryImages"                  value={formData.galleryImagesText}
-                  onChange={(e) => handleArrayChange('galleryImages', e.target.value)}
+                  id="galleryImages"
+                  value={formData.galleryImagesText}
+                  onChange={(e) =>
+                    handleArrayChange("galleryImages", e.target.value)
+                  }
                   rows="4"
                   placeholder="https://example.com/img1.jpg, https://example.com/img2.jpg"
                 />
@@ -506,7 +530,7 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
             </div>
           </div>
         );
-        
+
       case 5:
         return (
           <div className="step-content summary">
@@ -514,128 +538,175 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
             <div className="summary-grid">
               <div className="summary-section">
                 <h4>Podstawowe informacje</h4>
-                <p><strong>Nazwa:</strong> {formData.name}</p>
-                <p><strong>Marka:</strong> {formData.brand}</p>
-                <p><strong>Kategoria:</strong> {formData.category}</p>
-                <p><strong>Cena:</strong> {formData.price} {formData.currency}</p>
-                <p><strong>SKU:</strong> {formData.sku}</p>
+                <p>
+                  <strong>Nazwa:</strong> {formData.name}
+                </p>
+                <p>
+                  <strong>Marka:</strong> {formData.brand}
+                </p>
+                <p>
+                  <strong>Kategoria:</strong> {formData.category}
+                </p>
+                <p>
+                  <strong>Cena:</strong> {formData.price} {formData.currency}
+                </p>
+                <p>
+                  <strong>SKU:</strong> {formData.sku}
+                </p>
               </div>
-              
+
               <div className="summary-section">
                 <h4>Szczegóły</h4>
-                <p><strong>Materiał:</strong> {formData.material || 'Nie podano'}</p>                <p><strong>Waga:</strong> {formData.weight}</p>
-                <p><strong>Rozmiary:</strong> {formData.sizes.join(', ') || 'Nie wybrano'}</p>
-                <p><strong>Stan magazynowy:</strong></p>
+                <p>
+                  <strong>Materiał:</strong> {formData.material || "Nie podano"}
+                </p>{" "}
+                <p>
+                  <strong>Waga:</strong> {formData.weight}
+                </p>
+                <p>
+                  <strong>Rozmiary:</strong>{" "}
+                  {formData.sizes.join(", ") || "Nie wybrano"}
+                </p>
+                <p>
+                  <strong>Stan magazynowy:</strong>
+                </p>
                 <ul className="size-stock-list">
-                  {formData.sizes.map(size => (
+                  {formData.sizes.map((size) => (
                     <li key={size}>
                       {size}: {formData.sizeStock[size] || 0} szt.
                     </li>
                   ))}
                 </ul>
-                <p><strong>Kolory:</strong> {formData.colors.join(', ') || 'Nie podano'}</p>
+                <p>
+                  <strong>Kolory:</strong>{" "}
+                  {formData.colors.join(", ") || "Nie podano"}
+                </p>
               </div>
             </div>
           </div>
         );
-        
+
       default:
         return null;
     }
   };
-  return (
-    isPageView ? (
-      <div className="product-form-container">
+  return isPageView ? (
+    <div className="product-form-container">
+      <div className="step-indicator">
+        {steps.map((step) => (
+          <div
+            key={step.id}
+            className={`step ${currentStep === step.id ? "active" : ""} ${currentStep > step.id ? "completed" : ""}`}
+          >
+            <div className="step-icon">{step.icon}</div>
+            <div className="step-title">{step.title}</div>
+          </div>
+        ))}
+      </div>
+
+      <form onSubmit={handleSubmit} className="product-form">
+        {error && <div className="error-message">{error}</div>}
+
+        {renderStep()}
+
+        <div className="form-actions">
+          <div className="action-buttons">
+            {currentStep > 1 && (
+              <button type="button" onClick={prevStep} className="prev-button">
+                ← Poprzedni
+              </button>
+            )}
+
+            {currentStep < steps.length ? (
+              <button type="button" onClick={nextStep} className="next-button">
+                Następny →
+              </button>
+            ) : (
+              <button
+                type="submit"
+                disabled={loading}
+                className="submit-button"
+              >
+                {loading
+                  ? "Zapisywanie..."
+                  : product
+                    ? "Aktualizuj Produkt"
+                    : "Dodaj Produkt"}
+              </button>
+            )}
+          </div>
+        </div>
+      </form>
+    </div>
+  ) : (
+    <div className="modal-overlay">
+      <div className="product-form-modal">
+        <div className="modal-header">
+          <h2>{product ? "Edytuj Produkt" : "Dodaj Nowy Produkt"}</h2>
+          <button onClick={onClose} className="close-button">
+            ×
+          </button>
+        </div>
+
         <div className="step-indicator">
-          {steps.map(step => (
-            <div 
-              key={step.id} 
-              className={`step ${currentStep === step.id ? 'active' : ''} ${currentStep > step.id ? 'completed' : ''}`}
+          {steps.map((step) => (
+            <div
+              key={step.id}
+              className={`step ${currentStep === step.id ? "active" : ""} ${currentStep > step.id ? "completed" : ""}`}
             >
               <div className="step-icon">{step.icon}</div>
               <div className="step-title">{step.title}</div>
             </div>
           ))}
         </div>
-        
+
         <form onSubmit={handleSubmit} className="product-form">
           {error && <div className="error-message">{error}</div>}
-          
+
           {renderStep()}
-          
+
           <div className="form-actions">
             <div className="action-buttons">
               {currentStep > 1 && (
-                <button type="button" onClick={prevStep} className="prev-button">
+                <button
+                  type="button"
+                  onClick={prevStep}
+                  className="prev-button"
+                >
                   ← Poprzedni
                 </button>
               )}
-              
+
               {currentStep < steps.length ? (
-                <button type="button" onClick={nextStep} className="next-button">
+                <button
+                  type="button"
+                  onClick={nextStep}
+                  className="next-button"
+                >
                   Następny →
                 </button>
               ) : (
-                <button type="submit" disabled={loading} className="submit-button">
-                  {loading ? 'Zapisywanie...' : (product ? 'Aktualizuj Produkt' : 'Dodaj Produkt')}
+                <button
+                  type="submit"
+                  disabled={loading}
+                  className="submit-button"
+                >
+                  {loading
+                    ? "Zapisywanie..."
+                    : product
+                      ? "Aktualizuj Produkt"
+                      : "Dodaj Produkt"}
                 </button>
               )}
             </div>
+
+            <button type="button" onClick={onClose} className="cancel-button">
+              Anuluj
+            </button>
           </div>
         </form>
       </div>
-    ) : (
-      <div className="modal-overlay">
-        <div className="product-form-modal">
-          <div className="modal-header">
-            <h2>{product ? 'Edytuj Produkt' : 'Dodaj Nowy Produkt'}</h2>
-            <button onClick={onClose} className="close-button">×</button>
-          </div>
-          
-          <div className="step-indicator">
-            {steps.map(step => (
-              <div 
-                key={step.id} 
-                className={`step ${currentStep === step.id ? 'active' : ''} ${currentStep > step.id ? 'completed' : ''}`}
-              >
-                <div className="step-icon">{step.icon}</div>
-                <div className="step-title">{step.title}</div>
-              </div>
-            ))}
-          </div>
-          
-          <form onSubmit={handleSubmit} className="product-form">
-            {error && <div className="error-message">{error}</div>}
-            
-            {renderStep()}
-            
-            <div className="form-actions">
-              <div className="action-buttons">
-                {currentStep > 1 && (
-                  <button type="button" onClick={prevStep} className="prev-button">
-                    ← Poprzedni
-                  </button>
-                )}
-                
-                {currentStep < steps.length ? (
-                  <button type="button" onClick={nextStep} className="next-button">
-                    Następny →
-                  </button>
-                ) : (
-                  <button type="submit" disabled={loading} className="submit-button">
-                    {loading ? 'Zapisywanie...' : (product ? 'Aktualizuj Produkt' : 'Dodaj Produkt')}
-                  </button>
-                )}
-              </div>
-              
-              <button type="button" onClick={onClose} className="cancel-button">
-                Anuluj
-              </button>
-            </div>
-          </form>
-        </div>
-      </div>
-    )
+    </div>
   );
 };
 

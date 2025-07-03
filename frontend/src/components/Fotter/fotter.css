@@ -1,273 +1,377 @@
 .fotter {
-    width: 100%;
-    /* height: 100%; */
-    min-height: 80px;
-    background-color: #000000;
-    /* padding-top: 5px; */
-    /* padding-bottom: 5px; */
-    padding-bottom: 10px;
+  width: 100%;
+  min-height: 80px;
+  background-color: #000000;
+  padding-bottom: 10px;
 }
 
 .fotterContainer {
-    width: 100%;
-    /* height: 100%; */
+  width: 100%;
 }
 
 .fotterContainerDiv {
-    width: 100%;
-    /* height: 100%; */
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
 .fotterContainerDivTop {
-    width: 100%;
-    /* height: 100%; */
+  width: 100%;
 }
 
 .fotterContainerDivBottom {
-    width: 100%;
-    /* height: 100%; */
+  width: 100%;
 }
 
 .fotterContainerDivTopContainer {
-    width: 98%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .fotterContainerDivTopContainerLeftContainerText {
-    color: #ffffff;
-    font-family: 'Chinese Shanghai';
-    font-size: 200px;
-    font-weight: 700;
-    text-transform: uppercase;
-    letter-spacing: 10px;
-    line-height: 1.1;
-    /* margin-bottom: 10px; */
+  color: #ffffff;
+  font-family: "Rubik Dirt", system-ui;
+  font-size: 100px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 10px;
+  line-height: 1.1;
 }
 
 .fotterContainerDivBottomContainer {
-    width: 98%;
-    margin-left: auto;
-    margin-right: auto;
-    height: 100%;
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
 
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .fotterContainerDivBottomContainerRightContainer {
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
 }
 
 .fotterContainerDivBottomContainerLeftContainerText,
 .fotterContainerDivBottomContainerRightContainerElementText {
-    color: #ffffff;
-    font-size: 14px;
-    font-weight: 400;
-    text-transform: uppercase;
-    line-height: 20px;
+  color: #ffffff;
+  font-size: 14px;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 20px;
 }
 
 .fotterContainerDivTopContainerRight {
-    width: 480px;
-    overflow: hidden;
-    position: relative;
+  width: 480px;
+  overflow: hidden;
+  position: relative;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .fotterContainerDivMiddle {
-    width: 98%;
-
-    margin-left: auto;
-margin-right: auto;
-    height: 100%;
-
-    margin-top: 50px;
-    /* margin-left: 20px; */
+  width: 98%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+  margin-top: 50px;
 }
 
-
 .fotterContainerDivMiddleContainer {
-    width: 80%;
-    margin-right: auto;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* align-items: center; */
+  width: 80%;
+  margin-right: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .fotterContainerDivMiddleContainerLeftContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 180px;
 }
 
 .fotterContainerDivMiddleContainerLeftContainerOneContainerText {
-    color: gray;
+  color: gray;
 }
 
 .fotterContainerDivMiddleContainerLeftContainerTwoContainerDiv {
-    width: 100%;
-    /* background-color: red; */
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    /* gap: 440px; */
-    width: 500px;
-    border-bottom: 1px solid gray;
-    /* background-color: yellow; */
-    justify-content: space-between;
-    height: 60px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 500px;
+  border-bottom: 1px solid gray;
+  justify-content: space-between;
+  height: 60px;
 }
 
 .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOne {
-    width: 100%;
+  width: 100%;
 }
 
 .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput {
-    border: none;
-    background-color: transparent;
-    width: 100%;
-    height: 100%;
-    color: white;
-    font-size: 24px;
-    padding-left: 15px;
+  border: none;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+  color: white;
+  font-size: 24px;
+  padding-left: 15px;
 }
 
 .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivTwo {
-    /* background-color: red; */
-    height: 100%;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-    width: 100px;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100px;
 }
 
 .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivTwoText {
-    color: gray;
-    font-size: 18px;
-    font-weight: 500;
-    
+  color: gray;
+  font-size: 18px;
+  font-weight: 500;
 }
 
 .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput::placeholder {
-    font-size: 24px;
-    color: gray;
+  font-size: 24px;
+  color: gray;
 }
 
 .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput:focus {
-    border: none;
-    outline: none;
+  border: none;
+  outline: none;
 }
 
 .fotterContainerDivMiddleContainerRightContainerOneContainerText {
-    color: gray;
+  color: gray;
 }
 
 .fotterContainerDivMiddleContainerRightContainerTwo {
-    margin-top: 50px;
+  margin-top: 50px;
 }
 
 .fotterContainerDivMiddleContainerRightContainerTwoContainer {
-    display: flex;
-    flex-direction: column;
-    gap: 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
 }
 
 .fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainerText {
-    color: white;
+  color: white;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 .fotterContainerDivInfo {
-    width: 100%;
-    height: 100%;
-    /* background-color: red; */
-    margin-top: 50px;
+  width: 100%;
+  height: 100%;
+  margin-top: 50px;
 }
 
 .fotterContainerDivInfoContainer {
-    width: 80%;
-    /* margin-left: auto; */
-margin-right: auto;
-    height: 100%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    /* background-color: blue; */
-
-    gap: 160px;
+  width: 80%;
+  margin-right: auto;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 160px;
 }
 
 .fotterContainerDivInfoContainerLeft {
-    width: 100%;
-    height: 100%;
-    /* background-color: yellow; */
+  width: 100%;
+  height: 100%;
 }
 
 .fotterContainerDivInfoContainerLeftContainer {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
-
 
 .fotterContainerDivInfoContainerLeftContainerElementContainerOneContainerText,
 .fotterContainerDivInfoContainerRightContainerOneContainerText {
-    color: gray;
-    font-size: 18px;
+  color: gray;
+  font-size: 18px;
 }
 
 .fotterContainerDivInfoContainerLeftContainerElementContainerTwoOneText,
 .fotterContainerDivInfoContainerLeftContainerElementContainerTwoTwoText,
 .fotterContainerDivInfoContainerRightContainerTwoContainerElementContainerText {
-    color: white;
-    font-size: 16px
+  color: white;
+  font-size: 16px;
+}
+
+.hover-logo {
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+}
+
+.hover-logo:hover {
+  transform: scale(1.05);
+  color: #ff6b6b;
+  text-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
+  letter-spacing: 15px;
+}
+
+.hover-link {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-link::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
+  transition: left 0.5s ease;
+}
+
+.hover-link:hover::after {
+  left: 100%;
+}
+
+.hover-link:hover {
+  color: #ff6b6b;
+  transform: translateX(5px);
+}
+
+.hover-submit {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.hover-submit::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 107, 107, 0.1), transparent);
+  transition: left 0.5s ease;
+}
+
+.hover-submit:hover::before {
+  left: 100%;
+}
+
+.hover-submit:hover {
+  background-color: #ff6b6b;
+  color: #ffffff;
+  transform: scale(1.05);
+}
+
+.hover-submit:hover .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivTwoText {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput {
+  transition: all 0.3s ease;
+}
+
+.fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput:focus {
+  border: none;
+  outline: none;
+  color: #ff6b6b;
+  font-weight: 500;
+}
+
+.fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput:focus::placeholder {
+  color: rgba(255, 107, 107, 0.5);
+}
+
+.scrolling-text-wrapper {
+  animation: scroll-text 25s linear infinite;
+}
+
+.scrolling-text-wrapper:hover {
+  animation-play-state: paused;
+}
+
+@keyframes scroll-text {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.fotterContainerDivInfoContainerLeftContainerElement {
+  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  padding: 10px;
+  border-radius: 8px;
+}
+
+.fotterContainerDivInfoContainerLeftContainerElement:hover {
+  background-color: rgba(255, 107, 107, 0.05);
+  box-shadow: 0 4px 20px rgba(255, 107, 107, 0.1);
+}
+
+.fotterContainerDivInfoContainerLeftContainerElement:hover .fotterContainerDivInfoContainerLeftContainerElementContainerOneContainerText {
+  color: #ff6b6b;
+}
+
+.fotterContainerDivMiddleContainerLeftContainerTwoContainerDiv {
+  position: relative;
+  overflow: hidden;
+}
+
+.fotterContainerDivMiddleContainerLeftContainerTwoContainerDiv::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: -100%;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
+  transition: left 0.5s ease;
+}
+
+.fotterContainerDivMiddleContainerLeftContainerTwoContainerDiv:focus-within::after {
+  left: 100%;
+}
+
+@keyframes pulse {
+  0% {
+    text-shadow: 0 0 5px rgba(255, 107, 107, 0.2);
+  }
+  50% {
+    text-shadow: 0 0 20px rgba(255, 107, 107, 0.4);
+  }
+  100% {
+    text-shadow: 0 0 5px rgba(255, 107, 107, 0.2);
+  }
+}
+
+.fotterContainerDivTopContainerLeftContainerText {
+  animation: pulse 3s ease-in-out infinite;
+}
+
+.fotterContainerDivTopContainerLeftContainerText:hover {
+  animation: none;
 }

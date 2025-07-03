@@ -1,41 +1,34 @@
 .shippingAndReturnsInfo {
-    width: 100%;
-    height: 100%;
-
-    background-color: #FFFFFF;
-    /* padding-top: 100px; */
-    padding-bottom: 100px;
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  padding-bottom: 100px;
 }
 
 .shippingAndReturnsInfoContainer {
-    width: 86%;
-    margin-left: auto;
-    margin-right: auto;
-
-    height: 100%;
-    /* background-color: red; */
+  width: 86%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
 }
 
-
 .shippingAndReturnsInfoContainerDiv {
-    width: 100%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
 }
 
 .privacyPolicyInfoContainerDivElement {
-    width: 100%;
-    height: 60px;
+  width: 100%;
+  height: 60px;
 
-    background-color: red;
+  background-color: red;
 }
 
-/* --- AKORDEON --- */
 .shippingAndReturnsInfoAccordion {
   width: 100%;
   background: #fff;
@@ -50,7 +43,6 @@
   align-items: center;
   justify-content: space-between;
   cursor: pointer;
-  /* padding: 0 12px 0 12px; */
   min-height: 60px;
   -webkit-user-select: none;
   user-select: none;
@@ -68,8 +60,9 @@
 }
 
 .shippingAndReturnsInfoAccordion.open .shippingAndReturnsInfoAccordionTitle,
-.shippingAndReturnsInfoAccordionHeader:hover .shippingAndReturnsInfoAccordionTitle {
-  color: #DA2228;
+.shippingAndReturnsInfoAccordionHeader:hover
+  .shippingAndReturnsInfoAccordionTitle {
+  color: #da2228;
 }
 
 .shippingAndReturnsInfoAccordionIcon {
@@ -87,8 +80,9 @@
   overflow: visible;
 }
 .shippingAndReturnsInfoAccordion.open .shippingAndReturnsInfoAccordionIcon,
-.shippingAndReturnsInfoAccordionHeader:hover .shippingAndReturnsInfoAccordionIcon {
-  border-color: #DA2228;
+.shippingAndReturnsInfoAccordionHeader:hover
+  .shippingAndReturnsInfoAccordionIcon {
+  border-color: #da2228;
 }
 .shippingAndReturnsInfoAccordionIconHorizontal,
 .shippingAndReturnsInfoAccordionIconVertical {
@@ -97,16 +91,23 @@
   top: 50%;
   background: #595959;
   border-radius: 2px;
-  transition: background 0.3s, transform 0.3s, opacity 0.3s;
+  transition:
+    background 0.3s,
+    transform 0.3s,
+    opacity 0.3s;
   box-shadow: none;
   outline: none;
   border: none;
 }
-.shippingAndReturnsInfoAccordion.open .shippingAndReturnsInfoAccordionIconHorizontal,
-.shippingAndReturnsInfoAccordion.open .shippingAndReturnsInfoAccordionIconVertical,
-.shippingAndReturnsInfoAccordionHeader:hover .shippingAndReturnsInfoAccordionIconHorizontal,
-.shippingAndReturnsInfoAccordionHeader:hover .shippingAndReturnsInfoAccordionIconVertical {
-  background: #DA2228;
+.shippingAndReturnsInfoAccordion.open
+  .shippingAndReturnsInfoAccordionIconHorizontal,
+.shippingAndReturnsInfoAccordion.open
+  .shippingAndReturnsInfoAccordionIconVertical,
+.shippingAndReturnsInfoAccordionHeader:hover
+  .shippingAndReturnsInfoAccordionIconHorizontal,
+.shippingAndReturnsInfoAccordionHeader:hover
+  .shippingAndReturnsInfoAccordionIconVertical {
+  background: #da2228;
 }
 .shippingAndReturnsInfoAccordionIconHorizontal {
   width: 16px;
@@ -119,7 +120,8 @@
   transform: translate(-50%, -50%) rotate(0deg);
   opacity: 1;
 }
-.shippingAndReturnsInfoAccordion.open .shippingAndReturnsInfoAccordionIconVertical {
+.shippingAndReturnsInfoAccordion.open
+  .shippingAndReturnsInfoAccordionIconVertical {
   opacity: 0;
   transform: translate(-50%, -50%) scaleY(0.5);
 }
@@ -138,22 +140,27 @@
   animation: fadeInAccordion 0.4s;
 }
 .shippingAndReturnsInfoAccordion.open .shippingAndReturnsInfoAccordionContent {
-  color: #0B170D;
+  color: #0b170d;
 }
 @keyframes fadeInAccordion {
-  from { opacity: 0; transform: translateY(-10px); }
-  to { opacity: 1; transform: translateY(0); }
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 .shippingAndReturnsInfoAccordionDivider {
   width: 100%;
   height: 3px;
-  background: #EBEBEB;
+  background: #ebebeb;
   margin: 0 auto;
-  /* border-radius: 2px; */
   position: relative;
   top: 0;
 }
 
 .privacyPolicyInfoAccordionContentText {
-    color: #0B170D
+  color: #0b170d;
 }

@@ -11,13 +11,27 @@ const MenuOverlay = ({ onClose }) => {
       <div className="menuOverlay__content">
         <nav className="menuOverlay__nav">
           <ul>
-            <li><b>HOME</b></li>
-            <li><b>SHOP</b></li>
-            <li><b>FEATURES</b></li>
-            <li><b>SUBMISSIONS</b></li>
-            <li><NavLink to="/about">ABOUT</NavLink></li>
-            <li><b>CONTACT</b></li>
-            <li><b>AGENCY</b></li>
+            <li>
+              <b>HOME</b>
+            </li>
+            <li>
+              <b>SHOP</b>
+            </li>
+            <li>
+              <b>FEATURES</b>
+            </li>
+            <li>
+              <b>SUBMISSIONS</b>
+            </li>
+            <li>
+              <NavLink to="/about">ABOUT</NavLink>
+            </li>
+            <li>
+              <b>CONTACT</b>
+            </li>
+            <li>
+              <b>AGENCY</b>
+            </li>
           </ul>
           <ul className="menuOverlay__navSecondary">
             <li>PRIVACY POLICY</li>

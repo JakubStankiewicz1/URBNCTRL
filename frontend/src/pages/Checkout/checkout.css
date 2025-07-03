@@ -1,503 +1,501 @@
 .checkout {
-    width: 100%;
-    min-height: 100vh;
-    background: #fff;
-    padding-top: 80px;
+  width: 100%;
+  min-height: 100vh;
+  background: #fff;
+  padding-top: 80px;
 }
 
 .checkoutContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 40px 20px;
 }
 
 .emptyCheckout {
-    text-align: center;
-    padding: 80px 20px;
+  text-align: center;
+  padding: 80px 20px;
 }
 
 .backToShop {
-    display: inline-block;
-    background: #DA2228;
-    color: white;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 4px;
-    font-weight: 600;
-    margin-top: 20px;
+  display: inline-block;
+  background: #da2228;
+  color: white;
+  padding: 15px 30px;
+  text-decoration: none;
+  border-radius: 4px;
+  font-weight: 600;
+  margin-top: 20px;
 }
 
 .checkoutHeader {
-    text-align: center;
-    margin-bottom: 40px;
+  text-align: center;
+  margin-bottom: 40px;
 }
 
 .checkoutTitle {
-    font-size: 24px;
-    font-weight: 700;
-    color: #333;
-    margin-bottom: 30px;
+  font-size: 24px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 30px;
 }
 
 .afterpayExpress {
-    max-width: 500px;
-    margin: 0 auto;
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .afterpayExpressButton {
-    width: 100%;
-    background: #b2fce4;
-    border: 1px solid #000;
-    padding: 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    font-size: 16px;
-    font-weight: 600;
-    margin-bottom: 15px;
+  width: 100%;
+  background: #b2fce4;
+  border: 1px solid #000;
+  padding: 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 15px;
 }
 
 .afterpayLogo {
-    height: 25px;
+  height: 25px;
 }
 
 .orContinue {
-    text-align: center;
-    color: #666;
-    margin-bottom: 30px;
+  text-align: center;
+  color: #666;
+  margin-bottom: 30px;
 }
 
 .checkoutForm {
-    width: 100%;
+  width: 100%;
 }
 
 .checkoutMain {
-    display: grid;
-    grid-template-columns: 1fr 400px;
-    gap: 60px;
+  display: grid;
+  grid-template-columns: 1fr 400px;
+  gap: 60px;
 }
 
 .checkoutLeft {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .checkoutSection {
-    margin-bottom: 40px;
-    padding-bottom: 30px;
-    border-bottom: 1px solid #eee;
+  margin-bottom: 40px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee;
 }
 
 .checkoutSection:last-child {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .sectionHeader {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
 }
 
 .sectionTitle {
-    font-size: 18px;
-    font-weight: 700;
-    color: #333;
-    margin: 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 0;
 }
 
 .loginLink {
-    color: #DA2228;
-    text-decoration: none;
-    font-weight: 600;
+  color: #da2228;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .loginLink:hover {
-    text-decoration: underline;
+  text-decoration: underline;
 }
 
 .sectionDescription {
-    color: #666;
-    margin-bottom: 20px;
-    line-height: 1.5;
+  color: #666;
+  margin-bottom: 20px;
+  line-height: 1.5;
 }
 
 .inputGroup {
-    margin-bottom: 15px;
-    position: relative;
+  margin-bottom: 15px;
+  position: relative;
 }
 
 .inputRow {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
 }
 
 .input {
-    width: 100%;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    font-size: 14px;
-    transition: border-color 0.2s;
+  width: 100%;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 14px;
+  transition: border-color 0.2s;
 }
 
 .input:focus {
-    outline: none;
-    border-color: #DA2228;
+  outline: none;
+  border-color: #da2228;
 }
 
 .input.error {
-    border-color: #ff4757;
+  border-color: #ff4757;
 }
 
 .textarea {
-    min-height: 100px;
-    resize: vertical;
+  min-height: 100px;
+  resize: vertical;
 }
 
 .errorText {
-    color: #ff4757;
-    font-size: 12px;
-    margin-top: 5px;
-    display: block;
+  color: #ff4757;
+  font-size: 12px;
+  margin-top: 5px;
+  display: block;
 }
 
 .guestText {
-    color: #666;
-    font-size: 13px;
-    margin: 15px 0;
+  color: #666;
+  font-size: 13px;
+  margin: 15px 0;
 }
 
 .checkbox {
-    display: flex;
-    align-items: flex-start;
-    gap: 10px;
-    margin: 20px 0;
-    cursor: pointer;
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+  margin: 20px 0;
+  cursor: pointer;
 }
 
 .checkbox input[type="checkbox"] {
-    margin: 0;
-    transform: scale(1.2);
+  margin: 0;
+  transform: scale(1.2);
 }
 
 .checkboxText {
-    color: #DA2228;
-    font-size: 14px;
-    line-height: 1.4;
+  color: #da2228;
+  font-size: 14px;
+  line-height: 1.4;
 }
 
 .shippingOption {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 15px;
 }
 
 .shippingOption.selected {
-    border-color: #DA2228;
-    background: #faf8f8;
+  border-color: #da2228;
+  background: #faf8f8;
 }
 
 .shippingDetails {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex: 1;
 }
 
 .shippingName {
-    color: #DA2228;
-    font-weight: 600;
+  color: #da2228;
+  font-weight: 600;
 }
 
 .shippingPrice {
-    color: #DA2228;
-    font-weight: 700;
+  color: #da2228;
+  font-weight: 700;
 }
 
 .paymentMethods {
-    margin: 20px 0;
+  margin: 20px 0;
 }
 
 .paymentMethod {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-    padding: 15px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-    margin-bottom: 15px;
-    cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  padding: 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 15px;
+  cursor: pointer;
 }
 
 .paymentMethod:hover {
-    border-color: #DA2228;
+  border-color: #da2228;
 }
 
 .paymentMethod input[type="radio"]:checked + label {
-    color: #DA2228;
+  color: #da2228;
 }
 
 .creditCardForm {
-    margin: 15px 0;
-    padding: 20px;
-    background: #f8f9fa;
-    border-radius: 4px;
+  margin: 15px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 4px;
 }
 
 .paymentIcons {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .paymentIcons img {
-    height: 25px;
+  height: 25px;
 }
 
 .afterpayLabel,
 .paypalLabel {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
 }
 
 .afterpayLabel img,
 .paypalLabel img {
-    height: 25px;
+  height: 25px;
 }
 
 .termsText {
-    color: #666;
-    font-size: 13px;
-    line-height: 1.5;
-    margin: 30px 0;
+  color: #666;
+  font-size: 13px;
+  line-height: 1.5;
+  margin: 30px 0;
 }
 
 .checkoutButtons {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 30px;
 }
 
 .returnToCart {
-    color: #666;
-    text-decoration: none;
-    font-weight: 600;
+  color: #666;
+  text-decoration: none;
+  font-weight: 600;
 }
 
 .returnToCart:hover {
-    color: #DA2228;
+  color: #da2228;
 }
 
 .placeOrderButton {
-    background: #DA2228;
-    color: white;
-    border: none;
-    padding: 15px 40px;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 600;
-    cursor: pointer;
-    transition: background 0.2s;
+  background: #da2228;
+  color: white;
+  border: none;
+  padding: 15px 40px;
+  border-radius: 4px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
 }
 
 .placeOrderButton:hover {
-    background: #b91e24;
+  background: #b91e24;
 }
 
-/* Order Summary */
 .checkoutRight {
-    position: sticky;
-    top: 100px;
-    height: fit-content;
+  position: sticky;
+  top: 100px;
+  height: fit-content;
 }
 
 .orderSummary {
-    background: #f8f9fa;
-    padding: 30px;
-    border-radius: 8px;
+  background: #f8f9fa;
+  padding: 30px;
+  border-radius: 8px;
 }
 
 .orderSummaryTitle {
-    font-size: 18px;
-    font-weight: 700;
-    color: #333;
-    margin: 0 0 25px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: #333;
+  margin: 0 0 25px 0;
 }
 
 .orderItem {
-    display: flex;
-    gap: 15px;
-    margin-bottom: 20px;
-    padding-bottom: 20px;
-    border-bottom: 1px solid #ddd;
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #ddd;
 }
 
 .orderItemImage {
-    position: relative;
-    width: 60px;
-    height: 60px;
-    border-radius: 4px;
-    overflow: hidden;
-    flex-shrink: 0;
+  position: relative;
+  width: 60px;
+  height: 60px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
 }
 
 .orderItemImage img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .orderItemQuantity {
-    position: absolute;
-    top: -8px;
-    right: -8px;
-    background: #666;
-    color: white;
-    border-radius: 50%;
-    width: 20px;
-    height: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 12px;
-    font-weight: 600;
+  position: absolute;
+  top: -8px;
+  right: -8px;
+  background: #666;
+  color: white;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+  font-weight: 600;
 }
 
 .orderItemDetails {
-    flex: 1;
+  flex: 1;
 }
 
 .orderItemName {
-    font-size: 14px;
-    font-weight: 600;
-    color: #333;
-    margin: 0 0 5px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+  margin: 0 0 5px 0;
 }
 
 .orderItemPrice {
-    font-size: 13px;
-    color: #666;
-    margin: 0 0 5px 0;
+  font-size: 13px;
+  color: #666;
+  margin: 0 0 5px 0;
 }
 
 .orderItemDescription {
-    font-size: 12px;
-    color: #999;
-    margin: 0;
-    line-height: 1.4;
+  font-size: 12px;
+  color: #999;
+  margin: 0;
+  line-height: 1.4;
 }
 
 .orderItemTotal {
-    font-weight: 600;
-    color: #333;
-    white-space: nowrap;
+  font-weight: 600;
+  color: #333;
+  white-space: nowrap;
 }
 
 .couponSection {
-    margin: 25px 0;
-    padding: 20px 0;
-    border-top: 1px solid #ddd;
-    border-bottom: 1px solid #ddd;
+  margin: 25px 0;
+  padding: 20px 0;
+  border-top: 1px solid #ddd;
+  border-bottom: 1px solid #ddd;
 }
 
 .couponDetails {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .couponSummary {
-    font-weight: 600;
-    color: #333;
-    list-style: none;
-    outline: none;
+  font-weight: 600;
+  color: #333;
+  list-style: none;
+  outline: none;
 }
 
 .couponInput {
-    display: flex;
-    gap: 10px;
-    margin-top: 15px;
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
 }
 
 .couponInput .input {
-    flex: 1;
+  flex: 1;
 }
 
 .applyCouponButton {
-    background: #DA2228;
-    color: white;
-    border: none;
-    padding: 15px 20px;
-    border-radius: 4px;
-    cursor: pointer;
-    font-weight: 600;
-    white-space: nowrap;
+  background: #da2228;
+  color: white;
+  border: none;
+  padding: 15px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: 600;
+  white-space: nowrap;
 }
 
 .orderTotals {
-    margin-top: 25px;
+  margin-top: 25px;
 }
 
 .orderTotalRow {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 15px;
-    padding: 10px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  padding: 10px 0;
 }
 
 .orderTotalRow.total {
-    font-size: 18px;
-    font-weight: 700;
-    border-top: 1px solid #333;
-    margin-top: 20px;
-    padding-top: 20px;
+  font-size: 18px;
+  font-weight: 700;
+  border-top: 1px solid #333;
+  margin-top: 20px;
+  padding-top: 20px;
 }
 
 .deliveryInfo {
-    text-align: right;
+  text-align: right;
 }
 
 .deliveryDetails {
-    font-size: 12px;
-    color: #666;
-    margin: 5px 0 0 0;
+  font-size: 12px;
+  color: #666;
+  margin: 5px 0 0 0;
 }
 
-/* Responsive Design */
 @media (max-width: 768px) {
-    .checkoutMain {
-        grid-template-columns: 1fr;
-        gap: 30px;
-    }
-    
-    .checkoutRight {
-        position: static;
-        order: -1;
-    }
-    
-    .inputRow {
-        grid-template-columns: 1fr;
-    }
-    
-    .checkoutButtons {
-        flex-direction: column;
-        gap: 15px;
-        align-items: stretch;
-    }
-    
-    .placeOrderButton {
-        order: -1;
-    }
-    
-    .afterpayExpress {
-        max-width: none;
-    }
+  .checkoutMain {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .checkoutRight {
+    position: static;
+    order: -1;
+  }
+
+  .inputRow {
+    grid-template-columns: 1fr;
+  }
+
+  .checkoutButtons {
+    flex-direction: column;
+    gap: 15px;
+    align-items: stretch;
+  }
+
+  .placeOrderButton {
+    order: -1;
+  }
+
+  .afterpayExpress {
+    max-width: none;
+  }
 }

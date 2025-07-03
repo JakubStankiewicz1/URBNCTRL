@@ -1,22 +1,18 @@
-import React from 'react';
+import React from "react";
 import "./privacyPolicyFotter.css";
 
 const PrivacyPolicyFotter = () => {
   return (
-    <div className='privacyPolicyFotter'>
-        <div className="privacyPolicyFotterContainer">
-            <div className="privacyPolicyFotterContainerDiv">
-                <p className="privacyPolicyFotterContainerDivTextOne">
-                    urbnctrl
-                </p>
+    <div className="privacyPolicyFotter">
+      <div className="privacyPolicyFotterContainer">
+        <div className="privacyPolicyFotterContainerDiv">
+          <p className="privacyPolicyFotterContainerDivTextOne">urbnctrl</p>
 
-                <p className="privacyPolicyFotterContainerDivTextTwo">
-                    .com
-                </p>
-            </div>
+          <p className="privacyPolicyFotterContainerDivTextTwo">.studio</p>
         </div>
+      </div>
     </div>
-  )
-}
+  );
+};
 
-export default PrivacyPolicyFotter
+export default PrivacyPolicyFotter;
