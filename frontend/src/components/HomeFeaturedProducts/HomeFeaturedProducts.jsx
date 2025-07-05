@@ -13,6 +13,28 @@ const HomeFeaturedProducts = () => {
   const [startX, setStartX] = useState(0);
   const [scrollLeft, setScrollLeft] = useState(0);
   const [featuredProducts, setFeaturedProducts] = useState([]);
+  const [productWidth, setProductWidth] = useState(310);
+
+  // Dynamic product width based on screen size
+  useEffect(() => {
+    const updateProductWidth = () => {
+      if (window.innerWidth <= 360) {
+        setProductWidth(190); // 180px + 10px gap
+      } else if (window.innerWidth <= 480) {
+        setProductWidth(210); // 200px + 10px gap
+      } else if (window.innerWidth <= 768) {
+        setProductWidth(255); // 240px + 15px gap
+      } else if (window.innerWidth <= 1024) {
+        setProductWidth(275); // 260px + 15px gap
+      } else {
+        setProductWidth(310); // 290px + 20px gap
+      }
+    };
+
+    updateProductWidth();
+    window.addEventListener('resize', updateProductWidth);
+    return () => window.removeEventListener('resize', updateProductWidth);
+  }, []);
 
   const elements = [
     {
@@ -66,8 +88,6 @@ const HomeFeaturedProducts = () => {
       : [];
 
   console.log("Featured products:", featuredProducts);
-
-  const productWidth = 310;
 
   const scrollToPosition = (position, smooth = true) => {
     if (containerRef.current) {
@@ -134,6 +154,27 @@ const HomeFeaturedProducts = () => {
     }
   };
 
+  // Touch event handlers for mobile devices
+  const handleTouchStart = (e) => {
+    if (!containerRef.current) return;
+    
+    setIsDragging(true);
+    setStartX(e.touches[0].pageX - containerRef.current.offsetLeft);
+    setScrollLeft(containerRef.current.scrollLeft);
+  };
+
+  const handleTouchMove = (e) => {
+    if (!isDragging || !containerRef.current) return;
+    e.preventDefault();
+    const x = e.touches[0].pageX - containerRef.current.offsetLeft;
+    const walk = (x - startX) * 1.5;
+    containerRef.current.scrollLeft = scrollLeft - walk;
+  };
+
+  const handleTouchEnd = () => {
+    setIsDragging(false);
+  };
+
 
   useEffect(() => {
     if (featuredProducts.length > 0 && containerRef.current) {
@@ -142,7 +183,7 @@ const HomeFeaturedProducts = () => {
         scrollToPosition(startPosition, false);
       }, 100);
     }
-  }, [featuredProducts.length]);
+  }, [featuredProducts.length, productWidth]);
 
   if (loading) {
     return <div>Loading...</div>;
@@ -214,6 +255,9 @@ const HomeFeaturedProducts = () => {
                 onMouseMove={handleMouseMove}
                 onMouseUp={handleMouseUp}
                 onMouseLeave={handleMouseLeave}
+                onTouchStart={handleTouchStart}
+                onTouchMove={handleTouchMove}
+                onTouchEnd={handleTouchEnd}
                 style={{ cursor: isDragging ? "grabbing" : "grab" }}
               >
                 {duplicatedProducts.map((product, index) => (

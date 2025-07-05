@@ -6,10 +6,10 @@ const AboutUsFotter = () => {
     <div className="aboutUsFotter">
       <div className="aboutUsFotterContainer">
         <div className="aboutUsFotterContainerDiv">
-          <p className="aboutUsFotterContainerDivText nunito-sans-regular">
+          <p className="aboutUsFotterContainerDivText rubik-dirt-regular">
             urbnctrl
           </p>
-          <div className="aboutUsFotterContainerDivTextTwo nunito-sans-regular">
+          <div className="aboutUsFotterContainerDivTextTwo rubik-dirt-regular">
             .studio
           </div>
         </div>

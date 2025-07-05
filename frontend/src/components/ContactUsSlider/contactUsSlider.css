@@ -34,34 +34,329 @@
 .contactUsSliderContainerDivElement {
   display: flex;
   align-items: center;
+  transition: transform 0.3s ease;
+}
+
+.contactUsSliderContainerDivElement:hover {
+  transform: translateY(-5px);
+}
+
+.contactUsSliderContainerDivElementContainer {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.contactUsSliderContainerDivElementContainer:hover {
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transform: scale(1.05);
 }
 
 .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne {
   width: 200px;
   height: auto;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne:hover {
+  filter: brightness(1.1) contrast(1.1);
+  transform: scale(1.02);
 }
 
 .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo {
   width: 200px;
   height: auto;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo:hover {
+  filter: brightness(1.1) contrast(1.1);
+  transform: scale(1.02);
 }
 
 .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree {
   width: 200px;
   height: auto;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree:hover {
+  filter: brightness(1.1) contrast(1.1);
+  transform: scale(1.02);
 }
 
 .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour {
   width: 200px;
   height: auto;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour:hover {
+  filter: brightness(1.1) contrast(1.1);
+  transform: scale(1.02);
 }
 
 .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive {
   width: 200px;
   height: auto;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive:hover {
+  filter: brightness(1.1) contrast(1.1);
+  transform: scale(1.02);
 }
 
 .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix {
   width: 200px;
   height: auto;
+  transition: all 0.3s ease;
+  border-radius: 8px;
+}
+
+.homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix:hover {
+  filter: brightness(1.1) contrast(1.1);
+  transform: scale(1.02);
+}
+
+/* Responsive Design */
+
+/* Large Desktop (1200px+) */
+@media screen and (min-width: 1200px) {
+  .contactUsSlider {
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+  
+  .contactUsSliderContainerDiv {
+    gap: 60px;
+  }
+  
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix {
+    width: 220px;
+  }
+}
+
+/* Desktop (992px - 1199px) */
+@media screen and (max-width: 1199px) {
+  .contactUsSlider {
+    padding-top: 125px;
+    padding-bottom: 40px;
+  }
+  
+  .contactUsSliderContainerDiv {
+    gap: 50px;
+  }
+  
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix {
+    width: 200px;
+  }
+}
+
+/* Tablet (768px - 991px) */
+@media screen and (max-width: 991px) {
+  .contactUsSlider {
+    padding-top: 100px;
+    padding-bottom: 35px;
+  }
+  
+  .contactUsSliderContainerDiv {
+    gap: 40px;
+    animation: scroll-right 25s linear infinite;
+  }
+  
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix {
+    width: 180px;
+  }
+}
+
+/* Mobile Large (576px - 767px) */
+@media screen and (max-width: 767px) {
+  .contactUsSlider {
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+  
+  .contactUsSliderContainerDiv {
+    gap: 30px;
+    animation: scroll-right 22s linear infinite;
+  }
+  
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix {
+    width: 150px;
+  }
+}
+
+/* Mobile Medium (480px - 575px) */
+@media screen and (max-width: 575px) {
+  .contactUsSlider {
+    padding-top: 60px;
+    padding-bottom: 25px;
+  }
+  
+  .contactUsSliderContainerDiv {
+    gap: 25px;
+    animation: scroll-right 20s linear infinite;
+  }
+  
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix {
+    width: 130px;
+  }
+}
+
+/* Mobile Small (360px - 479px) */
+@media screen and (max-width: 479px) {
+  .contactUsSlider {
+    padding-top: 50px;
+    padding-bottom: 20px;
+  }
+  
+  .contactUsSliderContainerDiv {
+    gap: 20px;
+    animation: scroll-right 18s linear infinite;
+  }
+  
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix {
+    width: 110px;
+  }
+}
+
+/* Extra Small Mobile (280px - 359px) */
+@media screen and (max-width: 359px) {
+  .contactUsSlider {
+    padding-top: 40px;
+    padding-bottom: 15px;
+  }
+  
+  .contactUsSliderContainerDiv {
+    gap: 15px;
+    animation: scroll-right 16s linear infinite;
+  }
+  
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix {
+    width: 90px;
+  }
+}
+
+/* Performance Optimization */
+@media (prefers-reduced-motion: reduce) {
+  .contactUsSliderContainerDiv {
+    animation: none;
+  }
+  
+  .contactUsSliderContainer {
+    overflow-x: auto;
+  }
+  
+  .contactUsSliderContainerDiv {
+    justify-content: flex-start;
+  }
+  
+  .contactUsSliderContainerDivElement,
+  .contactUsSliderContainerDivElementContainer,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix {
+    transition: none;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .contactUsSliderContainerDivElement:active {
+    transform: translateY(-3px);
+  }
+  
+  .contactUsSliderContainerDivElementContainer:active {
+    transform: scale(1.03);
+  }
+  
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne:active,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo:active,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree:active,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour:active,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive:active,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix:active {
+    filter: brightness(1.1) contrast(1.1);
+    transform: scale(1.02);
+  }
+}
+
+/* Print Styles */
+@media print {
+  .contactUsSlider {
+    display: none;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .contactUsSlider {
+    background-color: #1a1a1a;
+  }
+  
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix {
+    filter: brightness(0.9);
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconOne,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconTwo,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconThree,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFour,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconFive,
+  .homeFeaturedProductsContainerDivBottomContainerDivElementContainerIconSix {
+    filter: contrast(1.2);
+  }
 }

@@ -335,3 +335,366 @@
     opacity: 0.5;
   }
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large desktops and ultra-wide screens */
+@media screen and (min-width: 1920px) {
+  .homeHeroButton {
+    padding: 30px 40px;
+    font-size: 1.4rem;
+    letter-spacing: 5px;
+    margin-right: 80px;
+  }
+  
+  .homeHeroScrollDownIconOval {
+    width: 35px;
+    height: 60px;
+    border: 3px solid #39ff14;
+  }
+  
+  .homeHeroScrollDownTextP {
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+  }
+}
+
+/* Standard desktops */
+@media screen and (max-width: 1440px) {
+  .homeHeroButton {
+    padding: 22px 28px;
+    font-size: 1.1rem;
+    letter-spacing: 3px;
+    margin-right: 60px;
+  }
+}
+
+/* Laptops and smaller desktops */
+@media screen and (max-width: 1200px) {
+  .homeHeroButton {
+    padding: 20px 25px;
+    font-size: 1rem;
+    letter-spacing: 2.5px;
+    margin-right: 50px;
+  }
+  
+  .homeHeroScrollDownIconOval {
+    width: 28px;
+    height: 45px;
+  }
+  
+  .homeHeroScrollDownTextP {
+    font-size: 0.8rem;
+    letter-spacing: 2px;
+  }
+}
+
+/* Tablets in landscape */
+@media screen and (max-width: 1024px) {
+  .homeHero {
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  .homeHeroButton {
+    padding: 18px 22px;
+    font-size: 0.95rem;
+    letter-spacing: 2px;
+    margin-right: 40px;
+  }
+  
+  .homeHeroScrollDown {
+    bottom: 30px;
+  }
+  
+  .homeHeroScrollDownContainer {
+    gap: 12px;
+  }
+  
+  .homeHeroScrollDownIconOval {
+    width: 26px;
+    height: 42px;
+  }
+  
+  .homeHeroScrollDownIconDot {
+    width: 5px;
+    height: 5px;
+  }
+  
+  .homeHeroScrollDownTextP {
+    font-size: 0.75rem;
+    letter-spacing: 1.8px;
+  }
+}
+
+/* Tablets in portrait */
+@media screen and (max-width: 768px) {
+  .homeHero {
+    height: 100vh;
+    min-height: 500px;
+  }
+  
+  .homeHeroContainerOverlay {
+    padding: 0 20px;
+  }
+  
+  .homeHeroButton {
+    padding: 16px 20px;
+    font-size: 0.9rem;
+    letter-spacing: 1.5px;
+    margin-right: 30px;
+  }
+  
+  .homeHeroScrollDown {
+    bottom: 25px;
+  }
+  
+  .homeHeroScrollDownContainer {
+    gap: 10px;
+  }
+  
+  .homeHeroScrollDownIconOval {
+    width: 24px;
+    height: 38px;
+    padding-top: 6px;
+  }
+  
+  .homeHeroScrollDownIconDot {
+    width: 4px;
+    height: 4px;
+  }
+  
+  .homeHeroScrollDownTextP {
+    font-size: 0.7rem;
+    letter-spacing: 1.5px;
+  }
+  
+  /* Adjust video overlay for tablets */
+  .homeHeroVideoOverlay {
+    background: rgba(0, 0, 0, 0.5);
+  }
+}
+
+/* Mobile devices in landscape */
+@media screen and (max-width: 640px) and (orientation: landscape) {
+  .homeHero {
+    height: 100vh;
+    min-height: 400px;
+  }
+  
+  .homeHeroButton {
+    padding: 14px 18px;
+    font-size: 0.8rem;
+    letter-spacing: 1.2px;
+    margin-right: 20px;
+  }
+  
+  .homeHeroScrollDown {
+    bottom: 15px;
+  }
+  
+  .homeHeroScrollDownContainer {
+    gap: 8px;
+  }
+  
+  .homeHeroScrollDownIconOval {
+    width: 20px;
+    height: 30px;
+    padding-top: 5px;
+  }
+  
+  .homeHeroScrollDownTextP {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Mobile devices in portrait */
+@media screen and (max-width: 480px) {
+  .homeHero {
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  .homeHeroContainerOverlay {
+    padding: 0 15px;
+  }
+  
+  .homeHeroButton {
+    padding: 15px 20px;
+    font-size: 0.85rem;
+    letter-spacing: 1.5px;
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+  
+  .homeHeroButton:hover {
+    box-shadow:
+      0 0 3px #39ff14,
+      0 0 15px #39ff14,
+      0 0 30px #39ff14,
+      0 0 150px #39ff14;
+  }
+  
+  .homeHeroScrollDown {
+    bottom: 20px;
+  }
+  
+  .homeHeroScrollDownContainer {
+    gap: 10px;
+  }
+  
+  .homeHeroScrollDownIconOval {
+    width: 22px;
+    height: 35px;
+    padding-top: 6px;
+  }
+  
+  .homeHeroScrollDownIconDot {
+    width: 4px;
+    height: 4px;
+  }
+  
+  .homeHeroScrollDownTextP {
+    font-size: 0.65rem;
+    letter-spacing: 1.2px;
+  }
+  
+  /* Enhanced video overlay for mobile */
+  .homeHeroVideoOverlay {
+    background: rgba(0, 0, 0, 0.6);
+  }
+}
+
+/* Small mobile devices */
+@media screen and (max-width: 360px) {
+  .homeHero {
+    min-height: 500px;
+  }
+  
+  .homeHeroContainerOverlay {
+    padding: 0 10px;
+  }
+  
+  .homeHeroButton {
+    padding: 12px 16px;
+    font-size: 0.75rem;
+    letter-spacing: 1px;
+  }
+  
+  .homeHeroScrollDown {
+    bottom: 15px;
+  }
+  
+  .homeHeroScrollDownIconOval {
+    width: 20px;
+    height: 32px;
+    padding-top: 5px;
+  }
+  
+  .homeHeroScrollDownIconDot {
+    width: 3px;
+    height: 3px;
+  }
+  
+  .homeHeroScrollDownTextP {
+    font-size: 0.6rem;
+    letter-spacing: 1px;
+  }
+}
+
+/* Extra small devices */
+@media screen and (max-width: 320px) {
+  .homeHeroButton {
+    padding: 10px 14px;
+    font-size: 0.7rem;
+    letter-spacing: 0.8px;
+  }
+  
+  .homeHeroScrollDownIconOval {
+    width: 18px;
+    height: 28px;
+  }
+  
+  .homeHeroScrollDownTextP {
+    font-size: 0.55rem;
+  }
+}
+
+/* High DPI displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi),
+       screen and (min-resolution: 2dppx) {
+  .homeHeroButton {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .homeHeroScrollDownTextP {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .homeHeroButton {
+    /* Increase touch target size */
+    min-height: 48px;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .homeHeroButton:hover {
+    /* Disable hover effects on touch devices */
+    background-color: transparent;
+    color: #39ff14;
+    box-shadow: none;
+  }
+  
+  .homeHeroButton:active {
+    /* Add touch feedback */
+    background-color: #39ff14;
+    color: #050801;
+    box-shadow:
+      0 0 5px #39ff14,
+      0 0 25px #39ff14,
+      0 0 50px #39ff14,
+      0 0 200px #39ff14;
+    transform: scale(0.98);
+    transition: all 0.1s ease;
+  }
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  .homeHeroContainerOverlay.hide {
+    animation: none;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s ease, visibility 0.5s ease;
+  }
+  
+  .homeHeroVideo {
+    transition: opacity 1s ease, visibility 1s ease;
+  }
+  
+  .homeHeroButtonAnimatedBorder {
+    animation: none !important;
+  }
+  
+  .homeHeroScrollDownIconOval,
+  .homeHeroScrollDownIconDot,
+  .homeHeroScrollDownTextP {
+    animation: none !important;
+  }
+  
+  .homeHeroScrollDown {
+    animation: none;
+    opacity: 1;
+  }
+}

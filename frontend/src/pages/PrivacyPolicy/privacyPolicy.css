@@ -1,0 +1,50 @@
+.privacyPolicy {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  overflow-x: hidden;
+}
+
+/* Responsive Container */
+@media screen and (max-width: 1439px) {
+  .privacyPolicy {
+    padding: 0;
+  }
+}
+
+/* Tablet Landscape and below */
+@media screen and (max-width: 1023px) {
+  .privacyPolicy {
+    min-height: 100vh;
+  }
+}
+
+/* Mobile optimizations */
+@media screen and (max-width: 599px) {
+  .privacyPolicy {
+    background-color: #ffffff;
+    position: relative;
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  .privacyPolicy * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* High DPI displays optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .privacyPolicy {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Print styles */
+@media print {
+  .privacyPolicy {
+    background-color: white;
+    color: black;
+  }
+}

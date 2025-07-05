@@ -380,3 +380,318 @@
   line-height: 23px;
   margin-top: 8px;
 }
+
+/* Responsive Media Queries */
+
+/* Large Desktop (1440px and up) */
+@media screen and (min-width: 1440px) {
+  .contactUsFormContainer {
+    width: 90%;
+  }
+  
+  .contactUsFormContainerDiv {
+    width: 80%;
+    gap: 28px;
+  }
+  
+  .contactUsFormContainerDivOneContainerOneInput,
+  .contactUsFormContainerDivOneContainerTwoInput,
+  .contactUsFormContainerDivTwoContainer select,
+  .contactUsFormContainerDivThreeContainerInput {
+    font-size: 18px;
+    padding: 18px 18px;
+  }
+  
+  .contactUsFormContainerDivFourContainerTextArea {
+    min-height: 130px;
+    font-size: 18px;
+    padding: 18px 18px;
+  }
+  
+  .contactUsFormContainerDivOneContainer {
+    gap: 36px;
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media screen and (max-width: 1439px) {
+  .contactUsFormContainer {
+    width: 92%;
+  }
+  
+  .contactUsFormContainerDiv {
+    width: 85%;
+    gap: 26px;
+  }
+  
+  .contactUsFormContainerDivOneContainer {
+    gap: 30px;
+  }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+  .contactUsForm {
+    padding: 0 0 60px 0;
+  }
+  
+  .contactUsFormContainer {
+    width: 95%;
+  }
+  
+  .contactUsFormContainerDiv {
+    width: 90%;
+    gap: 22px;
+  }
+  
+  .contactUsFormContainerDivOneContainer {
+    gap: 24px;
+  }
+  
+  .contactUsFormContainerDivOneContainerOneInput,
+  .contactUsFormContainerDivOneContainerTwoInput,
+  .contactUsFormContainerDivTwoContainer select,
+  .contactUsFormContainerDivThreeContainerInput {
+    font-size: 16px;
+    padding: 15px 15px;
+  }
+  
+  .contactUsFormContainerDivFourContainerTextArea {
+    min-height: 100px;
+    font-size: 16px;
+    padding: 15px 15px;
+  }
+  
+  .contactUsFormContainerDivTwoContainer::after {
+    right: 14px;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 7px solid #666;
+  }
+}
+
+/* Tablet Portrait (600px - 767px) */
+@media screen and (max-width: 767px) {
+  .contactUsForm {
+    padding: 0 0 50px 0;
+  }
+  
+  .contactUsFormContainer {
+    width: 98%;
+  }
+  
+  .contactUsFormContainerDiv {
+    width: 95%;
+    gap: 20px;
+  }
+  
+  .contactUsFormContainerDivOneContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .contactUsFormContainerDivOneContainerOneInput,
+  .contactUsFormContainerDivOneContainerTwoInput,
+  .contactUsFormContainerDivTwoContainer select,
+  .contactUsFormContainerDivThreeContainerInput {
+    font-size: 15px;
+    padding: 14px 14px;
+  }
+  
+  .contactUsFormContainerDivFourContainerTextArea {
+    min-height: 90px;
+    font-size: 15px;
+    padding: 14px 14px;
+  }
+  
+  .contactUsFormContainerDivTwoContainer select {
+    text-align: left;
+    text-align-last: left;
+    padding-left: 14px;
+  }
+}
+
+/* Mobile Large (480px - 599px) */
+@media screen and (max-width: 599px) {
+  .contactUsForm {
+    width: 100vw;
+    padding: 0 0 40px 0;
+  }
+  
+  .contactUsFormContainer {
+    width: 95%;
+  }
+  
+  .contactUsFormContainerDiv {
+    width: 92%;
+    gap: 18px;
+  }
+  
+  .contactUsFormContainerDivOneContainer {
+    gap: 18px;
+  }
+  
+  .contactUsFormContainerDivOneContainerOneInput,
+  .contactUsFormContainerDivOneContainerTwoInput,
+  .contactUsFormContainerDivTwoContainer select,
+  .contactUsFormContainerDivThreeContainerInput {
+    font-size: 14px;
+    padding: 13px 13px;
+  }
+  
+  .contactUsFormContainerDivFourContainerTextArea {
+    min-height: 80px;
+    font-size: 14px;
+    padding: 13px 13px;
+  }
+  
+  .contactUsFormContainerDivTwoContainer::after {
+    right: 12px;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 6px solid #666;
+  }
+}
+
+/* Mobile Small (320px - 479px) */
+@media screen and (max-width: 479px) {
+  .contactUsForm {
+    padding: 0 0 35px 0;
+  }
+  
+  .contactUsFormContainer {
+    width: 92%;
+  }
+  
+  .contactUsFormContainerDiv {
+    width: 88%;
+    gap: 16px;
+  }
+  
+  .contactUsFormContainerDivOneContainer {
+    gap: 16px;
+  }
+  
+  .contactUsFormContainerDivOneContainerOneInput,
+  .contactUsFormContainerDivOneContainerTwoInput,
+  .contactUsFormContainerDivTwoContainer select,
+  .contactUsFormContainerDivThreeContainerInput {
+    font-size: 13px;
+    padding: 12px 12px;
+  }
+  
+  .contactUsFormContainerDivFourContainerTextArea {
+    min-height: 70px;
+    font-size: 13px;
+    padding: 12px 12px;
+  }
+  
+  .contactUsFormContainerDivTwoContainer select option {
+    font-size: 14px;
+    padding: 10px 14px;
+  }
+}
+
+/* Extra Small Mobile (280px - 319px) */
+@media screen and (max-width: 319px) {
+  .contactUsForm {
+    padding: 0 0 30px 0;
+  }
+  
+  .contactUsFormContainer {
+    width: 88%;
+  }
+  
+  .contactUsFormContainerDiv {
+    width: 85%;
+    gap: 14px;
+  }
+  
+  .contactUsFormContainerDivOneContainer {
+    gap: 14px;
+  }
+  
+  .contactUsFormContainerDivOneContainerOneInput,
+  .contactUsFormContainerDivOneContainerTwoInput,
+  .contactUsFormContainerDivTwoContainer select,
+  .contactUsFormContainerDivThreeContainerInput {
+    font-size: 12px;
+    padding: 11px 11px;
+  }
+  
+  .contactUsFormContainerDivFourContainerTextArea {
+    min-height: 60px;
+    font-size: 12px;
+    padding: 11px 11px;
+  }
+}
+
+/* Drag & Drop Responsive Styles */
+@media screen and (max-width: 767px) {
+  .contactUsFormContainerDivFive {
+    min-height: 100px;
+  }
+  
+  .contactUsFormContainerDivFiveElementsTextOne {
+    font-size: 14px;
+  }
+  
+  .contactUsFormContainerDivFiveElementsTextThree {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .contactUsFormContainerDivFive {
+    min-height: 80px;
+  }
+  
+  .contactUsFormContainerDivFiveElementsTextOne {
+    font-size: 12px;
+  }
+  
+  .contactUsFormContainerDivFiveElementsTextTwo {
+    font-size: 12px;
+  }
+  
+  .contactUsFormContainerDivFiveElementsTextThree {
+    font-size: 12px;
+    padding: 6px 12px;
+  }
+}
+
+/* Submit Button Responsive */
+@media screen and (max-width: 767px) {
+  .contactUsFormContainerDivSixContainerButtonContainerText {
+    font-size: 16px;
+    padding: 12px 24px;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .contactUsFormContainerDivSixContainerButtonContainerText {
+    font-size: 14px;
+    padding: 10px 20px;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .contactUsFormContainerDivOneContainerOneInput,
+  .contactUsFormContainerDivOneContainerTwoInput,
+  .contactUsFormContainerDivTwoContainer select,
+  .contactUsFormContainerDivThreeContainerInput,
+  .contactUsFormContainerDivFourContainerTextArea {
+    min-height: 44px;
+    touch-action: manipulation;
+  }
+  
+  .contactUsFormContainerDivTwoContainer select {
+    padding-right: 44px;
+  }
+  
+  .contactUsFormContainerDivFive {
+    min-height: 120px;
+  }
+}

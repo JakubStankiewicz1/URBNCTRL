@@ -1,8 +1,42 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./homeLocationOne.css";
 import assets from "../../assets/assets";
 
 const HomeLocationOne = () => {
+  const [screenSize, setScreenSize] = useState('desktop');
+  const [isReducedMotion, setIsReducedMotion] = useState(false);
+
+  useEffect(() => {
+    // Screen size detection for additional optimizations
+    const handleResize = () => {
+      const width = window.innerWidth;
+      if (width <= 480) {
+        setScreenSize('mobile');
+      } else if (width <= 768) {
+        setScreenSize('tablet');
+      } else if (width <= 1024) {
+        setScreenSize('laptop');
+      } else {
+        setScreenSize('desktop');
+      }
+    };
+
+    // Check for reduced motion preference
+    const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
+    setIsReducedMotion(mediaQuery.matches);
+    
+    const handleMotionChange = (e) => setIsReducedMotion(e.matches);
+    mediaQuery.addEventListener('change', handleMotionChange);
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      mediaQuery.removeEventListener('change', handleMotionChange);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
   return (
     <div className="homeLocationOne">
       <div className="homeLocationOneContainer">
@@ -15,8 +49,13 @@ const HomeLocationOne = () => {
                   <div className="homeLocationOneContainerDivLeftContainerDivOneContainer">
                     <img
                       src={assets.HomeLocationOneImgOne}
-                      alt=""
+                      alt="Urban street style fashion showcase - Premium streetwear collection"
                       className="homeLocationOneContainerDivLeftContainerDivOneContainerImage"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        console.warn('Failed to load image: HomeLocationOneImgOne');
+                      }}
                     />
                   </div>
                 </div>
@@ -25,8 +64,13 @@ const HomeLocationOne = () => {
                   <div className="homeLocationOneContainerDivLeftContainerDivTwoContainer">
                     <img
                       src={assets.HomeLocationOneImgTwo}
-                      alt=""
+                      alt="Street culture lifestyle - Urban fashion photography"
                       className="homeLocationOneContainerDivLeftContainerDivTwoContainerImage"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        console.warn('Failed to load image: HomeLocationOneImgTwo');
+                      }}
                     />
                   </div>
                 </div>
@@ -35,8 +79,13 @@ const HomeLocationOne = () => {
                   <div className="homeLocationOneContainerDivLeftContainerDivThreeContainer">
                     <img
                       src={assets.HomeLocationOneImgThree}
-                      alt=""
+                      alt="Urban culture hub - Street style collective showcase"
                       className="homeLocationOneContainerDivLeftContainerDivThreeContainerImage"
+                      loading="lazy"
+                      onError={(e) => {
+                        e.target.style.display = 'none';
+                        console.warn('Failed to load image: HomeLocationOneImgThree');
+                      }}
                     />
                   </div>
                 </div>
@@ -75,16 +124,39 @@ const HomeLocationOne = () => {
               <div className="homeLocationOneContainerDivRightContainerBottom">
                 <div className="homeLocationOneContainerDivRightContainerBottomContainer">
                   <div className="homeLocationOneContainerDivRightContainerBottomContainerOne">
-                    <div className="homeLocationOneContainerDivRightContainerBottomContainerOneBtn">
+                    <div 
+                      className="homeLocationOneContainerDivRightContainerBottomContainerOneBtn"
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Explore urban culture collection"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          e.preventDefault();
+                          // Handle explore action
+                          console.log('Explore button clicked');
+                        }
+                      }}
+                      onClick={() => {
+                        // Handle explore action
+                        console.log('Explore button clicked');
+                      }}
+                    >
                       <p className="homeLocationOneContainerDivRightContainerBottomContainerOneBtnText">
-                        Explore
+                        {screenSize === 'mobile' ? 'Explore' : 'Explore'}
                       </p>
                     </div>
                   </div>
 
                   <div className="homeLocationOneContainerDivRightContainerBottomContainerTwo">
-                    <button className="homeLocationOneContainerDivRightContainerBottomContainerTwoButton">
-                      Instagram
+                    <button 
+                      className="homeLocationOneContainerDivRightContainerBottomContainerTwoButton"
+                      aria-label="Follow us on Instagram for street style updates"
+                      onClick={() => {
+                        // Handle Instagram link
+                        window.open('https://instagram.com', '_blank', 'noopener,noreferrer');
+                      }}
+                    >
+                      {screenSize === 'mobile' ? 'Instagram' : 'Instagram'}
                     </button>
                   </div>
                 </div>

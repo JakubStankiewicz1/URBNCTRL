@@ -42,3 +42,125 @@
   font-style: italic;
   transform: translateY(5px);
 }
+
+/* Responsive Media Queries */
+
+/* Large Desktop (1440px and up) */
+@media screen and (min-width: 1440px) {
+  .privacyPolicyFotterContainerDivTextOne {
+    font-size: 96px;
+    line-height: 42px;
+  }
+  
+  .privacyPolicyFotterContainerDivTextTwo {
+    font-size: 82px;
+    line-height: 42px;
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media screen and (max-width: 1439px) {
+  .privacyPolicyFotter {
+    padding-top: 35px;
+    padding-bottom: 45px;
+  }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+  .privacyPolicyFotter {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  
+  .privacyPolicyFotterContainerDivTextOne {
+    font-size: 72px;
+    line-height: 32px;
+  }
+  
+  .privacyPolicyFotterContainerDivTextTwo {
+    font-size: 60px;
+    line-height: 32px;
+    transform: translateY(4px);
+  }
+}
+
+/* Tablet Portrait (600px - 767px) */
+@media screen and (max-width: 767px) {
+  .privacyPolicyFotter {
+    padding-top: 25px;
+    padding-bottom: 35px;
+  }
+  
+  .privacyPolicyFotterContainerDivTextOne {
+    font-size: 64px;
+    line-height: 28px;
+  }
+  
+  .privacyPolicyFotterContainerDivTextTwo {
+    font-size: 54px;
+    line-height: 28px;
+    transform: translateY(3px);
+  }
+}
+
+/* Mobile Large (480px - 599px) */
+@media screen and (max-width: 599px) {
+  .privacyPolicyFotter {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  
+  .privacyPolicyFotterContainerDiv {
+    flex-direction: column;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .privacyPolicyFotterContainerDivTextOne {
+    font-size: 56px;
+    line-height: 24px;
+  }
+  
+  .privacyPolicyFotterContainerDivTextTwo {
+    font-size: 48px;
+    line-height: 24px;
+    transform: translateY(0);
+  }
+}
+
+/* Mobile Small (320px - 479px) */
+@media screen and (max-width: 479px) {
+  .privacyPolicyFotter {
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  
+  .privacyPolicyFotterContainerDivTextOne {
+    font-size: 48px;
+    line-height: 20px;
+  }
+  
+  .privacyPolicyFotterContainerDivTextTwo {
+    font-size: 42px;
+    line-height: 20px;
+  }
+}
+
+/* Extra Small Mobile (280px - 319px) */
+@media screen and (max-width: 319px) {
+  .privacyPolicyFotter {
+    padding-top: 12px;
+    padding-bottom: 20px;
+  }
+  
+  .privacyPolicyFotterContainerDivTextOne {
+    font-size: 42px;
+    line-height: 18px;
+  }
+  
+  .privacyPolicyFotterContainerDivTextTwo {
+    font-size: 36px;
+    line-height: 18px;
+  }
+}

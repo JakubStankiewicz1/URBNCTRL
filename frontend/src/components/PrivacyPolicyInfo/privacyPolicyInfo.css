@@ -158,3 +158,223 @@
 .privacyPolicyInfoAccordionContentText {
   color: #0b170d;
 }
+
+/* Responsive Media Queries */
+
+/* Large Desktop (1440px and up) */
+@media screen and (min-width: 1440px) {
+  .privacyPolicyInfoAccordionTitle {
+    font-size: 2.2rem;
+  }
+  
+  .privacyPolicyInfoAccordionContent {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 22px 22px 22px 22px;
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media screen and (max-width: 1439px) {
+  .privacyPolicyInfo {
+    padding-bottom: 80px;
+  }
+  
+  .privacyPolicyInfoContainer {
+    width: 90%;
+  }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+  .privacyPolicyInfo {
+    padding-bottom: 60px;
+  }
+  
+  .privacyPolicyInfoContainer {
+    width: 92%;
+  }
+  
+  .privacyPolicyInfoAccordionTitle {
+    font-size: 1.8rem;
+    letter-spacing: 0.3px;
+  }
+  
+  .privacyPolicyInfoAccordionContent {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 16px 16px 16px 16px;
+  }
+  
+  .privacyPolicyInfoAccordionIcon {
+    width: 28px;
+    height: 28px;
+    margin-left: 12px;
+  }
+  
+  .privacyPolicyInfoAccordionIconHorizontal {
+    width: 14px;
+    height: 2px;
+  }
+  
+  .privacyPolicyInfoAccordionIconVertical {
+    width: 2px;
+    height: 14px;
+  }
+}
+
+/* Tablet Portrait (600px - 767px) */
+@media screen and (max-width: 767px) {
+  .privacyPolicyInfo {
+    padding-bottom: 50px;
+  }
+  
+  .privacyPolicyInfoContainer {
+    width: 95%;
+  }
+  
+  .privacyPolicyInfoContainerDiv {
+    gap: 15px;
+  }
+  
+  .privacyPolicyInfoAccordionHeader {
+    min-height: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .privacyPolicyInfoAccordionTitle {
+    font-size: 1.6rem;
+    letter-spacing: 0.2px;
+    flex: 1;
+    min-width: 0;
+  }
+  
+  .privacyPolicyInfoAccordionContent {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 14px 14px 14px 14px;
+  }
+  
+  .privacyPolicyInfoAccordionIcon {
+    width: 26px;
+    height: 26px;
+    margin-left: 10px;
+    flex-shrink: 0;
+  }
+}
+
+/* Mobile Large (480px - 599px) */
+@media screen and (max-width: 599px) {
+  .privacyPolicyInfo {
+    padding-bottom: 40px;
+  }
+  
+  .privacyPolicyInfoContainer {
+    width: 90%;
+  }
+  
+  .privacyPolicyInfoContainerDiv {
+    gap: 12px;
+  }
+  
+  .privacyPolicyInfoAccordionHeader {
+    min-height: 45px;
+    padding: 8px 0;
+  }
+  
+  .privacyPolicyInfoAccordionTitle {
+    font-size: 1.4rem;
+    letter-spacing: 0.1px;
+    line-height: 1.3;
+  }
+  
+  .privacyPolicyInfoAccordionContent {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 12px 12px 12px 12px;
+  }
+  
+  .privacyPolicyInfoAccordionIcon {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+  }
+  
+  .privacyPolicyInfoAccordionIconHorizontal {
+    width: 12px;
+    height: 2px;
+  }
+  
+  .privacyPolicyInfoAccordionIconVertical {
+    width: 2px;
+    height: 12px;
+  }
+}
+
+/* Mobile Small (320px - 479px) */
+@media screen and (max-width: 479px) {
+  .privacyPolicyInfo {
+    padding-bottom: 30px;
+  }
+  
+  .privacyPolicyInfoContainer {
+    width: 85%;
+  }
+  
+  .privacyPolicyInfoContainerDiv {
+    gap: 10px;
+  }
+  
+  .privacyPolicyInfoAccordionHeader {
+    min-height: 40px;
+    padding: 6px 0;
+  }
+  
+  .privacyPolicyInfoAccordionTitle {
+    font-size: 1.2rem;
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
+  
+  .privacyPolicyInfoAccordionContent {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .privacyPolicyInfoAccordionIcon {
+    width: 22px;
+    height: 22px;
+    margin-left: 6px;
+  }
+  
+  .privacyPolicyInfoAccordionIconHorizontal {
+    width: 10px;
+    height: 1.5px;
+  }
+  
+  .privacyPolicyInfoAccordionIconVertical {
+    width: 1.5px;
+    height: 10px;
+  }
+  
+  .privacyPolicyInfoAccordionDivider {
+    height: 2px;
+  }
+}
+
+/* Extra Small Mobile (280px - 319px) */
+@media screen and (max-width: 319px) {
+  .privacyPolicyInfoContainer {
+    width: 80%;
+  }
+  
+  .privacyPolicyInfoAccordionTitle {
+    font-size: 1.1rem;
+  }
+  
+  .privacyPolicyInfoAccordionContent {
+    font-size: 0.8rem;
+    padding: 8px 8px 8px 8px;
+  }
+}

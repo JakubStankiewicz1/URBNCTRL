@@ -1,0 +1,81 @@
+.shippingAndReturns {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  overflow-x: hidden;
+  position: relative;
+}
+
+/* Responsive Container */
+@media screen and (max-width: 1439px) {
+  .shippingAndReturns {
+    padding: 0;
+  }
+}
+
+/* Tablet Landscape and below */
+@media screen and (max-width: 1023px) {
+  .shippingAndReturns {
+    min-height: 100vh;
+  }
+}
+
+/* Mobile optimizations */
+@media screen and (max-width: 599px) {
+  .shippingAndReturns {
+    background-color: #ffffff;
+    position: relative;
+  }
+  
+  /* Prevent horizontal scroll on mobile */
+  .shippingAndReturns * {
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* High DPI displays optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .shippingAndReturns {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Landscape mobile orientation */
+@media screen and (max-height: 500px) and (orientation: landscape) {
+  .shippingAndReturns {
+    min-height: 100vh;
+  }
+}
+
+/* Accessibility - Reduce motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+  .shippingAndReturns * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Dark mode support (future-proofing) */
+@media (prefers-color-scheme: dark) {
+  .shippingAndReturns {
+    background-color: #ffffff; /* Keep white for brand consistency */
+  }
+}
+
+/* Print styles */
+@media print {
+  .shippingAndReturns {
+    background-color: white;
+    color: black;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  
+  .shippingAndReturns * {
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+}

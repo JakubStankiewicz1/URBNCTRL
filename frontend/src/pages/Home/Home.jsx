@@ -20,9 +20,15 @@ const Home = ({ setHasStarted }) => {
       <HomeLocationOne />
       <HomeImages />
       <HomeTrendingFeatures />
+
+
+      {/* To do - different type device screen */}
       <HomeLocationTwo />
       <HomeCollection />
       <HomeFeaturedProducts />
+
+
+      
       <Fotter />
     </div>
   );

@@ -170,3 +170,337 @@
     background-color: transparent;
   }
 }
+
+/* ========================================
+   ULTRA PROFESSIONAL RESPONSIVE DESIGN
+   ======================================== */
+
+/* Large Desktop (1920px and up) - Premium Experience */
+@media screen and (min-width: 1920px) {
+  .aboutUsHero {
+    height: 100vh;
+  }
+  
+  .aboutUsHeroContainerDivInfo {
+    width: 450px;
+    height: 360px;
+    transform: translateY(-60px);
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOvergroundContainerText {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 700;
+  }
+  
+  .aboutUsHeroContainerDivInfo::before,
+  .aboutUsHeroContainerDivInfo::after,
+  .aboutUsHeroContainerDivInfoBorders::before,
+  .aboutUsHeroContainerDivInfoBorders::after {
+    height: 4px;
+    width: 4px;
+  }
+}
+
+/* Desktop HD (1440px - 1919px) - Enhanced Desktop */
+@media screen and (max-width: 1919px) and (min-width: 1440px) {
+  .aboutUsHeroContainerDivInfo {
+    width: 420px;
+    height: 340px;
+    transform: translateY(-50px);
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOvergroundContainerText {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 700;
+  }
+}
+
+/* Desktop Standard (1024px - 1439px) - Optimized Desktop */
+@media screen and (max-width: 1439px) and (min-width: 1024px) {
+  .aboutUsHero {
+    height: 100vh;
+  }
+  
+  .aboutUsHeroContainerDivInfo {
+    width: 380px;
+    height: 300px;
+    transform: translateY(-30px);
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOvergroundContainerText {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  
+  .aboutUsHeroVideo {
+    filter: brightness(0.45);
+  }
+}
+
+/* Tablet Landscape (768px - 1023px) - Professional Tablet */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .aboutUsHero {
+    height: 100vh;
+    min-height: 600px;
+  }
+  
+  .aboutUsHeroContainerDivInfo {
+    width: 340px;
+    height: 280px;
+    transform: translateY(-20px);
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOverground {
+    width: 85%;
+    height: 85%;
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOvergroundContainerText {
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 600;
+  }
+  
+  .aboutUsHeroVideo {
+    filter: brightness(0.5);
+  }
+  
+  .aboutUsHeroContainerDivInfo::before,
+  .aboutUsHeroContainerDivInfo::after,
+  .aboutUsHeroContainerDivInfoBorders::before,
+  .aboutUsHeroContainerDivInfoBorders::after {
+    height: 2.5px;
+    width: 2.5px;
+  }
+}
+
+/* Tablet Portrait (600px - 767px) - Touch Optimized */
+@media screen and (max-width: 767px) and (min-width: 600px) {
+  .aboutUsHero {
+    height: 100vh;
+    min-height: 500px;
+  }
+  
+  .aboutUsHeroContainerDivInfo {
+    width: 320px;
+    height: 260px;
+    transform: translateY(-10px);
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOverground {
+    width: 88%;
+    height: 88%;
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOvergroundContainerText {
+    font-size: 15px;
+    line-height: 21px;
+    font-weight: 500;
+  }
+  
+  .aboutUsHeroVideo {
+    filter: brightness(0.55);
+  }
+}
+
+/* Mobile Large (480px - 599px) - Mobile Excellence */
+@media screen and (max-width: 599px) and (min-width: 480px) {
+  .aboutUsHero {
+    height: 100vh;
+    min-height: 500px;
+  }
+  
+  .aboutUsHeroContainerDivInfo {
+    width: 300px;
+    height: 240px;
+    transform: translateY(0);
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOverground {
+    width: 90%;
+    height: 90%;
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOvergroundContainerText {
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+  }
+  
+  .aboutUsHeroVideo {
+    filter: brightness(0.6);
+  }
+  
+  .aboutUsHeroContainerDivInfo::before,
+  .aboutUsHeroContainerDivInfo::after,
+  .aboutUsHeroContainerDivInfoBorders::before,
+  .aboutUsHeroContainerDivInfoBorders::after {
+    height: 2px;
+    width: 2px;
+  }
+}
+
+/* Mobile Standard (375px - 479px) - Optimized Mobile */
+@media screen and (max-width: 479px) and (min-width: 375px) {
+  .aboutUsHero {
+    height: 100vh;
+    min-height: 480px;
+  }
+  
+  .aboutUsHeroContainerDivInfo {
+    width: 280px;
+    height: 220px;
+    transform: translateY(10px);
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOverground {
+    width: 92%;
+    height: 92%;
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOvergroundContainerText {
+    font-size: 13px;
+    line-height: 19px;
+    font-weight: 500;
+  }
+  
+  .aboutUsHeroVideo {
+    filter: brightness(0.65);
+  }
+}
+
+/* Mobile Small (320px - 374px) - Compact Mobile */
+@media screen and (max-width: 374px) and (min-width: 320px) {
+  .aboutUsHero {
+    height: 100vh;
+    min-height: 450px;
+  }
+  
+  .aboutUsHeroContainerDivInfo {
+    width: 260px;
+    height: 200px;
+    transform: translateY(20px);
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOverground {
+    width: 94%;
+    height: 94%;
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOvergroundContainerText {
+    font-size: 12px;
+    line-height: 18px;
+    font-weight: 500;
+  }
+  
+  .aboutUsHeroVideo {
+    filter: brightness(0.7);
+  }
+  
+  .aboutUsHeroContainerDivInfo::before,
+  .aboutUsHeroContainerDivInfo::after,
+  .aboutUsHeroContainerDivInfoBorders::before,
+  .aboutUsHeroContainerDivInfoBorders::after {
+    height: 1.5px;
+    width: 1.5px;
+  }
+}
+
+/* Ultra Small Mobile (280px - 319px) - Legacy Support */
+@media screen and (max-width: 319px) {
+  .aboutUsHero {
+    height: 100vh;
+    min-height: 400px;
+  }
+  
+  .aboutUsHeroContainerDivInfo {
+    width: 240px;
+    height: 180px;
+    transform: translateY(30px);
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOverground {
+    width: 95%;
+    height: 95%;
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOvergroundContainerText {
+    font-size: 11px;
+    line-height: 16px;
+    font-weight: 500;
+  }
+  
+  .aboutUsHeroVideo {
+    filter: brightness(0.75);
+  }
+}
+
+/* Landscape Mobile Orientation */
+@media screen and (max-height: 500px) and (orientation: landscape) and (max-width: 1023px) {
+  .aboutUsHero {
+    height: 100vh;
+    min-height: 400px;
+  }
+  
+  .aboutUsHeroContainerDivInfo {
+    width: 320px;
+    height: 200px;
+    transform: translateY(0);
+  }
+  
+  .aboutUsHeroContainerDivInfoContainerOvergroundContainerText {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+/* High Pixel Density Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .aboutUsHero {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .aboutUsHeroContainerDivInfo::before,
+  .aboutUsHeroContainerDivInfo::after,
+  .aboutUsHeroContainerDivInfoBorders::before,
+  .aboutUsHeroContainerDivInfoBorders::after {
+    transform: translateZ(0);
+    will-change: width, height;
+  }
+}
+
+/* Performance Optimizations */
+@media (prefers-reduced-motion: reduce) {
+  .aboutUsHero {
+    animation: none;
+  }
+  
+  .aboutUsHeroVideo {
+    animation: none;
+    opacity: 1;
+  }
+  
+  .aboutUsHeroContainerDivInfo::before,
+  .aboutUsHeroContainerDivInfo::after,
+  .aboutUsHeroContainerDivInfoBorders::before,
+  .aboutUsHeroContainerDivInfoBorders::after {
+    animation: none;
+    width: 100%;
+    height: 100%;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .aboutUsHeroContainerDivInfo {
+    transition: transform 0.2s ease-out;
+  }
+  
+  .aboutUsHeroContainerDivInfo:active {
+    transform: scale(0.98);
+  }
+}

@@ -1,8 +1,20 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "./homeLocationTwo.css";
 import assets from "../../assets/assets";
 
 const HomeLocationTwo = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 767);
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
   return (
     <div className="homeLocationTwo">
       <div className="homeLocationTwoContainer">
@@ -40,14 +52,17 @@ const HomeLocationTwo = () => {
                   <div className="homeLocationTwoContainerDivLeftCotntainerBottomContainerOne">
                     <div className="homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn">
                       <p className="homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtnText">
-                        Discover
+                        {isMobile ? "Visit" : "Discover"}
                       </p>
                     </div>
                   </div>
 
                   <div className="homeLocationTwoContainerDivLeftCotntainerBottomContainerTwo">
-                    <button className="homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton">
-                      Instagram
+                    <button 
+                      className="homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton"
+                      aria-label="Visit our Instagram page"
+                    >
+                      {isMobile ? "IG" : "Instagram"}
                     </button>
                   </div>
                 </div>
@@ -63,8 +78,9 @@ const HomeLocationTwo = () => {
                   <div className="homeLocationTwoContainerDivRightContainerDivOneContainer">
                     <img
                       src={assets.HomeLocationOneImgOne}
-                      alt=""
+                      alt="Creative District - Urban streetwear community showcase"
                       className="homeLocationTwoContainerDivRightContainerDivOneContainerImage"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -73,8 +89,9 @@ const HomeLocationTwo = () => {
                   <div className="homeLocationTwoContainerDivRightContainerDivTwoContainer">
                     <img
                       src={assets.HomeLocationOneImgTwo}
-                      alt=""
+                      alt="Design Community - Creative collaboration space"
                       className="homeLocationTwoContainerDivRightContainerDivTwoContainerImage"
+                      loading="lazy"
                     />
                   </div>
                 </div>
@@ -83,8 +100,9 @@ const HomeLocationTwo = () => {
                   <div className="homeLocationTwoContainerDivRightContainerDivThreeContainer">
                     <img
                       src={assets.HomeLocationOneImgThree}
-                      alt=""
+                      alt="Urban art gallery and design workshop space"
                       className="homeLocationTwoContainerDivRightContainerDivThreeContainerImage"
+                      loading="lazy"
                     />
                   </div>
                 </div>

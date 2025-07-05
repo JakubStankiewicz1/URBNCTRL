@@ -3,15 +3,15 @@ import "./communityHeader.css";
 
 const CommunityHeader = () => {
   return (
-    <div className="communityHeader">
+    <header className="communityHeader" role="banner">
       <div className="communityHeaderContainer">
         <div className="communityHeaderContainerDiv">
           {/* Top Part */}
           <div className="communityHeaderContainerDivTop">
             <div className="communityHeaderContainerDivTopContainer">
-              <p className="communityHeaderContainerDivTopContainerText nunito-sans-regular">
+              <h1 className="communityHeaderContainerDivTopContainerText nunito-sans-regular">
                 Our Community
-              </p>
+              </h1>
             </div>
           </div>
 
@@ -34,7 +34,7 @@ const CommunityHeader = () => {
           </div>
         </div>
       </div>
-    </div>
+    </header>
   );
 };
 

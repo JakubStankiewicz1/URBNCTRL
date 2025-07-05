@@ -23,6 +23,7 @@
   user-select: none;
   gap: 30px;
   will-change: transform;
+  touch-action: pan-y;
 }
 
 .communityArticleSlider:active {
@@ -43,6 +44,7 @@
   display: flex;
   gap: 12px;
   z-index: 10;
+  padding: 10px;
 }
 
 .communityArticleDot {
@@ -52,6 +54,9 @@
   background-color: rgba(255, 255, 255, 0.3);
   cursor: pointer;
   transition: all 0.3s ease;
+  border: none;
+  outline: none;
+  touch-action: manipulation;
 }
 
 .communityArticleDot.active {
@@ -64,28 +69,320 @@
   transform: scale(1.1);
 }
 
-@media (max-width: 1200px) {
+.communityArticleDot:focus {
+  outline: 2px solid #da2228;
+  outline-offset: 2px;
+}
+
+/* Extra Large Desktops (1920px and up) */
+@media (min-width: 1920px) {
+  .communityArticle {
+    padding-bottom: 70px;
+  }
+  
+  .communityArticleContainer {
+    max-width: 1600px;
+    padding: 0 60px;
+  }
+  
+  .communityArticleSlider {
+    gap: 40px;
+  }
+  
+  .communityArticleSlider .communityArticleElement {
+    min-width: 420px;
+    max-width: 420px;
+  }
+  
+  .communityArticleNavigation {
+    bottom: -40px;
+    gap: 15px;
+  }
+  
+  .communityArticleDot {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Large Desktops (1440px to 1919px) */
+@media (max-width: 1919px) and (min-width: 1440px) {
+  .communityArticle {
+    padding-bottom: 60px;
+  }
+  
+  .communityArticleContainer {
+    max-width: 1500px;
+    padding: 0 55px;
+  }
+  
+  .communityArticleSlider {
+    gap: 35px;
+  }
+  
+  .communityArticleSlider .communityArticleElement {
+    min-width: 400px;
+    max-width: 400px;
+  }
+  
+  .communityArticleNavigation {
+    bottom: -35px;
+    gap: 14px;
+  }
+  
+  .communityArticleDot {
+    width: 11px;
+    height: 11px;
+  }
+}
+
+/* Standard Desktops (1200px to 1439px) */
+@media (max-width: 1439px) and (min-width: 1200px) {
+  .communityArticle {
+    padding-bottom: 50px;
+  }
+  
+  .communityArticleContainer {
+    padding: 0 50px;
+  }
+  
+  .communityArticleSlider {
+    gap: 30px;
+  }
+  
+  .communityArticleSlider .communityArticleElement {
+    min-width: 380px;
+    max-width: 380px;
+  }
+  
+  .communityArticleNavigation {
+    bottom: -30px;
+    gap: 12px;
+  }
+}
+
+/* Small Desktops/Large Tablets (1024px to 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .communityArticle {
+    padding-bottom: 40px;
+  }
+  
+  .communityArticleContainer {
+    padding: 0 40px;
+  }
+  
+  .communityArticleSlider {
+    gap: 25px;
+  }
+  
   .communityArticleSlider .communityArticleElement {
     min-width: 340px;
     max-width: 340px;
   }
-
-  .communityArticleContainer {
-    padding: 0 30px;
+  
+  .communityArticleNavigation {
+    bottom: -25px;
+    gap: 10px;
+  }
+  
+  .communityArticleDot {
+    width: 9px;
+    height: 9px;
   }
 }
 
-@media (max-width: 768px) {
-  .communityArticleSlider .communityArticleElement {
-    min-width: 360px;
-    max-width: 360px;
+/* Tablets (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .communityArticle {
+    padding-bottom: 35px;
   }
+  
+  .communityArticleContainer {
+    padding: 0 30px;
+  }
+  
+  .communityArticleSlider {
+    gap: 20px;
+  }
+  
+  .communityArticleSlider .communityArticleElement {
+    min-width: 320px;
+    max-width: 320px;
+  }
+  
+  .communityArticleNavigation {
+    bottom: -20px;
+    gap: 8px;
+  }
+  
+  .communityArticleDot {
+    width: 8px;
+    height: 8px;
+  }
+}
 
+/* Large Mobile (480px to 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .communityArticle {
+    padding-bottom: 30px;
+  }
+  
   .communityArticleContainer {
     padding: 0 20px;
   }
-
+  
   .communityArticleSlider {
-    gap: 20px;
+    gap: 15px;
+  }
+  
+  .communityArticleSlider .communityArticleElement {
+    min-width: 280px;
+    max-width: 280px;
+  }
+  
+  .communityArticleNavigation {
+    bottom: -15px;
+    gap: 6px;
+  }
+  
+  .communityArticleDot {
+    width: 7px;
+    height: 7px;
+  }
+}
+
+/* Small Mobile (320px to 479px) */
+@media (max-width: 479px) and (min-width: 320px) {
+  .communityArticle {
+    padding-bottom: 25px;
+  }
+  
+  .communityArticleContainer {
+    padding: 0 15px;
+  }
+  
+  .communityArticleSlider {
+    gap: 12px;
+  }
+  
+  .communityArticleSlider .communityArticleElement {
+    min-width: 250px;
+    max-width: 250px;
+  }
+  
+  .communityArticleNavigation {
+    bottom: -12px;
+    gap: 5px;
+  }
+  
+  .communityArticleDot {
+    width: 6px;
+    height: 6px;
+  }
+}
+
+/* Extra Small Mobile (up to 319px) */
+@media (max-width: 319px) {
+  .communityArticle {
+    padding-bottom: 20px;
+  }
+  
+  .communityArticleContainer {
+    padding: 0 10px;
+  }
+  
+  .communityArticleSlider {
+    gap: 10px;
+  }
+  
+  .communityArticleSlider .communityArticleElement {
+    min-width: 220px;
+    max-width: 220px;
+  }
+  
+  .communityArticleNavigation {
+    bottom: -10px;
+    gap: 4px;
+  }
+  
+  .communityArticleDot {
+    width: 5px;
+    height: 5px;
+  }
+}
+
+/* Touch-specific adjustments */
+@media (hover: none) and (pointer: coarse) {
+  .communityArticleSlider {
+    cursor: default;
+  }
+  
+  .communityArticleSlider:active {
+    cursor: default;
+  }
+  
+  .communityArticleDot {
+    min-width: 44px;
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: transparent;
+  }
+  
+  .communityArticleDot::after {
+    content: '';
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.3);
+    transition: all 0.3s ease;
+  }
+  
+  .communityArticleDot.active::after {
+    background-color: #da2228;
+    transform: scale(1.3);
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .communityArticleSlider {
+    will-change: auto;
+  }
+  
+  .communityArticleDot {
+    transition: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .communityArticleDot {
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid #ffffff;
+  }
+  
+  .communityArticleDot.active {
+    background-color: #ff0000;
+    border-color: #ff0000;
+  }
+}
+
+/* Print styles */
+@media print {
+  .communityArticle {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 20px 0;
+  }
+  
+  .communityArticleSlider {
+    display: block;
+  }
+  
+  .communityArticleNavigation {
+    display: none;
   }
 }

@@ -54,3 +54,205 @@
   font-weight: 300;
   line-height: 23px;
 }
+
+/* Responsive Media Queries */
+
+/* Large Desktop (1440px and up) */
+@media screen and (min-width: 1440px) {
+  .shippingAndReturnsHero {
+    padding-top: 180px;
+    padding-bottom: 120px;
+  }
+  
+  .shippingAndReturnsHeroContainer {
+    width: 80%;
+  }
+  
+  .shippingAndReturnsHeroContainerDivTopContainerText {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  
+  .shippingAndReturnsHeroContainerDivBottomContainerTextOne,
+  .shippingAndReturnsHeroContainerDivBottomContainerTextTwo,
+  .shippingAndReturnsHeroContainerDivBottomContainerTextThree {
+    font-size: 19px;
+    line-height: 26px;
+  }
+  
+  .shippingAndReturnsHeroContainerDiv {
+    gap: 65px;
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media screen and (max-width: 1439px) {
+  .shippingAndReturnsHero {
+    padding-top: 160px;
+    padding-bottom: 90px;
+  }
+  
+  .shippingAndReturnsHeroContainer {
+    width: 88%;
+  }
+  
+  .shippingAndReturnsHeroContainerDiv {
+    gap: 50px;
+  }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+  .shippingAndReturnsHero {
+    padding-top: 120px;
+    padding-bottom: 70px;
+  }
+  
+  .shippingAndReturnsHeroContainer {
+    width: 92%;
+  }
+  
+  .shippingAndReturnsHeroContainerDivTopContainerText {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  
+  .shippingAndReturnsHeroContainerDivBottomContainerTextOne,
+  .shippingAndReturnsHeroContainerDivBottomContainerTextTwo,
+  .shippingAndReturnsHeroContainerDivBottomContainerTextThree {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+  .shippingAndReturnsHeroContainerDiv {
+    gap: 40px;
+  }
+  
+  .shippingAndReturnsHeroContainerDivBottomContainer {
+    gap: 20px;
+  }
+}
+
+/* Tablet Portrait (600px - 767px) */
+@media screen and (max-width: 767px) {
+  .shippingAndReturnsHero {
+    padding-top: 100px;
+    padding-bottom: 60px;
+  }
+  
+  .shippingAndReturnsHeroContainer {
+    width: 95%;
+  }
+  
+  .shippingAndReturnsHeroContainerDivTopContainerText {
+    font-size: 32px;
+    line-height: 38px;
+    text-align: center;
+  }
+  
+  .shippingAndReturnsHeroContainerDiv {
+    align-items: center;
+    gap: 35px;
+  }
+  
+  .shippingAndReturnsHeroContainerDivBottomContainerTextOne,
+  .shippingAndReturnsHeroContainerDivBottomContainerTextTwo,
+  .shippingAndReturnsHeroContainerDivBottomContainerTextThree {
+    font-size: 15px;
+    line-height: 21px;
+    text-align: center;
+  }
+  
+  .shippingAndReturnsHeroContainerDivBottomContainer {
+    align-items: center;
+    gap: 18px;
+  }
+}
+
+/* Mobile Large (480px - 599px) */
+@media screen and (max-width: 599px) {
+  .shippingAndReturnsHero {
+    padding-top: 80px;
+    padding-bottom: 50px;
+  }
+  
+  .shippingAndReturnsHeroContainer {
+    width: 90%;
+  }
+  
+  .shippingAndReturnsHeroContainerDivTopContainerText {
+    font-size: 28px;
+    line-height: 34px;
+  }
+  
+  .shippingAndReturnsHeroContainerDivBottomContainerTextOne,
+  .shippingAndReturnsHeroContainerDivBottomContainerTextTwo,
+  .shippingAndReturnsHeroContainerDivBottomContainerTextThree {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .shippingAndReturnsHeroContainerDiv {
+    gap: 30px;
+  }
+  
+  .shippingAndReturnsHeroContainerDivBottomContainer {
+    gap: 16px;
+  }
+}
+
+/* Mobile Small (320px - 479px) */
+@media screen and (max-width: 479px) {
+  .shippingAndReturnsHero {
+    padding-top: 70px;
+    padding-bottom: 40px;
+  }
+  
+  .shippingAndReturnsHeroContainer {
+    width: 85%;
+  }
+  
+  .shippingAndReturnsHeroContainerDivTopContainerText {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  .shippingAndReturnsHeroContainerDivBottomContainerTextOne,
+  .shippingAndReturnsHeroContainerDivBottomContainerTextTwo,
+  .shippingAndReturnsHeroContainerDivBottomContainerTextThree {
+    font-size: 13px;
+    line-height: 19px;
+  }
+  
+  .shippingAndReturnsHeroContainerDiv {
+    gap: 25px;
+  }
+  
+  .shippingAndReturnsHeroContainerDivBottomContainer {
+    gap: 14px;
+  }
+}
+
+/* Extra Small Mobile (280px - 319px) */
+@media screen and (max-width: 319px) {
+  .shippingAndReturnsHero {
+    padding-top: 60px;
+    padding-bottom: 35px;
+  }
+  
+  .shippingAndReturnsHeroContainer {
+    width: 80%;
+  }
+  
+  .shippingAndReturnsHeroContainerDivTopContainerText {
+    font-size: 22px;
+    line-height: 28px;
+  }
+  
+  .shippingAndReturnsHeroContainerDivBottomContainerTextOne,
+  .shippingAndReturnsHeroContainerDivBottomContainerTextTwo,
+  .shippingAndReturnsHeroContainerDivBottomContainerTextThree {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

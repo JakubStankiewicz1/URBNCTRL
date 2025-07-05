@@ -8,7 +8,7 @@ const CommunityArticleElement = ({
   buttonText = "Read Article",
 }) => {
   return (
-    <div className="communityArticleElement">
+    <article className="communityArticleElement" role="article" aria-labelledby={`article-title-${title.replace(/\s+/g, '-').toLowerCase()}`}>
       <div className="communityArticleElementContainer">
         <div className="communityArticleElementContainerDiv">
           {" "}
@@ -17,8 +17,10 @@ const CommunityArticleElement = ({
             <div className="communityArticleElementContainerDivImageContainer">
               <img
                 src={image}
-                alt={title}
+                alt={`${category}: ${title}`}
                 className="communityArticleElementContainerDivImageContainerImage"
+                loading="lazy"
+                decoding="async"
               />
             </div>
           </div>
@@ -35,28 +37,35 @@ const CommunityArticleElement = ({
 
               <div className="communityArticleElementContainerDivInfoContainerTwo">
                 <div className="communityArticleElementContainerDivInfoContainerTwoContainer">
-                  <p className="communityArticleElementContainerDivInfoContainerTwoContainerText nunito-sans-regular">
+                  <h3 
+                    className="communityArticleElementContainerDivInfoContainerTwoContainerText nunito-sans-regular"
+                    id={`article-title-${title.replace(/\s+/g, '-').toLowerCase()}`}
+                  >
                     {title}
-                  </p>
+                  </h3>
                 </div>
               </div>
 
               <div className="communityArticleElementContainerDivInfoContainerThree">
                 <div className="communityArticleElementContainerDivInfoContainerThreeContainer">
-                  <div className="communityArticleElementContainerDivInfoContainerThreeContainerButton">
+                  <button 
+                    className="communityArticleElementContainerDivInfoContainerThreeContainerButton"
+                    aria-label={`${buttonText} - ${title}`}
+                    type="button"
+                  >
                     <div className="communityArticleElementContainerDivInfoContainerThreeContainerButtonContainer">
-                      <p className="communityArticleElementContainerDivInfoContainerThreeContainerButtonContainerText nunito-sans-regular">
+                      <span className="communityArticleElementContainerDivInfoContainerThreeContainerButtonContainerText nunito-sans-regular">
                         {buttonText}
-                      </p>
+                      </span>
                     </div>
-                  </div>
+                  </button>
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-    </div>
+    </article>
   );
 };
 

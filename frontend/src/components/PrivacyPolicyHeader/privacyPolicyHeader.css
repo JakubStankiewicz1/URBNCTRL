@@ -34,3 +34,140 @@
   font-weight: 300;
   line-height: 23px;
 }
+
+/* Responsive Media Queries */
+
+/* Large Desktop (1440px and up) */
+@media screen and (min-width: 1440px) {
+  .privacyPolicyHeaderContainerTopContainerText {
+    font-size: 48px;
+    line-height: 56px;
+  }
+  
+  .privacyPolicyHeaderContainerBottomContainerText {
+    font-size: 19px;
+    line-height: 26px;
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media screen and (max-width: 1439px) {
+  .privacyPolicyHeader {
+    padding-top: 160px;
+    padding-bottom: 40px;
+  }
+  
+  .privacyPolicyHeaderContainer {
+    width: 90%;
+  }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+  .privacyPolicyHeader {
+    padding-top: 120px;
+    padding-bottom: 30px;
+  }
+  
+  .privacyPolicyHeaderContainer {
+    width: 92%;
+  }
+  
+  .privacyPolicyHeaderContainerTopContainerText {
+    font-size: 36px;
+    line-height: 42px;
+  }
+  
+  .privacyPolicyHeaderContainerBottom {
+    margin-top: 50px;
+  }
+  
+  .privacyPolicyHeaderContainerBottomContainerText {
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+/* Tablet Portrait (600px - 767px) */
+@media screen and (max-width: 767px) {
+  .privacyPolicyHeader {
+    padding-top: 100px;
+    padding-bottom: 25px;
+  }
+  
+  .privacyPolicyHeaderContainer {
+    width: 95%;
+  }
+  
+  .privacyPolicyHeaderContainerTopContainerText {
+    font-size: 32px;
+    line-height: 38px;
+  }
+  
+  .privacyPolicyHeaderContainerBottom {
+    margin-top: 40px;
+  }
+  
+  .privacyPolicyHeaderContainerBottomContainerText {
+    font-size: 15px;
+    line-height: 21px;
+  }
+}
+
+/* Mobile Large (480px - 599px) */
+@media screen and (max-width: 599px) {
+  .privacyPolicyHeader {
+    padding-top: 80px;
+    padding-bottom: 20px;
+  }
+  
+  .privacyPolicyHeaderContainer {
+    width: 90%;
+  }
+  
+  .privacyPolicyHeaderContainerTopContainerText {
+    font-size: 28px;
+    line-height: 34px;
+    text-align: center;
+  }
+  
+  .privacyPolicyHeaderContainer {
+    align-items: center;
+  }
+  
+  .privacyPolicyHeaderContainerBottom {
+    margin-top: 35px;
+  }
+  
+  .privacyPolicyHeaderContainerBottomContainerText {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+}
+
+/* Mobile Small (320px - 479px) */
+@media screen and (max-width: 479px) {
+  .privacyPolicyHeader {
+    padding-top: 70px;
+    padding-bottom: 15px;
+  }
+  
+  .privacyPolicyHeaderContainer {
+    width: 85%;
+  }
+  
+  .privacyPolicyHeaderContainerTopContainerText {
+    font-size: 24px;
+    line-height: 30px;
+  }
+  
+  .privacyPolicyHeaderContainerBottom {
+    margin-top: 30px;
+  }
+  
+  .privacyPolicyHeaderContainerBottomContainerText {
+    font-size: 13px;
+    line-height: 19px;
+  }
+}

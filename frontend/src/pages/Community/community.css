@@ -1,8 +1,149 @@
 .community {
   width: 100%;
   height: 100%;
-
   background-color: #000000;
-
   padding-bottom: 30px;
+  position: relative;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Extra Large Desktops (1920px and up) */
+@media (min-width: 1920px) {
+  .community {
+    padding-bottom: 40px;
+  }
+}
+
+/* Large Desktops (1440px to 1919px) */
+@media (max-width: 1919px) and (min-width: 1440px) {
+  .community {
+    padding-bottom: 35px;
+  }
+}
+
+/* Standard Desktops (1200px to 1439px) */
+@media (max-width: 1439px) and (min-width: 1200px) {
+  .community {
+    padding-bottom: 30px;
+  }
+}
+
+/* Small Desktops/Large Tablets (1024px to 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .community {
+    padding-bottom: 25px;
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .community {
+    padding-bottom: 20px;
+  }
+}
+
+/* Large Mobile (480px to 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .community {
+    padding-bottom: 15px;
+  }
+}
+
+/* Small Mobile (320px to 479px) */
+@media (max-width: 479px) and (min-width: 320px) {
+  .community {
+    padding-bottom: 10px;
+  }
+}
+
+/* Extra Small Mobile (up to 319px) */
+@media (max-width: 319px) {
+  .community {
+    padding-bottom: 8px;
+  }
+}
+
+/* iPad Pro 12.9" (1024px x 1366px) */
+@media screen and (device-width: 1024px) and (device-height: 1366px) and (-webkit-device-pixel-ratio: 2) {
+  .community {
+    padding-bottom: 35px;
+  }
+}
+
+/* iPad Pro 11" (834px x 1194px) */
+@media screen and (device-width: 834px) and (device-height: 1194px) and (-webkit-device-pixel-ratio: 2) {
+  .community {
+    padding-bottom: 30px;
+  }
+}
+
+/* iPad Air/Mini (768px x 1024px) */
+@media screen and (device-width: 768px) and (device-height: 1024px) and (-webkit-device-pixel-ratio: 2) {
+  .community {
+    padding-bottom: 25px;
+  }
+}
+
+/* iPhone 14 Pro Max (430px x 932px) */
+@media screen and (device-width: 430px) and (device-height: 932px) and (-webkit-device-pixel-ratio: 3) {
+  .community {
+    padding-bottom: 12px;
+  }
+}
+
+/* iPhone 14 Pro (393px x 852px) */
+@media screen and (device-width: 393px) and (device-height: 852px) and (-webkit-device-pixel-ratio: 3) {
+  .community {
+    padding-bottom: 10px;
+  }
+}
+
+/* iPhone 13/14 (390px x 844px) */
+@media screen and (device-width: 390px) and (device-height: 844px) and (-webkit-device-pixel-ratio: 3) {
+  .community {
+    padding-bottom: 10px;
+  }
+}
+
+/* iPhone 12 mini (375px x 812px) */
+@media screen and (device-width: 375px) and (device-height: 812px) and (-webkit-device-pixel-ratio: 3) {
+  .community {
+    padding-bottom: 8px;
+  }
+}
+
+/* Samsung Galaxy S21/S22 (360px x 740px) */
+@media screen and (device-width: 360px) and (device-height: 740px) and (-webkit-device-pixel-ratio: 3) {
+  .community {
+    padding-bottom: 8px;
+  }
+}
+
+/* Landscape orientation specific styles */
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .community {
+    padding-bottom: 15px;
+  }
+}
+
+/* Foldable devices */
+@media screen and (min-width: 600px) and (max-width: 900px) and (orientation: portrait) {
+  .community {
+    padding-bottom: 20px;
+  }
+}
+
+/* Very wide screens (ultrawide monitors) */
+@media screen and (min-width: 2560px) {
+  .community {
+    padding-bottom: 50px;
+  }
+}
+
+/* 4K and higher resolution displays */
+@media screen and (min-width: 3840px) {
+  .community {
+    padding-bottom: 60px;
+  }
 }

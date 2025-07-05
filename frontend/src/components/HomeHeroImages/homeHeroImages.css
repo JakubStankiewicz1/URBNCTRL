@@ -61,7 +61,7 @@
   height: 100%;
   margin-top: 45px;
   margin-bottom: 45px;
-  background-color: red;
+  /* background-color: red; */
   overflow: hidden;
 }
 
@@ -99,4 +99,547 @@
   width: 100%;
   height: 100%;
   background-color: #50d505;
+}
+
+/* ===== RESPONSIVE DESIGN - PROFESSIONAL LAYOUT ===== */
+
+/* Ultra-wide screens (1920px+) */
+@media screen and (min-width: 1920px) {
+  .homeHeroImages {
+    padding-top: 120px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    height: 420px;
+    margin-left: 60px;
+    margin-right: 60px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainer {
+    margin-top: 60px;
+    margin-bottom: 60px;
+  }
+  
+  .homeHeroImagesContainerTopContainerDiv {
+    width: 4px;
+    height: 420px;
+  }
+  
+  .homeHeroImagesContainerDivContainerDiv {
+    height: 4px;
+  }
+}
+
+/* Large desktops (1440px - 1919px) */
+@media screen and (max-width: 1919px) and (min-width: 1440px) {
+  .homeHeroImages {
+    padding-top: 110px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    height: 380px;
+    margin-left: 50px;
+    margin-right: 50px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainer {
+    margin-top: 50px;
+    margin-bottom: 50px;
+  }
+  
+  .homeHeroImagesContainerTopContainerDiv {
+    height: 380px;
+  }
+}
+
+/* Standard desktops (1200px - 1439px) */
+@media screen and (max-width: 1439px) and (min-width: 1200px) {
+  .homeHeroImages {
+    padding-top: 100px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    height: 320px;
+    margin-left: 40px;
+    margin-right: 40px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainer {
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .homeHeroImagesContainerTopContainerDiv {
+    height: 320px;
+  }
+}
+
+/* Small desktops/Large tablets (1024px - 1199px) */
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+  .homeHeroImages {
+    padding-top: 80px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    height: 280px;
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainer {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+  
+  .homeHeroImagesContainerTopContainerDiv {
+    width: 2px;
+    height: 280px;
+  }
+  
+  .homeHeroImagesContainerDivContainerDiv {
+    height: 2px;
+  }
+}
+
+/* Tablets landscape (768px - 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .homeHeroImages {
+    padding-top: 60px;
+  }
+  
+  .homeHeroImagesContainer {
+    /* gap: 20px; */
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    height: 220px;
+    /* width: 10px; */
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainer {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .homeHeroImagesContainerTopContainerDiv {
+    width: 2px;
+    height: 240px;
+  }
+  
+  .homeHeroImagesContainerDivContainerDiv {
+    height: 2px;
+  }
+}
+
+/* Tablets portrait and large mobiles (640px - 767px) */
+@media screen and (max-width: 767px) and (min-width: 640px) {
+  .homeHeroImages {
+    padding-top: 40px;
+  }
+  
+  .homeHeroImagesContainerTopContainer,
+  .homeHeroImagesContainerBottomContainer {
+    flex-direction: column;
+    gap: 0; /* Remove gap to maintain separator continuity */
+    padding: 0; /* Remove padding to ensure perfect alignment */
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    height: 200px;
+    margin-left: 15px;
+    margin-right: 15px;
+    max-width: 90%;
+    /* Keep sharp edges for separator continuity */
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainer {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 0;
+    overflow: hidden;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainerDivImage {
+    border-radius: 0;
+  }
+  
+  .homeHeroImagesContainerTopContainerDiv {
+    width: 100%;
+    height: 2px;
+    max-width: 90%;
+    /* Ensure separator spans full width and connects perfectly */
+    margin: 0 auto;
+    background-color: #50d505;
+  }
+  
+  .homeHeroImagesContainerDivContainerDiv {
+    height: 2px;
+  }
+}
+
+/* Mobile devices (480px - 639px) */
+@media screen and (max-width: 639px) and (min-width: 480px) {
+  .homeHeroImages {
+    padding-top: 30px;
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+  }
+  
+  .homeHeroImagesContainerTopContainer,
+  .homeHeroImagesContainerBottomContainer {
+    flex-direction: column;
+    gap: 12px;
+    padding: 35px 0 !important; /* Add more padding for visible gap */
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    height: 180px;
+    margin-left: 10px;
+    margin-right: 10px;
+    max-width: 95%;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainer {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+  .homeHeroImagesContainerTopContainerDiv {
+    width: 100%;
+    height: 2px;
+    max-width: 95%;
+  }
+  
+  .homeHeroImagesContainerDivContainerDiv {
+    height: 2px;
+    /* padding: 110px; */
+  }
+}
+
+/* Small mobile devices (360px - 479px) */
+@media screen and (max-width: 479px) and (min-width: 360px) {
+  .homeHeroImages {
+    /* padding-top: 20px; */
+    /* padding-left: 8px; */
+    /* margin-bottom: 20px; */
+    /* padding-right: 8px; */
+  }
+  
+  .homeHeroImagesContainerTopContainer,
+  .homeHeroImagesContainerBottomContainer {
+    flex-direction: column;
+    gap: 10px;
+
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    height: 160px;
+    margin-left: 8px;
+    margin-right: 8px;
+    max-width: 96%;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainer {
+    margin-top: 8px;
+    margin-bottom: 8px;
+  }
+  
+  .homeHeroImagesContainerTopContainerDiv {
+    width: 100%;
+    height: 1px;
+    max-width: 96%;
+  }
+  
+  .homeHeroImagesContainerDivContainerDiv {
+    height: 1px;
+  }
+}
+
+/* Extra small mobile devices (320px - 359px) */
+@media screen and (max-width: 359px) {
+  .homeHeroImages {
+    padding-top: 15px;
+    /* padding-left: 5px; */
+    /* padding-right: 5px; */
+  }
+  
+  .homeHeroImagesContainerTopContainer,
+  .homeHeroImagesContainerBottomContainer {
+    flex-direction: column;
+    gap: 8px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    height: 140px;
+    margin-left: 5px;
+    margin-right: 5px;
+    max-width: 98%;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainer {
+    margin-top: 5px;
+    margin-bottom: 5px;
+  }
+  
+  .homeHeroImagesContainerTopContainerDiv {
+    width: 100%;
+    height: 1px;
+    max-width: 98%;
+  }
+  
+  .homeHeroImagesContainerDivContainerDiv {
+    height: 1px;
+  }
+}
+
+/* Transition breakpoint for separator continuity (641px - 767px) */
+@media screen and (max-width: 767px) and (min-width: 641px) {
+  .homeHeroImagesContainerTopContainer,
+  .homeHeroImagesContainerBottomContainer {
+    /* Keep horizontal layout but responsive */
+    flex-direction: row;
+    flex-wrap: nowrap;
+    gap: 0;
+    padding: 0; /* Remove padding to ensure separator continuity */
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    /* Maintain separator alignment */
+    margin-left: 10px;
+    margin-right: 10px;
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+    height: 200px; /* Match the height from 640px breakpoint */
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainer {
+    border-radius: 0;
+    overflow: hidden;
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainerDivImage {
+    border-radius: 0;
+  }
+  
+  .homeHeroImagesContainerTopContainerDiv {
+    /* Keep vertical separators visible and properly sized */
+    display: block;
+    width: 2px;
+    height: 230px; /* Match total height: image (200px) + margins (15px top + 15px bottom) */
+    background-color: #50d505;
+  }
+}
+
+/* Advanced responsive grid for tablets and mobile */
+@media screen and (max-width: 767px) {
+  /* Only apply border-radius and effects when separators are hidden */
+  .homeHeroImagesContainerTopContainerElement {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .homeHeroImagesContainerTopContainerElement:hover {
+    /* transform: translateY(-3px); */
+  }
+}
+
+/* Apply padding only to mobile devices, not tablets */
+@media screen and (max-width: 639px) {
+  .homeHeroImagesContainerTop,
+  .homeHeroImagesContainerBottom {
+    padding: 0 10px;
+  }
+}
+
+/* Specific override for 640px range to ensure gap is visible */
+@media screen and (max-width: 640px) and (min-width: 481px) {
+  .homeHeroImagesContainerTop,
+  .homeHeroImagesContainerBottom {
+    padding: 0 !important; /* Remove conflicting padding */
+  }
+}
+
+/* Grid layout for very small screens */
+@media screen and (max-width: 480px) {
+  .homeHeroImagesContainerTopContainer,
+  .homeHeroImagesContainerBottomContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 15px;
+    padding: 0 15px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    margin: 0;
+    /* border-radius: 10px; */
+    overflow: hidden;
+    box-shadow: 0 6px 25px rgba(80, 213, 5, 0.15);
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainer {
+    margin: 0;
+    /* border-radius: 10px; */
+    overflow: hidden;
+  }
+  
+  .homeHeroImagesContainerTopContainerDiv {
+    display: none; /* Hide separators on mobile for cleaner look */
+  }
+}
+
+/* Two-column grid for slightly larger mobile screens */
+@media screen and (max-width: 640px) and (min-width: 481px) {
+  .homeHeroImagesContainerTopContainer,
+  .homeHeroImagesContainerBottomContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    padding: 30px 12px !important; /* Add top/bottom padding for space from green lines */
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    margin: 0;
+    /* border-radius: 8px; */
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(80, 213, 5, 0.1);
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainer {
+    margin: 0;
+    /* border-radius: 8px; */
+    overflow: hidden;
+  }
+  
+  .homeHeroImagesContainerTopContainerDiv {
+    display: none;
+  }
+}
+
+/* Enhanced image styling for better mobile experience */
+@media screen and (max-width: 1023px) {
+  .homeHeroImagesContainerTopContainerElementContainerDivImage {
+    transition: transform 0.3s ease;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainerDivImage:hover {
+    /* transform: scale(1.02); */
+  }
+}
+
+/* Clean separator styling for tablet landscape */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .homeHeroImagesContainerTopContainerElement {
+    /* Keep sharp edges for separator continuity */
+    border-radius: 0;
+    box-shadow: none;
+    overflow: visible;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainer {
+    border-radius: 0;
+    box-shadow: none;
+    overflow: hidden;
+  }
+  
+  .homeHeroImagesContainerTopContainerElementContainerDivImage {
+    border-radius: 0;
+  }
+}
+
+/* Performance optimizations for mobile */
+@media screen and (max-width: 767px) {
+  .homeHeroImagesContainerTopContainerElementContainerDivImage {
+    image-rendering: optimizeQuality;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Landscape mobile optimization */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .homeHeroImages {
+    padding-top: 20px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    height: 120px;
+  }
+  
+  .homeHeroImagesContainerTopContainer,
+  .homeHeroImagesContainerBottomContainer {
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    flex: 1;
+    min-width: 120px;
+    max-width: 150px;
+  }
+  
+  .homeHeroImagesContainerTopContainerDiv {
+    display: none;
+  }
+}
+
+/* High DPI displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi),
+       screen and (min-resolution: 2dppx) {
+  .homeHeroImagesContainerTopContainerElementContainerDivImage {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+  }
+}
+
+/* Print styles */
+@media print {
+  .homeHeroImages {
+    padding-top: 0;
+    background-color: white;
+  }
+  
+  .homeHeroImagesContainerDivContainerDiv,
+  .homeHeroImagesContainerTopContainerDivContainerDiv {
+    background-color: #333;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .homeHeroImagesContainerTopContainerElement,
+  .homeHeroImagesContainerTopContainerElementContainerDivImage {
+    transition: none !important;
+    transform: none !important;
+  }
+  
+  .homeHeroImagesContainerTopContainerElement:hover {
+    transform: none !important;
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .homeHeroImages {
+    background-color: #000;
+  }
+  
+  .homeHeroImagesContainerTopContainerElement {
+    box-shadow: 0 4px 20px rgba(80, 213, 5, 0.2);
+  }
 }

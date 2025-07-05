@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
   background-color: #000;
+  padding: 60px 0;
 }
 
 .homeHeroScrollingContainer {
@@ -15,9 +16,9 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 50px;
+  gap: 80px;
   width: max-content;
-  animation: scroll-left 30s linear infinite;
+  animation: scroll-left 35s linear infinite;
 }
 
 @keyframes scroll-left {
@@ -34,31 +35,520 @@
   height: 100%;
   display: flex;
   flex-direction: row;
-  gap: 50px;
+  gap: 80px;
   align-items: center;
 }
 
 .homeHeroScrollingContainerDivElement {
   display: flex;
   align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease;
 }
 
+.homeHeroScrollingContainerDivElement:hover {
+  transform: scale(1.05);
+}
+
+.homeHeroScrollingContainerDivElementContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Base icon sizes for desktop */
 .homeHeroScrollingContainerDivElementContainerIconOne {
-  width: 150px;
+  width: 180px;
   height: auto;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.homeHeroScrollingContainerDivElementContainerIconTwo {
+  width: 160px;
+  height: auto;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
 }
 
 .homeHeroScrollingContainerDivElementContainerIconThree {
-  width: 200px;
+  width: 220px;
   height: auto;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.homeHeroScrollingContainerDivElementContainerIconFour {
+  width: 190px;
+  height: auto;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
 }
 
 .homeHeroScrollingContainerDivElementContainerIconFive {
-  width: 250px;
+  width: 280px;
   height: auto;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+.homeHeroScrollingContainerDivElementContainerIconSix {
+  width: 200px;
+  height: auto;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
 }
 
 .homeHeroScrollingContainerDivElementContainerIconSeven {
-  width: 500px;
+  width: 320px;
   height: auto;
+  filter: brightness(0.9);
+  transition: filter 0.3s ease;
+}
+
+/* Hover effects */
+.homeHeroScrollingContainerDivElementContainerIconOne:hover,
+.homeHeroScrollingContainerDivElementContainerIconTwo:hover,
+.homeHeroScrollingContainerDivElementContainerIconThree:hover,
+.homeHeroScrollingContainerDivElementContainerIconFour:hover,
+.homeHeroScrollingContainerDivElementContainerIconFive:hover,
+.homeHeroScrollingContainerDivElementContainerIconSix:hover,
+.homeHeroScrollingContainerDivElementContainerIconSeven:hover {
+  filter: brightness(1.2);
+}
+
+/* ===== MEGA PROFESSIONAL RESPONSIVE DESIGN ===== */
+
+/* Ultra-wide screens (1920px+) */
+@media screen and (min-width: 1920px) {
+  .homeHeroScrolling {
+    padding: 80px 0;
+  }
+  
+  .homeHeroScrollingTrack {
+    gap: 100px;
+    animation: scroll-left 40s linear infinite;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconOne {
+    width: 220px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconTwo {
+    width: 200px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconThree {
+    width: 260px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFour {
+    width: 230px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFive {
+    width: 320px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSix {
+    width: 240px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSeven {
+    width: 380px;
+  }
+}
+
+/* Large desktops (1440px - 1919px) */
+@media screen and (max-width: 1919px) and (min-width: 1440px) {
+  .homeHeroScrolling {
+    padding: 70px 0;
+  }
+  
+  .homeHeroScrollingTrack {
+    gap: 90px;
+    animation: scroll-left 38s linear infinite;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconOne {
+    width: 200px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconTwo {
+    width: 180px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconThree {
+    width: 240px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFour {
+    width: 210px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFive {
+    width: 300px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSix {
+    width: 220px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSeven {
+    width: 350px;
+  }
+}
+
+/* Standard desktops (1200px - 1439px) */
+@media screen and (max-width: 1439px) and (min-width: 1200px) {
+  .homeHeroScrolling {
+    padding: 60px 0;
+  }
+  
+  .homeHeroScrollingTrack {
+    gap: 80px;
+    animation: scroll-left 35s linear infinite;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconOne {
+    width: 180px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconTwo {
+    width: 160px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconThree {
+    width: 220px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFour {
+    width: 190px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFive {
+    width: 280px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSix {
+    width: 200px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSeven {
+    width: 320px;
+  }
+}
+
+/* Small desktops/Large tablets (1024px - 1199px) */
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+  .homeHeroScrolling {
+    padding: 50px 0;
+  }
+  
+  .homeHeroScrollingTrack {
+    gap: 70px;
+    animation: scroll-left 32s linear infinite;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconOne {
+    width: 160px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconTwo {
+    width: 140px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconThree {
+    width: 200px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFour {
+    width: 170px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFive {
+    width: 250px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSix {
+    width: 180px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSeven {
+    width: 280px;
+  }
+}
+
+/* Tablets landscape (768px - 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .homeHeroScrolling {
+    padding: 40px 0;
+  }
+  
+  .homeHeroScrollingTrack {
+    gap: 60px;
+    animation: scroll-left 28s linear infinite;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconOne {
+    width: 140px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconTwo {
+    width: 120px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconThree {
+    width: 180px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFour {
+    width: 150px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFive {
+    width: 220px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSix {
+    width: 160px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSeven {
+    width: 240px;
+  }
+}
+
+/* Tablets portrait and large mobiles (640px - 767px) */
+@media screen and (max-width: 767px) and (min-width: 640px) {
+  .homeHeroScrolling {
+    padding: 30px 0;
+  }
+  
+  .homeHeroScrollingTrack {
+    gap: 50px;
+    animation: scroll-left 25s linear infinite;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconOne {
+    width: 120px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconTwo {
+    width: 100px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconThree {
+    width: 160px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFour {
+    width: 130px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFive {
+    width: 200px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSix {
+    width: 140px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSeven {
+    width: 220px;
+  }
+}
+
+/* Mobile devices (480px - 639px) */
+@media screen and (max-width: 639px) and (min-width: 480px) {
+  .homeHeroScrolling {
+    padding: 25px 0;
+  }
+  
+  .homeHeroScrollingTrack {
+    gap: 40px;
+    animation: scroll-left 22s linear infinite;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconOne {
+    width: 100px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconTwo {
+    width: 80px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconThree {
+    width: 140px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFour {
+    width: 110px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFive {
+    width: 180px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSix {
+    width: 120px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSeven {
+    width: 200px;
+  }
+}
+
+/* Small mobile devices (360px - 479px) */
+@media screen and (max-width: 479px) and (min-width: 360px) {
+  .homeHeroScrolling {
+    padding: 20px 0;
+  }
+  
+  .homeHeroScrollingTrack {
+    gap: 30px;
+    animation: scroll-left 20s linear infinite;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconOne {
+    width: 80px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconTwo {
+    width: 70px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconThree {
+    width: 120px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFour {
+    width: 90px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFive {
+    width: 150px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSix {
+    width: 100px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSeven {
+    width: 160px;
+  }
+}
+
+/* Extra small mobile devices (320px - 359px) */
+@media screen and (max-width: 359px) {
+  .homeHeroScrolling {
+    padding: 15px 0;
+  }
+  
+  .homeHeroScrollingTrack {
+    gap: 25px;
+    animation: scroll-left 18s linear infinite;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconOne {
+    width: 70px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconTwo {
+    width: 60px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconThree {
+    width: 100px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFour {
+    width: 80px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconFive {
+    width: 130px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSix {
+    width: 90px;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconSeven {
+    width: 140px;
+  }
+}
+
+/* Performance optimizations */
+@media screen and (max-width: 1023px) {
+  .homeHeroScrollingTrack {
+    will-change: transform;
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  .homeHeroScrollingContainerDivElement {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .homeHeroScrollingTrack {
+    animation: scroll-left 60s linear infinite;
+  }
+  
+  .homeHeroScrollingContainerDivElement:hover {
+    transform: none;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconOne:hover,
+  .homeHeroScrollingContainerDivElementContainerIconTwo:hover,
+  .homeHeroScrollingContainerDivElementContainerIconThree:hover,
+  .homeHeroScrollingContainerDivElementContainerIconFour:hover,
+  .homeHeroScrollingContainerDivElementContainerIconFive:hover,
+  .homeHeroScrollingContainerDivElementContainerIconSix:hover,
+  .homeHeroScrollingContainerDivElementContainerIconSeven:hover {
+    filter: brightness(0.9);
+  }
+}
+
+/* High DPI displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi),
+       screen and (min-resolution: 2dppx) {
+  .homeHeroScrollingContainerDivElementContainerIconOne,
+  .homeHeroScrollingContainerDivElementContainerIconTwo,
+  .homeHeroScrollingContainerDivElementContainerIconThree,
+  .homeHeroScrollingContainerDivElementContainerIconFour,
+  .homeHeroScrollingContainerDivElementContainerIconFive,
+  .homeHeroScrollingContainerDivElementContainerIconSix,
+  .homeHeroScrollingContainerDivElementContainerIconSeven {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+  }
+}
+
+/* Print styles */
+@media print {
+  .homeHeroScrolling {
+    background-color: white;
+    padding: 20px 0;
+  }
+  
+  .homeHeroScrollingTrack {
+    animation: none;
+    transform: none;
+  }
+  
+  .homeHeroScrollingContainerDivElementContainerIconOne,
+  .homeHeroScrollingContainerDivElementContainerIconTwo,
+  .homeHeroScrollingContainerDivElementContainerIconThree,
+  .homeHeroScrollingContainerDivElementContainerIconFour,
+  .homeHeroScrollingContainerDivElementContainerIconFive,
+  .homeHeroScrollingContainerDivElementContainerIconSix,
+  .homeHeroScrollingContainerDivElementContainerIconSeven {
+    filter: none;
+  }
 }

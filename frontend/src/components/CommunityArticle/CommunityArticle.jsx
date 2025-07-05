@@ -67,11 +67,44 @@ const CommunityArticle = () => {
   const [currentSlide, setCurrentSlide] = useState(2);
   const [isDragging, setIsDragging] = useState(false);
   const [startX, setStartX] = useState(0);
+  const [slideWidth, setSlideWidth] = useState(410);
   const [translateX, setTranslateX] = useState(-2 * 410);
   const sliderRef = useRef(null);
 
   const totalSlides = communityArticlesData.length;
-  const slideWidth = 410;
+
+  // Update slide width based on screen size
+  useEffect(() => {
+    const updateSlideWidth = () => {
+      const width = window.innerWidth;
+      let newSlideWidth = 410;
+      
+      if (width >= 1920) {
+        newSlideWidth = 460; // 420px + 40px gap
+      } else if (width >= 1440) {
+        newSlideWidth = 435; // 400px + 35px gap
+      } else if (width >= 1200) {
+        newSlideWidth = 410; // 380px + 30px gap
+      } else if (width >= 1024) {
+        newSlideWidth = 365; // 340px + 25px gap
+      } else if (width >= 768) {
+        newSlideWidth = 340; // 320px + 20px gap
+      } else if (width >= 480) {
+        newSlideWidth = 295; // 280px + 15px gap
+      } else if (width >= 320) {
+        newSlideWidth = 262; // 250px + 12px gap
+      } else {
+        newSlideWidth = 230; // 220px + 10px gap
+      }
+      
+      setSlideWidth(newSlideWidth);
+      setTranslateX(-currentSlide * newSlideWidth);
+    };
+
+    updateSlideWidth();
+    window.addEventListener('resize', updateSlideWidth);
+    return () => window.removeEventListener('resize', updateSlideWidth);
+  }, [currentSlide]);
 
   
   const slides = communityArticlesData.map((article, index) => (
@@ -195,6 +228,37 @@ const CommunityArticle = () => {
     return currentSlide - 2;
   };
 
+  // Keyboard navigation
+  useEffect(() => {
+    const handleKeyDown = (e) => {
+      if (e.key === 'ArrowLeft') {
+        e.preventDefault();
+        const prevSlide = currentSlide - 1;
+        setCurrentSlide(prevSlide);
+        setTranslateX(-prevSlide * slideWidth);
+        
+        if (sliderRef.current) {
+          sliderRef.current.style.transition = "transform 0.4s ease-out";
+        }
+      } else if (e.key === 'ArrowRight') {
+        e.preventDefault();
+        const nextSlide = currentSlide + 1;
+        setCurrentSlide(nextSlide);
+        setTranslateX(-nextSlide * slideWidth);
+        
+        if (sliderRef.current) {
+          sliderRef.current.style.transition = "transform 0.4s ease-out";
+        }
+      }
+    };
+
+    const slider = sliderRef.current;
+    if (slider) {
+      slider.addEventListener('keydown', handleKeyDown);
+      return () => slider.removeEventListener('keydown', handleKeyDown);
+    }
+  }, [currentSlide, slideWidth]);
+
   return (
     <div className="communityArticle">
       <div className="communityArticleContainer">
@@ -211,19 +275,27 @@ const CommunityArticle = () => {
           onTouchStart={handleMouseDown}
           onTouchMove={handleMouseMove}
           onTouchEnd={handleMouseUp}
+          role="region"
+          aria-label="Community Articles Slider"
+          aria-live="polite"
+          tabIndex={0}
         >
           {allSlides}
         </div>
 
         {/* Navigation dots */}
-        <div className="communityArticleNavigation">
+        <div className="communityArticleNavigation" role="tablist" aria-label="Article navigation">
           {Array(totalSlides)
             .fill()
             .map((_, index) => (
-              <div
+              <button
                 key={index}
                 className={`communityArticleDot ${getCurrentSlideForDots() === index ? "active" : ""}`}
                 onClick={() => goToSlide(index)}
+                role="tab"
+                aria-selected={getCurrentSlideForDots() === index}
+                aria-label={`Go to article ${index + 1}`}
+                tabIndex={0}
               />
             ))}
         </div>

@@ -375,3 +375,334 @@
 .fotterContainerDivTopContainerLeftContainerText:hover {
   animation: none;
 }
+
+/* ===== RESPONSIVE DESIGN ===== */
+
+/* Large Desktop (1440px and up) */
+@media (min-width: 1440px) {
+  .fotterContainerDivTopContainerLeftContainerText {
+    font-size: 120px;
+    letter-spacing: 12px;
+  }
+  
+  .fotterContainerDivMiddleContainer {
+    width: 85%;
+  }
+  
+  .fotterContainerDivInfoContainer {
+    width: 85%;
+    gap: 200px;
+  }
+}
+
+/* Desktop (1024px to 1439px) */
+@media (max-width: 1439px) {
+  .fotterContainerDivTopContainerLeftContainerText {
+    font-size: 90px;
+    letter-spacing: 8px;
+  }
+  
+  .fotterContainerDivMiddleContainer {
+    width: 85%;
+  }
+  
+  .fotterContainerDivInfoContainer {
+    width: 85%;
+    gap: 120px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDiv {
+    width: 450px;
+  }
+}
+
+/* Tablet (768px to 1023px) */
+@media (max-width: 1023px) {
+  .fotterContainerDivTopContainer {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+    padding: 40px 0;
+  }
+  
+  .fotterContainerDivTopContainerLeftContainerText {
+    font-size: 60px;
+    letter-spacing: 6px;
+    text-align: center;
+  }
+  
+  .fotterContainerDivTopContainerRight {
+    width: 90%;
+    max-width: 600px;
+  }
+  
+  .fotterContainerDivMiddle {
+    width: 95%;
+    margin-top: 40px;
+  }
+  
+  .fotterContainerDivMiddleContainer {
+    flex-direction: column;
+    width: 100%;
+    gap: 50px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainer {
+    gap: 40px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDiv {
+    width: 100%;
+    max-width: 500px;
+  }
+  
+  .fotterContainerDivInfo {
+    margin-top: 40px;
+  }
+  
+  .fotterContainerDivInfoContainer {
+    flex-direction: column;
+    width: 100%;
+    gap: 40px;
+  }
+  
+  .fotterContainerDivInfoContainerLeftContainer {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .fotterContainerDivBottomContainer {
+    flex-direction: column;
+    gap: 20px;
+    text-align: center;
+  }
+}
+
+/* Small Tablet (600px to 767px) */
+@media (max-width: 767px) {
+  .fotterContainerDivTopContainerLeftContainerText {
+    font-size: 45px;
+    letter-spacing: 4px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput {
+    font-size: 20px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput::placeholder {
+    font-size: 20px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivTwoText {
+    font-size: 16px;
+  }
+  
+  .fotterContainerDivInfoContainerLeftContainer {
+    flex-direction: column;
+    gap: 25px;
+  }
+}
+
+/* Mobile Large (480px to 599px) */
+@media (max-width: 599px) {
+  .fotter {
+    padding-bottom: 20px;
+  }
+  
+  .fotterContainerDiv {
+    gap: 30px;
+  }
+  
+  .fotterContainerDivTopContainer {
+    width: 95%;
+    padding: 30px 0;
+  }
+  
+  .fotterContainerDivTopContainerLeftContainerText {
+    font-size: 35px;
+    letter-spacing: 3px;
+  }
+  
+  .fotterContainerDivTopContainerRight {
+    width: 100%;
+  }
+  
+  .fotterContainerDivMiddle {
+    width: 95%;
+    margin-top: 30px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainer {
+    gap: 30px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDiv {
+    height: 50px;
+    flex-direction: column;
+    align-items: stretch;
+    border-bottom: none;
+    border: 1px solid gray;
+    border-radius: 8px;
+    padding: 10px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOne {
+    margin-bottom: 10px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput {
+    font-size: 18px;
+    padding-left: 10px;
+    height: 40px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput::placeholder {
+    font-size: 18px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivTwo {
+    width: 100%;
+    height: 40px;
+    background-color: #ff6b6b;
+    border-radius: 5px;
+    margin-top: 10px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivTwoText {
+    color: white;
+    font-weight: 600;
+  }
+  
+  .fotterContainerDivMiddleContainerRightContainerTwoContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+  }
+  
+  .fotterContainerDivInfo {
+    margin-top: 30px;
+  }
+  
+  .fotterContainerDivInfoContainer {
+    width: 100%;
+    gap: 30px;
+  }
+  
+  .fotterContainerDivInfoContainerLeftContainer {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+  
+  .fotterContainerDivBottomContainer {
+    width: 95%;
+    gap: 15px;
+  }
+}
+
+/* Mobile Small (320px to 479px) */
+@media (max-width: 479px) {
+  .fotterContainerDivTopContainerLeftContainerText {
+    font-size: 28px;
+    letter-spacing: 2px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput {
+    font-size: 16px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput::placeholder {
+    font-size: 16px;
+  }
+  
+  .fotterContainerDivMiddleContainerRightContainerTwoContainer {
+    grid-template-columns: 1fr;
+  }
+  
+  .fotterContainerDivInfoContainerLeftContainer {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  
+  .fotterContainerDivInfoContainerLeftContainerElementContainerOneContainerText,
+  .fotterContainerDivInfoContainerRightContainerOneContainerText {
+    font-size: 16px;
+  }
+  
+  .fotterContainerDivInfoContainerLeftContainerElementContainerTwoOneText,
+  .fotterContainerDivInfoContainerLeftContainerElementContainerTwoTwoText,
+  .fotterContainerDivInfoContainerRightContainerTwoContainerElementContainerText {
+    font-size: 14px;
+  }
+  
+  .fotterContainerDivBottomContainerLeftContainerText,
+  .fotterContainerDivBottomContainerRightContainerElementText {
+    font-size: 12px;
+  }
+}
+
+/* Ultra Small Mobile (up to 319px) */
+@media (max-width: 319px) {
+  .fotterContainerDivTopContainerLeftContainerText {
+    font-size: 24px;
+    letter-spacing: 1px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDiv {
+    padding: 8px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivOneInput {
+    font-size: 14px;
+    height: 35px;
+  }
+  
+  .fotterContainerDivMiddleContainerLeftContainerTwoContainerDivTwo {
+    height: 35px;
+  }
+}
+
+/* Hover effects adjustments for touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .hover-logo:hover,
+  .hover-link:hover,
+  .hover-submit:hover {
+    transform: none;
+  }
+  
+  .hover-logo:active {
+    transform: scale(1.02);
+    color: #ff6b6b;
+  }
+  
+  .hover-link:active {
+    color: #ff6b6b;
+  }
+  
+  .hover-submit:active {
+    background-color: #ff6b6b;
+    transform: scale(1.02);
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 767px) and (orientation: landscape) {
+  .fotterContainerDivTopContainerLeftContainerText {
+    font-size: 40px;
+  }
+  
+  .fotterContainerDivMiddleContainer {
+    flex-direction: row;
+    gap: 30px;
+  }
+  
+  .fotterContainerDivInfoContainer {
+    flex-direction: row;
+    gap: 30px;
+  }
+  
+  .fotterContainerDivInfoContainerLeftContainer {
+    flex-direction: row;
+    gap: 20px;
+  }
+}

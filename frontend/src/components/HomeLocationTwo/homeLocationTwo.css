@@ -8,14 +8,18 @@
 }
 
 .homeLocationTwoContainer {
-  left: 100%;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  position: relative;
   height: 100%;
 }
 
 .homeLocationTwoContainerDiv {
   width: 100%;
-  right: 0;
   display: flex;
+  position: relative;
+  min-height: 600px;
 }
 
 .homeLocationTwoContainerDivRightContainerDivOne {
@@ -401,4 +405,790 @@
 .homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton:hover::before,
 .homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton:focus::before {
   box-shadow: inset 0 0 0 10em rgb(255, 0, 0);
+}
+
+/* ALL MOBILE AND TABLET SIZES - FORCE COLUMN LAYOUT */
+@media screen and (max-width: 767px) {
+  .homeLocationTwoContainerDiv {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+  
+  .homeLocationTwoContainerDivLeft {
+    width: 100% !important;
+    max-width: 400px;
+    transform: none !important;
+    position: relative !important;
+    order: 1;
+  }
+  
+  .homeLocationTwoContainerDivRight {
+    order: 2 !important;
+    position: relative !important;
+    width: 100% !important;
+  }
+}
+
+/* SPECIFIC FIX FOR 767px - ENSURE COLUMN LAYOUT */
+@media screen and (max-width: 767px) and (min-width: 767px) {
+  .homeLocationTwoContainerDiv {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 30px !important;
+  }
+}
+
+/* ===== MEGA PROFESSIONAL RESPONSIVE DESIGN ===== */
+
+/* First, let's restructure the base layout for better responsiveness */
+
+/* Ultra-wide screens (1920px+) */
+@media screen and (min-width: 1920px) {
+  .homeLocationTwo {
+    padding-top: 140px;
+    padding-bottom: 600px;
+  }
+  
+  .homeLocationTwoContainer {
+    max-width: 1600px;
+  }
+  
+  .homeLocationTwoContainerDivLeft {
+    width: 450px;
+    transform: translateY(250px) translateX(320px);
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerOneText {
+    font-size: 18px;
+    line-height: 22px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerTwoText {
+    font-size: 36px;
+    line-height: 38px;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivOne {
+    width: 500px;
+    height: 620px;
+    transform: translateY(-120px) translateX(42vw);
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivTwo {
+    width: 320px;
+    height: 400px;
+    transform: translateX(520px) translateY(-180px);
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivThree {
+    width: 500px;
+    height: 300px;
+    transform: translateY(320px) translateX(470px);
+  }
+}
+
+/* Large desktops (1440px - 1919px) */
+@media screen and (max-width: 1919px) and (min-width: 1440px) {
+  .homeLocationTwo {
+    padding-top: 120px;
+    padding-bottom: 580px;
+  }
+  
+  .homeLocationTwoContainer {
+    max-width: 1500px;
+  }
+  
+  .homeLocationTwoContainerDivLeft {
+    width: 420px;
+    transform: translateY(230px) translateX(300px);
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerOneText {
+    font-size: 17px;
+    line-height: 21px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerTwoText {
+    font-size: 34px;
+    line-height: 36px;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivOne {
+    width: 470px;
+    height: 580px;
+    transform: translateY(-110px) translateX(40.5vw);
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivTwo {
+    width: 300px;
+    height: 380px;
+    transform: translateX(480px) translateY(-170px);
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivThree {
+    width: 470px;
+    height: 280px;
+    transform: translateY(300px) translateX(450px);
+  }
+}
+
+/* Standard desktops (1200px - 1439px) */
+@media screen and (max-width: 1439px) and (min-width: 1200px) {
+  .homeLocationTwo {
+    padding-top: 110px;
+    padding-bottom: 550px;
+  }
+  
+  .homeLocationTwoContainer {
+    max-width: 1400px;
+  }
+  
+  .homeLocationTwoContainerDivLeft {
+    width: 400px;
+    transform: translateY(220px) translateX(280px);
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivOne {
+    width: 445px;
+    height: 550px;
+    transform: translateY(-100px) translateX(39.6vw);
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivTwo {
+    width: 290px;
+    height: 360px;
+    transform: translateX(460px) translateY(-150px);
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivThree {
+    width: 450px;
+    height: 270px;
+    transform: translateY(290px) translateX(410px);
+  }
+}
+
+/* Small desktops/Large tablets (1024px - 1199px) */
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+  .homeLocationTwo {
+    padding-top: 80px;
+    padding-bottom: 400px;
+  }
+  
+  .homeLocationTwoContainer {
+    max-width: 1100px;
+    padding: 0 20px;
+  }
+  
+  .homeLocationTwoContainerDivLeft {
+    width: 350px;
+    transform: translateY(180px) translateX(200px);
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerOneText {
+    font-size: 15px;
+    line-height: 18px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerTwoText {
+    font-size: 28px;
+    line-height: 30px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn {
+    width: 130px;
+    padding: 8px 8px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton {
+    padding: 6px 25px;
+    font-size: 15px;
+    min-width: 110px;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivOne {
+    width: 380px;
+    height: 470px;
+    transform: translateY(-80px) translateX(35vw);
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivTwo {
+    width: 250px;
+    height: 300px;
+    transform: translateX(290px) translateY(-120px);
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivThree {
+    width: 340px;
+    height: 200px;
+    transform: translateY(290px) translateX(290px);
+  }
+}
+
+/* Tablets landscape (768px - 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .homeLocationTwo {
+    padding-top: 60px;
+    padding-bottom: 300px;
+  }
+  
+  .homeLocationTwoContainer {
+    max-width: 900px;
+    padding: 0 30px;
+  }
+  
+  .homeLocationTwoContainerDivLeft {
+    width: 300px;
+    transform: translateY(120px) translateX(120px);
+    z-index: 10;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerOneText {
+    font-size: 14px;
+    line-height: 17px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerTwoText {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainer {
+    flex-direction: column;
+    gap: 15px;
+    align-items: flex-start;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn {
+    width: 120px;
+    padding: 8px 6px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton {
+    padding: 6px 20px;
+    font-size: 14px;
+    min-width: 100px;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivOne {
+    width: 320px;
+    height: 400px;
+    transform: translateY(-60px) translateX(30vw);
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivTwo {
+    width: 200px;
+    height: 250px;
+    transform: translateX(180px) translateY(-100px);
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivThree {
+    width: 260px;
+    height: 150px;
+    transform: translateY(220px) translateX(200px);
+  }
+}
+
+/* Tablets portrait and large mobiles (640px - 767px) */
+@media screen and (max-width: 767px) and (min-width: 640px) {
+  .homeLocationTwo {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .homeLocationTwoContainer {
+    padding: 0 20px;
+  }
+  
+  .homeLocationTwoContainerDiv {
+    flex-direction: column !important;
+    align-items: center;
+    gap: 30px;
+    min-height: 500px;
+  }
+  
+  .homeLocationTwoContainerDivLeft {
+    width: 100%;
+    max-width: 400px;
+    transform: none;
+    position: relative;
+    order: 1;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerOneText {
+    font-size: 13px;
+    line-height: 16px;
+    text-align: center;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerTwoText {
+    font-size: 22px;
+    line-height: 24px;
+    text-align: center;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainer {
+    flex-direction: row;
+    gap: 15px;
+    justify-content: center;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn {
+    width: 110px;
+    padding: 8px 5px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton {
+    padding: 6px 18px;
+    font-size: 13px;
+    min-width: 90px;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivOne {
+    width: 320px;
+    height: 400px;
+    transform: translateY(-60px) translateX(30vw);
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivTwo {
+    width: 200px;
+    height: 250px;
+    transform: translateX(180px) translateY(-100px);
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivThree {
+    width: 260px;
+    height: 150px;
+    transform: translateY(220px) translateX(200px);
+  }
+}
+
+/* Mobile devices (480px - 639px) */
+@media screen and (max-width: 639px) and (min-width: 480px) {
+  .homeLocationTwo {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .homeLocationTwoContainer {
+    padding: 0 15px;
+  }
+  
+  .homeLocationTwoContainerDiv {
+    flex-direction: column !important;
+    gap: 25px;
+  }
+  
+  .homeLocationTwoContainerDivLeft {
+    width: 100% !important;
+    transform: none !important;
+    order: 1;
+    position: relative !important;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerOneText {
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerTwoText {
+    font-size: 20px;
+    line-height: 22px;
+    text-align: center;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainer {
+    flex-direction: column;
+    gap: 12px;
+    align-items: center;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn {
+    width: 100px;
+    padding: 7px 5px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton {
+    padding: 5px 15px;
+    font-size: 12px;
+    min-width: 80px;
+  }
+  
+  .homeLocationTwoContainerDivRight {
+    order: 2 !important;
+    width: 100% !important;
+    height: 350px;
+    position: relative !important;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivOne {
+    width: 65%;
+    height: 250px;
+    left: 0;
+    top: 0;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivTwo {
+    width: 40%;
+    height: 160px;
+    right: 0;
+    top: 30px;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivThree {
+    width: 75%;
+    height: 120px;
+    left: 12%;
+    bottom: 0;
+  }
+}
+
+/* Small mobile devices (360px - 479px) */
+@media screen and (max-width: 479px) and (min-width: 360px) {
+  .homeLocationTwo {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .homeLocationTwoContainer {
+    padding: 0 10px;
+  }
+  
+  .homeLocationTwoContainerDiv {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .homeLocationTwoContainerDivLeft {
+    width: 100%;
+    transform: none;
+    order: 1;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerTopContainerHr {
+    margin-top: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerOneText {
+    font-size: 11px;
+    line-height: 14px;
+    text-align: center;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerTwoText {
+    font-size: 18px;
+    line-height: 20px;
+    text-align: center;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottom {
+    margin-top: 20px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainer {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn {
+    width: 90px;
+    padding: 6px 4px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton {
+    padding: 4px 12px;
+    font-size: 11px;
+    min-width: 70px;
+  }
+  
+  .homeLocationTwoContainerDivRight {
+    order: 2;
+    width: 100%;
+    height: 300px;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivOne {
+    width: 70%;
+    height: 200px;
+    left: 0;
+    top: 0;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivTwo {
+    width: 45%;
+    height: 140px;
+    right: 0;
+    top: 20px;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivThree {
+    width: 80%;
+    height: 100px;
+    left: 10%;
+    bottom: 0;
+  }
+}
+
+/* Extra small mobile devices (320px - 359px) */
+@media screen and (max-width: 359px) {
+  .homeLocationTwo {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  
+  .homeLocationTwoContainer {
+    padding: 0 8px;
+  }
+  
+  .homeLocationTwoContainerDiv {
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .homeLocationTwoContainerDivLeft {
+    width: 100%;
+    transform: none;
+    order: 1;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerTopContainerHr {
+    margin-top: 12px;
+    margin-bottom: 12px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerOneText {
+    font-size: 10px;
+    line-height: 13px;
+    text-align: center;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerTwoText {
+    font-size: 16px;
+    line-height: 18px;
+    text-align: center;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottom {
+    margin-top: 15px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainer {
+    flex-direction: column;
+    gap: 8px;
+    align-items: center;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn {
+    width: 80px;
+    padding: 5px 3px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton {
+    padding: 4px 10px;
+    font-size: 10px;
+    min-width: 60px;
+  }
+  
+  .homeLocationTwoContainerDivRight {
+    order: 2;
+    width: 100%;
+    height: 250px;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivOne {
+    width: 75%;
+    height: 160px;
+    left: 0;
+    top: 0;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivTwo {
+    width: 50%;
+    height: 120px;
+    right: 0;
+    top: 15px;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivThree {
+    width: 85%;
+    height: 80px;
+    left: 7%;
+    bottom: 0;
+  }
+}
+
+/* ===== ENHANCED INTERACTIONS & ANIMATIONS ===== */
+
+/* Image hover effects with responsive scaling */
+.homeLocationTwoContainerDivRightContainerDivOneContainer,
+.homeLocationTwoContainerDivRightContainerDivTwoContainer,
+.homeLocationTwoContainerDivRightContainerDivThreeContainer {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.homeLocationTwoContainerDivRightContainerDivOneContainer:hover,
+.homeLocationTwoContainerDivRightContainerDivTwoContainer:hover,
+.homeLocationTwoContainerDivRightContainerDivThreeContainer:hover {
+  transform: scale(1.03);
+}
+
+.homeLocationTwoContainerDivRightContainerDivOneContainerImage,
+.homeLocationTwoContainerDivRightContainerDivTwoContainerImage,
+.homeLocationTwoContainerDivRightContainerDivThreeContainerImage {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.homeLocationTwoContainerDivRightContainerDivOneContainer:hover .homeLocationTwoContainerDivRightContainerDivOneContainerImage,
+.homeLocationTwoContainerDivRightContainerDivTwoContainer:hover .homeLocationTwoContainerDivRightContainerDivTwoContainerImage,
+.homeLocationTwoContainerDivRightContainerDivThreeContainer:hover .homeLocationTwoContainerDivRightContainerDivThreeContainerImage {
+  transform: scale(1.05);
+}
+
+/* Button enhanced animations */
+.homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn {
+  transition: all 0.3s ease;
+}
+
+.homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(255, 255, 255, 0.2);
+}
+
+.homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 15px rgba(255, 0, 0, 0.3);
+}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+
+/* Touch device optimizations */
+@media screen and (max-width: 1023px) {
+  .homeLocationTwoContainerDivRightContainerDivOneContainer:hover,
+  .homeLocationTwoContainerDivRightContainerDivTwoContainer:hover,
+  .homeLocationTwoContainerDivRightContainerDivThreeContainer:hover {
+    transform: none;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivOneContainer:active,
+  .homeLocationTwoContainerDivRightContainerDivTwoContainer:active,
+  .homeLocationTwoContainerDivRightContainerDivThreeContainer:active {
+    transform: scale(0.98);
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn:hover,
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton:hover {
+    transform: none;
+    box-shadow: none;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn:active,
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton:active {
+    transform: scale(0.95);
+  }
+}
+
+/* Landscape mobile optimization - ONLY for larger landscape screens */
+@media screen and (max-width: 767px) and (orientation: landscape) and (min-width: 640px) {
+  .homeLocationTwo {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .homeLocationTwoContainerDiv {
+    flex-direction: row !important;
+    gap: 20px;
+  }
+  
+  .homeLocationTwoContainerDivLeft {
+    width: 40% !important;
+    order: 1;
+  }
+  
+  .homeLocationTwoContainerDivRight {
+    width: 60% !important;
+    height: 250px;
+    order: 2;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerTwoText {
+    font-size: 18px;
+    line-height: 20px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .homeLocationTwoContainerDivRightContainerDivOneContainer,
+  .homeLocationTwoContainerDivRightContainerDivTwoContainer,
+  .homeLocationTwoContainerDivRightContainerDivThreeContainer,
+  .homeLocationTwoContainerDivRightContainerDivOneContainerImage,
+  .homeLocationTwoContainerDivRightContainerDivTwoContainerImage,
+  .homeLocationTwoContainerDivRightContainerDivThreeContainerImage,
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn {
+    transition: none;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtnText::before {
+    animation: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .homeLocationTwoContainerDivLeftCotntainerTopContainerHr {
+    background-color: #fff;
+    height: 3px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn {
+    border-width: 3px;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerBottomContainerTwoButton {
+    border-width: 3px;
+  }
+}
+
+/* Print styles */
+@media print {
+  .homeLocationTwo {
+    background-color: white;
+    color: black;
+    padding: 20px 0;
+  }
+  
+  .homeLocationTwoContainerDiv {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .homeLocationTwoContainerDivLeft {
+    width: 100%;
+    transform: none;
+    order: 1;
+  }
+  
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerOneText,
+  .homeLocationTwoContainerDivLeftCotntainerMiddleContainerTwoText {
+    color: black;
+  }
+  
+  .homeLocationTwoContainerDivRight {
+    order: 2;
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+  
+  .homeLocationTwoContainerDivRightContainerDivOne,
+  .homeLocationTwoContainerDivRightContainerDivTwo,
+  .homeLocationTwoContainerDivRightContainerDivThree {
+    position: relative;
+    transform: none;
+    width: 100%;
+    height: 200px;
+    margin-bottom: 10px;
+  }
 }

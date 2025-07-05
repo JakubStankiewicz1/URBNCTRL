@@ -4,11 +4,16 @@
   background-color: #000000;
   padding-top: 120px;
   padding-bottom: 55px;
+  position: relative;
+  overflow: hidden;
 }
 
 .communityHeaderContainer {
   width: 100%;
   height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .communityHeaderContainerDiv {
@@ -27,14 +32,22 @@
   line-height: 55px;
   text-transform: uppercase;
   letter-spacing: -3px;
+  text-align: center;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .communityHeaderContainerDivBottom {
   margin-top: 35px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .communityHeaderContainerDivBottomContainer {
   width: 60%;
+  max-width: 600px;
   margin-left: auto;
   margin-right: auto;
 }
@@ -45,14 +58,309 @@
   font-weight: 300;
   line-height: 23px;
   text-align: center;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
 }
 
 .communityHeaderContainerDivMiddle {
   margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .communityHeaderContainerDivMiddleContainerDiv {
   width: 120px;
   height: 3px;
   background-color: #da2228;
+  border-radius: 2px;
+}
+
+/* Extra Large Desktops (1920px and up) */
+@media (min-width: 1920px) {
+  .communityHeader {
+    padding-top: 140px;
+    padding-bottom: 70px;
+  }
+  
+  .communityHeaderContainerDivTopContainerText {
+    font-size: 55px;
+    line-height: 65px;
+    letter-spacing: -4px;
+  }
+  
+  .communityHeaderContainerDivBottomContainerText {
+    font-size: 19px;
+    line-height: 26px;
+  }
+  
+  .communityHeaderContainerDivMiddleContainerDiv {
+    width: 140px;
+    height: 4px;
+  }
+}
+
+/* Large Desktops (1440px to 1919px) */
+@media (max-width: 1919px) and (min-width: 1440px) {
+  .communityHeader {
+    padding-top: 130px;
+    padding-bottom: 60px;
+  }
+  
+  .communityHeaderContainerDivTopContainerText {
+    font-size: 50px;
+    line-height: 60px;
+    letter-spacing: -3.5px;
+  }
+  
+  .communityHeaderContainerDivBottomContainerText {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  
+  .communityHeaderContainerDivMiddleContainerDiv {
+    width: 130px;
+    height: 3px;
+  }
+}
+
+/* Standard Desktops (1200px to 1439px) */
+@media (max-width: 1439px) and (min-width: 1200px) {
+  .communityHeader {
+    padding-top: 120px;
+    padding-bottom: 55px;
+  }
+  
+  .communityHeaderContainerDivTopContainerText {
+    font-size: 45px;
+    line-height: 55px;
+    letter-spacing: -3px;
+  }
+  
+  .communityHeaderContainerDivBottomContainerText {
+    font-size: 17px;
+    line-height: 23px;
+  }
+  
+  .communityHeaderContainerDivMiddleContainerDiv {
+    width: 120px;
+    height: 3px;
+  }
+}
+
+/* Small Desktops/Large Tablets (1024px to 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .communityHeader {
+    padding-top: 100px;
+    padding-bottom: 45px;
+  }
+  
+  .communityHeaderContainerDivTopContainerText {
+    font-size: 40px;
+    line-height: 48px;
+    letter-spacing: -2.5px;
+  }
+  
+  .communityHeaderContainerDivBottomContainer {
+    width: 70%;
+  }
+  
+  .communityHeaderContainerDivBottomContainerText {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+  .communityHeaderContainerDivMiddleContainerDiv {
+    width: 100px;
+    height: 3px;
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .communityHeader {
+    padding-top: 80px;
+    padding-bottom: 35px;
+  }
+  
+  .communityHeaderContainerDivTopContainerText {
+    font-size: 35px;
+    line-height: 42px;
+    letter-spacing: -2px;
+  }
+  
+  .communityHeaderContainerDivBottomContainer {
+    width: 80%;
+  }
+  
+  .communityHeaderContainerDivBottomContainerText {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  
+  .communityHeaderContainerDivMiddleContainerDiv {
+    width: 90px;
+    height: 3px;
+  }
+  
+  .communityHeaderContainerDivBottom {
+    margin-top: 30px;
+  }
+}
+
+/* Large Mobile (480px to 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .communityHeader {
+    padding-top: 70px;
+    padding-bottom: 25px;
+  }
+  
+  .communityHeaderContainerDiv {
+    padding: 0 10px;
+  }
+  
+  .communityHeaderContainerDivTopContainerText {
+    font-size: 28px;
+    line-height: 34px;
+    letter-spacing: -1.5px;
+  }
+  
+  .communityHeaderContainerDivBottomContainer {
+    width: 90%;
+  }
+  
+  .communityHeaderContainerDivBottomContainerText {
+    font-size: 14px;
+    line-height: 20px;
+  }
+  
+  .communityHeaderContainerDivMiddleContainerDiv {
+    width: 80px;
+    height: 2px;
+  }
+  
+  .communityHeaderContainerDivBottom {
+    margin-top: 25px;
+  }
+}
+
+/* Small Mobile (320px to 479px) */
+@media (max-width: 479px) and (min-width: 320px) {
+  .communityHeader {
+    padding-top: 65px;
+    padding-bottom: 20px;
+  }
+  
+  .communityHeaderContainerDiv {
+    padding: 0 15px;
+  }
+  
+  .communityHeaderContainerDivTopContainerText {
+    font-size: 24px;
+    line-height: 30px;
+    letter-spacing: -1px;
+  }
+  
+  .communityHeaderContainerDivBottomContainer {
+    width: 95%;
+  }
+  
+  .communityHeaderContainerDivBottomContainerText {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  
+  .communityHeaderContainerDivMiddleContainerDiv {
+    width: 70px;
+    height: 2px;
+  }
+  
+  .communityHeaderContainerDivBottom {
+    margin-top: 20px;
+  }
+}
+
+/* Extra Small Mobile (up to 319px) */
+@media (max-width: 319px) {
+  .communityHeader {
+    padding-top: 60px;
+    padding-bottom: 15px;
+  }
+  
+  .communityHeaderContainerDiv {
+    padding: 0 10px;
+  }
+  
+  .communityHeaderContainerDivTopContainerText {
+    font-size: 20px;
+    line-height: 26px;
+    letter-spacing: -0.5px;
+  }
+  
+  .communityHeaderContainerDivBottomContainer {
+    width: 100%;
+  }
+  
+  .communityHeaderContainerDivBottomContainerText {
+    font-size: 12px;
+    line-height: 17px;
+  }
+  
+  .communityHeaderContainerDivMiddleContainerDiv {
+    width: 60px;
+    height: 2px;
+  }
+  
+  .communityHeaderContainerDivBottom {
+    margin-top: 15px;
+  }
+  
+  .communityHeaderContainerDivMiddle {
+    margin-top: 12px;
+  }
+}
+
+/* High DPI / Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .communityHeaderContainerDivTopContainerText {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .communityHeaderContainerDivBottomContainerText {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .communityHeader {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 20px 0;
+  }
+  
+  .communityHeaderContainerDivTopContainerText {
+    color: #000000 !important;
+  }
+  
+  .communityHeaderContainerDivBottomContainerText {
+    color: #000000 !important;
+  }
+  
+  .communityHeaderContainerDivMiddleContainerDiv {
+    background-color: #000000 !important;
+  }
 }

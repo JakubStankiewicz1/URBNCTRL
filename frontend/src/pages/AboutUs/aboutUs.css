@@ -1,0 +1,76 @@
+/* AboutUs Page Responsive Styles */
+
+.aboutUs {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #000000;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Tablet Landscape (1024px to 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .aboutUs {
+    min-height: 100vh;
+  }
+}
+
+/* Tablet Portrait (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .aboutUs {
+    min-height: 100vh;
+  }
+}
+
+/* Mobile Landscape (480px to 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .aboutUs {
+    min-height: 100vh;
+  }
+}
+
+/* Mobile Portrait (320px to 479px) */
+@media (max-width: 479px) {
+  .aboutUs {
+    min-height: 100vh;
+  }
+}
+
+/* Extra Small Mobile (up to 319px) */
+@media (max-width: 319px) {
+  .aboutUs {
+    min-height: 100vh;
+  }
+}
+
+/* High DPI / Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .aboutUs {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .aboutUs * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .aboutUs {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    min-height: 100vh;
+    overflow: visible;
+  }
+  
+  .aboutUs * {
+    color: #000000 !important;
+    background-color: transparent !important;
+  }
+}

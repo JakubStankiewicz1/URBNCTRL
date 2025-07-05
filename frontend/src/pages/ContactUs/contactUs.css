@@ -1,0 +1,153 @@
+/* Contact Us Page Styles */
+
+.contactUs {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Section Spacing */
+.contactUs > * {
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+
+/* Large Desktop (1200px+) */
+@media screen and (min-width: 1200px) {
+  .contactUs {
+    max-width: 100%;
+  }
+}
+
+/* Desktop (992px - 1199px) */
+@media screen and (max-width: 1199px) {
+  .contactUs {
+    width: 100%;
+  }
+}
+
+/* Tablet (768px - 991px) */
+@media screen and (max-width: 991px) {
+  .contactUs {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+/* Mobile Large (576px - 767px) */
+@media screen and (max-width: 767px) {
+  .contactUs {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+/* Mobile Medium (480px - 575px) */
+@media screen and (max-width: 575px) {
+  .contactUs {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+/* Mobile Small (360px - 479px) */
+@media screen and (max-width: 479px) {
+  .contactUs {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+/* Extra Small Mobile (280px - 359px) */
+@media screen and (max-width: 359px) {
+  .contactUs {
+    width: 100%;
+    min-height: 100vh;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .contactUs {
+    touch-action: manipulation;
+  }
+}
+
+/* Performance Optimization */
+@media (prefers-reduced-motion: reduce) {
+  .contactUs {
+    scroll-behavior: auto;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .contactUs {
+    background-color: white;
+    color: black;
+    width: 100%;
+    overflow: visible;
+  }
+  
+  .contactUs > * {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+}
+
+/* Dark Mode Support */
+@media (prefers-color-scheme: dark) {
+  .contactUs {
+    background-color: #1a1a1a;
+    color: #ffffff;
+  }
+}
+
+/* High Contrast Mode */
+@media (prefers-contrast: high) {
+  .contactUs {
+    background-color: #ffffff;
+    color: #000000;
+  }
+}
+
+/* Reduced Data Mode */
+@media (prefers-reduced-data: reduce) {
+  .contactUs {
+    background-image: none;
+  }
+}
+
+/* Orientation Specific */
+@media screen and (orientation: portrait) {
+  .contactUs {
+    width: 100%;
+  }
+}
+
+@media screen and (orientation: landscape) and (max-height: 500px) {
+  .contactUs {
+    min-height: 500px;
+  }
+}
+
+/* Focus Management */
+.contactUs:focus-within {
+  outline: none;
+}
+
+/* Accessibility Improvements */
+@media (prefers-reduced-motion: no-preference) {
+  .contactUs {
+    scroll-behavior: smooth;
+  }
+}

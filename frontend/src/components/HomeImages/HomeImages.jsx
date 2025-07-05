@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from "react";
+import React, { useRef, useEffect, useState, useCallback } from "react";
 import "./homeImages.css";
 import assets from "../../assets/assets";
 
@@ -8,6 +8,22 @@ const HomeImages = () => {
   const startX = useRef(0);
   const scrollLeft = useRef(0);
   const cycleWidth = useRef(0);
+  const scrollTimeout = useRef(null);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isScrolling, setIsScrolling] = useState(false);
+
+  // Detect screen size for optimal UX
+  useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth <= 1023);
+    };
+    
+    checkScreenSize();
+    window.addEventListener('resize', checkScreenSize);
+    
+    return () => window.removeEventListener('resize', checkScreenSize);
+  }, []);
 
   useEffect(() => {
     const el = scrollRef.current;
@@ -26,223 +42,249 @@ const HomeImages = () => {
     }
     cycleWidth.current = width;
     el.scrollLeft = width;
+    setIsLoading(false);
   }, []);
 
-  const handleMouseDown = (e) => {
+  // Infinite scroll logic with improved performance
+  const handleInfiniteScroll = useCallback(() => {
+    const el = scrollRef.current;
+    const w = cycleWidth.current;
+    if (!el || w === 0) return;
+    
+    if (el.scrollLeft < w * 0.5) {
+      el.scrollLeft += w;
+    } else if (el.scrollLeft > w * 1.5) {
+      el.scrollLeft -= w;
+    }
+  }, []);
+
+  const handleMouseDown = useCallback((e) => {
+    if (isMobile) return; // Better touch experience on mobile
     isDragging.current = true;
     startX.current = e.pageX - scrollRef.current.offsetLeft;
     scrollLeft.current = scrollRef.current.scrollLeft;
     scrollRef.current.classList.add("dragging");
-  };
+    e.preventDefault(); // Prevent text selection
+  }, [isMobile]);
 
-  const handleMouseLeave = () => {
-    isDragging.current = false;
-    scrollRef.current.classList.remove("dragging");
-  };
+  const handleMouseLeave = useCallback(() => {
+    if (!isMobile && isDragging.current) {
+      isDragging.current = false;
+      scrollRef.current?.classList.remove("dragging");
+    }
+  }, [isMobile]);
 
-  const handleMouseUp = () => {
-    isDragging.current = false;
-    scrollRef.current.classList.remove("dragging");
-  };
+  const handleMouseUp = useCallback(() => {
+    if (!isMobile && isDragging.current) {
+      isDragging.current = false;
+      scrollRef.current?.classList.remove("dragging");
+    }
+  }, [isMobile]);
 
-  const handleMouseMove = (e) => {
-    if (!isDragging.current) return;
+  const handleMouseMove = useCallback((e) => {
+    if (!isDragging.current || isMobile) return;
     e.preventDefault();
     const x = e.pageX - scrollRef.current.offsetLeft;
     const walk = (x - startX.current) * 1.2;
     scrollRef.current.scrollLeft = scrollLeft.current - walk;
+    handleInfiniteScroll();
+  }, [isMobile, handleInfiniteScroll]);
 
 
-    const el = scrollRef.current;
-    const w = cycleWidth.current;
-    if (w === 0) return;
-    if (el.scrollLeft < w * 0.5) {
-      el.scrollLeft += w;
-    } else if (el.scrollLeft > w * 1.5) {
-      el.scrollLeft -= w;
-    }
-  };
-
-
-  const handleTouchStart = (e) => {
+  const handleTouchStart = useCallback((e) => {
     isDragging.current = true;
     startX.current = e.touches[0].pageX - scrollRef.current.offsetLeft;
     scrollLeft.current = scrollRef.current.scrollLeft;
     scrollRef.current.classList.add("dragging");
-  };
-  const handleTouchEnd = () => {
+  }, []);
+
+  const handleTouchEnd = useCallback(() => {
     isDragging.current = false;
-    scrollRef.current.classList.remove("dragging");
-  };
-  const handleTouchMove = (e) => {
+    scrollRef.current?.classList.remove("dragging");
+  }, []);
+
+  // Scroll indicator logic
+  const handleScroll = useCallback(() => {
+    if (isMobile) {
+      setIsScrolling(true);
+      scrollRef.current?.classList.add('scrolling');
+      
+      clearTimeout(scrollTimeout.current);
+      scrollTimeout.current = setTimeout(() => {
+        setIsScrolling(false);
+        scrollRef.current?.classList.remove('scrolling');
+      }, 150);
+    }
+  }, [isMobile]);
+
+  // Enhanced touch handling with scroll indicator
+  const handleTouchMove = useCallback((e) => {
     if (!isDragging.current) return;
     const x = e.touches[0].pageX - scrollRef.current.offsetLeft;
     const walk = (x - startX.current) * 1.2;
     scrollRef.current.scrollLeft = scrollLeft.current - walk;
+    handleInfiniteScroll();
+    handleScroll();
+  }, [handleInfiniteScroll, handleScroll]);
 
+  // Image error handling
+  const handleImageError = useCallback((e, imageName) => {
+    console.warn(`Failed to load image: ${imageName}`);
+    e.target.style.backgroundColor = '#333';
+    e.target.alt = `Image ${imageName} failed to load`;
+  }, []);
 
-    const el = scrollRef.current;
-    const w = cycleWidth.current;
-    if (w === 0) return;
-    if (el.scrollLeft < w * 0.5) {
-      el.scrollLeft += w;
-    } else if (el.scrollLeft > w * 1.5) {
-      el.scrollLeft -= w;
-    }
-  };
+  // Create image component with error handling and accessibility
+  const createImageElement = useCallback((src, alt, className, imageName, isGreen = false) => {
+    const containerClass = isGreen 
+      ? "homeImagesContainerDivElementGreenContainer" 
+      : "homeImagesContainerDivElementContainer";
+    
+    return (
+      <div className={containerClass}>
+        <img
+          src={src}
+          alt={alt}
+          className={className}
+          loading="lazy"
+          onError={(e) => handleImageError(e, imageName)}
+          onLoad={() => setIsLoading(false)}
+        />
+      </div>
+    );
+  }, [handleImageError]);
 
 
   const originalElements = (
     <>
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer">
-          <div className="homeImagesContainerDivElementContainerImage">
-            <img
-              src={assets.HomeImagesOne}
-              alt=""
-              className="homeImagesContainerDivElementContainerImageImg"
-            />
-          </div>
-        </div>
+        {createImageElement(
+          assets.HomeImagesOne,
+          "Urban streetwear collection - Image 1",
+          "homeImagesContainerDivElementContainerImageImg",
+          "HomeImagesOne"
+        )}
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer">
-          <img
-            src={assets.HomeImagesTwo}
-            alt=""
-            className="homeImagesContainerDivElementContainerImageImg"
-          />
-        </div>
+        {createImageElement(
+          assets.HomeImagesTwo,
+          "Urban streetwear collection - Image 2", 
+          "homeImagesContainerDivElementContainerImageImg",
+          "HomeImagesTwo"
+        )}
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer">
-          <img
-            src={assets.HomeImagesThree}
-            alt=""
-            className="homeImagesContainerDivElementContainerImageImg"
-          />
-        </div>
+        {createImageElement(
+          assets.HomeImagesThree,
+          "Urban streetwear collection - Image 3",
+          "homeImagesContainerDivElementContainerImageImg", 
+          "HomeImagesThree"
+        )}
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer">
-          <img
-            src={assets.HomeImagesFour}
-            alt=""
-            className="homeImagesContainerDivElementContainerImageImg"
-          />
-        </div>
+        {createImageElement(
+          assets.HomeImagesFour,
+          "Urban streetwear collection - Image 4",
+          "homeImagesContainerDivElementContainerImageImg",
+          "HomeImagesFour"
+        )}
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer">
-          <img
-            src={assets.HomeImagesFive}
-            alt=""
-            className="homeImagesContainerDivElementContainerImageImg"
-          />
-        </div>
+        {createImageElement(
+          assets.HomeImagesFive,
+          "Urban streetwear collection - Image 5",
+          "homeImagesContainerDivElementContainerImageImg",
+          "HomeImagesFive"
+        )}
       </div>
 
       <div className="homeImagesContainerDivElementGreen">
-        <div className="homeImagesContainerDivElementGreenContainer">
-          <div className="homeImagesContainerDivElementGreenContainerImage">
-            <img
-              src={assets.HomeImagesSeven}
-              alt=""
-              className="homeImagesContainerDivElementGreenContainerImageImg"
-            />
-          </div>
-        </div>
+        {createImageElement(
+          assets.HomeImagesSeven,
+          "Featured urban streetwear - Special collection",
+          "homeImagesContainerDivElementGreenContainerImageImg",
+          "HomeImagesSeven",
+          true
+        )}
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer">
-          <img
-            src={assets.HomeImagesSix}
-            alt=""
-            className="homeImagesContainerDivElementContainerImageImg"
-          />
-        </div>
+        {createImageElement(
+          assets.HomeImagesSix,
+          "Urban streetwear collection - Image 6",
+          "homeImagesContainerDivElementContainerImageImg",
+          "HomeImagesSix"
+        )}
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer">
-          <img
-            src={assets.HomeImagesEight}
-            alt=""
-            className="homeImagesContainerDivElementContainerImageImg"
-          />
-        </div>
+        {createImageElement(
+          assets.HomeImagesEight,
+          "Urban streetwear collection - Image 8",
+          "homeImagesContainerDivElementContainerImageImg",
+          "HomeImagesEight"
+        )}
       </div>
 
       <div className="homeImagesContainerDivElementGreen">
-        <div className="homeImagesContainerDivElementGreenContainer">
-          <div className="homeImagesContainerDivElementGreenContainerImage">
-            <img
-              src={assets.HomeImagesNine}
-              alt=""
-              className="homeImagesContainerDivElementGreenContainerImageImg"
-            />
-          </div>
-        </div>
+        {createImageElement(
+          assets.HomeImagesNine,
+          "Featured urban streetwear - Premium collection",
+          "homeImagesContainerDivElementGreenContainerImageImg",
+          "HomeImagesNine",
+          true
+        )}
       </div>
 
       <div className="homeImagesContainerDivElementGreen">
-        <div className="homeImagesContainerDivElementGreenContainer">
-          <div className="homeImagesContainerDivElementGreenContainerImage">
-            <img
-              src={assets.HomeImagesTen}
-              alt=""
-              className="homeImagesContainerDivElementGreenContainerImageImg"
-            />
-          </div>
-        </div>
+        {createImageElement(
+          assets.HomeImagesTen,
+          "Featured urban streetwear - Exclusive collection",
+          "homeImagesContainerDivElementGreenContainerImageImg",
+          "HomeImagesTen",
+          true
+        )}
       </div>
 
       <div className="homeImagesContainerDivElementGreen">
-        <div className="homeImagesContainerDivElementGreenContainer">
-          <div className="homeImagesContainerDivElementGreenContainerImage">
-            <img
-              src={assets.HomeImagesEleven}
-              alt=""
-              className="homeImagesContainerDivElementGreenContainerImageImg"
-            />
-          </div>
-        </div>
-      </div>
-
-
-      <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer">
-          <img
-            src={assets.HomeImagesTwelve}
-            alt=""
-            className="homeImagesContainerDivElementContainerImageImg"
-          />
-        </div>
+        {createImageElement(
+          assets.HomeImagesEleven,
+          "Featured urban streetwear - Limited edition",
+          "homeImagesContainerDivElementGreenContainerImageImg",
+          "HomeImagesEleven",
+          true
+        )}
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer">
-          <img
-            src={assets.HomeImagesThirteen}
-            alt=""
-            className="homeImagesContainerDivElementContainerImageImg"
-          />
-        </div>
+        {createImageElement(
+          assets.HomeImagesTwelve,
+          "Urban streetwear collection - Image 12",
+          "homeImagesContainerDivElementContainerImageImg",
+          "HomeImagesTwelve"
+        )}
       </div>
 
       <div className="homeImagesContainerDivElement">
-        <div className="homeImagesContainerDivElementContainer">
-          <img
-            src={assets.HomeImagesFourteen}
-            alt=""
-            className="homeImagesContainerDivElementContainerImageImg"
-          />
-        </div>
+        {createImageElement(
+          assets.HomeImagesThirteen,
+          "Urban streetwear collection - Image 13",
+          "homeImagesContainerDivElementContainerImageImg",
+          "HomeImagesThirteen"
+        )}
+      </div>
+
+      <div className="homeImagesContainerDivElement">
+        {createImageElement(
+          assets.HomeImagesFourteen,
+          "Urban streetwear collection - Image 14",
+          "homeImagesContainerDivElementContainerImageImg",
+          "HomeImagesFourteen"
+        )}
       </div>
     </>
   );
@@ -260,6 +302,20 @@ const HomeImages = () => {
           onTouchStart={handleTouchStart}
           onTouchEnd={handleTouchEnd}
           onTouchMove={handleTouchMove}
+          onScroll={handleScroll}
+          role="region"
+          aria-label="Urban streetwear image gallery"
+          tabIndex={0}
+          onKeyDown={(e) => {
+            // Keyboard navigation for accessibility
+            if (e.key === 'ArrowLeft') {
+              e.preventDefault();
+              scrollRef.current.scrollBy({ left: -200, behavior: 'smooth' });
+            } else if (e.key === 'ArrowRight') {
+              e.preventDefault();
+              scrollRef.current.scrollBy({ left: 200, behavior: 'smooth' });
+            }
+          }}
         >
           <div className="homeImagesContainerDiv">
             {originalElements}

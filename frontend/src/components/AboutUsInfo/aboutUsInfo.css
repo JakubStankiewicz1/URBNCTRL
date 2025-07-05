@@ -120,3 +120,544 @@
   border-radius: 5px;
   object-fit: cover;
 }
+
+/* ========================================
+   ULTRA PROFESSIONAL RESPONSIVE DESIGN
+   ======================================== */
+
+/* Large Desktop (1920px and up) - Premium Experience */
+@media screen and (min-width: 1920px) {
+  .aboutUsInfo {
+    padding-top: 300px;
+    padding-bottom: 80px;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainer {
+    width: 65%;
+    margin-left: 120px;
+    gap: 45px;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerOneContainerText {
+    font-size: 48px;
+    line-height: 56px;
+    font-weight: 900;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerTwoContainerText {
+    font-size: 19px;
+    line-height: 26px;
+    font-weight: 400;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerOne {
+    width: 700px;
+    height: 920px;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerTwo {
+    width: 480px;
+    height: 640px;
+    transform: translateX(-70%) translateY(-40%);
+  }
+}
+
+/* Desktop HD (1440px - 1919px) - Enhanced Desktop */
+@media screen and (max-width: 1919px) and (min-width: 1440px) {
+  .aboutUsInfo {
+    padding-top: 260px;
+    padding-bottom: 60px;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainer {
+    width: 68%;
+    margin-left: 100px;
+    gap: 40px;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerOneContainerText {
+    font-size: 44px;
+    line-height: 52px;
+    font-weight: 800;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerTwoContainerText {
+    font-size: 18px;
+    line-height: 25px;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerOne {
+    width: 650px;
+    height: 880px;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerTwo {
+    width: 450px;
+    height: 600px;
+    transform: translateX(-68%) translateY(-38%);
+  }
+}
+
+/* Desktop Standard (1024px - 1439px) - Optimized Desktop */
+@media screen and (max-width: 1439px) and (min-width: 1024px) {
+  .aboutUsInfo {
+    padding-top: 200px;
+    padding-bottom: 40px;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainer {
+    width: 75%;
+    margin-left: 80px;
+    gap: 30px;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerOneContainerText {
+    font-size: 36px;
+    line-height: 44px;
+    font-weight: 800;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerTwoContainerText {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerOne {
+    width: 500px;
+    height: 700px;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerTwo {
+    width: 350px;
+    height: 480px;
+    transform: translateX(-65%) translateY(-35%);
+  }
+}
+
+/* Tablet Landscape (768px - 1023px) - Professional Tablet */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .aboutUsInfo {
+    padding-top: 150px;
+    padding-bottom: 30px;
+  }
+  
+  .aboutUsInfoContainerDiv {
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+  }
+  
+  .aboutUsInfoContainerDivLeft {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainer {
+    width: 85%;
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+    gap: 25px;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerOneContainerText {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 700;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerTwoContainerText {
+    font-size: 15px;
+    line-height: 21px;
+    text-align: center;
+  }
+  
+  .aboutUsInfoContainerDivRight {
+    order: 1;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .aboutUsInfoContainerDivRightContainer {
+    align-items: center;
+    position: relative;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerOne {
+    width: 400px;
+    height: 500px;
+    position: relative;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerTwo {
+    width: 280px;
+    height: 350px;
+    transform: translateX(-60%) translateY(-25%);
+  }
+}
+
+/* Tablet Portrait (600px - 767px) - Touch Optimized */
+@media screen and (max-width: 767px) and (min-width: 600px) {
+  .aboutUsInfo {
+    padding-top: 120px;
+    padding-bottom: 25px;
+  }
+  
+  .aboutUsInfoContainerDiv {
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+  }
+  
+  .aboutUsInfoContainerDivLeft {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainer {
+    width: 90%;
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+    gap: 20px;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerOneContainerText {
+    font-size: 28px;
+    line-height: 34px;
+    font-weight: 700;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerTwoContainerText {
+    font-size: 14px;
+    line-height: 20px;
+    text-align: center;
+  }
+  
+  .aboutUsInfoContainerDivRight {
+    order: 1;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerOne {
+    width: 350px;
+    height: 450px;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerTwo {
+    width: 250px;
+    height: 320px;
+    transform: translateX(-40%) translateY(-20%);
+  }
+}
+
+/* Mobile Large (480px - 599px) - Mobile Excellence */
+@media screen and (max-width: 599px) and (min-width: 480px) {
+  .aboutUsInfo {
+    padding-top: 100px;
+    padding-bottom: 20px;
+  }
+  
+  .aboutUsInfoContainerDiv {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .aboutUsInfoContainerDivLeft {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainer {
+    width: 95%;
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+    gap: 18px;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerOneContainerText {
+    font-size: 24px;
+    line-height: 30px;
+    font-weight: 700;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerTwoContainerText {
+    font-size: 13px;
+    line-height: 19px;
+    text-align: center;
+  }
+  
+  .aboutUsInfoContainerDivRight {
+    order: 1;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerOne {
+    width: 300px;
+    height: 400px;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerTwo {
+    width: 220px;
+    height: 280px;
+    transform: translateX(-35%) translateY(-18%);
+  }
+}
+
+/* Mobile Standard (375px - 479px) - Optimized Mobile */
+@media screen and (max-width: 479px) and (min-width: 375px) {
+  .aboutUsInfo {
+    padding-top: 80px;
+    padding-bottom: 15px;
+  }
+  
+  .aboutUsInfoContainerDiv {
+    flex-direction: column;
+    gap: 35px;
+    align-items: center;
+  }
+  
+  .aboutUsInfoContainerDivLeft {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainer {
+    width: 92%;
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerOneContainerText {
+    font-size: 22px;
+    line-height: 28px;
+    font-weight: 600;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerTwoContainerText {
+    font-size: 12px;
+    line-height: 18px;
+    text-align: center;
+  }
+  
+  .aboutUsInfoContainerDivRight {
+    order: 1;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerOne {
+    width: 280px;
+    height: 360px;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerTwo {
+    width: 200px;
+    height: 250px;
+    transform: translateX(-30%) translateY(-15%);
+  }
+}
+
+/* Mobile Small (320px - 374px) - Compact Mobile */
+@media screen and (max-width: 374px) and (min-width: 320px) {
+  .aboutUsInfo {
+    padding-top: 70px;
+    padding-bottom: 15px;
+  }
+  
+  .aboutUsInfoContainerDiv {
+    flex-direction: column;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .aboutUsInfoContainerDivLeft {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainer {
+    width: 88%;
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+    gap: 14px;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerOneContainerText {
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: 600;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerTwoContainerText {
+    font-size: 11px;
+    line-height: 17px;
+    text-align: center;
+  }
+  
+  .aboutUsInfoContainerDivRight {
+    order: 1;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerOne {
+    width: 250px;
+    height: 320px;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerTwo {
+    width: 180px;
+    height: 220px;
+    transform: translateX(-25%) translateY(-12%);
+  }
+}
+
+/* Ultra Small Mobile (280px - 319px) - Legacy Support */
+@media screen and (max-width: 319px) {
+  .aboutUsInfo {
+    padding-top: 60px;
+    padding-bottom: 10px;
+  }
+  
+  .aboutUsInfoContainerDiv {
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+  }
+  
+  .aboutUsInfoContainerDivLeft {
+    order: 2;
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainer {
+    width: 85%;
+    margin-left: 0;
+    text-align: center;
+    align-items: center;
+    gap: 12px;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerOneContainerText {
+    font-size: 18px;
+    line-height: 24px;
+    font-weight: 600;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainerTwoContainerText {
+    font-size: 10px;
+    line-height: 16px;
+    text-align: center;
+  }
+  
+  .aboutUsInfoContainerDivRight {
+    order: 1;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerOne {
+    width: 220px;
+    height: 280px;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerTwo {
+    width: 160px;
+    height: 200px;
+    transform: translateX(-20%) translateY(-10%);
+  }
+}
+
+/* Landscape Mobile Optimization */
+@media screen and (max-height: 500px) and (orientation: landscape) and (max-width: 1023px) {
+  .aboutUsInfo {
+    padding-top: 60px;
+    padding-bottom: 15px;
+  }
+  
+  .aboutUsInfoContainerDiv {
+    flex-direction: row;
+    gap: 30px;
+    align-items: center;
+  }
+  
+  .aboutUsInfoContainerDivLeft {
+    order: 1;
+    flex: 1;
+  }
+  
+  .aboutUsInfoContainerDivRight {
+    order: 2;
+    flex: 0 0 50%;
+  }
+  
+  .aboutUsInfoContainerDivLeftContainer {
+    margin-left: 20px;
+    text-align: left;
+    align-items: flex-start;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerOne {
+    width: 250px;
+    height: 300px;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerTwo {
+    width: 180px;
+    height: 220px;
+  }
+}
+
+/* High DPI Optimization */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .aboutUsInfo {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerOneContainerImg,
+  .aboutUsInfoContainerDivRightContainerTwoContainerImg {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Performance Optimizations */
+@media (prefers-reduced-motion: reduce) {
+  .aboutUsInfoContainerDivRightContainerTwo {
+    transition: none;
+  }
+}
+
+/* Touch Device Optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .aboutUsInfoContainerDivRightContainer {
+    cursor: default;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerOneContainerImg,
+  .aboutUsInfoContainerDivRightContainerTwoContainerImg {
+    transition: transform 0.2s ease-out;
+  }
+  
+  .aboutUsInfoContainerDivRightContainerOneContainerImg:active,
+  .aboutUsInfoContainerDivRightContainerTwoContainerImg:active {
+    transform: scale(0.98);
+  }
+}

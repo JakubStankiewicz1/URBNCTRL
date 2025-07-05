@@ -6,11 +6,11 @@ import AboutUsInfoScroll from "../../components/AboutUsInfoScroll/AboutUsInfoScr
 
 const Community = () => {
   return (
-    <div className="community">
+    <main className="community" role="main">
       <CommunityHeader />
       <CommunityArticle />
       <AboutUsInfoScroll />
-    </div>
+    </main>
   );
 };
 

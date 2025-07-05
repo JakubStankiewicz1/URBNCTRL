@@ -1,6 +1,7 @@
 .communityArticleElement {
   width: 100%;
   height: 100%;
+  position: relative;
 }
 
 .communityArticleElementContainer {
@@ -15,58 +16,74 @@
 .communityArticleElementContainerDiv {
   width: 380px;
   height: 480px;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  position: relative;
 }
 
 .communityArticleElementContainerDivImage {
   width: 380px;
   height: 480px;
-  border-radius: 5px;
+  /* border-radius: 8px; */
   position: relative;
   transition: all 0.3s ease-in-out;
   overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
 }
 
 .communityArticleElementContainerDivImageContainer {
   width: 100%;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   position: relative;
 }
 
 .communityArticleElementContainerDivImageContainerImage {
   width: 100%;
   height: 100%;
-  border-radius: 5px;
+  /* border-radius: 8px; */
   object-fit: cover;
-  object-position: center top;
+  object-position: center;
   filter: brightness(0.8);
   transition: all 0.3s ease-in-out;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
 }
 
 .communityArticleElementContainerDiv:hover
   .communityArticleElementContainerDivImageContainerImage {
   filter: brightness(1);
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
+}
+
+.communityArticleElementContainerDivImage:hover {
+  /* transform: translateY(-5px); */
+  /* box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4); */
 }
 
 .communityArticleElementContainerDivInfo {
   position: absolute;
-  /* width: 80%; */
+  bottom: 0;
+  left: 0;
+  right: 0;
   color: white;
-  transform: translateY(50%) translateX(-10%);
+  padding: 30px;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.6) 50%,
+    transparent 100%
+  );
+  /* border-radius: 0 0 8px 8px; */
 }
 
 .communityArticleElementContainerDivInfoContainer {
-  width: 220px;
+  width: 100%;
+  max-width: 300px;
 }
 
 .communityArticleElementContainerDivInfoContainerThree {
@@ -78,12 +95,26 @@
   height: 50px;
   background-color: #da2228;
   cursor: pointer;
+  border: none;
+  /* border-radius: 4px; */
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.communityArticleElementContainerDivInfoContainerThreeContainerButton:hover {
+  background-color: #c11e24;
+  /* transform: translateY(-2px); */
+  /* box-shadow: 0 4px 15px rgba(218, 34, 40, 0.3); */
+}
+
+.communityArticleElementContainerDivInfoContainerThreeContainerButton:active {
+  transform: translateY(0);
 }
 
 .communityArticleElementContainerDivInfoContainerThreeContainerButtonContainer {
   width: 100%;
   height: 100%;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -95,6 +126,8 @@
   font-weight: 800;
   line-height: 20px;
   text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-rendering: optimizeLegibility;
 }
 
 .communityArticleElementContainerDivInfoContainerOneContainerText {
@@ -102,6 +135,9 @@
   font-size: 14px;
   font-weight: 400;
   line-height: 19px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  opacity: 0.9;
 }
 
 .communityArticleElementContainerDivInfoContainerTwo {
@@ -115,4 +151,434 @@
   line-height: 26px;
   text-transform: uppercase;
   font-style: italic;
+  letter-spacing: -0.5px;
+  word-wrap: break-word;
+  -webkit-hyphens: auto;
+  hyphens: auto;
+}
+
+/* Extra Large Desktops (1920px and up) */
+@media (min-width: 1920px) {
+  .communityArticleElementContainerDiv {
+    width: 420px;
+    height: 530px;
+  }
+  
+  .communityArticleElementContainerDivImage {
+    width: 420px;
+    height: 530px;
+  }
+  
+  .communityArticleElementContainerDivInfo {
+    padding: 35px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainer {
+    max-width: 350px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerOneContainerText {
+    font-size: 15px;
+    line-height: 21px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerTwoContainerText {
+    font-size: 26px;
+    line-height: 28px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButton {
+    width: 180px;
+    height: 55px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButtonContainerText {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+
+/* Large Desktops (1440px to 1919px) */
+@media (max-width: 1919px) and (min-width: 1440px) {
+  .communityArticleElementContainerDiv {
+    width: 400px;
+    height: 500px;
+  }
+  
+  .communityArticleElementContainerDivImage {
+    width: 400px;
+    height: 500px;
+  }
+  
+  .communityArticleElementContainerDivInfo {
+    padding: 32px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainer {
+    max-width: 320px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButton {
+    width: 170px;
+    height: 52px;
+  }
+}
+
+/* Standard Desktops (1200px to 1439px) */
+@media (max-width: 1439px) and (min-width: 1200px) {
+  .communityArticleElementContainerDiv {
+    width: 380px;
+    height: 480px;
+  }
+  
+  .communityArticleElementContainerDivImage {
+    width: 380px;
+    height: 480px;
+  }
+  
+  .communityArticleElementContainerDivInfo {
+    padding: 30px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainer {
+    max-width: 300px;
+  }
+}
+
+/* Small Desktops/Large Tablets (1024px to 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .communityArticleElementContainerDiv {
+    width: 340px;
+    height: 430px;
+  }
+  
+  .communityArticleElementContainerDivImage {
+    width: 340px;
+    height: 430px;
+  }
+  
+  .communityArticleElementContainerDivInfo {
+    padding: 25px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainer {
+    max-width: 280px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerOneContainerText {
+    font-size: 13px;
+    line-height: 18px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerTwoContainerText {
+    font-size: 22px;
+    line-height: 24px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButton {
+    width: 150px;
+    height: 45px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButtonContainerText {
+    font-size: 13px;
+    line-height: 18px;
+  }
+}
+
+/* Tablets (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .communityArticleElementContainerDiv {
+    width: 320px;
+    height: 400px;
+  }
+  
+  .communityArticleElementContainerDivImage {
+    width: 320px;
+    height: 400px;
+  }
+  
+  .communityArticleElementContainerDivInfo {
+    padding: 20px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainer {
+    max-width: 260px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerOneContainerText {
+    font-size: 12px;
+    line-height: 16px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerTwoContainerText {
+    font-size: 20px;
+    line-height: 22px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThree {
+    margin-top: 15px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButton {
+    width: 140px;
+    height: 40px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButtonContainerText {
+    font-size: 12px;
+    line-height: 16px;
+  }
+}
+
+/* Large Mobile (480px to 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .communityArticleElementContainerDiv {
+    width: 280px;
+    height: 350px;
+  }
+  
+  .communityArticleElementContainerDivImage {
+    width: 280px;
+    height: 350px;
+  }
+  
+  .communityArticleElementContainerDivInfo {
+    padding: 18px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainer {
+    max-width: 240px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerOneContainerText {
+    font-size: 11px;
+    line-height: 15px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerTwoContainerText {
+    font-size: 18px;
+    line-height: 20px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThree {
+    margin-top: 12px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButton {
+    width: 130px;
+    height: 38px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButtonContainerText {
+    font-size: 11px;
+    line-height: 15px;
+  }
+}
+
+/* Small Mobile (320px to 479px) */
+@media (max-width: 479px) and (min-width: 320px) {
+  .communityArticleElementContainerDiv {
+    width: 250px;
+    height: 320px;
+  }
+  
+  .communityArticleElementContainerDivImage {
+    width: 250px;
+    height: 320px;
+  }
+  
+  .communityArticleElementContainerDivInfo {
+    padding: 15px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainer {
+    max-width: 220px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerOneContainerText {
+    font-size: 10px;
+    line-height: 14px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerTwo {
+    margin-top: 10px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerTwoContainerText {
+    font-size: 16px;
+    line-height: 18px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThree {
+    margin-top: 10px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButton {
+    width: 120px;
+    height: 35px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButtonContainerText {
+    font-size: 10px;
+    line-height: 14px;
+  }
+}
+
+/* Extra Small Mobile (up to 319px) */
+@media (max-width: 319px) {
+  .communityArticleElementContainerDiv {
+    width: 220px;
+    height: 280px;
+  }
+  
+  .communityArticleElementContainerDivImage {
+    width: 220px;
+    height: 280px;
+  }
+  
+  .communityArticleElementContainerDivInfo {
+    padding: 12px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainer {
+    max-width: 190px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerOneContainerText {
+    font-size: 9px;
+    line-height: 13px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerTwo {
+    margin-top: 8px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerTwoContainerText {
+    font-size: 14px;
+    line-height: 16px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThree {
+    margin-top: 8px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButton {
+    width: 110px;
+    height: 32px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButtonContainerText {
+    font-size: 9px;
+    line-height: 13px;
+  }
+}
+
+/* Touch devices */
+@media (hover: none) and (pointer: coarse) {
+  .communityArticleElementContainerDivInfoContainerThreeContainerButton {
+    min-width: 44px;
+    min-height: 44px;
+  }
+  
+  .communityArticleElementContainerDiv:hover
+    .communityArticleElementContainerDivImageContainerImage {
+    filter: brightness(0.8);
+    /* transform: scale(1); */
+  }
+  
+  .communityArticleElementContainerDivImage:hover {
+    transform: none;
+    /* box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); */
+  }
+}
+
+/* High DPI / Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .communityArticleElementContainerDivImageContainerImage {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerOneContainerText,
+  .communityArticleElementContainerDivInfoContainerTwoContainerText,
+  .communityArticleElementContainerDivInfoContainerThreeContainerButtonContainerText {
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+}
+
+/* Reduce motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .communityArticleElementContainerDivImage,
+  .communityArticleElementContainerDivImageContainerImage,
+  .communityArticleElementContainerDivInfoContainerThreeContainerButton {
+    transition: none;
+  }
+  
+  .communityArticleElementContainerDiv:hover
+    .communityArticleElementContainerDivImageContainerImage {
+    transform: none;
+  }
+  
+  .communityArticleElementContainerDivImage:hover {
+    transform: none;
+  }
+}
+
+/* High contrast mode */
+@media (prefers-contrast: high) {
+  .communityArticleElementContainerDivImage {
+    border: 2px solid #ffffff;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButton {
+    border: 2px solid #ffffff;
+  }
+  
+  .communityArticleElementContainerDivInfo {
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(0, 0, 0, 0.8) 50%,
+      rgba(0, 0, 0, 0.3) 100%
+    );
+  }
+}
+
+/* Print styles */
+@media print {
+  .communityArticleElement {
+    break-inside: avoid;
+    page-break-inside: avoid;
+    margin-bottom: 20px;
+  }
+  
+  .communityArticleElementContainerDivImage {
+    box-shadow: none;
+    border: 1px solid #000000;
+  }
+  
+  .communityArticleElementContainerDivInfo {
+    position: static;
+    background: #ffffff;
+    color: #000000;
+    border: 1px solid #000000;
+    margin-top: 10px;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerOneContainerText,
+  .communityArticleElementContainerDivInfoContainerTwoContainerText {
+    color: #000000;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButton {
+    background-color: #ffffff;
+    border: 2px solid #000000;
+  }
+  
+  .communityArticleElementContainerDivInfoContainerThreeContainerButtonContainerText {
+    color: #000000;
+  }
 }

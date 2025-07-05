@@ -6,6 +6,21 @@ import video from "../../assets/HomeHeroVideo.mp4";
 const HomeHero = ({ setHasStarted }) => {
   const [showVideo, setShowVideo] = useState(false);
   const [scrollBlocked, setScrollBlocked] = useState(true);
+  const [isMobile, setIsMobile] = useState(false);
+  const [isTouch, setIsTouch] = useState(false);
+
+  // Check for mobile/touch devices
+  useEffect(() => {
+    const checkDevice = () => {
+      setIsMobile(window.innerWidth <= 768);
+      setIsTouch('ontouchstart' in window || navigator.maxTouchPoints > 0);
+    };
+
+    checkDevice();
+    window.addEventListener('resize', checkDevice);
+
+    return () => window.removeEventListener('resize', checkDevice);
+  }, []);
 
   useEffect(() => {
     if (scrollBlocked) {
@@ -27,19 +42,46 @@ const HomeHero = ({ setHasStarted }) => {
     setShowVideo(true);
     setScrollBlocked(false);
 
-    // Show navbar with a slight delay
+    // Show navbar with a slight delay - longer delay for mobile
+    const delay = isMobile ? 1500 : 1000;
     setTimeout(() => {
       setHasStarted(true);
-    }, 1000);
+    }, delay);
+  };
+
+  // Handle touch events for better mobile experience
+  const handleTouchStart = (e) => {
+    if (isTouch) {
+      e.currentTarget.style.transform = 'scale(0.98)';
+    }
+  };
+
+  const handleTouchEnd = (e) => {
+    if (isTouch) {
+      e.currentTarget.style.transform = 'scale(1)';
+    }
   };
 
   return (
     <div className="homeHero">
       <div className="homeHeroContainer">
-        {/* Video Background */}{" "}
+        {/* Video Background */}
         <div className={`homeHeroVideo ${showVideo ? "show" : ""}`}>
-          <video autoPlay muted loop>
+          <video 
+            autoPlay 
+            muted 
+            loop 
+            playsInline
+            preload="metadata"
+            style={{
+              // Ensure proper video scaling on mobile
+              objectFit: 'cover',
+              width: '100%',
+              height: '100%'
+            }}
+          >
             <source src={video} type="video/mp4" />
+            Your browser does not support the video tag.
           </video>
           <div className="homeHeroVideoOverlay"></div>
         </div>
@@ -68,13 +110,26 @@ const HomeHero = ({ setHasStarted }) => {
               {" "}
               <div className="homeHeroContainerOverlayBottomContainerButton">
                 <div className="homeHeroContainerOverlayBottomContainerButtonContainer">
-                  <div className="homeHeroButton" onClick={handleStartClick}>
+                  <div 
+                    className="homeHeroButton" 
+                    onClick={handleStartClick}
+                    onTouchStart={handleTouchStart}
+                    onTouchEnd={handleTouchEnd}
+                    role="button"
+                    tabIndex={0}
+                    aria-label="Start experience"
+                    onKeyDown={(e) => {
+                      if (e.key === 'Enter' || e.key === ' ') {
+                        handleStartClick(e);
+                      }
+                    }}
+                  >
                     <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderTop"></div>
                     <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderRight"></div>
                     <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderBottom"></div>
                     <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderLeft"></div>
                     <p className="homeHeroContainerOverlayBottomContainerButtonContainerText">
-                      Start
+                      {isMobile ? "TAP TO START" : "START"}
                     </p>
                   </div>
                 </div>

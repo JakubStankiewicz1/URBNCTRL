@@ -4,11 +4,15 @@
   background-color: #000000;
   padding-top: 40px;
   padding-bottom: 50px;
+  position: relative;
 }
 
 .aboutUsFotterContainer {
   width: 100%;
   height: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
 .aboutUsFotterContainerDiv {
@@ -18,6 +22,7 @@
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
+  position: relative;
 }
 
 .aboutUsFotterContainerDivText {
@@ -27,8 +32,20 @@
   font-weight: 700;
   line-height: 38px;
   text-align: center;
-  text-transform: uppercase;
   font-style: italic;
+  letter-spacing: -1px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.aboutUsFotterContainerDivText:hover {
+  color: #f0f0f0;
+  transform: scale(1.02);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
 }
 
 .aboutUsFotterContainerDivTextTwo {
@@ -38,7 +55,187 @@
   font-weight: 100;
   line-height: 38px;
   text-align: center;
-  text-transform: uppercase;
   font-style: italic;
   transform: translateY(5px);
+  letter-spacing: -0.5px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+}
+
+.aboutUsFotterContainerDivTextTwo:hover {
+  color: #f0f0f0;
+  transform: translateY(5px) scale(1.02);
+  text-shadow: 0 0 20px rgba(255, 255, 255, 0.3);
+}
+
+/* Tablet Landscape (1024px to 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .aboutUsFotter {
+    padding-top: 35px;
+    padding-bottom: 45px;
+  }
+  
+  .aboutUsFotterContainerDivText {
+    font-size: 76px;
+  }
+  
+  .aboutUsFotterContainerDivTextTwo {
+    font-size: 64px;
+  }
+}
+
+/* Tablet Portrait (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .aboutUsFotter {
+    padding-top: 30px;
+    padding-bottom: 40px;
+  }
+  
+  .aboutUsFotterContainer {
+    padding: 0 40px;
+  }
+  
+  .aboutUsFotterContainerDivText {
+    font-size: 66px;
+    line-height: 34px;
+  }
+  
+  .aboutUsFotterContainerDivTextTwo {
+    font-size: 56px;
+    line-height: 34px;
+  }
+}
+
+/* Mobile Landscape (480px to 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .aboutUsFotter {
+    padding-top: 25px;
+    padding-bottom: 35px;
+  }
+  
+  .aboutUsFotterContainer {
+    padding: 0 20px;
+  }
+  
+  .aboutUsFotterContainerDivText {
+    font-size: 46px;
+    line-height: 30px;
+  }
+  
+  .aboutUsFotterContainerDivTextTwo {
+    font-size: 48px;
+    line-height: 30px;
+    transform: translateY(3px);
+  }
+  
+  .aboutUsFotterContainerDivTextTwo:hover {
+    transform: translateY(3px) scale(1.02);
+  }
+}
+
+/* Mobile Portrait (320px to 479px) */
+@media (max-width: 479px) {
+  .aboutUsFotter {
+    padding-top: 20px;
+    padding-bottom: 30px;
+  }
+  
+  .aboutUsFotterContainer {
+    padding: 0 15px;
+  }
+
+  .aboutUsFotterContainerDiv {
+    gap: 3px
+  }
+  
+  .aboutUsFotterContainerDivText {
+    font-size: 32px;
+    line-height: 26px;
+  }
+  
+  .aboutUsFotterContainerDivTextTwo {
+    font-size: 26px;
+    line-height: 26px;
+    transform: translateY(2px);
+  }
+  
+  .aboutUsFotterContainerDivTextTwo:hover {
+    transform: translateY(2px) scale(1.02);
+  }
+}
+
+/* Extra Small Mobile (up to 319px) */
+@media (max-width: 319px) {
+  .aboutUsFotter {
+    padding-top: 15px;
+    padding-bottom: 25px;
+  }
+  
+  .aboutUsFotterContainer {
+    padding: 0 10px;
+  }
+  
+  .aboutUsFotterContainerDivText {
+    font-size: 22px;
+    line-height: 22px;
+  }
+  
+  .aboutUsFotterContainerDivTextTwo {
+    font-size: 18px;
+    line-height: 22px;
+    transform: translateY(1px);
+  }
+  
+  .aboutUsFotterContainerDivTextTwo:hover {
+    transform: translateY(1px) scale(1.02);
+  }
+}
+
+/* Touch Device Optimization */
+@media (hover: none) and (pointer: coarse) {
+  .aboutUsFotterContainerDivText,
+  .aboutUsFotterContainerDivTextTwo {
+    transition: none;
+  }
+  
+  .aboutUsFotterContainerDivText:hover,
+  .aboutUsFotterContainerDivTextTwo:hover {
+    transform: none;
+    text-shadow: none;
+    color: #ffffff;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .aboutUsFotterContainerDivText,
+  .aboutUsFotterContainerDivTextTwo {
+    transition: none;
+  }
+  
+  .aboutUsFotterContainerDivText:hover,
+  .aboutUsFotterContainerDivTextTwo:hover {
+    transform: none;
+    text-shadow: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .aboutUsFotter {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 20px 0;
+    page-break-inside: avoid;
+  }
+  
+  .aboutUsFotterContainerDivText,
+  .aboutUsFotterContainerDivTextTwo {
+    color: #000000 !important;
+    text-shadow: none;
+  }
 }

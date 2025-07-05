@@ -31,19 +31,25 @@ const AboutUsInfoScroll = () => {
   ];
 
   return (
-    <div className="aboutUsInfoScroll">
+    <section className="aboutUsInfoScroll" aria-label="Featured Products Showcase">
       <div className="aboutUsInfoScrollContainer">
-        <div className="aboutUsInfoScrollContainerDiv">
+        <div className="aboutUsInfoScrollContainerDiv" role="img" aria-label="Scrolling product showcase">
           {[...elements, ...elements].map((el, idx) => (
             <div className="aboutUsInfoScrollContainerDivElement" key={idx}>
               <div className="aboutUsInfoScrollContainerDivElementContainer">
-                <img src={el.src} alt="" className={el.className} />
+                <img 
+                  src={el.src} 
+                  alt={`Featured product ${(idx % elements.length) + 1}`} 
+                  className={el.className} 
+                  loading="lazy"
+                  decoding="async"
+                />
               </div>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

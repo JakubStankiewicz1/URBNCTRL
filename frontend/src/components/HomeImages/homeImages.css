@@ -20,6 +20,13 @@
   scrollbar-width: none;
   -ms-overflow-style: none;
   cursor: grab;
+  outline: 2px solid transparent;
+  outline-offset: 2px;
+  transition: outline-color 0.2s ease;
+}
+
+.homeImagesScroll:focus-visible {
+  outline-color: #22c55e;
 }
 
 .homeImagesScroll:active,
@@ -45,7 +52,7 @@
   min-width: 870px;
   height: 490px;
   flex: 0 0 auto;
-  background-color: red;
+  /* background-color: red; */
 }
 
 .homeImagesContainerDivElement {
@@ -140,4 +147,531 @@
   object-fit: cover;
   object-position: center;
   /* border-radius: 5px; */
+}
+
+/* ===== MEGA PROFESSIONAL RESPONSIVE DESIGN ===== */
+
+/* Ultra-wide screens (1920px+) */
+@media screen and (min-width: 1920px) {
+  .homeImages {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+  
+  .homeImagesContainerDiv {
+    gap: 60px;
+  }
+  
+  .homeImagesContainerDivElement {
+    min-width: 1000px;
+    width: 1000px;
+    height: 580px;
+  }
+  
+  .homeImagesContainerDivElementGreen {
+    min-width: 450px;
+    width: 450px;
+    height: 580px;
+  }
+}
+
+/* Large desktops (1440px - 1919px) */
+@media screen and (max-width: 1919px) and (min-width: 1440px) {
+  .homeImages {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  
+  .homeImagesContainerDiv {
+    gap: 50px;
+  }
+  
+  .homeImagesContainerDivElement {
+    min-width: 920px;
+    width: 920px;
+    height: 540px;
+  }
+  
+  .homeImagesContainerDivElementGreen {
+    min-width: 420px;
+    width: 420px;
+    height: 540px;
+  }
+}
+
+/* Standard desktops (1200px - 1439px) */
+@media screen and (max-width: 1439px) and (min-width: 1200px) {
+  .homeImages {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .homeImagesContainerDiv {
+    gap: 40px;
+  }
+  
+  .homeImagesContainerDivElement {
+    min-width: 870px;
+    width: 870px;
+    height: 490px;
+  }
+  
+  .homeImagesContainerDivElementGreen {
+    min-width: 395px;
+    width: 395px;
+    height: 490px;
+  }
+}
+
+/* Small desktops/Large tablets (1024px - 1199px) */
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+  .homeImages {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .homeImagesContainerDiv {
+    gap: 35px;
+  }
+  
+  .homeImagesContainerDivElement {
+    min-width: 720px;
+    width: 720px;
+    height: 420px;
+  }
+  
+  .homeImagesContainerDivElementGreen {
+    min-width: 340px;
+    width: 340px;
+    height: 420px;
+  }
+}
+
+/* Tablets landscape (768px - 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .homeImages {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .homeImagesContainerDiv {
+    gap: 30px;
+  }
+  
+  .homeImagesContainerDivElement {
+    min-width: 600px;
+    width: 600px;
+    height: 360px;
+  }
+  
+  .homeImagesContainerDivElementGreen {
+    min-width: 280px;
+    width: 280px;
+    height: 360px;
+  }
+  
+  .homeImagesScroll {
+    cursor: auto;
+  }
+  
+  .homeImagesScroll:active,
+  .homeImagesScroll.dragging {
+    cursor: auto;
+  }
+}
+
+/* Tablets portrait and large mobiles (640px - 767px) */
+@media screen and (max-width: 767px) and (min-width: 640px) {
+  .homeImages {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .homeImagesContainerDiv {
+    gap: 25px;
+  }
+  
+  .homeImagesContainerDivElement {
+    min-width: 500px;
+    width: 500px;
+    height: 300px;
+  }
+  
+  .homeImagesContainerDivElementGreen {
+    min-width: 240px;
+    width: 240px;
+    height: 300px;
+  }
+  
+  .homeImagesScroll {
+    cursor: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .homeImagesScroll:active,
+  .homeImagesScroll.dragging {
+    cursor: auto;
+  }
+}
+
+/* Mobile devices (480px - 639px) */
+@media screen and (max-width: 639px) and (min-width: 480px) {
+  .homeImages {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .homeImagesContainerDiv {
+    gap: 20px;
+  }
+  
+  .homeImagesContainerDivElement {
+    min-width: 400px;
+    width: 400px;
+    height: 250px;
+  }
+  
+  .homeImagesContainerDivElementGreen {
+    min-width: 200px;
+    width: 200px;
+    height: 250px;
+  }
+  
+  .homeImagesScroll {
+    cursor: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .homeImagesScroll:active,
+  .homeImagesScroll.dragging {
+    cursor: auto;
+  }
+}
+
+/* Small mobile devices (360px - 479px) */
+@media screen and (max-width: 479px) and (min-width: 360px) {
+  .homeImages {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .homeImagesContainerDiv {
+    gap: 15px;
+  }
+  
+  .homeImagesContainerDivElement {
+    min-width: 320px;
+    width: 320px;
+    height: 200px;
+  }
+  
+  .homeImagesContainerDivElementGreen {
+    min-width: 160px;
+    width: 160px;
+    height: 200px;
+  }
+  
+  .homeImagesScroll {
+    cursor: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .homeImagesScroll:active,
+  .homeImagesScroll.dragging {
+    cursor: auto;
+  }
+}
+
+/* Extra small mobile devices (320px - 359px) */
+@media screen and (max-width: 359px) {
+  .homeImages {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  
+  .homeImagesContainerDiv {
+    gap: 12px;
+  }
+  
+  .homeImagesContainerDivElement {
+    min-width: 280px;
+    width: 280px;
+    height: 180px;
+  }
+  
+  .homeImagesContainerDivElementGreen {
+    min-width: 140px;
+    width: 140px;
+    height: 180px;
+  }
+  
+  .homeImagesScroll {
+    cursor: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .homeImagesScroll:active,
+  .homeImagesScroll.dragging {
+    cursor: auto;
+  }
+}
+
+/* Performance optimizations for mobile */
+@media screen and (max-width: 1023px) {
+  .homeImagesContainerDivElementContainer,
+  .homeImagesContainerDivElementGreenContainer {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+  
+  .homeImagesContainerDivElementContainerImageImg,
+  .homeImagesContainerDivElementGreenContainerImageImg {
+    image-rendering: optimizeQuality;
+    will-change: transform;
+  }
+  
+  .homeImagesScroll {
+    scroll-behavior: smooth;
+    overscroll-behavior-x: contain;
+  }
+}
+
+/* Touch device optimizations */
+@media screen and (max-width: 767px) {
+  .homeImagesContainerDivElementContainer::before,
+  .homeImagesContainerDivElementGreenContainer::before {
+    opacity: 0.3;
+  }
+  
+  .homeImagesContainerDivElementContainer:hover::before,
+  .homeImagesContainerDivElementGreenContainer:hover::before {
+    opacity: 0.5;
+  }
+  
+  .homeImagesContainerDivElementContainer:active::before,
+  .homeImagesContainerDivElementGreenContainer:active::before {
+    opacity: 0.6;
+  }
+  
+  /* Enhanced mobile touch interactions */
+  .homeImagesContainerDivElementContainer:hover,
+  .homeImagesContainerDivElementGreenContainer:hover {
+    /* transform: translateY(-2px); */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+  }
+  
+  .homeImagesContainerDivElementContainer:active,
+  .homeImagesContainerDivElementGreenContainer:active {
+    /* transform: scale(0.96) translateY(1px); */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+    transition: all 0.1s ease;
+  }
+}
+
+/* High DPI displays */
+@media screen and (-webkit-min-device-pixel-ratio: 2),
+       screen and (min-resolution: 192dpi),
+       screen and (min-resolution: 2dppx) {
+  .homeImagesContainerDivElementContainerImageImg,
+  .homeImagesContainerDivElementGreenContainerImageImg {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: optimize-contrast;
+  }
+}
+
+/* Landscape mobile optimization */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .homeImages {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .homeImagesContainerDivElement {
+    height: 200px;
+  }
+  
+  .homeImagesContainerDivElementGreen {
+    height: 200px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .homeImagesContainerDivElementContainer::before,
+  .homeImagesContainerDivElementGreenContainer::before {
+    transition: none;
+  }
+  
+  .homeImagesScroll {
+    scroll-behavior: auto;
+  }
+}
+
+/* Dark mode support (if needed) */
+@media (prefers-color-scheme: dark) {
+  .homeImages {
+    background-color: #000;
+  }
+  
+  .homeImagesContainerDivElementContainer::before,
+  .homeImagesContainerDivElementGreenContainer::before {
+    background: rgba(0, 0, 0, 0.25);
+  }
+}
+
+/* Print styles */
+@media print {
+  .homeImages {
+    background-color: white;
+    padding: 20px 0;
+  }
+  
+  .homeImagesScroll {
+    overflow: visible;
+  }
+  
+  .homeImagesContainerDiv {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .homeImagesContainerDivElement,
+  .homeImagesContainerDivElementGreen {
+    width: 300px;
+    height: 200px;
+    min-width: auto;
+  }
+  
+  .homeImagesContainerDivElementContainer::before,
+  .homeImagesContainerDivElementGreenContainer::before {
+    display: none;
+  }
+}
+
+/* ===== LOADING AND INTERACTION STATES ===== */
+
+/* Loading placeholder */
+.homeImagesContainerDivElementContainerImageImg,
+.homeImagesContainerDivElementGreenContainerImageImg {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.homeImagesContainerDivElementContainerImageImg[src=""],
+.homeImagesContainerDivElementGreenContainerImageImg[src=""] {
+  background: linear-gradient(90deg, #333 25%, #444 50%, #333 75%);
+  background-size: 200% 100%;
+  animation: loading-shimmer 1.5s infinite;
+}
+
+@keyframes loading-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* Enhanced hover and focus effects */
+.homeImagesContainerDivElementContainer,
+.homeImagesContainerDivElementGreenContainer {
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), 
+              box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.homeImagesContainerDivElementContainer:hover,
+.homeImagesContainerDivElementGreenContainer:hover {
+  /* transform: translateY(-4px); */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+.homeImagesContainerDivElementContainer:active,
+.homeImagesContainerDivElementGreenContainer:active {
+  /* transform: translateY(-2px); */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.25);
+}
+
+/* Image optimizations */
+.homeImagesContainerDivElementContainerImageImg,
+.homeImagesContainerDivElementGreenContainerImageImg {
+  -webkit-user-select: none;
+  user-select: none;
+  pointer-events: none;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
+/* ===== RESPONSIVE HOVER REFINEMENTS ===== */
+
+/* Desktop hover enhancements */
+@media screen and (min-width: 1024px) {
+  .homeImagesContainerDivElementContainer:hover::before,
+  .homeImagesContainerDivElementGreenContainer:hover::before {
+    opacity: 0.5;
+    -webkit-backdrop-filter: blur(1px);
+    backdrop-filter: blur(1px);
+  }
+}
+
+/* Tablet and mobile interaction adjustments */
+@media screen and (max-width: 1023px) {
+  .homeImagesContainerDivElementContainer:hover,
+  .homeImagesContainerDivElementGreenContainer:hover {
+    /* transform: translateY(-3px); */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+  }
+  
+  .homeImagesContainerDivElementContainer:active,
+  .homeImagesContainerDivElementGreenContainer:active {
+    transform: scale(0.98);
+    transition: transform 0.1s ease;
+  }
+}
+
+/* ===== ULTRA-PROFESSIONAL MICRO-INTERACTIONS ===== */
+
+/* Smooth scrolling indicators for mobile */
+@media screen and (max-width: 767px) {
+  .homeImagesScroll::after {
+    content: "";
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: 4px;
+    background: rgba(34, 197, 94, 0.6);
+    border-radius: 2px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 10;
+  }
+  
+  .homeImagesScroll.scrolling::after {
+    opacity: 1;
+  }
+}
+
+/* Accessibility improvements */
+@media (prefers-reduced-motion: reduce) {
+  .homeImagesContainerDivElementContainer,
+  .homeImagesContainerDivElementGreenContainer {
+    transition: none;
+  }
+  
+  .homeImagesContainerDivElementContainerImageImg,
+  .homeImagesContainerDivElementGreenContainerImageImg {
+    transition: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .homeImagesContainerDivElementContainer::before,
+  .homeImagesContainerDivElementGreenContainer::before {
+    background: rgba(0, 0, 0, 0.7);
+  }
+  
+  .homeImagesScroll:focus-visible {
+    outline-color: #fff;
+    outline-width: 3px;
+  }
 }

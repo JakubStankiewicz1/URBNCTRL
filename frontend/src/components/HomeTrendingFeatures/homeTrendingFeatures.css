@@ -213,3 +213,540 @@
   align-items: center;
   justify-content: center;
 }
+
+/* ===== MEGA PROFESSIONAL RESPONSIVE DESIGN ===== */
+
+/* Ultra-wide screens (1920px+) */
+@media screen and (min-width: 1920px) {
+  .homeTrendingFeatures {
+    padding-top: 140px;
+    padding-bottom: 140px;
+  }
+  
+  .homeTrendingFeaturesContainer {
+    width: 84%;
+    gap: 40px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerOneText {
+    font-size: 28px;
+    line-height: 32px;
+    letter-spacing: 1.5px;
+  }
+  
+  .homeTrendingFeaturesContainerBottom {
+    height: 700px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainer {
+    gap: 60px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainerText {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+
+/* Large desktops (1440px - 1919px) */
+@media screen and (max-width: 1919px) and (min-width: 1440px) {
+  .homeTrendingFeatures {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+  
+  .homeTrendingFeaturesContainer {
+    width: 85%;
+    gap: 35px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerOneText {
+    font-size: 26px;
+    line-height: 30px;
+    letter-spacing: 1.2px;
+  }
+  
+  .homeTrendingFeaturesContainerBottom {
+    height: 650px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainer {
+    gap: 55px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainerText {
+    font-size: 22px;
+    line-height: 30px;
+  }
+}
+
+/* Standard desktops (1200px - 1439px) */
+@media screen and (max-width: 1439px) and (min-width: 1200px) {
+  .homeTrendingFeatures {
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+  
+  .homeTrendingFeaturesContainer {
+    width: 86.5%;
+    gap: 30px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerOneText {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  
+  .homeTrendingFeaturesContainerBottom {
+    height: 600px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainer {
+    gap: 50px;
+  }
+}
+
+/* Small desktops/Large tablets (1024px - 1199px) */
+@media screen and (max-width: 1199px) and (min-width: 1024px) {
+  .homeTrendingFeatures {
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  
+  .homeTrendingFeaturesContainer {
+    width: 90%;
+    gap: 25px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerOneText {
+    font-size: 22px;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+  }
+  
+  .homeTrendingFeaturesContainerBottom {
+    height: 500px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainer {
+    gap: 35px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainerText {
+    font-size: 18px;
+    line-height: 24px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfo {
+    padding: 15px;
+  }
+}
+
+/* Tablets landscape (768px - 1023px) */
+@media screen and (max-width: 1023px) and (min-width: 768px) {
+  .homeTrendingFeatures {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+  
+  .homeTrendingFeaturesContainer {
+    width: 92%;
+    gap: 20px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerOneText {
+    font-size: 20px;
+    line-height: 22px;
+    letter-spacing: 0.6px;
+  }
+  
+  .homeTrendingFeaturesContainerBottom {
+    height: 420px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainer {
+    gap: 25px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainerText {
+    font-size: 16px;
+    line-height: 22px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerOneContainerText {
+    font-size: 12px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfo {
+    padding: 12px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerTwoContainerTwo,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerTwo {
+    width: 20px;
+    height: 20px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerTwoContainerTwoContainerIcon,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerTwoContainerIcon {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Tablets portrait and large mobiles (640px - 767px) */
+@media screen and (max-width: 767px) and (min-width: 640px) {
+  .homeTrendingFeatures {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+  
+  .homeTrendingFeaturesContainer {
+    width: 94%;
+    gap: 25px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerOneText {
+    font-size: 18px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerTwoContainerOneContainerText {
+    font-size: 12px;
+  }
+  
+  .homeTrendingFeaturesContainerBottom {
+    height: auto;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainer {
+    flex-direction: column;
+    gap: 30px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElement {
+    height: 300px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainerText {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerOneContainerText {
+    font-size: 11px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfo {
+    padding: 10px;
+  }
+}
+
+/* Mobile devices (480px - 639px) */
+@media screen and (max-width: 639px) and (min-width: 480px) {
+  .homeTrendingFeatures {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  
+  .homeTrendingFeaturesContainer {
+    width: 95%;
+    gap: 20px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerOneText {
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: 0.4px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerTwoContainerOneContainerText {
+    font-size: 11px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainer {
+    flex-direction: column;
+    gap: 25px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElement {
+    height: 250px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainerText {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerOneContainerText {
+    font-size: 10px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfo {
+    padding: 8px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerTwoContainerTwo,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerTwo {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerTwoContainerTwoContainerIcon,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerTwoContainerIcon {
+    width: 12px;
+    height: 12px;
+  }
+}
+
+/* Small mobile devices (360px - 479px) */
+@media screen and (max-width: 479px) and (min-width: 360px) {
+  .homeTrendingFeatures {
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+  
+  .homeTrendingFeaturesContainer {
+    width: 96%;
+    gap: 18px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerOneText {
+    font-size: 15px;
+    line-height: 17px;
+    letter-spacing: 0.3px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerTwoContainerOneContainerText {
+    font-size: 10px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElement {
+    height: 220px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainerText {
+    font-size: 13px;
+    line-height: 16px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerOneContainerText {
+    font-size: 9px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfo {
+    padding: 6px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerTwoContainerTwo,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerTwo {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerTwoContainerTwoContainerIcon,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerTwoContainerIcon {
+    width: 10px;
+    height: 10px;
+  }
+}
+
+/* Extra small mobile devices (320px - 359px) */
+@media screen and (max-width: 359px) {
+  .homeTrendingFeatures {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+  
+  .homeTrendingFeaturesContainer {
+    width: 97%;
+    gap: 15px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerOneText {
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.2px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerTwoContainerOneContainerText {
+    font-size: 9px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainer {
+    flex-direction: column;
+    gap: 18px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElement {
+    height: 200px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainerText {
+    font-size: 12px;
+    line-height: 15px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerOneContainerText {
+    font-size: 8px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfo {
+    padding: 5px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerTwoContainerTwo,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerTwo {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerTwoContainerTwoContainerIcon,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerTwoContainerIcon {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+/* ===== ENHANCED INTERACTIONS & ANIMATIONS ===== */
+
+/* Hover effects for all buttons */
+.homeTrendingFeaturesContainerTopContainerTwoContainer,
+.homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainer {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.homeTrendingFeaturesContainerTopContainerTwoContainer:hover,
+.homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainer:hover {
+  transform: translateX(5px);
+}
+
+.homeTrendingFeaturesContainerTopContainerTwoContainerTwo,
+.homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerTwo {
+  transition: all 0.3s ease;
+}
+
+.homeTrendingFeaturesContainerTopContainerTwoContainer:hover .homeTrendingFeaturesContainerTopContainerTwoContainerTwo,
+.homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainer:hover .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerTwo {
+  background-color: rgb(211, 51, 51);
+  transform: scale(1.1);
+}
+
+.homeTrendingFeaturesContainerTopContainerTwoContainer:hover .homeTrendingFeaturesContainerTopContainerTwoContainerTwoContainerIcon,
+.homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainer:hover .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerTwoContainerIcon {
+  color: #ffffff;
+}
+
+/* Image hover effects */
+.homeTrendingFeaturesContainerBottomContainerElementContainerImageContainer {
+  transition: transform 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  overflow: hidden;
+}
+
+.homeTrendingFeaturesContainerBottomContainerElementContainerImageContainerImage {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.homeTrendingFeaturesContainerBottomContainerElementContainer:hover .homeTrendingFeaturesContainerBottomContainerElementContainerImageContainerImage {
+  filter: brightness(0.7);
+  transform: scale(1.05);
+}
+
+.homeTrendingFeaturesContainerBottomContainerElementContainer:hover .homeTrendingFeaturesContainerBottomContainerElementContainerImageContainer {
+  transform: scale(1.02);
+}
+
+/* Text animations */
+.homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainerText {
+  transition: all 0.3s ease;
+}
+
+.homeTrendingFeaturesContainerBottomContainerElementContainer:hover .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainerText {
+  color: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+
+/* Touch device optimizations */
+@media screen and (max-width: 1023px) {
+  .homeTrendingFeaturesContainerTopContainerTwoContainer:active,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainer:active {
+    transform: scale(0.95);
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainer:active .homeTrendingFeaturesContainerBottomContainerElementContainerImageContainerImage {
+    filter: brightness(0.8);
+  }
+}
+
+/* Landscape mobile optimization */
+@media screen and (max-width: 767px) and (orientation: landscape) {
+  .homeTrendingFeatures {
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainer {
+    flex-direction: row;
+    gap: 15px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElement {
+    height: 180px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfo {
+    padding: 8px;
+  }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .homeTrendingFeaturesContainerTopContainerTwoContainer,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainer,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerImageContainer,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerImageContainerImage {
+    transition: none;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .homeTrendingFeaturesContainerBottomContainerElementContainerImageContainerImage {
+    filter: brightness(0.8) contrast(1.2);
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerTwoContainerOneContainerText,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerOneContainerText {
+    color: #ff4444;
+  }
+}
+
+/* Print styles */
+@media print {
+  .homeTrendingFeatures {
+    background-color: white;
+    padding: 20px 0;
+  }
+  
+  .homeTrendingFeaturesContainerTopContainerOneText,
+  .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerOneContainerText {
+    color: black;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainer {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .homeTrendingFeaturesContainerBottomContainerElementContainerImageContainerImage {
+    filter: none;
+  }
+}

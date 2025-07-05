@@ -164,3 +164,313 @@
 .privacyPolicyInfoAccordionContentText {
   color: #0b170d;
 }
+
+/* Responsive Media Queries */
+
+/* Large Desktop (1440px and up) */
+@media screen and (min-width: 1440px) {
+  .shippingAndReturnsInfo {
+    padding-bottom: 120px;
+  }
+  
+  .shippingAndReturnsInfoContainer {
+    width: 80%;
+  }
+  
+  .shippingAndReturnsInfoAccordionTitle {
+    font-size: 2.2rem;
+    letter-spacing: 0.6px;
+  }
+  
+  .shippingAndReturnsInfoAccordionContent {
+    font-size: 1.2rem;
+    line-height: 1.8;
+    padding: 22px 22px 22px 22px;
+  }
+  
+  .shippingAndReturnsInfoAccordionHeader {
+    min-height: 70px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIcon {
+    width: 36px;
+    height: 36px;
+    margin-left: 20px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIconHorizontal {
+    width: 18px;
+    height: 3px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIconVertical {
+    width: 3px;
+    height: 18px;
+  }
+}
+
+/* Desktop (1024px - 1439px) */
+@media screen and (max-width: 1439px) {
+  .shippingAndReturnsInfo {
+    padding-bottom: 90px;
+  }
+  
+  .shippingAndReturnsInfoContainer {
+    width: 88%;
+  }
+  
+  .shippingAndReturnsInfoContainerDiv {
+    gap: 18px;
+  }
+}
+
+/* Tablet Landscape (768px - 1023px) */
+@media screen and (max-width: 1023px) {
+  .shippingAndReturnsInfo {
+    padding-bottom: 70px;
+  }
+  
+  .shippingAndReturnsInfoContainer {
+    width: 92%;
+  }
+  
+  .shippingAndReturnsInfoContainerDiv {
+    gap: 16px;
+  }
+  
+  .shippingAndReturnsInfoAccordionTitle {
+    font-size: 1.8rem;
+    letter-spacing: 0.3px;
+  }
+  
+  .shippingAndReturnsInfoAccordionContent {
+    font-size: 1rem;
+    line-height: 1.6;
+    padding: 16px 16px 16px 16px;
+  }
+  
+  .shippingAndReturnsInfoAccordionHeader {
+    min-height: 55px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIcon {
+    width: 28px;
+    height: 28px;
+    margin-left: 12px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIconHorizontal {
+    width: 14px;
+    height: 2px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIconVertical {
+    width: 2px;
+    height: 14px;
+  }
+}
+
+/* Tablet Portrait (600px - 767px) */
+@media screen and (max-width: 767px) {
+  .shippingAndReturnsInfo {
+    padding-bottom: 60px;
+  }
+  
+  .shippingAndReturnsInfoContainer {
+    width: 95%;
+  }
+  
+  .shippingAndReturnsInfoContainerDiv {
+    gap: 15px;
+  }
+  
+  .shippingAndReturnsInfoAccordionHeader {
+    min-height: 50px;
+    flex-wrap: wrap;
+    padding: 8px 0;
+  }
+  
+  .shippingAndReturnsInfoAccordionTitle {
+    font-size: 1.6rem;
+    letter-spacing: 0.2px;
+    flex: 1;
+    min-width: 0;
+    line-height: 1.2;
+  }
+  
+  .shippingAndReturnsInfoAccordionContent {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    padding: 14px 14px 14px 14px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIcon {
+    width: 26px;
+    height: 26px;
+    margin-left: 10px;
+    flex-shrink: 0;
+  }
+  
+  .shippingAndReturnsInfoAccordionIconHorizontal {
+    width: 13px;
+    height: 2px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIconVertical {
+    width: 2px;
+    height: 13px;
+  }
+}
+
+/* Mobile Large (480px - 599px) */
+@media screen and (max-width: 599px) {
+  .shippingAndReturnsInfo {
+    padding-bottom: 50px;
+  }
+  
+  .shippingAndReturnsInfoContainer {
+    width: 90%;
+  }
+  
+  .shippingAndReturnsInfoContainerDiv {
+    gap: 12px;
+  }
+  
+  .shippingAndReturnsInfoAccordionHeader {
+    min-height: 45px;
+    padding: 6px 0;
+  }
+  
+  .shippingAndReturnsInfoAccordionTitle {
+    font-size: 1.4rem;
+    letter-spacing: 0.1px;
+    line-height: 1.3;
+  }
+  
+  .shippingAndReturnsInfoAccordionContent {
+    font-size: 0.9rem;
+    line-height: 1.4;
+    padding: 12px 12px 12px 12px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIcon {
+    width: 24px;
+    height: 24px;
+    margin-left: 8px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIconHorizontal {
+    width: 12px;
+    height: 2px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIconVertical {
+    width: 2px;
+    height: 12px;
+  }
+}
+
+/* Mobile Small (320px - 479px) */
+@media screen and (max-width: 479px) {
+  .shippingAndReturnsInfo {
+    padding-bottom: 40px;
+  }
+  
+  .shippingAndReturnsInfoContainer {
+    width: 85%;
+  }
+  
+  .shippingAndReturnsInfoContainerDiv {
+    gap: 10px;
+  }
+  
+  .shippingAndReturnsInfoAccordionHeader {
+    min-height: 40px;
+    padding: 5px 0;
+  }
+  
+  .shippingAndReturnsInfoAccordionTitle {
+    font-size: 1.2rem;
+    letter-spacing: 0;
+    line-height: 1.2;
+  }
+  
+  .shippingAndReturnsInfoAccordionContent {
+    font-size: 0.85rem;
+    line-height: 1.4;
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIcon {
+    width: 22px;
+    height: 22px;
+    margin-left: 6px;
+    border-width: 1.5px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIconHorizontal {
+    width: 10px;
+    height: 1.5px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIconVertical {
+    width: 1.5px;
+    height: 10px;
+  }
+  
+  .shippingAndReturnsInfoAccordionDivider {
+    height: 2px;
+  }
+}
+
+/* Extra Small Mobile (280px - 319px) */
+@media screen and (max-width: 319px) {
+  .shippingAndReturnsInfo {
+    padding-bottom: 35px;
+  }
+  
+  .shippingAndReturnsInfoContainer {
+    width: 80%;
+  }
+  
+  .shippingAndReturnsInfoContainerDiv {
+    gap: 8px;
+  }
+  
+  .shippingAndReturnsInfoAccordionTitle {
+    font-size: 1.1rem;
+  }
+  
+  .shippingAndReturnsInfoAccordionContent {
+    font-size: 0.8rem;
+    padding: 8px 8px 8px 8px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIcon {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIconHorizontal {
+    width: 8px;
+    height: 1px;
+  }
+  
+  .shippingAndReturnsInfoAccordionIconVertical {
+    width: 1px;
+    height: 8px;
+  }
+}
+
+/* Touch device optimizations */
+@media (hover: none) and (pointer: coarse) {
+  .shippingAndReturnsInfoAccordionHeader {
+    padding: 10px 0;
+  }
+  
+  .shippingAndReturnsInfoAccordionIcon {
+    min-width: 44px;
+    min-height: 44px;
+  }
+}

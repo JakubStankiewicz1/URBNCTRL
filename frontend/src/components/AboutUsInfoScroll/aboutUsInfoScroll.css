@@ -4,6 +4,8 @@
   background-color: #000000;
   padding-top: 125px;
   padding-bottom: 40px;
+  position: relative;
+  overflow: hidden;
 }
 
 .aboutUsInfoScrollContainer {
@@ -11,6 +13,20 @@
   height: 100%;
   overflow: hidden;
   position: relative;
+  -webkit-mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
+  mask-image: linear-gradient(
+    to right,
+    transparent,
+    black 20%,
+    black 80%,
+    transparent
+  );
 }
 
 .aboutUsInfoScrollContainerDiv {
@@ -20,6 +36,7 @@
   gap: 50px;
   width: max-content;
   animation: scroll-right 30s linear infinite;
+  will-change: transform;
 }
 
 @keyframes scroll-right {
@@ -34,34 +51,326 @@
 .aboutUsInfoScrollContainerDivElement {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
-.aboutUsInfoScrollContainerDivElementContainerIconOne {
-  width: 200px;
-  height: auto;
+.aboutUsInfoScrollContainerDivElementContainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
-.aboutUsInfoScrollContainerDivElementContainerIconTwo {
-  width: 200px;
-  height: auto;
+.aboutUsInfoScrollContainerDivElementContainer:hover {
+  transform: scale(1.05);
+  z-index: 10;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
 }
 
-.aboutUsInfoScrollContainerDivElementContainerIconThree {
-  width: 200px;
-  height: auto;
-}
-
-.aboutUsInfoScrollContainerDivElementContainerIconFour {
-  width: 200px;
-  height: auto;
-}
-
-.aboutUsInfoScrollContainerDivElementContainerIconFive {
-  width: 200px;
-  height: auto;
-}
-
+.aboutUsInfoScrollContainerDivElementContainerIconOne,
+.aboutUsInfoScrollContainerDivElementContainerIconTwo,
+.aboutUsInfoScrollContainerDivElementContainerIconThree,
+.aboutUsInfoScrollContainerDivElementContainerIconFour,
+.aboutUsInfoScrollContainerDivElementContainerIconFive,
 .aboutUsInfoScrollContainerDivElementContainerIconSix {
   width: 200px;
   height: auto;
+  display: block;
+  transition: all 0.3s ease;
+  image-rendering: -webkit-optimize-contrast;
+  image-rendering: crisp-edges;
+  filter: brightness(0.95) contrast(1.05);
+  border-radius: 8px;
+}
+
+.aboutUsInfoScrollContainerDivElementContainerIconOne:hover,
+.aboutUsInfoScrollContainerDivElementContainerIconTwo:hover,
+.aboutUsInfoScrollContainerDivElementContainerIconThree:hover,
+.aboutUsInfoScrollContainerDivElementContainerIconFour:hover,
+.aboutUsInfoScrollContainerDivElementContainerIconFive:hover,
+.aboutUsInfoScrollContainerDivElementContainerIconSix:hover {
+  filter: brightness(1) contrast(1.1);
+}
+
+/* Extra Large Desktops (1920px and up) */
+@media (min-width: 1920px) {
+  .aboutUsInfoScroll {
+    padding-top: 150px;
+    padding-bottom: 50px;
+  }
+  
+  .aboutUsInfoScrollContainerDiv {
+    gap: 60px;
+    animation: scroll-right 35s linear infinite;
+  }
+  
+  .aboutUsInfoScrollContainerDivElementContainerIconOne,
+  .aboutUsInfoScrollContainerDivElementContainerIconTwo,
+  .aboutUsInfoScrollContainerDivElementContainerIconThree,
+  .aboutUsInfoScrollContainerDivElementContainerIconFour,
+  .aboutUsInfoScrollContainerDivElementContainerIconFive,
+  .aboutUsInfoScrollContainerDivElementContainerIconSix {
+    width: 220px;
+  }
+}
+
+/* Large Desktops (1440px to 1919px) */
+@media (max-width: 1919px) and (min-width: 1440px) {
+  .aboutUsInfoScroll {
+    padding-top: 135px;
+    padding-bottom: 45px;
+  }
+  
+  .aboutUsInfoScrollContainerDiv {
+    gap: 55px;
+    animation: scroll-right 32s linear infinite;
+  }
+  
+  .aboutUsInfoScrollContainerDivElementContainerIconOne,
+  .aboutUsInfoScrollContainerDivElementContainerIconTwo,
+  .aboutUsInfoScrollContainerDivElementContainerIconThree,
+  .aboutUsInfoScrollContainerDivElementContainerIconFour,
+  .aboutUsInfoScrollContainerDivElementContainerIconFive,
+  .aboutUsInfoScrollContainerDivElementContainerIconSix {
+    width: 210px;
+  }
+}
+
+/* Standard Desktops (1200px to 1439px) */
+@media (max-width: 1439px) and (min-width: 1200px) {
+  .aboutUsInfoScroll {
+    padding-top: 125px;
+    padding-bottom: 40px;
+  }
+  
+  .aboutUsInfoScrollContainerDiv {
+    gap: 50px;
+    animation: scroll-right 30s linear infinite;
+  }
+  
+  .aboutUsInfoScrollContainerDivElementContainerIconOne,
+  .aboutUsInfoScrollContainerDivElementContainerIconTwo,
+  .aboutUsInfoScrollContainerDivElementContainerIconThree,
+  .aboutUsInfoScrollContainerDivElementContainerIconFour,
+  .aboutUsInfoScrollContainerDivElementContainerIconFive,
+  .aboutUsInfoScrollContainerDivElementContainerIconSix {
+    width: 200px;
+  }
+}
+
+/* Tablet Landscape (1024px to 1199px) */
+@media (max-width: 1199px) and (min-width: 1024px) {
+  .aboutUsInfoScroll {
+    padding-top: 100px;
+    padding-bottom: 35px;
+  }
+  
+  .aboutUsInfoScrollContainerDiv {
+    gap: 40px;
+  }
+  
+  .aboutUsInfoScrollContainerDivElementContainerIconOne,
+  .aboutUsInfoScrollContainerDivElementContainerIconTwo,
+  .aboutUsInfoScrollContainerDivElementContainerIconThree,
+  .aboutUsInfoScrollContainerDivElementContainerIconFour,
+  .aboutUsInfoScrollContainerDivElementContainerIconFive,
+  .aboutUsInfoScrollContainerDivElementContainerIconSix {
+    width: 180px;
+  }
+}
+
+/* Tablet Portrait (768px to 1023px) */
+@media (max-width: 1023px) and (min-width: 768px) {
+  .aboutUsInfoScroll {
+    padding-top: 80px;
+    padding-bottom: 30px;
+  }
+  
+  .aboutUsInfoScrollContainerDiv {
+    gap: 35px;
+    animation: scroll-right 25s linear infinite;
+  }
+  
+  .aboutUsInfoScrollContainerDivElementContainerIconOne,
+  .aboutUsInfoScrollContainerDivElementContainerIconTwo,
+  .aboutUsInfoScrollContainerDivElementContainerIconThree,
+  .aboutUsInfoScrollContainerDivElementContainerIconFour,
+  .aboutUsInfoScrollContainerDivElementContainerIconFive,
+  .aboutUsInfoScrollContainerDivElementContainerIconSix {
+    width: 160px;
+  }
+  
+  .aboutUsInfoScrollContainer {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 15%,
+      black 85%,
+      transparent
+    );
+  }
+}
+
+/* Mobile Landscape (480px to 767px) */
+@media (max-width: 767px) and (min-width: 480px) {
+  .aboutUsInfoScroll {
+    padding-top: 60px;
+    padding-bottom: 25px;
+  }
+  
+  .aboutUsInfoScrollContainerDiv {
+    gap: 25px;
+    animation: scroll-right 20s linear infinite;
+  }
+  
+  .aboutUsInfoScrollContainerDivElementContainerIconOne,
+  .aboutUsInfoScrollContainerDivElementContainerIconTwo,
+  .aboutUsInfoScrollContainerDivElementContainerIconThree,
+  .aboutUsInfoScrollContainerDivElementContainerIconFour,
+  .aboutUsInfoScrollContainerDivElementContainerIconFive,
+  .aboutUsInfoScrollContainerDivElementContainerIconSix {
+    width: 120px;
+  }
+  
+  .aboutUsInfoScrollContainer {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+  }
+}
+
+/* Mobile Portrait (320px to 479px) */
+@media (max-width: 479px) {
+  .aboutUsInfoScroll {
+    padding-top: 40px;
+    padding-bottom: 20px;
+  }
+  
+  .aboutUsInfoScrollContainerDiv {
+    gap: 20px;
+    animation: scroll-right 15s linear infinite;
+  }
+  
+  .aboutUsInfoScrollContainerDivElementContainerIconOne,
+  .aboutUsInfoScrollContainerDivElementContainerIconTwo,
+  .aboutUsInfoScrollContainerDivElementContainerIconThree,
+  .aboutUsInfoScrollContainerDivElementContainerIconFour,
+  .aboutUsInfoScrollContainerDivElementContainerIconFive,
+  .aboutUsInfoScrollContainerDivElementContainerIconSix {
+    width: 100px;
+  }
+  
+  .aboutUsInfoScrollContainer {
+    -webkit-mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 5%,
+      black 95%,
+      transparent
+    );
+    mask-image: linear-gradient(
+      to right,
+      transparent,
+      black 5%,
+      black 95%,
+      transparent
+    );
+  }
+}
+
+/* Extra Small Mobile (up to 319px) */
+@media (max-width: 319px) {
+  .aboutUsInfoScroll {
+    padding-top: 30px;
+    padding-bottom: 15px;
+  }
+  
+  .aboutUsInfoScrollContainerDiv {
+    gap: 15px;
+    animation: scroll-right 12s linear infinite;
+  }
+  
+  .aboutUsInfoScrollContainerDivElementContainerIconOne,
+  .aboutUsInfoScrollContainerDivElementContainerIconTwo,
+  .aboutUsInfoScrollContainerDivElementContainerIconThree,
+  .aboutUsInfoScrollContainerDivElementContainerIconFour,
+  .aboutUsInfoScrollContainerDivElementContainerIconFive,
+  .aboutUsInfoScrollContainerDivElementContainerIconSix {
+    width: 80px;
+  }
+}
+
+/* High DPI / Retina Displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .aboutUsInfoScrollContainerDivElementContainerIconOne,
+  .aboutUsInfoScrollContainerDivElementContainerIconTwo,
+  .aboutUsInfoScrollContainerDivElementContainerIconThree,
+  .aboutUsInfoScrollContainerDivElementContainerIconFour,
+  .aboutUsInfoScrollContainerDivElementContainerIconFive,
+  .aboutUsInfoScrollContainerDivElementContainerIconSix {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  .aboutUsInfoScrollContainerDiv {
+    animation: none;
+  }
+  
+  .aboutUsInfoScrollContainerDivElementContainer {
+    transition: none;
+  }
+  
+  .aboutUsInfoScrollContainerDivElementContainerIconOne,
+  .aboutUsInfoScrollContainerDivElementContainerIconTwo,
+  .aboutUsInfoScrollContainerDivElementContainerIconThree,
+  .aboutUsInfoScrollContainerDivElementContainerIconFour,
+  .aboutUsInfoScrollContainerDivElementContainerIconFive,
+  .aboutUsInfoScrollContainerDivElementContainerIconSix {
+    transition: none;
+  }
+}
+
+/* Print Styles */
+@media print {
+  .aboutUsInfoScroll {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+    padding: 20px 0;
+  }
+  
+  .aboutUsInfoScrollContainer {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+  
+  .aboutUsInfoScrollContainerDiv {
+    animation: none;
+    position: static;
+    transform: none;
+  }
 }
