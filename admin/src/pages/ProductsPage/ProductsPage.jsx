@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useProducts } from "../contexts/ProductContext";
-import ProductForm from "../components/ProductForm";
-import "./ProductsPage.css";
+import { useProducts } from "../../contexts/ProductContext";
+import ProductForm from "../../components/ProductForm/ProductForm.jsx";
+import "./productsPage.css";
 import {
   FiBox,
   FiStar,

@@ -1,13 +1,13 @@
 import { AuthProvider, useAuth } from "./contexts/AuthContext";
 import { ProductProvider } from "./contexts/ProductContext";
 import { OrderProvider } from "./contexts/OrderContext";
-import Login from "./components/Login";
-import Header from "./components/Header";
-import Sidebar from "./components/Sidebar";
-import Dashboard from "./pages/Dashboard";
-import ProductsPage from "./pages/ProductsPage";
-import AddProductPage from "./pages/AddProductPage";
-import OrdersPage from "./pages/OrdersPage";
+import Login from "./components/Login/Login.jsx";
+import Header from "./components/Header/Header.jsx";
+import Sidebar from "./components/Sidebar/Sidebar.jsx";
+import Dashboard from "./pages/Dashboard/Dashboard.jsx";
+import ProductsPage from "./pages/ProductsPage/ProductsPage.jsx";
+import AddProductPage from "./pages/AddProductPage/AddProductPage.jsx";
+import OrdersPage from "./pages/OrdersPage/OrdersPage.jsx";
 import { useState } from "react";
 import "./App.css";
 

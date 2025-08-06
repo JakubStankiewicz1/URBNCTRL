@@ -1,6 +1,7 @@
 import React, { useState } from "react";
-import { useAuth } from "../contexts/AuthContext";
-import "./Login.css";
+import { useAuth } from "../../contexts/AuthContext";
+import "./login.css";
+import { FiEye, FiEyeOff } from "react-icons/fi";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -8,6 +9,7 @@ const Login = () => {
   const [rememberMe, setRememberMe] = useState(false);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const { login } = useAuth();
 
   const handleSubmit = async (e) => {
@@ -70,16 +72,26 @@ const Login = () => {
                 />
               </div>
 
-              <div className="form-group">
+              <div className="form-group" style={{ position: "relative" }}>
                 <label htmlFor="password">Password</label>
                 <input
-                  type="password"
+                  type={showPassword ? "text" : "password"}
                   id="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
                   placeholder="••••••••"
                   required
+                  className="password-input"
                 />
+                <button
+                  type="button"
+                  className="password-toggle-btn"
+                  onClick={() => setShowPassword((prev) => !prev)}
+                  tabIndex={-1}
+                  aria-label={showPassword ? "Ukryj hasło" : "Pokaż hasło"}
+                >
+                  {showPassword ? <FiEyeOff /> : <FiEye />}
+                </button>
               </div>
 
               <div className="form-options">
@@ -99,12 +111,12 @@ const Login = () => {
               </button>
             </form>
 
-            <div className="login-footer">
+            {/* <div className="login-footer">
               <p>
                 Not a member?{" "}
                 <span className="create-account">Create an account</span>
               </p>
-            </div>
+            </div> */}
 
             <div className="default-credentials">
               <p>

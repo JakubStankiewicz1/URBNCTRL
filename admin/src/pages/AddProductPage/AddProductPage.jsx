@@ -1,7 +1,7 @@
 import { useState } from "react";
-import { useProducts } from "../contexts/ProductContext";
-import ProductForm from "../components/ProductForm";
-import "./AddProductPage.css";
+import { useProducts } from "../../contexts/ProductContext";
+import ProductForm from "../../components/ProductForm/ProductForm.jsx";
+import "./addProductPage.css";
 import { FiArrowLeft } from "react-icons/fi";
 
 const AddProductPage = ({ onBack }) => {

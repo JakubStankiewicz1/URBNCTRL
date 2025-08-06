@@ -1,8 +1,8 @@
 import { useState } from "react";
-import { useProducts } from "../contexts/ProductContext";
-import ProductForm from "../components/ProductForm";
+import { useProducts } from "../../contexts/ProductContext";
+import ProductForm from "../../components/ProductForm/ProductForm.jsx";
 import { FiEdit, FiTrash2, FiSearch } from "react-icons/fi";
-import "./Dashboard.css";
+import "./dashboard.css";
 
 const Dashboard = () => {
   const { products, loading, error, deleteProduct } = useProducts();

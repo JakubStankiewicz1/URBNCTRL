@@ -12,11 +12,11 @@
 }
 
 .orderspage-container {
-  padding: 2rem;
-  max-width: 1400px;
+  /* padding: 2rem; */
+  /* max-width: 1400px; */
   margin: 0 auto;
   background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
-  min-height: 100vh;
+  /* min-height: 100vh; */
   color: var(--text-primary);
 }
 

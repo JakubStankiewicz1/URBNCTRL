@@ -1,5 +1,5 @@
-import { useAuth } from "../contexts/AuthContext";
-import "./Header.css";
+import { useAuth } from "../../contexts/AuthContext";
+import "./header.css";
 import { FiLogOut, FiUser } from "react-icons/fi";
 import { useState } from "react";
 

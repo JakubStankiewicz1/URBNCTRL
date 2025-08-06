@@ -1,6 +1,6 @@
 import { useState } from "react";
-import { useProducts } from "../contexts/ProductContext";
-import "./ProductForm.css";
+import { useProducts } from "../../contexts/ProductContext";
+import "./productForm.css";
 
 const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
   const { addProduct, updateProduct } = useProducts();

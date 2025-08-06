@@ -11,8 +11,8 @@ import {
   FiClock,
   FiTruck,
 } from "react-icons/fi";
-import { useOrders } from "../contexts/OrderContext";
-import "./OrdersPage.css";
+import { useOrders } from "../../contexts/OrderContext";
+import "./ordersPage.css";
 
 import { FaWrench } from "react-icons/fa";
 
