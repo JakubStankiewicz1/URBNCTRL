@@ -10,6 +10,7 @@ import {
   FiX,
   FiClock,
   FiTruck,
+  FiChevronDown,
 } from "react-icons/fi";
 import { useOrders } from "../../contexts/OrderContext";
 import "./ordersPage.css";
@@ -34,6 +35,8 @@ const OrdersPage = () => {
 
   const [searchTerm, setSearchTerm] = useState("");
   const [statusFilter, setStatusFilter] = useState("ALL");
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [arrowRotated, setArrowRotated] = useState(false);
   const [selectedOrder, setSelectedOrder] = useState(null);
   const [showOrderDetails, setShowOrderDetails] = useState(false);
 
@@ -155,12 +158,19 @@ const OrdersPage = () => {
             onChange={(e) => setSearchTerm(e.target.value)}
           />
         </div>
-        <div className="orderspage-filter-group">
+        <div className="orderspage-filter-group" style={{ position: "relative", display: "inline-block", minWidth: 200 }}>
           <FiFilter className="orderspage-filter-icon" />
           <select
             value={statusFilter}
-            onChange={(e) => setStatusFilter(e.target.value)}
-            className="orderspage-filter-select"
+            onChange={(e) => {
+              setStatusFilter(e.target.value);
+              setArrowRotated(true);
+              setTimeout(() => setArrowRotated(false), 400);
+            }}
+            className="orderspage-filter-select custom-select"
+            onFocus={() => setFilterOpen(true)}
+            onBlur={() => setFilterOpen(false)}
+            style={{ appearance: "none", WebkitAppearance: "none", MozAppearance: "none", paddingRight: "32px" }}
           >
             <option value="ALL">Wszystkie statusy</option>
             <option value="PENDING">Oczekujące</option>
@@ -169,6 +179,19 @@ const OrdersPage = () => {
             <option value="DELIVERED">Dostarczone</option>
             <option value="CANCELLED">Anulowane</option>
           </select>
+          <FiChevronDown
+            className="custom-select-arrow"
+            style={{
+              position: "absolute",
+              right: "12px",
+              top: "50%",
+              transform: `translateY(-50%) rotate(${filterOpen || arrowRotated ? 180 : 0}deg)`,
+              transition: "transform 0.3s cubic-bezier(0.25,0.8,0.25,1)",
+              pointerEvents: "none",
+              fontSize: "22px",
+              color: "#aaa"
+            }}
+          />
         </div>
       </div>{" "}
       {/* Lista zamówień */}

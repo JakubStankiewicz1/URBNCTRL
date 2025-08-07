@@ -1,7 +1,8 @@
 .add-product-page {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
+  /* max-width: 1200px; */
+  height: 100%;
+  /* margin: 0 auto; */
 }
 
 .page-header {
@@ -52,10 +53,10 @@
 
 .form-container {
   background: var(--bg-secondary);
-  border-radius: 12px;
-  padding: 2rem;
+  /* border-radius: 12px; */
+  /* padding: 2rem; */
   box-shadow: var(--card-shadow);
-  margin-bottom: 2rem;
+  /* margin-bottom: 2rem; */
   animation: fadeIn 0.5s ease-in-out;
 }
 

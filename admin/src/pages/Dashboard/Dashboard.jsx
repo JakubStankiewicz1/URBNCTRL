@@ -2,6 +2,7 @@ import { useState } from "react";
 import { useProducts } from "../../contexts/ProductContext";
 import ProductForm from "../../components/ProductForm/ProductForm.jsx";
 import { FiEdit, FiTrash2, FiSearch } from "react-icons/fi";
+import { FiChevronDown } from "react-icons/fi";
 import "./dashboard.css";
 
 const Dashboard = () => {
@@ -9,6 +10,8 @@ const Dashboard = () => {
   const [showForm, setShowForm] = useState(false);
   const [editingProduct, setEditingProduct] = useState(null);
   const [filter, setFilter] = useState("all");
+  const [filterOpen, setFilterOpen] = useState(false);
+  const [arrowRotated, setArrowRotated] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleEdit = (product) => {
@@ -106,8 +109,19 @@ const Dashboard = () => {
           />
         </div>
 
-        <div className="dashboard-filter-select">
-          <select value={filter} onChange={(e) => setFilter(e.target.value)}>
+        <div className="dashboard-filter-select" style={{ position: "relative", display: "inline-block", minWidth: 200 }}>
+          <select
+            value={filter}
+            onChange={(e) => {
+              setFilter(e.target.value);
+              setArrowRotated(true);
+              setTimeout(() => setArrowRotated(false), 400);
+            }}
+            className="dashboard-filter-select custom-select"
+            onFocus={() => setFilterOpen(true)}
+            onBlur={() => setFilterOpen(false)}
+            style={{ appearance: "none", WebkitAppearance: "none", MozAppearance: "none", paddingRight: "32px" }}
+          >
             <option value="all">Wszystkie produkty</option>
             <option value="in-stock">W magazynie</option>
             <option value="out-of-stock">Wyprzedane</option>
@@ -119,6 +133,19 @@ const Dashboard = () => {
             <option value="Torby">Torby</option>
             <option value="Biżuteria">Biżuteria</option>
           </select>
+          <FiChevronDown
+            className="custom-select-arrow"
+            style={{
+              position: "absolute",
+              right: "12px",
+              top: "50%",
+              transform: `translateY(-50%) rotate(${filterOpen || arrowRotated ? 180 : 0}deg)`,
+              transition: "transform 0.3s cubic-bezier(0.25,0.8,0.25,1)",
+              pointerEvents: "none",
+              fontSize: "22px",
+              color: "#aaa"
+            }}
+          />
         </div>
       </div>{" "}
       <div className="dashboard-products-table-container">

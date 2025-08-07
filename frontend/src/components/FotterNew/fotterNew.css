@@ -1,0 +1,450 @@
+@keyframes blink-twice {
+  0% { color: #E6E6E6; }
+  20% { color: #000; }
+  40% { color: #E6E6E6; }
+  60% { color: #000; }
+  80% { color: #E6E6E6; }
+  100% { color: #000; }
+}
+.fotterNew {
+    width: 100%;
+    height: 100%;
+
+    background-color: #000000;
+
+    padding-top: 100px;
+
+
+    padding-bottom: 100px;
+}
+
+.fotterNewContainer {
+    width: 97.6%;
+    margin-left: auto;
+    margin-right: auto;
+
+    /* background-color: red; */
+
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
+}
+
+
+.fotterNewContainerTop {
+    width: 100%;
+    height: 100%;
+}
+
+.fotterNewContainerTopContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 60px;
+}
+
+
+.fotterNewContainerTopContainerTwoContainerDivider {
+    width: 100%;
+    height: 1px;
+    background-color: #454545;
+}
+
+.fotterNewContainerTopContainerOne {
+    width: 100%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.fotterNewContainerTopContainerOneContainerDivText {
+    color: #C4C4C4;
+    font-size: 180px;
+    font-weight: 900;
+    line-height: 72px;
+}
+
+
+.fotterNewContainerBottom {
+    width: 100%;
+    height: 100%;
+
+}
+
+.fotterNewContainerBottomContainer {
+    width: 100%;
+    height: 100%;
+}
+
+.fotterNewContainerBottomContainerContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+}
+
+.fotterNewContainerBottomContainerContainerLeft,
+.fotterNewContainerBottomContainerContainerMiddle,
+.fotterNewContainerBottomContainerContainerRight {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex: 1;
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDiv {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+
+    gap: 20px;
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivOneContainer {
+    max-width: 440px;
+
+    /* background-color: blue; */
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivOneContainerText {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #C4C4C4;
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivThreeContainerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivThreeContainerDivOne {
+    /* width: 100%; */
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivThreeContainerDivOneContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    /* gap: 10px; */
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivThreeContainerDivOneContainerText {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 20px;
+    color: #757575;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivThreeContainerDivTwo {
+    /* background-color: blue; */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivThreeContainerDivTwoContainer {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    align-items: center;
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivThreeContainerDivTwoContainerIcon {
+    color: #757575;
+    width: 24px;
+    height: 24px;
+}
+
+
+
+
+
+.fotterNewContainerBottomContainerContainerMiddleContainerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    cursor: pointer;
+}
+
+.fotterNewContainerBottomContainerContainerMiddleContainerDivOneContainerDivText:hover {
+    text-decoration: underline;
+    animation: blink-twice 0.35s linear;
+}
+
+.fotterNewContainerBottomContainerContainerMiddleContainerDivTwoContainerDivText:hover {
+    text-decoration: underline;
+    animation: blink-twice 0.35s linear;
+}
+
+.fotterNewContainerBottomContainerContainerMiddleContainerDivThreeContainerDivOneContainerText:hover {
+    text-decoration: underline;
+    animation: blink-twice 0.35s linear;
+}
+
+.fotterNewContainerBottomContainerContainerMiddleContainerDivFourContainerDivText:hover {
+    text-decoration: underline;
+    animation: blink-twice 0.35s linear;
+}
+
+.fotterNewContainerBottomContainerContainerMiddleContainerDivFiveContainerDivOneContainerText:hover {
+    text-decoration: underline;
+    animation: blink-twice 0.35s linear;
+}
+
+.fotterNewContainerBottomContainerContainerMiddleContainerDivSixContainerDivText:hover {
+    text-decoration: underline;
+    animation: blink-twice 0.35s linear;
+}
+
+.fotterNewContainerBottomContainerContainerMiddleContainerDivSevenContainerDivText:hover {
+    text-decoration: underline;
+    animation: blink-twice 0.35s linear;
+}
+
+.fotterNewContainerBottomContainerContainerMiddleContainerDivOneContainerDivText,
+.fotterNewContainerBottomContainerContainerMiddleContainerDivTwoContainerDivText,
+.fotterNewContainerBottomContainerContainerMiddleContainerDivThreeContainerDivOneContainerText,
+.fotterNewContainerBottomContainerContainerMiddleContainerDivFourContainerDivText,
+.fotterNewContainerBottomContainerContainerMiddleContainerDivFiveContainerDivOneContainerText,
+.fotterNewContainerBottomContainerContainerMiddleContainerDivSixContainerDivText,
+.fotterNewContainerBottomContainerContainerMiddleContainerDivSevenContainerDivText {
+    font-size: 38px;
+    font-weight: 600;
+    line-height: 34px;
+    color: #E6E6E6;
+    transition: color 0.15s;
+}
+
+.fotterNewContainerBottomContainerContainerMiddleContainerDivThreeContainerDivTwoContainerText,
+.fotterNewContainerBottomContainerContainerMiddleContainerDivFiveContainerDivTwoContainerText {
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    color: #757575;
+}
+
+
+
+
+
+.fotterNewContainerBottomContainerContainerMiddleContainer {
+    width: 100%;
+
+    /* background-color: yellow; */
+
+    padding-left: 230px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.fotterNewContainerBottomContainerContainerMiddleContainerDivThreeContainerDiv,
+.fotterNewContainerBottomContainerContainerMiddleContainerDivFiveContainerDiv {
+    display: flex;
+    flex-direction: row;
+}
+
+
+
+
+
+.fotterNewContainerBottomContainerContainerRightContainerDivOneContainerDiv {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    /* justify-content: flex-end; */
+    align-items: center;
+    gap: 4px;
+}
+
+
+
+.fotterNewContainerBottomContainerContainerRightContainerDivOneContainerDivOneContainerText,
+.fotterNewContainerBottomContainerContainerRightContainerDivOneContainerDivThreeContainerText,
+.fotterNewContainerBottomContainerContainerRightContainerDivOneContainerDivFiveContainerText,
+.fotterNewContainerBottomContainerContainerRightContainerDivOneContainerDivSevenContainerText {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 12px;
+    color: #E6E6E6;
+    cursor: alias;
+}
+
+.fotterNewContainerBottomContainerContainerRightContainerDivOneContainerDivOneContainerText:hover,
+.fotterNewContainerBottomContainerContainerRightContainerDivOneContainerDivThreeContainerText:hover,
+.fotterNewContainerBottomContainerContainerRightContainerDivOneContainerDivFiveContainerText:hover,
+.fotterNewContainerBottomContainerContainerRightContainerDivOneContainerDivSevenContainerText:hover {
+    text-decoration: underline;
+    animation: blink-twice 0.35s linear;
+}
+
+.fotterNewContainerBottomContainerContainerRightContainerDivOneContainerDivTwoContainerText,
+.fotterNewContainerBottomContainerContainerRightContainerDivOneContainerDivFourContainerText,
+.fotterNewContainerBottomContainerContainerRightContainerDivOneContainerDivSixContainerText {
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #757575;
+}
+
+
+
+.fotterNewContainerBottomContainerContainerRightContainerDivTwoContainerDivText {
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 16px;
+    color: #757575;
+}
+
+
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivTwo {
+    width: 100%;
+    height: 100%;
+
+    /* background-color: blue; */
+    /* max-width: 420px; */
+    height: 40px;
+
+    /* padding-left: 10px; */
+    /* padding-right: 10px; */
+
+    /* background-color: blue; */
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivTwoContainer {
+    width: 100%;
+    height: 100%;
+
+
+    /* background-color: yellow;; */
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivTwoContainerDiv {
+    width: 100%;
+    height: 40px;
+    background: #181818;
+    border: 2px solid transparent;
+    /* border-radius: 8px; */
+    transition: border 0.2s;
+    display: flex;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivTwoContainerDivInput {
+    width: 100%;
+    height: 100%;
+    padding: 0 16px;
+    font-size: 20px;
+    font-weight: 600;
+    color: #fff;
+    border: none;
+    outline: none;
+    background: transparent;
+    box-sizing: border-box;
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivTwoContainerDiv input {
+    /* ...usunięte... */
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivTwoContainerDivInput::placeholder {
+    font-size: 20px;
+    font-weight: 600;
+    color: #bdbdbd;
+    opacity: 1;
+    line-height: 40px;
+}
+
+.fotterNewContainerBottomContainerContainerRightContainer {
+    width: 100%;
+    height: 100%;
+
+    /* background-color: lightcoral; */
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.fotterNewContainerBottomContainerContainerRightContainerDiv {
+
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+
+.fotterNewContainerBottomContainerContainerLeftContainerDivTwoContainerDivInput:focus {
+    outline: none;
+}
+.fotterNewContainerBottomContainerContainerLeftContainerDivTwoContainerDiv:focus-within {
+    border: 2px solid #B83800;
+}
+/* --- ROLL ME IN & ARROW --- */
+.roll-me-in-text {
+    color: #757575;
+    transition: color 0.2s;
+    cursor: default;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.roll-me-in-arrow {
+    color: #757575;
+    transition: color 0.2s;
+    cursor: default;
+}
+.roll-me-in-text.active,
+.roll-me-in-arrow.active {
+    color: #fff;
+}
+.roll-me-in-text:hover,
+.roll-me-in-arrow:hover {
+    cursor: pointer;
+}
+
+.roll-me-in-group.active:hover .roll-me-in-text,
+.roll-me-in-group.active:hover .roll-me-in-arrow {
+    animation: blink-twice 0.35s linear;
+}

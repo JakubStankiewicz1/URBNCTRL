@@ -87,7 +87,12 @@
 }
 
 .Toastify__toast-container {
-  z-index: 9999 !important;
+  z-index: 2147483647 !important;
+  position: fixed !important;
+  top: 10px !important;
+  right: 10px !important;
+  left: auto !important;
+  pointer-events: all !important;
 }
 
 @media (max-width: 768px) {

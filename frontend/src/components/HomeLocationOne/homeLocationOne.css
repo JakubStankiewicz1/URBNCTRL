@@ -12,6 +12,8 @@
   margin-left: auto;
   margin-right: auto;
   height: 100%;
+
+  /* background-color: lightgray; */
 }
 
 .homeLocationOneContainerDiv {
@@ -19,7 +21,7 @@
   display: flex;
   flex-direction: row;
   align-items: center;
-  gap: 680px;
+  /* gap: 11110px; */
 }
 
 .homeLocationOneContainerDivLeftContainerDivOne {
@@ -176,9 +178,15 @@
 }
 
 .homeLocationOneContainerDivRight {
-  width: 400px;
+  width: 500px;
   height: 100%;
-  transform: translateY(220px);
+
+  display: flex;
+  /* transform: translateY(220px) translateX(200em); */
+  margin-left: 50px;
+
+  /* background-color: red; */
+
 }
 
 .homeLocationOneContainerDivRightContainer {
@@ -216,6 +224,7 @@
 
 .homeLocationOneContainerDivRightContainerMiddleContainerOneText {
   color: #ffffff;
+  /* color: yellow */
   font-size: 16px;
   font-weight: 800;
   line-height: 19px;
@@ -244,130 +253,56 @@
 }
 
 .homeLocationOneContainerDivRightContainerBottomContainerOneBtn {
-  padding: 10px 10px;
+  padding: 8px 30px;
   display: flex;
-  width: 150px;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  transition: 0.3s;
+  transition: color 0.3s 0.1s ease-out, background 0.5s ease-out;
   overflow: hidden;
   text-align: center;
-  border: 2px solid #ffffff;
-  border-radius: 100px;
-}
-
-.homeLocationOneContainerDivRightContainerBottomContainerOneBtnText {
-  letter-spacing: 0.1rem;
-  transition: 0.3s;
-  box-sizing: border-box;
+  border: 2px solid #50d505;
+  border-radius: 25px;
+  outline: none;
   position: relative;
-  background: inherit;
-  white-space: nowrap;
-  overflow: hidden;
-  display: inline-block;
-  width: 100%;
+  color: #50d505;
+  background: transparent;
+  z-index: 1;
+  min-width: 130px;
+  font-size: 17px;
+  font-weight: 600;
 }
 
-.homeLocationOneContainerDivRightContainerBottomContainerOneBtnText::before {
-  box-sizing: border-box;
-  position: absolute;
+.homeLocationOneContainerDivRightContainerBottomContainerOneBtn::before {
   content: "";
-  background: inherit;
+  position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  opacity: 0;
-  pointer-events: none;
-  color: lime;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  border-radius: 100px;
+  display: block;
+  width: 20em;
+  height: 20em;
+  left: -5em;
+  text-align: center;
+  transition: box-shadow 0.5s ease-out;
+  z-index: -1;
+  box-shadow: none;
 }
 
-.homeLocationOneContainerDivRightContainerBottomContainerOneBtn:hover
-  .homeLocationOneContainerDivRightContainerBottomContainerOneBtnText,
-.homeLocationOneContainerDivRightContainerBottomContainerOneBtn:focus
-  .homeLocationOneContainerDivRightContainerBottomContainerOneBtnText {
-  color: transparent;
+.homeLocationOneContainerDivRightContainerBottomContainerOneBtn:hover,
+.homeLocationOneContainerDivRightContainerBottomContainerOneBtn:focus {
+  color: #fff;
+  border: 2px solid #50d505;
 }
 
-.homeLocationOneContainerDivRightContainerBottomContainerOneBtn:hover
-  .homeLocationOneContainerDivRightContainerBottomContainerOneBtnText::before,
-.homeLocationOneContainerDivRightContainerBottomContainerOneBtn:focus
-  .homeLocationOneContainerDivRightContainerBottomContainerOneBtnText::before {
-  animation: chitchat linear 1.2s forwards;
-  opacity: 1;
+.homeLocationOneContainerDivRightContainerBottomContainerOneBtn:hover::before,
+.homeLocationOneContainerDivRightContainerBottomContainerOneBtn:focus::before {
+  box-shadow: inset 0 0 0 10em #50d505;
 }
 
-@keyframes chitchat {
-  0% {
-    content: "#";
-  }
-  5% {
-    content: ".";
-  }
-  10% {
-    content: "^{";
-  }
-  15% {
-    content: "-!";
-  }
-  20% {
-    content: "#$_";
-  }
-  25% {
-    content: "№:0";
-  }
-  30% {
-    content: "#{+.";
-  }
-  35% {
-    content: "@}-?";
-  }
-  40% {
-    content: "?{4@%";
-  }
-  45% {
-    content: "=.,^!";
-  }
-  50% {
-    content: "?2@%";
-  }
-  55% {
-    content: "\\;1}]";
-  }
-  60% {
-    content: "?{%:%";
-  }
-  65% {
-    content: "|{f[4";
-  }
-  70% {
-    content: "{4%0%";
-  }
-  75% {
-    content: "'1_0<";
-  }
-  80% {
-    content: "{0%";
-  }
-  85% {
-    content: "]>'";
-  }
-  90% {
-    content: "4";
-  }
-  95% {
-    content: "2";
-  }
-  100% {
-    content: "Visit Us";
-    color: lime;
-  }
-}
 
 .homeLocationOneContainerDivRightContainerBottomContainerTwoButton {
   background: transparent;
@@ -385,7 +320,7 @@
   outline: none;
   overflow: hidden;
   color: rgb(255, 0, 0);
-  transition: color 0.3s 0.1s ease-out;
+  transition: color 0.3s 0.1s ease-out, background 0.5s ease-out;
   text-align: center;
   min-width: 130px;
   background-clip: padding-box;
@@ -420,6 +355,12 @@
 .homeLocationOneContainerDivRightContainerBottomContainerTwoButton:hover::before,
 .homeLocationOneContainerDivRightContainerBottomContainerTwoButton:focus::before {
   box-shadow: inset 0 0 0 10em rgb(255, 0, 0);
+}
+
+.homeLocationOneContainerDivRightContainerBottomContainerOneBtnText {
+  font-size: 17px;
+  font-weight: 600;
+  line-height: normal;
 }
 
 /* ===== MEGA PROFESSIONAL RESPONSIVE DESIGN ===== */

@@ -201,8 +201,11 @@ const HomeFeaturedProducts = () => {
                 onClick={handlePrevious}
               >
                 <div className="homeFeaturedProductsContainerDivTopContainerLeftContainer">
-                  <div className="homeFeaturedProductsContainerDivTopContainerLeftContainerDiv">
+                  <div className="homeFeaturedProductsContainerDivTopContainerLeftContainerDiv" style={{position: 'relative'}}>
                     <GoArrowLeft className="homeFeaturedProductsContainerDivTopContainerLeftContainerDivIcon" />
+                    <svg className="arrow-circle-svg" width="40" height="40" viewBox="0 0 40 40" style={{position: 'absolute', top: '-2px', left: '-2px', pointerEvents: 'none'}}>
+                      <circle className="arrow-circle" cx="20" cy="20" r="19" fill="none" stroke="red" strokeWidth="2" />
+                    </svg>
                   </div>
                 </div>
               </div>
@@ -236,8 +239,11 @@ const HomeFeaturedProducts = () => {
                 onClick={handleNext}
               >
                 <div className="homeFeaturedProductsContainerDivTopContainerRightContainer">
-                  <div className="homeFeaturedProductsContainerDivTopContainerRightContainerDiv">
+                  <div className="homeFeaturedProductsContainerDivTopContainerRightContainerDiv" style={{position: 'relative'}}>
                     <GoArrowRight className="homeFeaturedProductsContainerDivTopContainerRightContainerDivIcon" />
+                    <svg className="arrow-circle-svg" width="40" height="40" viewBox="0 0 40 40" style={{position: 'absolute', top: '-2px', left: '-2px', pointerEvents: 'none'}}>
+                      <circle className="arrow-circle" cx="20" cy="20" r="19" fill="none" stroke="red" strokeWidth="2" />
+                    </svg>
                   </div>
                 </div>
               </div>

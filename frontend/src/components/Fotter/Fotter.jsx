@@ -92,7 +92,7 @@ const Fotter = () => {
 
                   <div className="fotterContainerDivMiddleContainerRightContainerTwo">
                     <div className="fotterContainerDivMiddleContainerRightContainerTwoContainer">
-                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement">
+                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement fotterContainerDivMiddleContainerRightContainerTwoContainerOne">
                         <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainer hover-link">
                           <p className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainerText">
                             Shop
@@ -100,7 +100,7 @@ const Fotter = () => {
                         </div>
                       </div>
 
-                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement">
+                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement fotterContainerDivMiddleContainerRightContainerTwoContainerTwo">
                         <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainer hover-link">
                           <p className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainerText">
                             Collections
@@ -108,7 +108,7 @@ const Fotter = () => {
                         </div>
                       </div>
 
-                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement">
+                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement fotterContainerDivMiddleContainerRightContainerTwoContainerThree">
                         <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainer hover-link">
                           <p className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainerText">
                             About Us
@@ -116,7 +116,7 @@ const Fotter = () => {
                         </div>
                       </div>
 
-                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement">
+                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement fotterContainerDivMiddleContainerRightContainerTwoContainerFour">
                         <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainer hover-link">
                           <p className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainerText">
                             Lookbook
@@ -124,7 +124,7 @@ const Fotter = () => {
                         </div>
                       </div>
 
-                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement">
+                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement fotterContainerDivMiddleContainerRightContainerTwoContainerFiv">
                         <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainer hover-link">
                           <p className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainerText">
                             Contact
@@ -132,7 +132,7 @@ const Fotter = () => {
                         </div>
                       </div>
 
-                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement">
+                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement fotterContainerDivMiddleContainerRightContainerTwoContainerSix">
                         <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainer hover-link">
                           <p className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainerText">
                             Size Guide
@@ -140,7 +140,7 @@ const Fotter = () => {
                         </div>
                       </div>
 
-                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement">
+                      <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElement fotterContainerDivMiddleContainerRightContainerTwoContainerSeven">
                         <div className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainer hover-link">
                           <p className="fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainerText">
                             Careers

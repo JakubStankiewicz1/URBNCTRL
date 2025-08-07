@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { useProducts } from "../../contexts/ProductContext";
+import { FiEdit, FiSettings, FiGrid, FiCamera, FiCheckCircle } from "react-icons/fi";
 import "./productForm.css";
 
 const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
@@ -65,11 +66,11 @@ const ProductForm = ({ product, onClose, onSuccess, isPageView = false }) => {
   });
 
   const steps = [
-    { id: 1, title: "Podstawowe informacje", icon: "📝" },
-    { id: 2, title: "Szczegóły produktu", icon: "🔧" },
-    { id: 3, title: "Rozmiary i kolory", icon: "📏" },
-    { id: 4, title: "Zdjęcia i media", icon: "📸" },
-    { id: 5, title: "Podsumowanie", icon: "✅" },
+    { id: 1, title: "Podstawowe informacje", icon: <FiEdit /> },
+    { id: 2, title: "Szczegóły produktu", icon: <FiSettings /> },
+    { id: 3, title: "Rozmiary i kolory", icon: <FiGrid /> },
+    { id: 4, title: "Zdjęcia i media", icon: <FiCamera /> },
+    { id: 5, title: "Podsumowanie", icon: <FiCheckCircle /> },
   ];
 
   const handleChange = (e) => {

@@ -167,11 +167,36 @@
 .fotterContainerDivMiddleContainerRightContainerTwoContainer {
   display: flex;
   flex-direction: column;
-  gap: 5px;
+  gap: 7px;
 }
 
 .fotterContainerDivMiddleContainerRightContainerTwoContainerElementContainerText {
   color: white;
+}
+
+.fotterContainerDivMiddleContainerRightContainerTwoContainerOne {
+  /* background-color: blue; */
+  width: 40px
+}
+
+.fotterContainerDivMiddleContainerRightContainerTwoContainerSeven {
+  /* background-color: blue; */
+  width: 60px;
+}
+
+.fotterContainerDivMiddleContainerRightContainerTwoContainerFiv {
+  /* background-color: blue; */
+  width: 60px;
+}
+
+.fotterContainerDivMiddleContainerRightContainerTwoContainerFour {
+  /* background-color: blue; */
+  width: 72px
+}
+
+.fotterContainerDivMiddleContainerRightContainerTwoContainerThree {
+  /* background-color: blue; */
+  width: 70px;
 }
 
 .fotterContainerDivInfo {
@@ -223,36 +248,51 @@
 
 .hover-logo:hover {
   transform: scale(1.05);
-  color: #ff6b6b;
+  color: #CC101A;
   text-shadow: 0 0 20px rgba(255, 107, 107, 0.3);
   letter-spacing: 15px;
 }
 
+
+
 .hover-link {
-  transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  transition: color 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   cursor: pointer;
   position: relative;
   overflow: hidden;
 }
 
+
 .hover-link::after {
   content: '';
   position: absolute;
+  left: 0;
   bottom: 0;
-  left: -100%;
-  width: 100%;
-  height: 1px;
-  background: linear-gradient(90deg, transparent, #ff6b6b, transparent);
-  transition: left 0.5s ease;
+  /* transform: translateY(10px); */
+  width: 120px;
+  height: 2px;
+  background-color: red;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.hover-link:not(:hover)::after {
+  transition: transform 0.8s cubic-bezier(0.77, 0, 0.175, 1);
 }
 
 .hover-link:hover::after {
-  left: 100%;
+  transform: scaleX(1);
+  transform-origin: left;
+}
+
+.hover-link:not(:hover)::after {
+  transform: scaleX(0);
+  transform-origin: right;
 }
 
 .hover-link:hover {
   color: #ff6b6b;
-  transform: translateX(5px);
 }
 
 .hover-submit {

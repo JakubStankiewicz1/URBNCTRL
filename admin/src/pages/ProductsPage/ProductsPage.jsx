@@ -13,6 +13,7 @@ import {
   FiSearch,
   FiGrid,
   FiList,
+  FiChevronDown,
 } from "react-icons/fi";
 
 const ProductsPage = ({ onAddProduct }) => {
@@ -21,6 +22,7 @@ const ProductsPage = ({ onAddProduct }) => {
   const [editingProduct, setEditingProduct] = useState(null);
   const [viewMode, setViewMode] = useState("grid"); // 'grid' or 'table'
   const [filter, setFilter] = useState("all");
+  const [filterOpen, setFilterOpen] = useState(false);
   const [searchTerm, setSearchTerm] = useState("");
 
   const handleEdit = (product) => {
@@ -141,6 +143,8 @@ const ProductsPage = ({ onAddProduct }) => {
           </div>
         </div>
       </div>{" "}
+
+
       <div className="productspage-controls">
         <div className="productspage-search-filters">
           {" "}
@@ -153,21 +157,47 @@ const ProductsPage = ({ onAddProduct }) => {
               onChange={(e) => setSearchTerm(e.target.value)}
             />
           </div>
-          <select
-            value={filter}
-            onChange={(e) => setFilter(e.target.value)}
-            className="productspage-filter-select"
-          >
-            <option value="all">Wszystkie produkty</option>
-            <option value="featured">Polecane</option>
-            <option value="limited">Limitowane</option>
-            <option value="in-stock">W magazynie</option>
-            <option value="out-of-stock">Wyprzedane</option>
-            <option value="Apparel">Odzież</option>
-            <option value="Hoodies">Bluzy</option>
-            <option value="T-Shirts">Koszulki</option>
-          </select>
+
+
+          <div style={{ position: "relative", display: "inline-block", minWidth: 200 }}>
+            <select
+              value={filter}
+              onChange={(e) => setFilter(e.target.value)}
+              className="productspage-filter-select custom-select"
+              onFocus={() => setFilterOpen(true)}
+              onBlur={() => setFilterOpen(false)}
+              style={{ appearance: "none", WebkitAppearance: "none", MozAppearance: "none", paddingRight: "32px" }}
+            >
+              <option value="all">Wszystkie produkty</option>
+              <option value="featured">Polecane</option>
+              <option value="limited">Limitowane</option>
+              <option value="in-stock">W magazynie</option>
+              <option value="out-of-stock">Wyprzedane</option>
+              <option value="Apparel">Odzież</option>
+              <option value="Hoodies">Bluzy</option>
+              <option value="T-Shirts">Koszulki</option>
+            </select>
+            <FiChevronDown
+              className="custom-select-arrow"
+              style={{
+                position: "absolute",
+                right: "12px",
+                top: "50%",
+                transform: `translateY(-50%) rotate(${filterOpen ? 180 : 0}deg)`,
+                transition: "transform 0.3s cubic-bezier(0.25,0.8,0.25,1)",
+                pointerEvents: "none",
+                fontSize: "22px",
+                color: "#aaa"
+              }}
+            />
+          </div>
+
+
         </div>{" "}
+
+
+
+        
         <div className="productspage-view-controls">
           <button
             className={`productspage-view-button ${viewMode === "grid" ? "active" : ""}`}
@@ -185,6 +215,8 @@ const ProductsPage = ({ onAddProduct }) => {
           </button>
         </div>
       </div>{" "}
+
+
       {filteredProducts.length === 0 ? (
         <div className="productspage-empty-state">
           <FiBox className="productspage-empty-icon" />

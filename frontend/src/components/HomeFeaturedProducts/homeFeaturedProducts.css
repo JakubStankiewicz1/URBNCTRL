@@ -201,6 +201,30 @@
   flex-shrink: 0;
 }
 
+/* SVG circle animation for arrow buttons */
+
+.arrow-circle-svg {
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 2;
+}
+
+
+.arrow-circle {
+  stroke-dasharray: 119.4;
+  stroke-dashoffset: 119.4;
+  transition: stroke-dashoffset 0.6s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.homeFeaturedProductsContainerDivTopContainerLeft:hover .arrow-circle,
+.homeFeaturedProductsContainerDivTopContainerRight:hover .arrow-circle {
+  stroke-dashoffset: 0;
+}
+
 /* Mobile styles */
 @media (max-width: 768px) {
   .homeFeaturedProductsContainerDivTopContainerRight,
@@ -211,64 +235,6 @@
   }
 }
 
-.homeFeaturedProductsContainerDivTopContainerRight::after,
-.homeFeaturedProductsContainerDivTopContainerLeft::after {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  border: 2px solid red;
-  box-sizing: border-box;
-  pointer-events: none;
-  transform: rotate(0deg) scale(1);
-  opacity: 0;
-  transition:
-    opacity 0.2s,
-    stroke-dashoffset 0.5s cubic-bezier(0.77, 0, 0.175, 1);
-  z-index: 2;
-  border-color: red;
-  border-style: solid;
-  border-width: 2px;
-  border-right-color: transparent;
-  border-bottom-color: transparent;
-  border-left-color: transparent;
-}
-
-/* .homeFeaturedProductsContainerDivTopContainerRight:hover,
-.homeFeaturedProductsContainerDivTopContainerLeft:hover {
-    border-color: red;
-} */
-
-.homeFeaturedProductsContainerDivTopContainerRight:hover::after,
-.homeFeaturedProductsContainerDivTopContainerLeft:hover::after {
-  opacity: 1;
-  animation: circle-reveal 0.6s cubic-bezier(0.77, 0, 0.175, 1) forwards;
-}
-
-@keyframes circle-reveal {
-  0% {
-    border-right-color: transparent;
-    border-bottom-color: transparent;
-    border-left-color: transparent;
-  }
-  25% {
-    border-right-color: red;
-  }
-  50% {
-    border-bottom-color: red;
-  }
-  75% {
-    border-left-color: red;
-  }
-  100% {
-    border-right-color: red;
-    border-bottom-color: red;
-    border-left-color: red;
-  }
-}
 
 .homeFeaturedProductsContainerDivTopContainerLeftContainer,
 .homeFeaturedProductsContainerDivTopContainerRightContainer,

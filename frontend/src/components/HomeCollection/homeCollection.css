@@ -8,6 +8,20 @@
   overflow: hidden;
 }
 
+.homeCollectionContainerDivBottomContainerElementContainerBottomContainerButtonContainerText {
+  cursor: pointer;
+  color: #000000;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 19px;
+  transition: color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.homeCollectionContainerDivBottomContainerElementContainerBottomContainerButtonContainerText:hover {
+  color: #ffffff;
+  /* text-decoration: underline; */
+}
+
 /* Tablet styles */
 @media (max-width: 1024px) {
   .homeCollection {

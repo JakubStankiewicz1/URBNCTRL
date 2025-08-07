@@ -13,7 +13,7 @@ import "./App.css";
 
 function AppContent() {
   const { user, loading } = useAuth();
-  const [activeSection, setActiveSection] = useState("products");
+  const [activeSection, setActiveSection] = useState("dashboard");
   const [addingProduct, setAddingProduct] = useState(false);
 
   if (loading) {
@@ -28,11 +28,19 @@ function AppContent() {
   if (!user) {
     return <Login />;
   }
+  const handleSectionChange = (section) => {
+    if (addingProduct) {
+      setAddingProduct(false);
+      setTimeout(() => setActiveSection(section), 300); // allow AddProductPage to close first
+    } else {
+      setActiveSection(section);
+    }
+  };
+
   const renderContent = () => {
     if (addingProduct) {
       return <AddProductPage onBack={() => setAddingProduct(false)} />;
     }
-
     switch (activeSection) {
       case "dashboard":
         return <Dashboard />;
@@ -41,7 +49,7 @@ function AppContent() {
       case "orders":
         return <OrdersPage />;
       default:
-        return <ProductsPage onAddProduct={() => setAddingProduct(true)} />;
+        return <Dashboard />;
     }
   };
   return (
@@ -50,7 +58,7 @@ function AppContent() {
         <div className="app">
           <Sidebar
             activeSection={activeSection}
-            setActiveSection={setActiveSection}
+            setActiveSection={handleSectionChange}
           />
           <div className="app-content">
             <Header />

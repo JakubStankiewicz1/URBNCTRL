@@ -10,6 +10,7 @@ import Fotter from "../../components/Fotter/Fotter";
 import HomeTrendingFeatures from "../../components/HomeTrendingFeatures/HomeTrendingFeatures";
 import HomeFeaturedProducts from "../../components/HomeFeaturedProducts/HomeFeaturedProducts";
 import HomeLocationTwo from "../../components/HomeLocationTwo/HomeLocationTwo";
+import FotterNew from "../../components/FotterNew/FotterNew";
 
 const Home = ({ setHasStarted }) => {
   return (
@@ -29,7 +30,8 @@ const Home = ({ setHasStarted }) => {
 
 
       
-      <Fotter />
+      {/* <Fotter /> */}
+      <FotterNew />
     </div>
   );
 };

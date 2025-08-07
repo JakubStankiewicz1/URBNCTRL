@@ -68,30 +68,12 @@ export const ProductProvider = ({ children }) => {
     return featured.slice(0, limit);
   }; // Funkcje koszyka
   const addToCart = (product, quantity = 1) => {
+    let toastId = null;
     setCart((prevCart) => {
       const existingItem = prevCart.find((item) => item.id === product.id);
       if (existingItem) {
-        // Jeśli produkt już jest w koszyku, zwiększ ilość
-        toast.success(`Zwiększono ilość "${product.name}" w koszyku`, {
-          position: "top-right",
-          autoClose: 3000,
-          hideProgressBar: false,
-          closeOnClick: true,
-          pauseOnHover: true,
-          draggable: true,
-        });
-        return prevCart.map((item) =>
-          item.id === product.id
-            ? { ...item, quantity: item.quantity + quantity }
-            : item,
-        );
-      } else {
-        // Jeśli produkt nie ma w koszyku, dodaj nowy
-        const newCart = [...prevCart, { ...product, quantity }];
-
-        // Wyświetl toast dopiero po aktualizacji stanu (nie podczas renderowania)
-        setTimeout(() => {
-          toast.success(`"${product.name}" został dodany do koszyka! 🛍️`, {
+        if (!toast.isActive(toastId)) {
+          toastId = toast.success(`Zwiększono ilość "${product.name}" w koszyku`, {
             position: "top-right",
             autoClose: 3000,
             hideProgressBar: false,
@@ -99,9 +81,24 @@ export const ProductProvider = ({ children }) => {
             pauseOnHover: true,
             draggable: true,
           });
-        }, 0);
-
-        return newCart;
+        }
+        return prevCart.map((item) =>
+          item.id === product.id
+            ? { ...item, quantity: item.quantity + quantity }
+            : item,
+        );
+      } else {
+        if (!toast.isActive(toastId)) {
+          toastId = toast.success(`"${product.name}" został dodany do koszyka! 🛍️`, {
+            position: "top-right",
+            autoClose: 3000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+          });
+        }
+        return [...prevCart, { ...product, quantity }];
       }
     });
   };
