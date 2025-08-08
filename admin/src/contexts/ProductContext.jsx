@@ -11,7 +11,8 @@ export const useProducts = () => {
   return context;
 };
 
-const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8081/api";
+// Tymczasowo hardcode'owany URL dla debugowania
+const API_BASE_URL = "https://urbnctrl-backend.onrender.com/api";
 
 export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);

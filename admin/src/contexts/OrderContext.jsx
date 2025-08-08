@@ -21,7 +21,8 @@ export const OrderProvider = ({ children }) => {
     totalRevenue: 0,
   });
 
-  const API_BASE_URL = process.env.REACT_APP_API_URL || "http://localhost:8081/api";
+  // Tymczasowo hardcode'owany URL dla debugowania
+  const API_BASE_URL = "https://urbnctrl-backend.onrender.com/api";
   // Pobieranie wszystkich zamówień
   const fetchOrders = async () => {
     try {
