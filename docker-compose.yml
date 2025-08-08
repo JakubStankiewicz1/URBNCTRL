@@ -1,0 +1,57 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:17-alpine
+    container_name: urbnctrl-db
+    environment:
+      POSTGRES_DB: urbnctrl_db
+      POSTGRES_USER: urbnctrl_user
+      POSTGRES_PASSWORD: urbnctrl_password
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+    networks:
+      - urbnctrl-network
+
+  # Backend API
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: urbnctrl-backend
+    environment:
+      DATABASE_URL: jdbc:postgresql://postgres:5432/urbnctrl_db
+      DATABASE_USER: urbnctrl_user
+      DATABASE_PASSWORD: urbnctrl_password
+      SPRING_PROFILES_ACTIVE: docker
+    ports:
+      - "8080:8080"
+    depends_on:
+      - postgres
+    networks:
+      - urbnctrl-network
+
+  # Admin Panel
+  admin:
+    build:
+      context: ./admin
+      dockerfile: Dockerfile
+    container_name: urbnctrl-admin
+    environment:
+      REACT_APP_API_URL: http://localhost:8080/api
+    ports:
+      - "3000:80"
+    depends_on:
+      - backend
+    networks:
+      - urbnctrl-network
+
+volumes:
+  postgres_data:
+
+networks:
+  urbnctrl-network:
+    driver: bridge 
