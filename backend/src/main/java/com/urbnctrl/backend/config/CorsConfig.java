@@ -15,6 +15,7 @@ public class CorsConfig {
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
                         .allowedOrigins(
+                            "https://urbnctrl-frontend-j99n.onrender.com",
                             "https://urbnctrl-admin-x6jn.onrender.com",
                             "https://*.onrender.com",
                             "http://localhost:3000", 

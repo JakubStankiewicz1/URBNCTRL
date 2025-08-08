@@ -4,8 +4,8 @@ import axios from "axios";
 
 const ProductContext = createContext();
 
-// API Base URL
-const API_BASE_URL = "http://localhost:8081/api";
+// API URL dla Render backend
+const API_BASE_URL = process.env.REACT_APP_API_URL || "https://urbnctrl-backend.onrender.com/api";
 
 export const useProducts = () => {
   const context = useContext(ProductContext);

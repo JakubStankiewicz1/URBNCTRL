@@ -14,6 +14,7 @@ import java.util.Optional;
 @RestController
 @RequestMapping("/api/simple-products")
 @CrossOrigin(origins = {
+    "https://urbnctrl-frontend-j99n.onrender.com",
     "https://urbnctrl-admin-x6jn.onrender.com",
     "https://*.onrender.com", 
     "http://localhost:3000", 

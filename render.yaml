@@ -25,6 +25,17 @@ services:
       - key: REACT_APP_API_URL
         value: https://urbnctrl-backend.onrender.com/api
 
+  - type: web
+    name: urbnctrl-frontend-j99n
+    env: static
+    plan: free
+    rootDir: frontend
+    buildCommand: npm install && npm run build
+    staticPublishPath: ./dist
+    envVars:
+      - key: REACT_APP_API_URL
+        value: https://urbnctrl-backend.onrender.com/api
+
 databases:
   - name: urbnctrl-db
     databaseName: urbnctrl_db
