@@ -12,7 +12,13 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/orders")
-@CrossOrigin(origins = {"https://*.onrender.com", "http://localhost:3000", "http://localhost:5173", "http://localhost:9999"})
+@CrossOrigin(origins = {
+    "https://urbnctrl-admin-x6jn.onrender.com",
+    "https://*.onrender.com", 
+    "http://localhost:3000", 
+    "http://localhost:5173", 
+    "http://localhost:9999"
+})
 public class OrderController {
       @Autowired
     private OrderService orderService;    // Create new order
