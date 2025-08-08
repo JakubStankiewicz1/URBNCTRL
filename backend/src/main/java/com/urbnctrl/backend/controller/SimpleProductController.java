@@ -13,91 +13,60 @@ import java.util.Optional;
 
 @RestController
 @RequestMapping("/api/simple-products")
-@CrossOrigin(origins = {"http://localhost:3000", "http://localhost:5173", "http://localhost:9999"})
+@CrossOrigin(origins = {"https://*.onrender.com", "http://localhost:3000", "http://localhost:5173", "http://localhost:9999"})
 public class SimpleProductController {
-    
+
     @Autowired
     private SimpleProductService productService;
-    
-    // Test endpoint
+
     @GetMapping("/test")
     public ResponseEntity<String> test() {
-        return ResponseEntity.ok("Simple API works!");
+        return ResponseEntity.ok("SimpleProduct API is working!");
     }
-    
-    // Get all products
+
     @GetMapping
     public ResponseEntity<List<SimpleProduct>> getAllProducts() {
-        try {
-            List<SimpleProduct> products = productService.getAllProducts();
-            return new ResponseEntity<>(products, HttpStatus.OK);
-        } catch (Exception e) {
-            System.err.println("Error getting all products: " + e.getMessage());
-            e.printStackTrace();
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
-        }
+        List<SimpleProduct> products = productService.getAllProducts();
+        return ResponseEntity.ok(products);
     }
-    
-    // Get product by ID
+
     @GetMapping("/{id}")
     public ResponseEntity<SimpleProduct> getProductById(@PathVariable Long id) {
-        try {
-            Optional<SimpleProduct> product = productService.getProductById(id);
-            if (product.isPresent()) {
-                return new ResponseEntity<>(product.get(), HttpStatus.OK);
-            } else {
-                return new ResponseEntity<>(HttpStatus.NOT_FOUND);
-            }
-        } catch (Exception e) {
-            System.err.println("Error getting product by id: " + e.getMessage());
-            e.printStackTrace();
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+        Optional<SimpleProduct> product = productService.getProductById(id);
+        if (product.isPresent()) {
+            return ResponseEntity.ok(product.get());
+        } else {
+            return ResponseEntity.notFound().build();
         }
     }
-    
-    // Create new product
+
     @PostMapping
     public ResponseEntity<SimpleProduct> createProduct(@Valid @RequestBody SimpleProduct product) {
         try {
             SimpleProduct createdProduct = productService.createProduct(product);
-            return new ResponseEntity<>(createdProduct, HttpStatus.CREATED);
-        } catch (RuntimeException e) {
-            System.err.println("Error creating product: " + e.getMessage());
-            return new ResponseEntity<>(HttpStatus.CONFLICT);
+            return ResponseEntity.status(HttpStatus.CREATED).body(createdProduct);
         } catch (Exception e) {
-            System.err.println("Error creating product: " + e.getMessage());
-            e.printStackTrace();
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return ResponseEntity.badRequest().build();
         }
     }
-    
-    // Update product
+
     @PutMapping("/{id}")
     public ResponseEntity<SimpleProduct> updateProduct(@PathVariable Long id, @Valid @RequestBody SimpleProduct productDetails) {
         try {
             SimpleProduct updatedProduct = productService.updateProduct(id, productDetails);
-            return new ResponseEntity<>(updatedProduct, HttpStatus.OK);
-        } catch (RuntimeException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return ResponseEntity.ok(updatedProduct);
         } catch (Exception e) {
-            System.err.println("Error updating product: " + e.getMessage());
-            e.printStackTrace();
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return ResponseEntity.notFound().build();
         }
     }
-    
-    // Delete product
+
     @DeleteMapping("/{id}")
     public ResponseEntity<Void> deleteProduct(@PathVariable Long id) {
         try {
             productService.deleteProduct(id);
-            return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-        } catch (RuntimeException e) {
-            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+            return ResponseEntity.noContent().build();
         } catch (Exception e) {
-            System.err.println("Error deleting product: " + e.getMessage());
-            e.printStackTrace();
-            return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
+            return ResponseEntity.notFound().build();
         }
     }
 }

@@ -14,7 +14,12 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
                 registry.addMapping("/api/**")
-                        .allowedOrigins("http://localhost:3000", "http://localhost:5173", "http://localhost:9999")
+                        .allowedOrigins(
+                            "https://*.onrender.com",
+                            "http://localhost:3000", 
+                            "http://localhost:5173", 
+                            "http://localhost:9999"
+                        )
                         .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
                         .allowedHeaders("*")
                         .allowCredentials(true);

@@ -183,7 +183,7 @@
   filter: brightness(0.8);
   transition: all 0.3s ease-in-out;
   image-rendering: -webkit-optimize-contrast;
-  image-rendering: crisp-edges;
+  /* image-rendering: crisp-edges; */
 }
 
 .communityArticleElementContainerDiv:hover
@@ -629,7 +629,7 @@
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   .communityArticleElementContainerDivImageContainerImage {
     image-rendering: -webkit-optimize-contrast;
-    image-rendering: crisp-edges;
+    /* image-rendering: crisp-edges; */
   }
   
   .communityArticleElementContainerDivInfoContainerOneContainerText,
