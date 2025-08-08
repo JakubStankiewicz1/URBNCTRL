@@ -146,7 +146,7 @@ const Cart = () => {
           ))}
         </div>
 
-        <div className="cartActions">
+        {/* <div className="cartActions">
           <div className="couponSection">
             <input
               type="text"
@@ -166,7 +166,7 @@ const Cart = () => {
           <button className="updateCartButton nunito-sans-regular">
             UPDATE CART
           </button>
-        </div>
+        </div> */}
 
         <div className="cartTotals">
           <h2 className="cartTotalsTitle nunito-sans-regular">CART TOTALS</h2>
@@ -201,11 +201,11 @@ const Cart = () => {
             </span>
           </div>
 
-          <div className="afterpayInfo nunito-sans-regular">
+          {/* <div className="afterpayInfo nunito-sans-regular">
             or 4 interest-free payments of{" "}
             {formatPrice((getCartTotal() + 10) / 4)} with
             <span className="afterpayLogo"> afterpay</span>
-          </div>
+          </div> */}
 
           <button
             className="checkoutButton nunito-sans-regular"
@@ -214,9 +214,9 @@ const Cart = () => {
             PROCEED TO CHECKOUT
           </button>
 
-          <button className="afterpayCheckoutButton nunito-sans-regular">
+          {/* <button className="afterpayCheckoutButton nunito-sans-regular">
             Checkout with afterpay
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

@@ -44,13 +44,13 @@ const HamburgerMenuOpen = ({ isOpen, setMenuOpen }) => {
         {/* Left Part */}{" "}
         <div className="hamburgerMenuOpenContainerLeft">
           <div className="hamburgerMenuOpenContainerLeftContainer">
-            <div
+            {/* <div
               className="hamburgerMenuOpenContainerLeftContainerOverlay"
               onClick={handleCloseMenu}
               style={{ cursor: "pointer" }}
             >
               <CgClose className="hamburgerMenuOpenContainerLeftContainerIcon" />
-            </div>
+            </div> */}
           </div>
         </div>
         {/* Right Part */}
@@ -224,11 +224,10 @@ const HamburgerMenuOpen = ({ isOpen, setMenuOpen }) => {
                 </div>
                 {/* Element - Cart */}
                 <div
-                  className={`hamburgerMenuOpenContainerRightContainerMiddleContainerElement ${isActivePage("/cart") ? "active" : ""}`}
+                  className={`hamburgerMenuOpenContainerRightContainerMiddleContainerElement ${(isActivePage("/cart") || isActivePage("/checkout")) ? "active" : ""}`}
                   onClick={() => handleNavigateAndClose("/cart")}
                   style={{ cursor: "pointer" }}
                 >
-                  {" "}
                   <div className="hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainer">
                     <p className="hamburgerMenuOpenContainerRightContainerMiddleContainerElementContainerText nunito-sans-regular">
                       Cart {cartItemsCount > 0 && `(${cartItemsCount})`}

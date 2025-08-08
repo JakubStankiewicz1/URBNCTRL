@@ -4,6 +4,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  /* background-color: blue; */
 }
 
 .productElementContainer {
@@ -22,9 +24,11 @@
 }
 
 .productElementContainerDiv:hover {
-  transform: scale(1.02);
+  /* transform: scale(1.02); */
   transition: transform 0.3s ease;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); */
+
+  border: 1px solid #000000;
 }
 
 .productElementContainerDivTop {

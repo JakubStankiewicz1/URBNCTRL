@@ -4,8 +4,13 @@ import "./homeHero.css";
 import video from "../../assets/HomeHeroVideo.mp4";
 
 const HomeHero = ({ setHasStarted }) => {
-  const [showVideo, setShowVideo] = useState(false);
-  const [scrollBlocked, setScrollBlocked] = useState(true);
+  // Check localStorage for start flag
+  const [showVideo, setShowVideo] = useState(() => {
+    return localStorage.getItem('homeHeroStarted') === 'true';
+  });
+  const [scrollBlocked, setScrollBlocked] = useState(() => {
+    return localStorage.getItem('homeHeroStarted') === 'true' ? false : true;
+  });
   const [isMobile, setIsMobile] = useState(false);
   const [isTouch, setIsTouch] = useState(false);
 
@@ -41,6 +46,7 @@ const HomeHero = ({ setHasStarted }) => {
     e.preventDefault();
     setShowVideo(true);
     setScrollBlocked(false);
+    localStorage.setItem('homeHeroStarted', 'true');
 
     // Show navbar with a slight delay - longer delay for mobile
     const delay = isMobile ? 1500 : 1000;
@@ -100,43 +106,45 @@ const HomeHero = ({ setHasStarted }) => {
             </div>
           </div>
         )}
-        <div className={`homeHeroContainerOverlay ${showVideo ? "hide" : ""}`}>
-          {/* Top Part */}
-          <div className="homeHeroContainerOverlayTop"></div>
+        {/* Only show overlay if not started yet */}
+        {!showVideo && (
+          <div className={`homeHeroContainerOverlay`}>
+            {/* Top Part */}
+            <div className="homeHeroContainerOverlayTop"></div>
 
-          {/* Bottom Part */}
-          <div className="homeHeroContainerOverlayBottom">
-            <div className="homeHeroContainerOverlayBottomContainer">
-              {" "}
-              <div className="homeHeroContainerOverlayBottomContainerButton">
-                <div className="homeHeroContainerOverlayBottomContainerButtonContainer">
-                  <div 
-                    className="homeHeroButton" 
-                    onClick={handleStartClick}
-                    onTouchStart={handleTouchStart}
-                    onTouchEnd={handleTouchEnd}
-                    role="button"
-                    tabIndex={0}
-                    aria-label="Start experience"
-                    onKeyDown={(e) => {
-                      if (e.key === 'Enter' || e.key === ' ') {
-                        handleStartClick(e);
-                      }
-                    }}
-                  >
-                    <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderTop"></div>
-                    <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderRight"></div>
-                    <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderBottom"></div>
-                    <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderLeft"></div>
-                    <p className="homeHeroContainerOverlayBottomContainerButtonContainerText">
-                      {isMobile ? "TAP TO START" : "START"}
-                    </p>
+            {/* Bottom Part */}
+            <div className="homeHeroContainerOverlayBottom">
+              <div className="homeHeroContainerOverlayBottomContainer">
+                <div className="homeHeroContainerOverlayBottomContainerButton">
+                  <div className="homeHeroContainerOverlayBottomContainerButtonContainer">
+                    <div 
+                      className="homeHeroButton" 
+                      onClick={handleStartClick}
+                      onTouchStart={handleTouchStart}
+                      onTouchEnd={handleTouchEnd}
+                      role="button"
+                      tabIndex={0}
+                      aria-label="Start experience"
+                      onKeyDown={(e) => {
+                        if (e.key === 'Enter' || e.key === ' ') {
+                          handleStartClick(e);
+                        }
+                      }}
+                    >
+                      <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderTop"></div>
+                      <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderRight"></div>
+                      <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderBottom"></div>
+                      <div className="homeHeroButtonAnimatedBorder homeHeroButtonAnimatedBorderLeft"></div>
+                      <p className="homeHeroContainerOverlayBottomContainerButtonContainerText">
+                        {isMobile ? "TAP TO START" : "START"}
+                      </p>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
+        )}
       </div>
     </div>
   );

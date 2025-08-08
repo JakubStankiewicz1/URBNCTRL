@@ -94,11 +94,11 @@
   cursor: pointer;
   border: 1px solid transparent;
   transition: border-color 0.2s;
-  background: #fafafa;
+  background: #ffffff;
 }
 .productInfoGalleryThumbnailItem:hover {
   border-color: #ccc;
-  background: #f0f0f0;
+  background: ffffff;
 }
 .productInfoGalleryThumbnailActive {
   border-color: #da2228 !important;

@@ -1,4 +1,5 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
 import "./shopMain.css";
 import { useProducts } from "../../context/ProductContext";
 import ShopProductElement from "../ShopProductElement/ShopProductElement";
@@ -6,6 +7,7 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 
 const ShopMain = () => {
   const { products, loading } = useProducts();
+  const navigate = useNavigate();
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [selectedSorting, setSelectedSorting] = useState("Default sorting");
   const dropdownRef = useRef(null);
@@ -85,7 +87,11 @@ const ShopMain = () => {
           <div className="shopMainContainerDivTop">
             <div className="shopMainHeader">
               <div className="shopMainHeaderLeft">
-                <div className="shopMainHeaderBreadcrumbHome">
+                <div
+                  className="shopMainHeaderBreadcrumbHome"
+                  onClick={() => navigate("/")}
+                  style={{ cursor: "pointer" }}
+                >
                   <p className="shopMainHeaderBreadcrumbHomeText">Home</p>
                   <div className="shopMainHeaderBreadcrumbHomeDiv" />
                 </div>

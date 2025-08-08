@@ -19,22 +19,42 @@ import Product from "./pages/Product/Product";
 import Cart from "./pages/Cart/Cart";
 import Checkout from "./pages/Checkout/Checkout";
 
+// Scroll to top on route change
+const ScrollToTop = () => {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, [pathname]);
+  return null;
+};
+
 const App = () => {
   const [menuOpen, setMenuOpen] = useState(false);
-  const [hasStarted, setHasStarted] = useState(false);
+  // Check localStorage for start flag on mount
+  const [hasStarted, setHasStarted] = useState(() => {
+    if (typeof window !== "undefined") {
+      return localStorage.getItem("homeHeroStarted") === "true";
+    }
+    return false;
+  });
   const location = useLocation();
 
   useEffect(() => {
     if (location.pathname === "/") {
-      setHasStarted(false);
+      // Only reset if user never started
+      if (localStorage.getItem("homeHeroStarted") !== "true") {
+        setHasStarted(false);
+      } else {
+        setHasStarted(true);
+      }
     }
   }, [location.pathname]);
 
   return (
     <ProductProvider>
+      <ScrollToTop />
       <div className={`app`}>
         <HamburgerMenuOpen isOpen={menuOpen} setMenuOpen={setMenuOpen} />
-
         <div
           className={`appContainer ${menuOpen ? "appContainer--menuOpen" : ""}`}
           onClick={menuOpen ? () => setMenuOpen(false) : undefined}

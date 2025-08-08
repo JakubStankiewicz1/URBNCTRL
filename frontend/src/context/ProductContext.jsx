@@ -19,7 +19,17 @@ export const ProductProvider = ({ children }) => {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [cart, setCart] = useState([]);
+  // Load cart from localStorage only once, with fallback for corrupted data
+  const [cart, setCart] = useState(() => {
+    try {
+      const savedCart = localStorage.getItem("urbnctrl-cart");
+      return savedCart ? JSON.parse(savedCart) : [];
+    } catch (e) {
+      localStorage.removeItem("urbnctrl-cart");
+      return [];
+    }
+  });
+
   useEffect(() => {
     // Pobieranie produktów z backend API
     const loadProducts = async () => {
@@ -44,15 +54,7 @@ export const ProductProvider = ({ children }) => {
     loadProducts();
   }, []);
 
-  // Ładowanie koszyka z localStorage przy inicjalizacji
-  useEffect(() => {
-    const savedCart = localStorage.getItem("urbnctrl-cart");
-    if (savedCart) {
-      setCart(JSON.parse(savedCart));
-    }
-  }, []);
-
-  // Zapisywanie koszyka do localStorage przy każdej zmianie
+  // Save cart to localStorage on every change
   useEffect(() => {
     localStorage.setItem("urbnctrl-cart", JSON.stringify(cart));
   }, [cart]);
@@ -141,6 +143,7 @@ export const ProductProvider = ({ children }) => {
       });
     }
     setCart([]);
+    localStorage.removeItem("urbnctrl-cart");
   };
   const getCartTotal = () => {
     return cart.reduce((total, item) => {

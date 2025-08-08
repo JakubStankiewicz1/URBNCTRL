@@ -106,7 +106,7 @@
   align-items: center;
   justify-content: center;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   overflow: hidden;
   width: fit-content;
   margin: 0 auto;
@@ -172,7 +172,7 @@
 .couponInput {
   padding: 12px 15px;
   border: 1px solid #ddd;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   font-size: 14px;
   width: 200px;
 }
@@ -182,7 +182,7 @@
   color: white;
   border: none;
   padding: 12px 20px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
@@ -198,7 +198,7 @@
   color: #666;
   border: 1px solid #ddd;
   padding: 12px 20px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   cursor: pointer;
   font-size: 14px;
   font-weight: 600;
@@ -215,7 +215,7 @@
   margin-left: auto;
   background: #f8f9fa;
   padding: 30px;
-  border-radius: 8px;
+  /* border-radius: 8px; */
 }
 
 .cartTotalsTitle {
@@ -281,7 +281,7 @@
   color: #b2fce4;
   background: #000;
   padding: 2px 6px;
-  border-radius: 3px;
+  /* border-radius: 3px; */
   margin-left: 5px;
 }
 
@@ -291,7 +291,7 @@
   color: white;
   border: none;
   padding: 15px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;
@@ -309,7 +309,7 @@
   color: #000;
   border: none;
   padding: 15px;
-  border-radius: 4px;
+  /* border-radius: 4px; */
   font-size: 16px;
   font-weight: 600;
   cursor: pointer;

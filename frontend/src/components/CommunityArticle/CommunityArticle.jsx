@@ -70,6 +70,7 @@ const CommunityArticle = () => {
   const [slideWidth, setSlideWidth] = useState(410);
   const [translateX, setTranslateX] = useState(-2 * 410);
   const sliderRef = useRef(null);
+  const autoSlideTimer = useRef(null);
 
   const totalSlides = communityArticlesData.length;
 
@@ -105,6 +106,32 @@ const CommunityArticle = () => {
     window.addEventListener('resize', updateSlideWidth);
     return () => window.removeEventListener('resize', updateSlideWidth);
   }, [currentSlide]);
+  // Auto-slide effect
+  useEffect(() => {
+    // Clear previous timer
+    if (autoSlideTimer.current) {
+      clearTimeout(autoSlideTimer.current);
+    }
+    // Set new timer
+    autoSlideTimer.current = setTimeout(() => {
+      handleAutoSlide();
+    }, 5000);
+    return () => {
+      if (autoSlideTimer.current) {
+        clearTimeout(autoSlideTimer.current);
+      }
+    };
+  }, [currentSlide, slideWidth]);
+
+  // Auto-slide function
+  const handleAutoSlide = () => {
+    const nextSlide = currentSlide + 1;
+    setCurrentSlide(nextSlide);
+    setTranslateX(-nextSlide * slideWidth);
+    if (sliderRef.current) {
+      sliderRef.current.style.transition = "transform 0.4s ease-out";
+    }
+  };
 
   
   const slides = communityArticlesData.map((article, index) => (
@@ -134,6 +161,17 @@ const CommunityArticle = () => {
         ? "none"
         : "transform 0.4s ease-out";
     }
+    resetAutoSlideTimer();
+  };
+
+  // Reset auto-slide timer on user interaction
+  const resetAutoSlideTimer = () => {
+    if (autoSlideTimer.current) {
+      clearTimeout(autoSlideTimer.current);
+    }
+    autoSlideTimer.current = setTimeout(() => {
+      handleAutoSlide();
+    }, 5000);
   };
 
   const handleMouseDown = (e) => {
@@ -144,6 +182,7 @@ const CommunityArticle = () => {
     if (sliderRef.current) {
       sliderRef.current.style.transition = "none";
     }
+    resetAutoSlideTimer();
   };
 
   const handleMouseMove = (e) => {
@@ -154,6 +193,7 @@ const CommunityArticle = () => {
     const diffX = startX - currentX;
     const newTranslateX = -currentSlide * slideWidth - diffX;
     setTranslateX(newTranslateX);
+    resetAutoSlideTimer();
   };
 
   const handleMouseUp = (e) => {
@@ -184,6 +224,7 @@ const CommunityArticle = () => {
       
       setTranslateX(-currentSlide * slideWidth);
     }
+    resetAutoSlideTimer();
   };
 
   
@@ -240,6 +281,7 @@ const CommunityArticle = () => {
         if (sliderRef.current) {
           sliderRef.current.style.transition = "transform 0.4s ease-out";
         }
+        resetAutoSlideTimer();
       } else if (e.key === 'ArrowRight') {
         e.preventDefault();
         const nextSlide = currentSlide + 1;
@@ -249,6 +291,7 @@ const CommunityArticle = () => {
         if (sliderRef.current) {
           sliderRef.current.style.transition = "transform 0.4s ease-out";
         }
+        resetAutoSlideTimer();
       }
     };
 

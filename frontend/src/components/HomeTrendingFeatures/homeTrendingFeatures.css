@@ -43,6 +43,9 @@
   align-items: center;
   cursor: pointer;
   gap: 10px;
+
+  /* background-color: blue; */
+  width: 105px;
 }
 
 .homeTrendingFeaturesContainerTopContainerTwoContainerOneContainerText {
@@ -183,6 +186,9 @@
   display: flex;
   flex-direction: row;
   gap: 5px;
+
+  /* background-color: blue; */
+  width: 158px;
 }
 
 .homeTrendingFeaturesContainerBottomContainerElementContainerInfoContainerTwoContainerTwo {
@@ -655,7 +661,7 @@
 
 .homeTrendingFeaturesContainerBottomContainerElementContainer:hover .homeTrendingFeaturesContainerBottomContainerElementContainerImageContainerImage {
   filter: brightness(0.7);
-  transform: scale(1.05);
+  transform: scale(1.005);
 }
 
 .homeTrendingFeaturesContainerBottomContainerElementContainer:hover .homeTrendingFeaturesContainerBottomContainerElementContainerImageContainer {

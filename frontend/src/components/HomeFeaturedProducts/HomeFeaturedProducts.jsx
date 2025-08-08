@@ -14,6 +14,8 @@ const HomeFeaturedProducts = () => {
   const [scrollLeft, setScrollLeft] = useState(0);
   const [featuredProducts, setFeaturedProducts] = useState([]);
   const [productWidth, setProductWidth] = useState(310);
+  const [leftHovered, setLeftHovered] = useState(false);
+  const [rightHovered, setRightHovered] = useState(false);
 
   // Dynamic product width based on screen size
   useEffect(() => {
@@ -199,12 +201,15 @@ const HomeFeaturedProducts = () => {
               <div
                 className="homeFeaturedProductsContainerDivTopContainerLeft"
                 onClick={handlePrevious}
+                onMouseEnter={() => setLeftHovered(true)}
+                onMouseLeave={() => setLeftHovered(false)}
               >
                 <div className="homeFeaturedProductsContainerDivTopContainerLeftContainer">
                   <div className="homeFeaturedProductsContainerDivTopContainerLeftContainerDiv" style={{position: 'relative'}}>
                     <GoArrowLeft className="homeFeaturedProductsContainerDivTopContainerLeftContainerDivIcon" />
                     <svg className="arrow-circle-svg" width="40" height="40" viewBox="0 0 40 40" style={{position: 'absolute', top: '-2px', left: '-2px', pointerEvents: 'none'}}>
-                      <circle className="arrow-circle" cx="20" cy="20" r="19" fill="none" stroke="red" strokeWidth="2" />
+                      <circle cx="20" cy="20" r="19" fill="none" stroke="#e0e0e0" strokeWidth="2" />
+                      <circle className={`arrow-circle${leftHovered ? ' hovered' : ''}`} cx="20" cy="20" r="19" fill="none" stroke="red" strokeWidth="2" />
                     </svg>
                   </div>
                 </div>
@@ -237,12 +242,15 @@ const HomeFeaturedProducts = () => {
               <div
                 className="homeFeaturedProductsContainerDivTopContainerRight"
                 onClick={handleNext}
+                onMouseEnter={() => setRightHovered(true)}
+                onMouseLeave={() => setRightHovered(false)}
               >
                 <div className="homeFeaturedProductsContainerDivTopContainerRightContainer">
                   <div className="homeFeaturedProductsContainerDivTopContainerRightContainerDiv" style={{position: 'relative'}}>
                     <GoArrowRight className="homeFeaturedProductsContainerDivTopContainerRightContainerDivIcon" />
                     <svg className="arrow-circle-svg" width="40" height="40" viewBox="0 0 40 40" style={{position: 'absolute', top: '-2px', left: '-2px', pointerEvents: 'none'}}>
-                      <circle className="arrow-circle" cx="20" cy="20" r="19" fill="none" stroke="red" strokeWidth="2" />
+                      <circle cx="20" cy="20" r="19" fill="none" stroke="#e0e0e0" strokeWidth="2" />
+                      <circle className={`arrow-circle${rightHovered ? ' hovered' : ''}`} cx="20" cy="20" r="19" fill="none" stroke="red" strokeWidth="2" />
                     </svg>
                   </div>
                 </div>

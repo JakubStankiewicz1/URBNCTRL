@@ -255,6 +255,7 @@
   font-weight: 600;
 }
 
+
 .homeLocationTwoContainerDivLeftCotntainerBottomContainerOneBtn::before {
   content: "";
   position: absolute;
@@ -263,7 +264,7 @@
   right: 0;
   bottom: 0;
   margin: auto;
-  border-radius: 25px;
+  border-radius: 50%;
   display: block;
   width: 20em;
   height: 20em;
@@ -993,7 +994,7 @@
 .homeLocationTwoContainerDivRightContainerDivOneContainer:hover,
 .homeLocationTwoContainerDivRightContainerDivTwoContainer:hover,
 .homeLocationTwoContainerDivRightContainerDivThreeContainer:hover {
-  transform: scale(1.03);
+  /* transform: scale(1.03); */
 }
 
 .homeLocationTwoContainerDivRightContainerDivOneContainerImage,
@@ -1005,7 +1006,7 @@
 .homeLocationTwoContainerDivRightContainerDivOneContainer:hover .homeLocationTwoContainerDivRightContainerDivOneContainerImage,
 .homeLocationTwoContainerDivRightContainerDivTwoContainer:hover .homeLocationTwoContainerDivRightContainerDivTwoContainerImage,
 .homeLocationTwoContainerDivRightContainerDivThreeContainer:hover .homeLocationTwoContainerDivRightContainerDivThreeContainerImage {
-  transform: scale(1.05);
+  /* transform: scale(1.05); */
 }
 
 /* Button enhanced animations */
